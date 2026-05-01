@@ -1,0 +1,44 @@
+[
+  {
+    "summary": "Alphabet is the strongest AI infrastructure play among hyperscalers, with Google Cloud accelerating to 63% growth and a $460B backlog justifying its $180-190B capex commitment; the market has validated this with a 10% surge post-earnings.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+    "direction": "bullish",
+    "instruments": [
+      "GOOGL",
+      "GOOG"
+    ],
+    "timeframe": "2026-2027",
+    "date_made": "2026-05-01",
+    "source_confidence": 0.72,
+    "status": "open"
+  },
+  {
+    "summary": "Meta is the most vulnerable of the four hyperscalers to continued market skepticism because it lacks a third-party cloud business to validate its massive capex commitment, making its AI spending thesis the weakest among peers.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+    "direction": "bearish",
+    "instruments": [
+      "META"
+    ],
+    "timeframe": "2026-2027",
+    "date_made": "2026-05-01",
+    "source_confidence": 0.7,
+    "status": "open"
+  },
+  {
+    "summary": "The oil futures curve is pricing a sharp normalization from current ~$110 Brent to roughly $80 by December 2026 and ~$70 by late 2027, representing either a generational hedging opportunity for energy buyers or a violent correction risk if the backwardation proves wrong.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+    "direction": "bearish",
+    "instruments": [
+      "BNO",
+      "USO",
+      "XLE"
+    ],
+    "timeframe": "December 2026 to late 2027",
+    "date_made": "2026-05-01",
+    "source_confidence": 0.76,
+    "status": "open"
+  }
+]
