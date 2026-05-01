@@ -26,11 +26,7 @@ from pathlib import Path
 
 import feedparser
 import anthropic
-from youtube_transcript_api import (
-    YouTubeTranscriptApi,
-    TranscriptsDisabled,
-    NoTranscriptFound,
-)
+from youtube_transcript_api import YouTubeTranscriptApi
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
@@ -116,16 +112,28 @@ def get_recent_youtube_videos(channel_url: str, source_name: str,
 
 
 def get_youtube_transcript(video_id: str, title: str) -> str | None:
-    """Fetch and return (truncated) transcript text, or None if unavailable."""
+    """Fetch and return (truncated) transcript text, or None if unavailable.
+
+    Handles both the legacy classmethod API (< 0.6.x) and the newer
+    instance-based API (>= 0.6.x) so the script works across library versions.
+    """
     try:
-        entries = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
-        text = " ".join(e["text"] for e in entries)
+        # Newer API (youtube-transcript-api >= 0.6.x): instantiate first
+        try:
+            api = YouTubeTranscriptApi()
+            entries = api.fetch(video_id, languages=["en"])
+            text = " ".join(e.text for e in entries)
+        except AttributeError:
+            # Fallback: older classmethod API (< 0.6.x)
+            entries = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
+            text = " ".join(e["text"] for e in entries)
         return text[:MAX_TRANSCRIPT_CHARS]
-    except (TranscriptsDisabled, NoTranscriptFound):
-        print(f"    No transcript: {title[:60]}")
-        return None
     except Exception as exc:
-        print(f"    Transcript error ({title[:50]}): {exc}")
+        msg = str(exc).lower()
+        if any(k in msg for k in ("disabled", "no transcript", "notranscriptfound", "could not retrieve")):
+            print(f"    No transcript available: {title[:60]}")
+        else:
+            print(f"    Transcript error ({title[:50]}): {exc}")
         return None
 
 
@@ -583,7 +591,7 @@ def format_daily_email(data: dict) -> str:
     html += (
         f'</div>'  # card
         f'<div class="ftr">Market Intelligence Monitor · '
-        f'{datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC")}</div>'
+        f'{datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}</div>'
         f'</div></body></html>'
     )
     return html
