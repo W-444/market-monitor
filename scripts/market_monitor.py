@@ -112,25 +112,14 @@ def get_recent_youtube_videos(channel_url: str, source_name: str,
 
 
 def get_youtube_transcript(video_id: str, title: str) -> str | None:
-    """Fetch and return (truncated) transcript text, or None if unavailable.
-
-    Handles both the legacy classmethod API (< 0.6.x) and the newer
-    instance-based API (>= 0.6.x) so the script works across library versions.
-    """
+    """Fetch and return (truncated) transcript text, or None if unavailable."""
     try:
-        # Newer API (youtube-transcript-api >= 0.6.x): instantiate first
-        try:
-            api = YouTubeTranscriptApi()
-            entries = api.fetch(video_id, languages=["en"])
-            text = " ".join(e.text for e in entries)
-        except AttributeError:
-            # Fallback: older classmethod API (< 0.6.x)
-            entries = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
-            text = " ".join(e["text"] for e in entries)
+        entries = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
+        text = " ".join(e["text"] for e in entries)
         return text[:MAX_TRANSCRIPT_CHARS]
     except Exception as exc:
         msg = str(exc).lower()
-        if any(k in msg for k in ("disabled", "no transcript", "notranscriptfound", "could not retrieve")):
+        if any(k in msg for k in ("disabled", "no transcript", "could not retrieve")):
             print(f"    No transcript available: {title[:60]}")
         else:
             print(f"    Transcript error ({title[:50]}): {exc}")
