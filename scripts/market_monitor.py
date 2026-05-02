@@ -26,7 +26,7 @@ from pathlib import Path
 
 import feedparser
 import anthropic
-from youtube_transcript_api import YouTubeTranscriptApi
+# Transcripts fetched via yt-dlp (see get_youtube_transcript)
 
 # ── Configuration ─────────────────────────────────────────────────────────────
 
@@ -112,17 +112,56 @@ def get_recent_youtube_videos(channel_url: str, source_name: str,
 
 
 def get_youtube_transcript(video_id: str, title: str) -> str | None:
-    """Fetch and return (truncated) transcript text, or None if unavailable."""
+    """Fetch auto-generated transcript via yt-dlp VTT subtitle download.
+
+    Uses yt-dlp (already installed for channel scraping) rather than a separate
+    library, so transcript fetching stays in sync with YouTube changes.
+    """
+    import tempfile
+    url = f"https://youtube.com/watch?v={video_id}"
     try:
-        entries = YouTubeTranscriptApi.get_transcript(video_id, languages=["en"])
-        text = " ".join(e["text"] for e in entries)
-        return text[:MAX_TRANSCRIPT_CHARS]
+        with tempfile.TemporaryDirectory() as tmpdir:
+            subprocess.run(
+                [
+                    "yt-dlp",
+                    "--write-auto-subs", "--no-download",
+                    "--sub-langs", "en.*",
+                    "--sub-format", "vtt",
+                    "--output", f"{tmpdir}/sub",
+                    "--no-warnings", "--quiet",
+                    url,
+                ],
+                capture_output=True, text=True, timeout=90,
+            )
+            vtt_files = list(Path(tmpdir).glob("*.vtt"))
+            if not vtt_files:
+                print(f"    No transcript available: {title[:60]}")
+                return None
+
+            content = vtt_files[0].read_text(encoding="utf-8", errors="ignore")
+
+            # Strip VTT metadata, timestamps, and inline tags; deduplicate adjacent lines
+            lines, prev = [], None
+            for line in content.splitlines():
+                line = line.strip()
+                if (not line
+                        or "WEBVTT" in line
+                        or "-->" in line
+                        or re.match(r"^\d{2}:\d{2}", line)):
+                    continue
+                line = re.sub(r"<[^>]+>", "", line).strip()
+                if line and line != prev:
+                    lines.append(line)
+                    prev = line
+
+            text = " ".join(lines)
+            if not text:
+                print(f"    Empty transcript: {title[:60]}")
+                return None
+            return text[:MAX_TRANSCRIPT_CHARS]
+
     except Exception as exc:
-        msg = str(exc).lower()
-        if any(k in msg for k in ("disabled", "no transcript", "could not retrieve")):
-            print(f"    No transcript available: {title[:60]}")
-        else:
-            print(f"    Transcript error ({title[:50]}): {exc}")
+        print(f"    Transcript error ({title[:50]}): {exc}")
         return None
 
 
