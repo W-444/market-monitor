@@ -43,9 +43,9 @@ jobs:
         run: |
           git config --local user.email "market-monitor-bot@users.noreply.github.com"
           git config --local user.name  "Market Monitor Bot"
+          git pull --rebase origin main   # pull any remote changes BEFORE staging
           git add data/
           if ! git diff --staged --quiet; then
             git commit -m "chore: market data $(date -u +%Y-%m-%d)"
-            git pull --rebase origin main
             git push
           fi
