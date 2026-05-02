@@ -54,9 +54,10 @@ MAX_ARTICLE_CHARS    = 8000
 # ── Sources ───────────────────────────────────────────────────────────────────
 
 YOUTUBE_CHANNELS = {
-    "Thoughtful Money":      "https://www.youtube.com/@thoughtfulmoney",
-    "Eurodollar University": "https://www.youtube.com/@EurodollarUniversity",
-    "All-In Podcast":        "https://www.youtube.com/@allin",
+    "Thoughtful Money":        "https://www.youtube.com/@adam.taggart/videos",
+    "Thoughtful Money (Live)": "https://www.youtube.com/@adam.taggart/streams",
+    "Eurodollar University":   "https://www.youtube.com/@EurodollarUniversity",
+    "All-In Podcast":          "https://www.youtube.com/@allin",
 }
 
 RSS_SOURCES = {
@@ -83,7 +84,8 @@ def get_recent_youtube_videos(channel_url: str, source_name: str,
     try:
         result = subprocess.run(
             [
-                "yt-dlp", "--flat-playlist", "--playlist-end", "8",
+                "yt-dlp", "--flat-playlist", "--playlist-end", "15",
+                "--dateafter", cutoff,   # yt-dlp native filter: skip older videos
                 "--print", "%(id)s|||%(title)s|||%(upload_date)s",
                 "--no-warnings", "--quiet", channel_url,
             ],
@@ -97,7 +99,8 @@ def get_recent_youtube_videos(channel_url: str, source_name: str,
             if len(parts) < 3:
                 continue
             vid_id, title, upload_date = (p.strip() for p in parts[:3])
-            if upload_date and upload_date >= cutoff:
+            # Belt-and-suspenders: also validate date format before comparing
+            if re.match(r"^\d{8}$", upload_date or "") and upload_date >= cutoff:
                 videos.append({
                     "id":     vid_id,
                     "title":  title,
@@ -271,32 +274,39 @@ def extract_insights(item: dict, content_type: str) -> list[dict]:
         url=item.get("url", "N/A"),
         content=content,
     )
-    try:
-        resp = claude.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=2000,
-            system=_EXTRACT_SYSTEM,
-            messages=[{"role": "user", "content": prompt}],
-        )
-        raw = resp.content[0].text.strip()
-        m = re.search(r"\{.*\}", raw, re.DOTALL)
-        if m:
-            raw = m.group(0)
-        data = json.loads(raw)
-        insights = data.get("insights", [])
-        for ins in insights:
-            ins.update({
-                "source":        item["source"],
-                "source_url":    item.get("url", ""),
-                "content_title": item.get("title", ""),
-                "content_date":  item.get("date", TODAY.isoformat()),
-                "content_type":  content_type,
-                "corroboration_confidence": 0.0,
-                "corroborated_by": [],
-            })
-        return insights
-    except Exception as exc:
-        print(f"    Extraction error ({item.get('title', '')[:50]}): {exc}")
+    for attempt in range(2):
+        try:
+            resp = claude.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=2000,
+                system=_EXTRACT_SYSTEM,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            raw = resp.content[0].text.strip()
+            m = re.search(r"\{.*\}", raw, re.DOTALL)
+            if m:
+                raw = m.group(0)
+            data = json.loads(raw)
+            insights = data.get("insights", [])
+            for ins in insights:
+                ins.update({
+                    "source":        item["source"],
+                    "source_url":    item.get("url", ""),
+                    "content_title": item.get("title", ""),
+                    "content_date":  item.get("date", TODAY.isoformat()),
+                    "content_type":  content_type,
+                    "corroboration_confidence": 0.0,
+                    "corroborated_by": [],
+                })
+            return insights
+        except json.JSONDecodeError as exc:
+            if attempt == 0:
+                print(f"    JSON parse error, retrying ({item.get('title', '')[:40]}): {exc}")
+                time.sleep(2)
+                continue
+            print(f"    Extraction error after retry ({item.get('title', '')[:40]}): {exc}")
+        except Exception as exc:
+            print(f"    Extraction error ({item.get('title', '')[:50]}): {exc}")
         return []
 
 # ── Corroboration ─────────────────────────────────────────────────────────────
@@ -748,9 +758,8 @@ def send_email(subject: str, html_body: str):
     msg["To"]      = RECIPIENT_EMAIL
     msg.attach(MIMEText(html_body, "html"))
     try:
-        with smtplib.SMTP("smtp.mail.yahoo.com", 587) as srv:
-            srv.ehlo()
-            srv.starttls()
+        # Port 465 with SSL is more reliable than 587/STARTTLS from cloud servers
+        with smtplib.SMTP_SSL("smtp.mail.yahoo.com", 465) as srv:
             srv.login(YAHOO_EMAIL, YAHOO_PASSWORD)
             srv.sendmail(YAHOO_EMAIL, RECIPIENT_EMAIL, msg.as_string())
         print(f"  ✅ Email sent: {subject}")
