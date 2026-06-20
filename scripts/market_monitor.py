@@ -8,9 +8,12 @@ Weekly (Sundays): synthesises the past 7 daily JSON files into a weekly report.
 
 Sources monitored
 -----------------
-YouTube : Thoughtful Money, Eurodollar University, All-In Podcast
+YouTube : Thoughtful Money, Eurodollar University, All-In Podcast,
+          George Gammon, Forward Guidance (Jack Farley)
 RSS     : Lyn Alden, Doomberg, SemiAnalysis, Macro Voices, Kitco News,
-          Real Investment Advice (Lance Roberts), Sprott, Grant Williams
+          Real Investment Advice (Lance Roberts), Sprott, Grant Williams,
+          Odd Lots, Stratechery, Macleod Finance, The Diff
+Earnings: Google News RSS for AI/tech, precious metals miners, industrial commodities
 """
 
 import os
@@ -58,6 +61,8 @@ YOUTUBE_CHANNELS = {
     "Thoughtful Money (Live)": "https://www.youtube.com/@adam.taggart/streams",
     "Eurodollar University":   "https://www.youtube.com/@EurodollarUniversity",
     "All-In Podcast":          "https://www.youtube.com/@allin",
+    "George Gammon":           "https://www.youtube.com/@GeorgeGammon",
+    "Forward Guidance":        "https://www.youtube.com/@ForwardGuidance",
 }
 
 RSS_SOURCES = {
@@ -68,12 +73,34 @@ RSS_SOURCES = {
     "Kitco News":             "https://www.kitco.com/rss/kitco-news.rss",
     "Real Investment Advice": "https://realinvestmentadvice.com/feed/",
     "Sprott":                 "https://sprott.com/feed/",
-    # Grant Williams' feed URL – update if needed
     "Grant Williams":         "https://www.ttmygh.com/feed/",
+    # New sources
+    "Odd Lots":               "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/8a94442e-5a74-4fa2-8b8d-ae27003a8d6b/982f5071-765c-403d-969d-ae27003a8d83/podcast.rss",  # confirmed via Apple Podcasts API
+    "Stratechery":            "https://stratechery.com/feed/",
+    "Macleod Finance":        "https://alasdairmacleod.substack.com/feed",  # confirmed
+    "The Diff":               "https://www.thediff.co/rss/",               # confirmed
 }
 
 # Luke Gromen (FFTT) posts primarily behind a paid newsletter and on X.
 # Add his RSS here if you subscribe: e.g. "Luke Gromen": "https://fftt-llc.com/feed/"
+
+# Earnings & company news via Google News RSS – one feed per sector theme.
+# Google News search RSS is reliably public; update the search terms as needed.
+EARNINGS_SOURCES = {
+    "AI/Tech Earnings":
+        "https://news.google.com/rss/search?q=NVDA+OR+AMD+OR+Microsoft+OR+TSMC+earnings+results&hl=en-US&gl=US&ceid=US:en",
+    "Precious Metals Earnings":
+        "https://news.google.com/rss/search?q=Newmont+OR+Barrick+OR+Agnico+Eagle+OR+Wheaton+gold+miner+earnings&hl=en-US&gl=US&ceid=US:en",
+    "Industrial Commodities Earnings":
+        "https://news.google.com/rss/search?q=Freeport+OR+BHP+OR+Rio+Tinto+OR+Caterpillar+copper+commodity+earnings&hl=en-US&gl=US&ceid=US:en",
+}
+
+# Keywords that flag an article as earnings-relevant (title match, case-insensitive)
+_EARNINGS_KEYWORDS = frozenset({
+    "earnings", "revenue", "guidance", "outlook", "q1", "q2", "q3", "q4",
+    "beats", "misses", "eps", "results", "quarterly", "transcript", "profit",
+    "forecast", "raised", "lowered",
+})
 
 # ── Content Fetching ──────────────────────────────────────────────────────────
 
@@ -392,6 +419,90 @@ def corroborate_insights(all_insights: list[dict]) -> tuple[list[dict], list[dic
         print(f"  ⚠  Corroboration error: {exc}")
         return all_insights, []
 
+# ── Daily Dashboard Synthesis ─────────────────────────────────────────────────
+
+_DASHBOARD_SYSTEM = """\
+You are a senior financial analyst producing a concise daily market dashboard for a
+retail investor focused on ETFs in AI/tech, precious metals, and industrial commodities."""
+
+_DASHBOARD_PROMPT = """\
+Today's extracted market insights and convergence themes are below.
+
+Insights ({n_insights} total):
+{insights_json}
+
+Convergence themes:
+{themes_json}
+
+Produce a dashboard synthesis. Return JSON:
+
+{{
+  "market_summary": "One tight paragraph (3-5 sentences) summarising today's overall market picture — what matters most for an investor in AI/tech, precious metals, and industrial commodities.",
+  "sectors": {{
+    "ai_tech": {{
+      "sentiment_score": 0.0,
+      "recommendation": "buy | hold | sell | no signal",
+      "rationale": "1-2 sentence explanation of the call"
+    }},
+    "precious_metals": {{
+      "sentiment_score": 0.0,
+      "recommendation": "buy | hold | sell | no signal",
+      "rationale": "1-2 sentence explanation"
+    }},
+    "industrial_commodities": {{
+      "sentiment_score": 0.0,
+      "recommendation": "buy | hold | sell | no signal",
+      "rationale": "1-2 sentence explanation"
+    }},
+    "macro": {{
+      "sentiment_score": 0.0,
+      "recommendation": "buy | hold | sell | no signal",
+      "rationale": "1-2 sentence explanation"
+    }}
+  }}
+}}
+
+sentiment_score: -1.0 = strongly bearish, 0.0 = neutral, +1.0 = strongly bullish.
+Use "no signal" when there is insufficient data for a sector today.
+Base recommendations on the weight of evidence across all sources — not a single data point."""
+
+
+def synthesize_daily_dashboard(insights: list[dict], themes: list[dict]) -> dict:
+    """One Claude call that produces the market summary paragraph and sector signals."""
+    if not insights:
+        return {}
+
+    slim = [
+        {
+            "source":        ins["source"],
+            "summary":       ins["summary"],
+            "direction":     ins["direction"],
+            "asset_classes": ins.get("asset_classes", []),
+            "source_confidence":        ins.get("source_confidence", 0.0),
+            "corroboration_confidence": ins.get("corroboration_confidence", 0.0),
+        }
+        for ins in insights
+    ]
+    prompt = _DASHBOARD_PROMPT.format(
+        n_insights=len(insights),
+        insights_json=json.dumps(slim, indent=2),
+        themes_json=json.dumps(themes, indent=2),
+    )
+    try:
+        resp = claude.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=1200,
+            system=_DASHBOARD_SYSTEM,
+            messages=[{"role": "user", "content": prompt}],
+        )
+        raw = resp.content[0].text.strip()
+        m = re.search(r"\{.*\}", raw, re.DOTALL)
+        return json.loads(m.group(0)) if m else {}
+    except Exception as exc:
+        print(f"  ⚠  Dashboard synthesis error: {exc}")
+        return {}
+
+
 # ── Open Calls Tracker ────────────────────────────────────────────────────────
 
 def _load_open_calls() -> list[dict]:
@@ -500,136 +611,260 @@ def generate_weekly_synthesis() -> dict:
 
 # ── Email Formatting ──────────────────────────────────────────────────────────
 
-def _conf_bar(score: float) -> str:
-    filled = round(min(max(score, 0), 1) * 10)
-    return "█" * filled + "░" * (10 - filled) + f"  {score:.0%}"
+# Maps insight asset_class values → sector panel keys
+_ASSET_TO_SECTOR = {
+    "ai_tech":                "ai_tech",
+    "precious_metals":        "precious_metals",
+    "industrial_commodities": "industrial_commodities",
+    "energy":                 "macro",
+    "macro":                  "macro",
+    "bonds":                  "macro",
+    "currencies":             "macro",
+    "crypto":                 "macro",
+    "other":                  "macro",
+}
+
+_DIR_COLORS = {
+    "bullish": ("#1a7a4a", "#e6f9f0"),
+    "bearish": ("#b03030", "#fef0f0"),
+    "neutral": ("#3050a0", "#eef2ff"),
+    "mixed":   ("#7a5a00", "#fffbe6"),
+}
 
 
-_EMAIL_CSS = """
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-     background:#f0f2f5;margin:0;padding:20px}
-.wrap{max-width:680px;margin:0 auto}
-.card{background:#fff;border-radius:10px;overflow:hidden;margin-bottom:16px;
-      box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.hdr{background:#1a1a2e;color:#fff;padding:22px 28px}
-.hdr h1{margin:0;font-size:20px;font-weight:600}
-.hdr p{margin:4px 0 0;opacity:.65;font-size:12px}
-.sec{padding:18px 28px;border-bottom:1px solid #f0f0f0}
-.sec:last-child{border-bottom:none}
-.sec h2{font-size:11px;text-transform:uppercase;letter-spacing:.6px;
-         color:#999;margin:0 0 12px}
-.theme{background:#f7f8ff;border-left:3px solid #4a6cf7;
-       padding:9px 13px;margin-bottom:9px;border-radius:0 5px 5px 0}
-.theme b{font-size:13px}
-.theme small{display:block;font-size:11px;color:#999;margin-top:3px}
-.ins{padding:13px 0;border-bottom:1px solid #f5f5f5}
-.ins:last-child{border-bottom:none}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:7px}
-.tag{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:500}
-.bullish{background:#e6f9f0;color:#1a7a4a}
-.bearish{background:#fef0f0;color:#b03030}
-.neutral{background:#eef2ff;color:#3050a0}
-.mixed{background:#fffbe6;color:#7a5a00}
-.src{background:#f0f0f0;color:#555}
-.ins .body{font-size:13px;line-height:1.55;color:#222;margin-bottom:5px}
-.ins .reason{font-size:12px;color:#666;line-height:1.4}
-.ins .conf{font-size:11px;color:#aaa;font-family:monospace;margin-top:6px;
-           line-height:1.8}
-.call{background:#fffbf0;border:1px solid #f0d878;border-radius:6px;
-      padding:10px 14px;margin-bottom:8px}
-.call .cs{font-size:13px;font-weight:500;color:#333}
-.call .cm{font-size:11px;color:#999;margin-top:4px}
-.ftr{text-align:center;padding:14px;font-size:11px;color:#bbb}
-"""
+def _sentiment_gauge(score: float) -> str:
+    """10-segment coloured bar + label — uses only table/inline styles for email safety."""
+    clamped = max(-1.0, min(1.0, score))
+    filled  = round((clamped + 1.0) / 2.0 * 10)   # 0-10 segments
+
+    # Segment palette: deep-red → orange → grey → light-green → deep-green
+    palette = ["#c0392b","#c0392b","#e67e22","#f39c12","#95a5a6",
+               "#95a5a6","#27ae60","#27ae60","#1e8449","#1e8449"]
+
+    cells = "".join(
+        f'<td style="background:{"" + palette[i] if i < filled else "#e0e0e0"};'
+        f'height:8px;padding:0;border-right:2px solid #fff"></td>'
+        for i in range(10)
+    )
+
+    if   score <= -0.7: label, lc = "STRONGLY BEARISH", "#c0392b"
+    elif score <= -0.3: label, lc = "BEARISH",          "#e67e22"
+    elif score <   0.3: label, lc = "NEUTRAL",          "#7f8c8d"
+    elif score <   0.7: label, lc = "BULLISH",          "#27ae60"
+    else:               label, lc = "STRONGLY BULLISH", "#1e8449"
+
+    return (
+        f'<table cellpadding="0" cellspacing="0" '
+        f'style="width:100%;border-collapse:collapse;margin-bottom:4px">'
+        f'<tr>{cells}</tr></table>'
+        f'<div style="font-size:9px;font-weight:700;color:{lc};'
+        f'letter-spacing:0.5px;margin-bottom:8px">{label}</div>'
+    )
 
 
-def format_daily_email(data: dict) -> str:
-    date_str  = data["date"]
-    insights  = data.get("insights", [])
-    themes    = data.get("convergence_themes", [])
-    open_calls = data.get("open_calls", [])
-    src_count = len(set(i["source"] for i in insights))
-
-    html = (
-        f'<!DOCTYPE html><html><head><meta charset="utf-8">'
-        f'<style>{_EMAIL_CSS}</style></head>'
-        f'<body><div class="wrap">'
-        f'<div class="card"><div class="hdr">'
-        f'<h1>📊 Market Intelligence Digest</h1>'
-        f'<p>{date_str} · {len(insights)} insights · {src_count} sources</p>'
+def _rec_badge(rec: str) -> str:
+    """Buy / Hold / Sell badge."""
+    styles = {
+        "buy":       ("#fff", "#1a7a4a", "▲ BUY"),
+        "hold":      ("#fff", "#7a5a00", "◆ HOLD"),
+        "sell":      ("#fff", "#b03030", "▼ SELL"),
+        "no signal": ("#888", "#e8e8e8", "— NO SIGNAL"),
+    }
+    fg, bg, text = styles.get(rec.lower().strip(), ("#888", "#e8e8e8", rec.upper()))
+    return (
+        f'<div style="margin-bottom:10px">'
+        f'<span style="background:{bg};color:{fg};font-size:11px;font-weight:700;'
+        f'padding:4px 12px;border-radius:3px;letter-spacing:0.5px">{text}</span>'
         f'</div>'
     )
 
-    # Convergence themes
-    if themes:
-        html += '<div class="sec"><h2>🔁 Convergence Themes</h2>'
-        for t in themes:
-            d = t.get("direction", "neutral")
-            srcs = ", ".join(t.get("supporting_sources", []))
-            strength = t.get("strength", "")
-            html += (
-                f'<div class="theme">'
-                f'<b><span class="tag {d}" style="margin-right:7px">{d.upper()}</span>'
-                f'{t["theme"]}</b>'
-                f'<small>{srcs}{" · " + strength if strength else ""}</small>'
-                f'</div>'
-            )
-        html += '</div>'
 
-    # Key insights (sorted by combined confidence)
-    sorted_ins = sorted(
+def _sector_card(title: str, icon: str, sector_data: dict, sector_insights: list[dict]) -> str:
+    """One sector panel (50% wide table cell)."""
+    score = sector_data.get("sentiment_score", 0.0)
+    rec   = sector_data.get("recommendation", "no signal")
+    rat   = sector_data.get("rationale", "")
+
+    html = (
+        f'<td style="width:50%;vertical-align:top;padding:6px">'
+        f'<div style="background:#fff;border-radius:8px;padding:14px 16px;'
+        f'border:1px solid #e8e8e8">'
+        f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+        f'letter-spacing:0.6px;color:#555;margin-bottom:10px">{icon}&nbsp;{title}</div>'
+        + _sentiment_gauge(score)
+        + _rec_badge(rec)
+    )
+    if rat:
+        html += (
+            f'<div style="font-size:11px;color:#666;line-height:1.45;'
+            f'margin-bottom:10px;border-top:1px solid #f0f0f0;padding-top:8px">{rat}</div>'
+        )
+
+    # Up to 3 top insights for this sector
+    for ins in sector_insights[:3]:
+        d  = ins.get("direction", "neutral")
+        fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
+        html += (
+            f'<div style="border-top:1px solid #f5f5f5;padding-top:7px;margin-top:7px">'
+            f'<span style="background:{bg};color:{fg};font-size:9px;font-weight:700;'
+            f'padding:1px 5px;border-radius:2px;letter-spacing:0.4px">{d.upper()}</span>'
+            f'<div style="font-size:11px;color:#333;line-height:1.4;margin-top:3px">'
+            f'{ins["summary"]}</div>'
+            f'<div style="font-size:10px;color:#aaa;margin-top:2px">{ins["source"]}</div>'
+            f'</div>'
+        )
+
+    html += '</div></td>'
+    return html
+
+
+def format_daily_email(data: dict) -> str:
+    date_str   = data["date"]
+    insights   = data.get("insights", [])
+    themes     = data.get("convergence_themes", [])
+    open_calls = data.get("open_calls", [])
+    dashboard  = data.get("dashboard", {})
+    src_count  = len(set(i["source"] for i in insights))
+
+    # ── Group insights by sector ──────────────────────────────────────────────
+    sector_insights: dict[str, list[dict]] = {
+        k: [] for k in ("ai_tech", "precious_metals", "industrial_commodities", "macro")
+    }
+    for ins in sorted(
         insights,
         key=lambda x: x.get("source_confidence", 0) + x.get("corroboration_confidence", 0),
         reverse=True,
+    ):
+        placed = False
+        for ac in ins.get("asset_classes", []):
+            s = _ASSET_TO_SECTOR.get(ac)
+            if s:
+                sector_insights[s].append(ins)
+                placed = True
+                break
+        if not placed:
+            sector_insights["macro"].append(ins)
+
+    sectors_cfg = dashboard.get("sectors", {})
+
+    # ── Date label ────────────────────────────────────────────────────────────
+    try:
+        date_label = datetime.datetime.strptime(date_str, "%Y-%m-%d").strftime("%A %-d %B %Y")
+    except ValueError:
+        date_label = date_str
+
+    W = "max-width:700px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont," \
+        "'Segoe UI',Arial,sans-serif"
+
+    html = (
+        f'<!DOCTYPE html><html><head><meta charset="utf-8"></head>'
+        f'<body style="background:#f0f2f5;margin:0;padding:20px">'
+        f'<div style="{W}">'
+
+        # ── Header ────────────────────────────────────────────────────────────
+        f'<div style="background:#1a1a2e;border-radius:10px 10px 0 0;padding:22px 28px">'
+        f'<div style="color:#fff;font-size:20px;font-weight:700;margin-bottom:4px">'
+        f'📊 Market Intelligence Digest</div>'
+        f'<div style="color:rgba(255,255,255,.55);font-size:12px">'
+        f'{date_label}&nbsp;&nbsp;·&nbsp;&nbsp;{len(insights)} insights'
+        f'&nbsp;&nbsp;·&nbsp;&nbsp;{src_count} sources</div>'
+        f'</div>'
     )
-    html += '<div class="sec"><h2>💡 Key Insights</h2>'
-    for ins in sorted_ins[:18]:
-        d    = ins.get("direction", "neutral")
-        inst = ", ".join(ins.get("instruments", []))
-        tf   = ins.get("timeframe", "")
-        nd   = ins.get("notable_data", "")
-        sc   = ins.get("source_confidence", 0.0)
-        cc   = ins.get("corroboration_confidence", 0.0)
-        cby  = ", ".join(ins.get("corroborated_by", []))
 
+    # ── Market Overview ───────────────────────────────────────────────────────
+    if dashboard.get("market_summary"):
         html += (
-            f'<div class="ins"><div class="tags">'
-            f'<span class="tag {d}">{d.upper()}</span>'
-            f'<span class="tag src">{ins["source"]}</span>'
-            + (f'<span class="tag src">{inst}</span>' if inst else "")
-            + f'<span style="font-size:11px;color:#ccc;margin-left:auto">{ins.get("content_date","")}</span>'
+            f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
+            f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:.6px;color:#999;margin-bottom:10px">📋 Market Overview</div>'
+            f'<div style="font-size:14px;line-height:1.65;color:#222">'
+            f'{dashboard["market_summary"]}</div>'
             f'</div>'
-            f'<div class="body">{ins["summary"]}</div>'
-            f'<div class="reason">{ins.get("key_reasoning","")}'
-            + (f' <em>Data: {nd}</em>' if nd else "")
-            + f'</div>'
-            f'<div class="conf">'
-            f'Source confidence&nbsp;&nbsp;&nbsp;{_conf_bar(sc)}<br>'
-            f'Corroboration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{_conf_bar(cc)}'
-            + (f'<br>Corroborated by: {cby}' if cby else "")
-            + (f'<br>Timeframe: {tf}' if tf else "")
-            + '</div></div>'
         )
-    html += '</div>'
 
-    # Open calls
-    if open_calls:
-        html += '<div class="sec"><h2>📌 Open Calls Tracker</h2>'
-        for c in open_calls[-12:]:
-            insts = ", ".join(c.get("instruments", []))
+    # ── Sector Dashboard (2 × 2 grid) ─────────────────────────────────────────
+    panels = [
+        ("ai_tech",                "AI / TECH",               "🤖"),
+        ("precious_metals",        "PRECIOUS METALS",          "🥇"),
+        ("industrial_commodities", "INDUSTRIAL COMMODITIES",   "⚙️"),
+        ("macro",                  "MACRO & OTHER",            "🌍"),
+    ]
+    html += (
+        f'<div style="background:#f7f8fc;padding:14px 16px;border-bottom:1px solid #eee">'
+        f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+        f'letter-spacing:.6px;color:#999;margin-bottom:10px">📊 Sector Dashboard</div>'
+        f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">'
+        # Row 1
+        f'<tr>'
+        + _sector_card(panels[0][1], panels[0][2], sectors_cfg.get(panels[0][0], {}), sector_insights[panels[0][0]])
+        + _sector_card(panels[1][1], panels[1][2], sectors_cfg.get(panels[1][0], {}), sector_insights[panels[1][0]])
+        + f'</tr>'
+        # Row 2
+        f'<tr>'
+        + _sector_card(panels[2][1], panels[2][2], sectors_cfg.get(panels[2][0], {}), sector_insights[panels[2][0]])
+        + _sector_card(panels[3][1], panels[3][2], sectors_cfg.get(panels[3][0], {}), sector_insights[panels[3][0]])
+        + f'</tr>'
+        f'</table></div>'
+    )
+
+    # ── Convergence Themes ────────────────────────────────────────────────────
+    if themes:
+        html += (
+            f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
+            f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:.6px;color:#999;margin-bottom:12px">🔁 Convergence Themes</div>'
+        )
+        for t in themes:
+            d  = t.get("direction", "neutral")
+            fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
+            srcs = ", ".join(t.get("supporting_sources", []))
+            strength = t.get("strength", "")
             html += (
-                f'<div class="call"><div class="cs">{c["summary"]}</div>'
-                f'<div class="cm">📅 {c["date_made"]} · ⏱ {c.get("timeframe","?")} · '
-                f'📰 {c["source"]}'
-                + (f' · 🎯 {insts}' if insts else "")
-                + f'</div></div>'
+                f'<div style="background:{bg};border-left:3px solid {fg};'
+                f'padding:9px 13px;margin-bottom:8px;border-radius:0 5px 5px 0">'
+                f'<div style="font-size:13px;font-weight:600;color:#222">'
+                f'<span style="background:{fg};color:#fff;font-size:9px;font-weight:700;'
+                f'padding:2px 6px;border-radius:2px;margin-right:7px;'
+                f'letter-spacing:.4px">{d.upper()}</span>{t["theme"]}</div>'
+                + (f'<div style="font-size:11px;color:#888;margin-top:3px">'
+                   f'{srcs}{(" · " + strength) if strength else ""}</div>' if srcs else "")
+                + '</div>'
             )
         html += '</div>'
 
+    # ── Open Calls Tracker ────────────────────────────────────────────────────
+    if open_calls:
+        html += (
+            f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
+            f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:.6px;color:#999;margin-bottom:12px">📌 Open Calls Tracker</div>'
+        )
+        for c in open_calls[-10:]:
+            insts = ", ".join(c.get("instruments", []))
+            d  = c.get("direction", "neutral")
+            fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
+            html += (
+                f'<div style="background:#fffbf0;border:1px solid #f0d878;'
+                f'border-radius:6px;padding:10px 14px;margin-bottom:8px">'
+                f'<span style="background:{bg};color:{fg};font-size:9px;font-weight:700;'
+                f'padding:1px 5px;border-radius:2px;margin-right:6px">{d.upper()}</span>'
+                f'<span style="font-size:13px;font-weight:500;color:#333">{c["summary"]}</span>'
+                f'<div style="font-size:11px;color:#aaa;margin-top:5px">'
+                f'📅 {c["date_made"]}&nbsp;&nbsp;·&nbsp;&nbsp;'
+                f'⏱ {c.get("timeframe","?")}&nbsp;&nbsp;·&nbsp;&nbsp;'
+                f'📰 {c["source"]}'
+                + (f'&nbsp;&nbsp;·&nbsp;&nbsp;🎯 {insts}' if insts else "")
+                + '</div></div>'
+            )
+        html += '</div>'
+
+    # ── Footer ────────────────────────────────────────────────────────────────
     html += (
-        f'</div>'  # card
-        f'<div class="ftr">Market Intelligence Monitor · '
-        f'{datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}</div>'
+        f'<div style="text-align:center;padding:14px;font-size:11px;color:#bbb;'
+        f'background:#f0f2f5;border-radius:0 0 10px 10px">'
+        f'Market Intelligence Monitor &nbsp;·&nbsp; '
+        f'{datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}'
+        f'</div>'
         f'</div></body></html>'
     )
     return html
@@ -796,6 +1031,18 @@ def run_daily():
         for a in articles:
             all_items.append(("article", a))
 
+    # Earnings & company news (keyword-filtered)
+    for source_name, feed_url in EARNINGS_SOURCES.items():
+        print(f"\n📈 Earnings · {source_name}")
+        articles = get_rss_articles(source_name, feed_url, days_back=1)
+        earnings = [
+            a for a in articles
+            if any(kw in a["title"].lower() for kw in _EARNINGS_KEYWORDS)
+        ]
+        print(f"   {len(earnings)} earnings item(s)")
+        for a in earnings:
+            all_items.append(("earnings", a))
+
     print(f"\n🧠 Extracting insights from {len(all_items)} item(s)…")
     all_insights: list[dict] = []
     for content_type, item in all_items:
@@ -812,12 +1059,18 @@ def run_daily():
 
     open_calls = update_open_calls(all_insights)
 
+    dashboard: dict = {}
+    if all_insights:
+        print(f"\n🗺  Synthesising dashboard…")
+        dashboard = synthesize_daily_dashboard(all_insights, convergence_themes)
+
     daily_data = {
         "date":              TODAY.isoformat(),
         "sources_processed": sorted({i["source"] for i in all_insights}),
         "insights":          all_insights,
         "convergence_themes": convergence_themes,
         "open_calls":        open_calls,
+        "dashboard":         dashboard,
     }
 
     out = DAILY_DIR / f"{TODAY.isoformat()}.json"
