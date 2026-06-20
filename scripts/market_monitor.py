@@ -758,14 +758,14 @@ def send_email(subject: str, html_body: str):
     msg["To"]      = RECIPIENT_EMAIL
     msg.attach(MIMEText(html_body, "html"))
     try:
-        # Port 465 with SSL is more reliable than 587/STARTTLS from cloud servers
-        with smtplib.SMTP_SSL("smtp.mail.yahoo.com", 465) as srv:
+        with smtplib.SMTP("smtp.gmail.com", 587) as srv:
+            srv.ehlo()
+            srv.starttls()
             srv.login(YAHOO_EMAIL, YAHOO_PASSWORD)
             srv.sendmail(YAHOO_EMAIL, RECIPIENT_EMAIL, msg.as_string())
         print(f"  ✅ Email sent: {subject}")
     except Exception as exc:
-        print(f"  ❌ Email failed: {exc}")
-        raise
+        print(f"  ❌ Email failed (non-fatal — data still saved): {exc}")
 
 # ── Daily Run ─────────────────────────────────────────────────────────────────
 
