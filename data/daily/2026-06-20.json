@@ -1,0 +1,287 @@
+{
+  "date": "2026-06-20",
+  "sources_processed": [
+    "Real Investment Advice"
+  ],
+  "insights": [
+    {
+      "summary": "The S&P 500 is in a constructive trend with the path of least resistance higher into quarter-end, supported by record retail buying flows and favorable July seasonal tailwinds, with 7,610 as the key level to clear.",
+      "asset_classes": [
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "direction": "bullish",
+      "timeframe": "next 2 weeks / quarter-end June 30",
+      "specificity": "high",
+      "key_reasoning": "Record retail cash equity volumes (60% above 2025 average, 9% above May's record in June), VIX falling to mid-16s despite hawkish Fed, and mechanical month/quarter-end pension rebalancing flows provide a near-term tailwind.",
+      "notable_data": "S&P 500 at 7,500.58; record at 7,609.78; 50-DMA support at 7,329; RSI 54.9; retail volumes 60% above 2025 average; largest single retail net buying day on record June 12",
+      "source_confidence": 0.62,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "content_title": "Kevin Warsh And The End Of The Fed\u2019s \u201cForward Guidance\u201d",
+      "content_date": "2026-06-20",
+      "content_type": "article",
+      "corroboration_confidence": 0.25,
+      "corroborated_by": [
+        "Real Investment Advice (index 6)"
+      ]
+    },
+    {
+      "summary": "Gold is expected to remain under pressure as a hawkish Fed under Kevin Warsh, a rising dollar, and higher real yields weigh on the metal.",
+      "asset_classes": [
+        "precious_metals"
+      ],
+      "instruments": [
+        "gold",
+        "GLD"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term, next few weeks",
+      "specificity": "medium",
+      "key_reasoning": "Warsh's hawkish debut and market pricing of a rate hike by October lifted the dollar index to ~100.7, its highest since May 2025, directly sapping gold's appeal alongside higher real yields.",
+      "notable_data": "Gold fell ~3.5% on the week to ~$4,175; dollar index at ~100.7; 2-year yield at 4.19%; 10-year at 4.46%",
+      "source_confidence": 0.6,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "content_title": "Kevin Warsh And The End Of The Fed\u2019s \u201cForward Guidance\u201d",
+      "content_date": "2026-06-20",
+      "content_type": "article",
+      "corroboration_confidence": 0.1,
+      "corroborated_by": []
+    },
+    {
+      "summary": "The US dollar is expected to strengthen further as markets price in a Fed rate hike by October 2026, with a hawkish Warsh removing the forward guidance that previously capped dollar upside.",
+      "asset_classes": [
+        "currencies"
+      ],
+      "instruments": [
+        "DXY",
+        "UUP"
+      ],
+      "direction": "bullish",
+      "timeframe": "by October 2026",
+      "specificity": "medium",
+      "key_reasoning": "Nine of eighteen Fed officials now pencil in a rate hike this year, and a hot PCE print on June 25 could fully price in that hike, pushing the dollar and front-end rates higher.",
+      "notable_data": "Dollar index at ~100.7 (highest since May 2025); market pricing a rate hike by October; 2-year yield at 4.19%",
+      "source_confidence": 0.65,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "content_title": "Kevin Warsh And The End Of The Fed\u2019s \u201cForward Guidance\u201d",
+      "content_date": "2026-06-20",
+      "content_type": "article",
+      "corroboration_confidence": 0.2,
+      "corroborated_by": [
+        "Real Investment Advice (index 3)"
+      ]
+    },
+    {
+      "summary": "Treasury yields, particularly the front end, face upside risk if May PCE comes in hot, as the market would fully price in a 2026 rate hike with no Fed guidance to soften the blow.",
+      "asset_classes": [
+        "bonds"
+      ],
+      "instruments": [
+        "TBT",
+        "SHY",
+        "2-year Treasury",
+        "10-year Treasury"
+      ],
+      "direction": "bearish",
+      "timeframe": "June 25 PCE release and near-term",
+      "specificity": "medium",
+      "key_reasoning": "Without Fed forward guidance, the PCE print drives rate expectations directly; Wells Fargo forecasts May headline PCE accelerating to 4.1% and core to 3.4%, which would harden the case for a hike and push yields higher.",
+      "notable_data": "April PCE: 3.8% headline, 3.3% core; Wells Fargo May PCE forecast: 4.1% headline, 3.4% core; 2-year at 4.19%; 10-year at 4.46%",
+      "source_confidence": 0.63,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "content_title": "Kevin Warsh And The End Of The Fed\u2019s \u201cForward Guidance\u201d",
+      "content_date": "2026-06-20",
+      "content_type": "article",
+      "corroboration_confidence": 0.2,
+      "corroborated_by": [
+        "Real Investment Advice (index 2)"
+      ]
+    },
+    {
+      "summary": "Energy equities are expected to underperform as the US-Iran deal removes geopolitical risk premium from crude and pump prices fall, even as crude holds near $75.70.",
+      "asset_classes": [
+        "energy"
+      ],
+      "instruments": [
+        "XLE",
+        "crude oil"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term",
+      "specificity": "medium",
+      "key_reasoning": "The US-Iran memorandum of understanding drained the last of the geopolitical premium from oil, with pump prices slipping below $4/gallon for the first time since March, weighing on energy sector equities.",
+      "notable_data": "Crude near $75.70; pump prices below $4/gallon for first time since March; energy was the clear sector laggard for the week",
+      "source_confidence": 0.55,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "content_title": "Kevin Warsh And The End Of The Fed\u2019s \u201cForward Guidance\u201d",
+      "content_date": "2026-06-20",
+      "content_type": "article",
+      "corroboration_confidence": 0.1,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Micron's earnings on June 25 will serve as the cleanest near-term signal for AI memory demand; any cautious guidance could undermine the parabolic rise in semiconductor sector leadership.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "MU",
+        "SOXX",
+        "SMH"
+      ],
+      "direction": "mixed",
+      "timeframe": "June 25 earnings report",
+      "specificity": "medium",
+      "key_reasoning": "Micron is identified as the purest proxy for AI memory demand, and a cautious read could destabilize the AI/chip sector that has been the primary market leadership group.",
+      "notable_data": "Micron reports Wednesday June 25; semiconductors were among week's top performers alongside technology",
+      "source_confidence": 0.52,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "content_title": "Kevin Warsh And The End Of The Fed\u2019s \u201cForward Guidance\u201d",
+      "content_date": "2026-06-20",
+      "content_type": "article",
+      "corroboration_confidence": 0.15,
+      "corroborated_by": [
+        "Real Investment Advice (index 6)"
+      ]
+    },
+    {
+      "summary": "Nasdaq and small-cap equities (Russell 2000) show relative strength and are positioned to continue leading if the constructive tape holds into quarter-end.",
+      "asset_classes": [
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "QQQ",
+        "IWM",
+        "Nasdaq Composite",
+        "Russell 2000"
+      ],
+      "direction": "bullish",
+      "timeframe": "next 1-2 weeks / quarter-end",
+      "specificity": "medium",
+      "key_reasoning": "Technology, semiconductors, and small caps absorbed the hawkish Fed shock and led weekly gains; record retail demand and a buy-the-dip reflex while VIX remains in mid-teens support continued leadership.",
+      "notable_data": "Nasdaq up 2.43% to 26,517.93; Russell 2000 up 1.22% to 2,979.77; VIX eased to mid-16s from above 18",
+      "source_confidence": 0.55,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "content_title": "Kevin Warsh And The End Of The Fed\u2019s \u201cForward Guidance\u201d",
+      "content_date": "2026-06-20",
+      "content_type": "article",
+      "corroboration_confidence": 0.25,
+      "corroborated_by": [
+        "Real Investment Advice (index 0)"
+      ]
+    }
+  ],
+  "convergence_themes": [
+    {
+      "theme": "Constructive broad equity tape into quarter-end with Nasdaq and small-cap leadership",
+      "direction": "bullish",
+      "asset_classes": [
+        "other",
+        "ai_tech"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 0)",
+        "Real Investment Advice (index 6)"
+      ],
+      "strength": "weak",
+      "note": "Two insights from the same source agree on bullish equities. Strength is capped at weak due to lack of independent source diversity."
+    },
+    {
+      "theme": "Hawkish Fed (Warsh) driving USD strength and Treasury yield upside risk",
+      "direction": "bearish",
+      "asset_classes": [
+        "currencies",
+        "bonds"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 2)",
+        "Real Investment Advice (index 3)"
+      ],
+      "strength": "weak",
+      "note": "USD bullish and bond bearish views share a common hawkish Fed catalyst. Both from same source; no independent corroboration elevates this beyond weak."
+    },
+    {
+      "theme": "Hawkish Fed and rising dollar weighing on gold",
+      "direction": "bearish",
+      "asset_classes": [
+        "precious_metals",
+        "currencies"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 1)",
+        "Real Investment Advice (index 2)"
+      ],
+      "strength": "weak",
+      "note": "Gold bearishness is consistent with the USD strength narrative. Single-source origin limits conviction."
+    }
+  ],
+  "open_calls": [
+    {
+      "summary": "Alphabet is the strongest AI infrastructure play among hyperscalers, with Google Cloud accelerating to 63% growth and a $460B backlog justifying its $180-190B capex commitment; the market has validated this with a 10% surge post-earnings.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bullish",
+      "instruments": [
+        "GOOGL",
+        "GOOG"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.72,
+      "status": "open"
+    },
+    {
+      "summary": "Meta is the most vulnerable of the four hyperscalers to continued market skepticism because it lacks a third-party cloud business to validate its massive capex commitment, making its AI spending thesis the weakest among peers.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "META"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.7,
+      "status": "open"
+    },
+    {
+      "summary": "The oil futures curve is pricing a sharp normalization from current ~$110 Brent to roughly $80 by December 2026 and ~$70 by late 2027, representing either a generational hedging opportunity for energy buyers or a violent correction risk if the backwardation proves wrong.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "BNO",
+        "USO",
+        "XLE"
+      ],
+      "timeframe": "December 2026 to late 2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.76,
+      "status": "open"
+    },
+    {
+      "summary": "The S&P 500 is in a constructive trend with the path of least resistance higher into quarter-end, supported by record retail buying flows and favorable July seasonal tailwinds, with 7,610 as the key level to clear.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "next 2 weeks / quarter-end June 30",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.62,
+      "status": "open"
+    }
+  ]
+}

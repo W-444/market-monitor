@@ -40,5 +40,19 @@
     "date_made": "2026-05-01",
     "source_confidence": 0.76,
     "status": "open"
+  },
+  {
+    "summary": "The S&P 500 is in a constructive trend with the path of least resistance higher into quarter-end, supported by record retail buying flows and favorable July seasonal tailwinds, with 7,610 as the key level to clear.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+    "direction": "bullish",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "next 2 weeks / quarter-end June 30",
+    "date_made": "2026-06-20",
+    "source_confidence": 0.62,
+    "status": "open"
   }
 ]
