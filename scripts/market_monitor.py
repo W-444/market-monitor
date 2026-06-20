@@ -27,6 +27,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from pathlib import Path
 
+import requests
 import feedparser
 import anthropic
 # Transcripts fetched via yt-dlp (see get_youtube_transcript)
@@ -52,6 +53,7 @@ DAILY_DIR.mkdir(parents=True, exist_ok=True)
 WEEKLY_DIR.mkdir(parents=True, exist_ok=True)
 
 MAX_TRANSCRIPT_CHARS = 14000   # ~3 500 Claude tokens
+FETCH_DAYS_BACK      = 3       # rolling fetch window (content deduped against prior runs)
 MAX_ARTICLE_CHARS    = 8000
 
 # ── Sources ───────────────────────────────────────────────────────────────────
@@ -93,6 +95,35 @@ EARNINGS_SOURCES = {
         "https://news.google.com/rss/search?q=Newmont+OR+Barrick+OR+Agnico+Eagle+OR+Wheaton+gold+miner+earnings&hl=en-US&gl=US&ceid=US:en",
     "Industrial Commodities Earnings":
         "https://news.google.com/rss/search?q=Freeport+OR+BHP+OR+Rio+Tinto+OR+Caterpillar+copper+commodity+earnings&hl=en-US&gl=US&ceid=US:en",
+}
+
+# Key instruments to display as a live price snapshot at the top of every email.
+# Tickers must be valid Yahoo Finance symbols.
+PRICE_WATCHLIST = [
+    # (symbol,  display name,          sector)
+    ("NVDA",  "Nvidia",               "ai_tech"),
+    ("QQQ",   "Nasdaq 100",           "ai_tech"),
+    ("SOXX",  "Semiconductors",       "ai_tech"),
+    ("GLD",   "Gold",                 "precious_metals"),
+    ("GDX",   "Gold Miners",          "precious_metals"),
+    ("SLV",   "Silver",               "precious_metals"),
+    ("COPX",  "Copper Miners",        "industrial_commodities"),
+    ("XME",   "Metals & Mining",      "industrial_commodities"),
+    ("TLT",   "20yr Bonds",           "macro"),
+    ("UUP",   "US Dollar",            "macro"),
+]
+
+# X / Twitter sources via RSSHub.  Works out-of-the-box with the public instance
+# (rsshub.app) or a self-hosted one — set RSSHUB_BASE in GitHub Secrets to switch.
+# Free self-hosting on Vercel: https://docs.rsshub.app/deploy/
+_RSSHUB_BASE = os.environ.get("RSSHUB_BASE", "https://rsshub.app")
+
+X_SOURCES = {
+    "Luke Gromen (X)":   f"{_RSSHUB_BASE}/twitter/user/LukeGromen",
+    "Jeff Snider (X)":   f"{_RSSHUB_BASE}/twitter/user/JeffSnider_AIP",
+    "Doomberg (X)":      f"{_RSSHUB_BASE}/twitter/user/doombergT",
+    "Lyn Alden (X)":     f"{_RSSHUB_BASE}/twitter/user/LynAldenContact",
+    "Adam Taggart (X)":  f"{_RSSHUB_BASE}/twitter/user/AdamTaggart_TTM",
 }
 
 # Keywords that flag an article as earnings-relevant (title match, case-insensitive)
@@ -237,6 +268,108 @@ def get_rss_articles(source_name: str, feed_url: str,
     except Exception as exc:
         print(f"  ⚠  RSS error ({source_name}): {exc}")
     return articles
+
+# ── Market Snapshot ───────────────────────────────────────────────────────────
+
+_YF_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
+    "Accept":     "application/json",
+}
+
+
+def get_market_snapshot() -> list[dict]:
+    """Fetch current price and 1-day % change for every symbol in PRICE_WATCHLIST."""
+    symbols = [sym for sym, *_ in PRICE_WATCHLIST]
+    url = (
+        "https://query1.finance.yahoo.com/v7/finance/quote"
+        f"?lang=en-US&region=US&symbols={','.join(symbols)}"
+    )
+    try:
+        resp = requests.get(url, headers=_YF_HEADERS, timeout=15)
+        quotes = {q["symbol"]: q for q in resp.json()["quoteResponse"]["result"]}
+        snap = []
+        for sym, name, sector in PRICE_WATCHLIST:
+            q = quotes.get(sym, {})
+            snap.append({
+                "symbol":     sym,
+                "name":       name,
+                "sector":     sector,
+                "price":      q.get("regularMarketPrice"),
+                "change_pct": q.get("regularMarketChangePercent"),
+            })
+        print(f"  📈 Price snapshot: {len([s for s in snap if s['price']])} ticker(s) fetched")
+        return snap
+    except Exception as exc:
+        print(f"  ⚠  Price snapshot failed: {exc}")
+        return []
+
+
+# ── Deduplication ────────────────────────────────────────────────────────────
+
+def get_already_processed_urls() -> set[str]:
+    """Return URLs already processed in the previous (FETCH_DAYS_BACK - 1) daily runs.
+
+    With a 72h fetch window we'd otherwise re-process yesterday's and the day
+    before's content every day.  Reading source_url from recent daily JSONs lets
+    us skip anything already seen — so each item is only processed once, on the
+    first day it falls inside the window.
+    """
+    seen: set[str] = set()
+    for i in range(1, FETCH_DAYS_BACK):          # e.g. 1 and 2 for a 3-day window
+        fp = DAILY_DIR / f"{(TODAY - datetime.timedelta(days=i)).isoformat()}.json"
+        if fp.exists():
+            try:
+                data = json.loads(fp.read_text())
+                for ins in data.get("insights", []):
+                    url = ins.get("source_url", "")
+                    if url:
+                        seen.add(url)
+            except Exception:
+                pass
+    return seen
+
+
+# ── Sentiment Trends ─────────────────────────────────────────────────────────
+
+def get_sentiment_trends(days: int = 14) -> dict[str, list[float | None]]:
+    """Read the last `days` daily JSONs (oldest→newest) and return per-sector scores.
+
+    Returns a dict like {"ai_tech": [None, 0.2, 0.4, ...], ...}.
+    None means no data that day (no content published / first run).
+    """
+    sectors = ("ai_tech", "precious_metals", "industrial_commodities", "macro")
+    trends: dict[str, list[float | None]] = {s: [] for s in sectors}
+    for i in range(days - 1, -1, -1):   # oldest first
+        fp = DAILY_DIR / f"{(TODAY - datetime.timedelta(days=i)).isoformat()}.json"
+        if fp.exists():
+            try:
+                dash = json.loads(fp.read_text()).get("dashboard", {}).get("sectors", {})
+                for s in sectors:
+                    score = dash.get(s, {}).get("sentiment_score")
+                    trends[s].append(float(score) if score is not None else None)
+            except Exception:
+                for s in sectors: trends[s].append(None)
+        else:
+            for s in sectors: trends[s].append(None)
+    return trends
+
+
+def _trend_indicator(scores: list[float | None]) -> str:
+    """Return a compact 'arrow + delta' string for the recent trend."""
+    valid = [(i, s) for i, s in enumerate(scores) if s is not None]
+    if len(valid) < 2:
+        return ""
+    first_score = valid[0][1]
+    last_score  = valid[-1][1]
+    delta = last_score - first_score
+    if   delta >  0.15: arrow, col = "↑", "#27ae60"
+    elif delta < -0.15: arrow, col = "↓", "#c0392b"
+    else:               arrow, col = "→", "#888"
+    return (
+        f'<span style="font-size:10px;color:{col};font-weight:600">'
+        f'{arrow} {delta:+.2f} (14d)</span>'
+    )
+
 
 # ── Insight Extraction ────────────────────────────────────────────────────────
 
@@ -515,32 +648,122 @@ def _save_open_calls(calls: list[dict]):
     CALLS_FILE.write_text(json.dumps(calls, indent=2))
 
 
-def update_open_calls(new_insights: list[dict]) -> list[dict]:
-    """Log high-specificity insights with timeframes; return all open calls."""
-    calls = _load_open_calls()
+def _parse_timeframe(timeframe: str, date_made: str) -> datetime.date | None:
+    """Best-effort parse of a timeframe string into an expected resolution date."""
+    tf   = timeframe.lower().strip()
+    base = datetime.date.fromisoformat(date_made)
+
+    # "X week(s) / month(s) / year(s)"
+    m = re.match(r"(\d+)\s*(week|month|year)", tf)
+    if m:
+        n, unit = int(m.group(1)), m.group(2)
+        if unit == "week":   return base + datetime.timedelta(weeks=n)
+        if unit == "month":  return base + datetime.timedelta(days=n * 30)
+        if unit == "year":   return base + datetime.timedelta(days=n * 365)
+
+    # "X-Y months" — use midpoint
+    m = re.match(r"(\d+)-(\d+)\s*month", tf)
+    if m:
+        mid = (int(m.group(1)) + int(m.group(2))) // 2
+        return base + datetime.timedelta(days=mid * 30)
+
+    # "Q1/Q2/Q3/Q4 YYYY"
+    m = re.match(r"q([1-4])\s*(\d{4})", tf)
+    if m:
+        q, yr = int(m.group(1)), int(m.group(2))
+        return datetime.date(yr, q * 3, 28)   # approximate end-of-quarter
+
+    # "end of YYYY" or bare "YYYY"
+    m = re.match(r"(?:end of\s*)?(\d{4})", tf)
+    if m:
+        return datetime.date(int(m.group(1)), 12, 31)
+
+    return None   # unparseable — call stays open indefinitely
+
+
+def update_open_calls(new_insights: list[dict],
+                      snapshot: list[dict] | None = None) -> list[dict]:
+    """Log high-specificity insights with timeframes; capture entry prices when available."""
+    calls    = _load_open_calls()
     existing = {c["summary"] for c in calls}
+    price_map = {s["symbol"].upper(): s["price"]
+                 for s in (snapshot or []) if s.get("price")}
 
     for ins in new_insights:
-        if (
-            ins.get("specificity") == "high"
-            and ins.get("timeframe")
-            and ins["summary"] not in existing
-        ):
+        if (ins.get("specificity") == "high"
+                and ins.get("timeframe")
+                and ins["summary"] not in existing):
+
+            # Capture current price for every instrument we track
+            entry_prices = {
+                instr.upper(): price_map[instr.upper()]
+                for instr in ins.get("instruments", [])
+                if instr.upper() in price_map
+            }
             calls.append({
-                "summary":           ins["summary"],
-                "source":            ins["source"],
-                "source_url":        ins.get("source_url", ""),
-                "direction":         ins["direction"],
-                "instruments":       ins.get("instruments", []),
-                "timeframe":         ins["timeframe"],
-                "date_made":         ins["content_date"],
-                "source_confidence": ins.get("source_confidence", 0.0),
-                "status":            "open",
+                "summary":            ins["summary"],
+                "source":             ins["source"],
+                "source_url":         ins.get("source_url", ""),
+                "direction":          ins["direction"],
+                "instruments":        ins.get("instruments", []),
+                "timeframe":          ins["timeframe"],
+                "date_made":          ins["content_date"],
+                "source_confidence":  ins.get("source_confidence", 0.0),
+                "status":             "open",
+                "entry_prices":       entry_prices,
             })
             existing.add(ins["summary"])
 
     _save_open_calls(calls)
     return [c for c in calls if c["status"] == "open"]
+
+
+def resolve_expired_calls(snapshot: list[dict]) -> list[dict]:
+    """Check open calls whose timeframe has elapsed; mark correct / incorrect.
+
+    Returns a list of calls newly resolved in this run (for the email digest).
+    """
+    calls     = _load_open_calls()
+    price_map = {s["symbol"].upper(): s["price"]
+                 for s in snapshot if s.get("price")}
+    resolved  = []
+
+    for call in calls:
+        if call.get("status") != "open":
+            continue
+        resolution_date = _parse_timeframe(
+            call.get("timeframe", ""), call.get("date_made", TODAY.isoformat())
+        )
+        if not resolution_date or TODAY < resolution_date:
+            continue    # not due yet
+
+        direction     = call.get("direction", "neutral")
+        entry_prices  = call.get("entry_prices", {})
+        verdict       = None
+
+        for instr in call.get("instruments", []):
+            sym     = instr.upper()
+            entry   = entry_prices.get(sym)
+            current = price_map.get(sym)
+            if entry and current:
+                change = (current - entry) / entry
+                correct = (change > 0.02 and direction == "bullish") or \
+                          (change < -0.02 and direction == "bearish")
+                verdict = "correct" if correct else "incorrect"
+                call["resolution_change_pct"] = round(change * 100, 1)
+                call["resolution_price"]      = current
+                break
+
+        if verdict:
+            call["status"]          = verdict
+            call["resolution_date"] = TODAY.isoformat()
+            resolved.append(call)
+        elif resolution_date < TODAY - datetime.timedelta(days=30):
+            # Timeframe long past but no price data — mark unresolvable
+            call["status"] = "unresolvable"
+
+    _save_open_calls(calls)
+    return resolved
 
 # ── Weekly Synthesis ──────────────────────────────────────────────────────────
 
@@ -679,7 +902,9 @@ def _rec_badge(rec: str) -> str:
     )
 
 
-def _sector_card(title: str, icon: str, sector_data: dict, sector_insights: list[dict]) -> str:
+def _sector_card(title: str, icon: str, sector_data: dict,
+                 sector_insights: list[dict],
+                 trend_scores: list[float | None] | None = None) -> str:
     """One sector panel (50% wide table cell)."""
     score = sector_data.get("sentiment_score", 0.0)
     rec   = sector_data.get("recommendation", "no signal")
@@ -689,8 +914,13 @@ def _sector_card(title: str, icon: str, sector_data: dict, sector_insights: list
         f'<td style="width:50%;vertical-align:top;padding:6px">'
         f'<div style="background:#fff;border-radius:8px;padding:14px 16px;'
         f'border:1px solid #e8e8e8">'
-        f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
-        f'letter-spacing:0.6px;color:#555;margin-bottom:10px">{icon}&nbsp;{title}</div>'
+        f'<div style="display:table;width:100%;margin-bottom:10px">'
+        f'<div style="display:table-cell;font-size:10px;font-weight:700;'
+        f'text-transform:uppercase;letter-spacing:0.6px;color:#555">{icon}&nbsp;{title}</div>'
+        + (f'<div style="display:table-cell;text-align:right">'
+           + _trend_indicator(trend_scores)
+           + '</div>' if trend_scores else "")
+        + '</div>'
         + _sentiment_gauge(score)
         + _rec_badge(rec)
     )
@@ -718,13 +948,49 @@ def _sector_card(title: str, icon: str, sector_data: dict, sector_insights: list
     return html
 
 
+def _price_snapshot_html(snapshot: list[dict]) -> str:
+    """Compact 2-column price table, colour-coded by 1-day change."""
+    if not snapshot:
+        return ""
+    rows = ""
+    for i in range(0, len(snapshot), 2):
+        row = ""
+        for item in snapshot[i:i+2]:
+            price  = item.get("price")
+            chg    = item.get("change_pct")
+            if price is None:
+                continue
+            chg_s  = f"{chg:+.1f}%" if chg is not None else "—"
+            chg_c  = "#27ae60" if (chg or 0) >= 0 else "#c0392b"
+            row += (
+                f'<td style="padding:5px 10px 5px 0;width:50%">'
+                f'<span style="font-size:11px;color:#555;font-weight:600">'
+                f'{item["symbol"]}</span> '
+                f'<span style="font-size:11px;color:#333">${price:,.2f}</span> '
+                f'<span style="font-size:10px;color:{chg_c};font-weight:600">{chg_s}</span>'
+                f'</td>'
+            )
+        if row:
+            rows += f'<tr>{row}</tr>'
+    return (
+        f'<div style="background:#f8f9fc;padding:14px 28px;border-bottom:1px solid #eee">'
+        f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+        f'letter-spacing:.6px;color:#999;margin-bottom:8px">📈 Market Snapshot</div>'
+        f'<table cellpadding="0" cellspacing="0" style="width:100%">{rows}</table>'
+        f'</div>'
+    )
+
+
 def format_daily_email(data: dict) -> str:
-    date_str   = data["date"]
-    insights   = data.get("insights", [])
-    themes     = data.get("convergence_themes", [])
-    open_calls = data.get("open_calls", [])
-    dashboard  = data.get("dashboard", {})
-    src_count  = len(set(i["source"] for i in insights))
+    date_str      = data["date"]
+    insights      = data.get("insights", [])
+    themes        = data.get("convergence_themes", [])
+    open_calls    = data.get("open_calls", [])
+    resolved      = data.get("resolved_calls", [])
+    dashboard     = data.get("dashboard", {})
+    snapshot      = data.get("snapshot", [])
+    trends        = data.get("sentiment_trends", {})
+    src_count     = len(set(i["source"] for i in insights))
 
     # ── Group insights by sector ──────────────────────────────────────────────
     sector_insights: dict[str, list[dict]] = {
@@ -771,6 +1037,9 @@ def format_daily_email(data: dict) -> str:
         f'</div>'
     )
 
+    # ── Price Snapshot ────────────────────────────────────────────────────────
+    html += _price_snapshot_html(snapshot)
+
     # ── Market Overview ───────────────────────────────────────────────────────
     if dashboard.get("market_summary"):
         html += (
@@ -796,13 +1065,13 @@ def format_daily_email(data: dict) -> str:
         f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">'
         # Row 1
         f'<tr>'
-        + _sector_card(panels[0][1], panels[0][2], sectors_cfg.get(panels[0][0], {}), sector_insights[panels[0][0]])
-        + _sector_card(panels[1][1], panels[1][2], sectors_cfg.get(panels[1][0], {}), sector_insights[panels[1][0]])
+        + _sector_card(panels[0][1], panels[0][2], sectors_cfg.get(panels[0][0], {}), sector_insights[panels[0][0]], trends.get(panels[0][0]))
+        + _sector_card(panels[1][1], panels[1][2], sectors_cfg.get(panels[1][0], {}), sector_insights[panels[1][0]], trends.get(panels[1][0]))
         + f'</tr>'
         # Row 2
         f'<tr>'
-        + _sector_card(panels[2][1], panels[2][2], sectors_cfg.get(panels[2][0], {}), sector_insights[panels[2][0]])
-        + _sector_card(panels[3][1], panels[3][2], sectors_cfg.get(panels[3][0], {}), sector_insights[panels[3][0]])
+        + _sector_card(panels[2][1], panels[2][2], sectors_cfg.get(panels[2][0], {}), sector_insights[panels[2][0]], trends.get(panels[2][0]))
+        + _sector_card(panels[3][1], panels[3][2], sectors_cfg.get(panels[3][0], {}), sector_insights[panels[3][0]], trends.get(panels[3][0]))
         + f'</tr>'
         f'</table></div>'
     )
@@ -829,6 +1098,31 @@ def format_daily_email(data: dict) -> str:
                 + (f'<div style="font-size:11px;color:#888;margin-top:3px">'
                    f'{srcs}{(" · " + strength) if strength else ""}</div>' if srcs else "")
                 + '</div>'
+            )
+        html += '</div>'
+
+    # ── Resolved Calls ────────────────────────────────────────────────────────
+    if resolved:
+        html += (
+            f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
+            f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:.6px;color:#999;margin-bottom:12px">🏁 Calls Resolved Today</div>'
+        )
+        for c in resolved:
+            verdict = c.get("status", "")
+            v_color = "#1a7a4a" if verdict == "correct" else "#b03030"
+            v_icon  = "✅" if verdict == "correct" else "❌"
+            chg     = c.get("resolution_change_pct")
+            chg_s   = f" ({chg:+.1f}%)" if chg is not None else ""
+            html += (
+                f'<div style="background:#f8f8f8;border-left:3px solid {v_color};'
+                f'padding:10px 14px;margin-bottom:8px;border-radius:0 6px 6px 0">'
+                f'<div style="font-size:12px;font-weight:600;color:{v_color};margin-bottom:3px">'
+                f'{v_icon} {verdict.upper()}{chg_s}</div>'
+                f'<div style="font-size:13px;color:#333">{c["summary"]}</div>'
+                f'<div style="font-size:11px;color:#aaa;margin-top:4px">'
+                f'📅 Made {c["date_made"]} · ⏱ {c.get("timeframe","?")} · 📰 {c["source"]}'
+                f'</div></div>'
             )
         html += '</div>'
 
@@ -984,6 +1278,126 @@ def format_weekly_email(data: dict, week_label: str) -> str:
     )
     return html
 
+# ── Convergence Alert ─────────────────────────────────────────────────────────
+
+_ALERTS_FILE = BASE_DIR / "data" / "convergence_alerts.json"
+
+
+def _load_alerted_dates() -> set[str]:
+    if _ALERTS_FILE.exists():
+        return set(json.loads(_ALERTS_FILE.read_text()))
+    return set()
+
+
+def _save_alerted_dates(dates: set[str]):
+    _ALERTS_FILE.write_text(json.dumps(sorted(dates)))
+
+
+def _format_alert_email(themes: list[dict], insights: list[dict]) -> str:
+    """Compact HTML email for a mid-day convergence alert."""
+    W = "max-width:620px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif"
+    html = (
+        f'<!DOCTYPE html><html><head><meta charset="utf-8"></head>'
+        f'<body style="background:#f0f2f5;margin:0;padding:20px">'
+        f'<div style="{W}">'
+        f'<div style="background:#b03030;border-radius:10px 10px 0 0;padding:18px 24px">'
+        f'<div style="color:#fff;font-size:18px;font-weight:700">🚨 Convergence Alert</div>'
+        f'<div style="color:rgba(255,255,255,.7);font-size:12px">'
+        f'{TODAY.strftime("%A %-d %B %Y")} · Multiple sources converging</div>'
+        f'</div>'
+        f'<div style="background:#fff;padding:18px 24px;border-bottom:1px solid #eee">'
+        f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+        f'letter-spacing:.6px;color:#999;margin-bottom:12px">Strong convergence themes</div>'
+    )
+    for t in themes:
+        d  = t.get("direction", "neutral")
+        fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
+        srcs = ", ".join(t.get("supporting_sources", []))
+        html += (
+            f'<div style="background:{bg};border-left:3px solid {fg};'
+            f'padding:9px 13px;margin-bottom:8px;border-radius:0 5px 5px 0">'
+            f'<div style="font-size:13px;font-weight:600;color:#222">'
+            f'<span style="background:{fg};color:#fff;font-size:9px;font-weight:700;'
+            f'padding:2px 6px;border-radius:2px;margin-right:7px">{d.upper()}</span>'
+            f'{t["theme"]}</div>'
+            f'<div style="font-size:11px;color:#888;margin-top:3px">{srcs}</div>'
+            f'</div>'
+        )
+    # Top corroborated insights behind these themes
+    top = sorted(
+        [i for i in insights if i.get("corroboration_confidence", 0) >= 0.5],
+        key=lambda x: x.get("corroboration_confidence", 0), reverse=True
+    )[:6]
+    if top:
+        html += (
+            '</div><div style="background:#fff;padding:18px 24px">'
+            '<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            'letter-spacing:.6px;color:#999;margin-bottom:12px">Supporting insights</div>'
+        )
+        for ins in top:
+            d  = ins.get("direction", "neutral")
+            fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
+            html += (
+                f'<div style="padding:8px 0;border-bottom:1px solid #f5f5f5">'
+                f'<span style="background:{bg};color:{fg};font-size:9px;font-weight:700;'
+                f'padding:1px 5px;border-radius:2px;margin-right:6px">{d.upper()}</span>'
+                f'<span style="font-size:11px;color:#555">{ins["source"]}</span>'
+                f'<div style="font-size:12px;color:#222;margin-top:3px">{ins["summary"]}</div>'
+                f'</div>'
+            )
+    html += (
+        f'</div>'
+        f'<div style="text-align:center;padding:12px;font-size:11px;color:#bbb">'
+        f'Market Intelligence Monitor · Convergence Alert · '
+        f'{datetime.datetime.now(datetime.timezone.utc).strftime("%H:%M UTC")}'
+        f'</div></div></body></html>'
+    )
+    return html
+
+
+def run_convergence_check():
+    """Mid-day check: if today's digest has strong convergence not yet alerted, email it."""
+    print(f"\n{'='*60}")
+    print(f"CONVERGENCE CHECK — {TODAY.isoformat()}")
+    print("=" * 60)
+
+    alerted = _load_alerted_dates()
+    if TODAY.isoformat() in alerted:
+        print("  ✓ Alert already sent today — skipping.")
+        return
+
+    fp = DAILY_DIR / f"{TODAY.isoformat()}.json"
+    if not fp.exists():
+        print("  ✗ No daily JSON found yet — daily run may not have completed.")
+        return
+
+    data    = json.loads(fp.read_text())
+    themes  = data.get("convergence_themes", [])
+    insights= data.get("insights", [])
+
+    # Alert only on strong convergence from ≥ 3 sources
+    strong = [
+        t for t in themes
+        if t.get("strength") == "strong"
+        and len(t.get("supporting_sources", [])) >= 3
+        and t.get("direction") in ("bullish", "bearish")
+    ]
+
+    if not strong:
+        print(f"  ✓ No strong convergence today ({len(themes)} theme(s), none qualifying).")
+        return
+
+    print(f"  🚨 {len(strong)} strong convergence theme(s) — sending alert…")
+    html = _format_alert_email(strong, insights)
+    send_email(
+        f"🚨 Convergence Alert — {TODAY.strftime('%a %-d %b')} · "
+        f"{len(strong)} strong signal(s)",
+        html,
+    )
+    alerted.add(TODAY.isoformat())
+    _save_alerted_dates(alerted)
+
+
 # ── Email Sending ─────────────────────────────────────────────────────────────
 
 def send_email(subject: str, html_body: str):
@@ -1011,12 +1425,22 @@ def run_daily():
 
     all_items: list[tuple[str, dict]] = []
 
+    # Fetch live prices first — used for snapshot email section and entry-price logging
+    print("\n💹 Fetching market snapshot…")
+    snapshot = get_market_snapshot()
+
+    # URLs already processed in the previous (FETCH_DAYS_BACK - 1) runs —
+    # skip these so each item is only ever extracted once despite the 72h window.
+    already_seen = get_already_processed_urls()
+    print(f"   ({len(already_seen)} URL(s) already processed in prior runs — will skip)")
+
     # YouTube
     for source_name, channel_url in YOUTUBE_CHANNELS.items():
         print(f"\n▶  YouTube · {source_name}")
-        videos = get_recent_youtube_videos(channel_url, source_name, days_back=1)
-        print(f"   {len(videos)} new video(s)")
-        for v in videos:
+        videos = get_recent_youtube_videos(channel_url, source_name, days_back=FETCH_DAYS_BACK)
+        new_videos = [v for v in videos if v["url"] not in already_seen]
+        print(f"   {len(new_videos)} new video(s) ({len(videos) - len(new_videos)} already processed)")
+        for v in new_videos:
             transcript = get_youtube_transcript(v["id"], v["title"])
             if transcript:
                 v["content"] = transcript
@@ -1026,18 +1450,29 @@ def run_daily():
     # RSS
     for source_name, feed_url in RSS_SOURCES.items():
         print(f"\n📰 RSS · {source_name}")
-        articles = get_rss_articles(source_name, feed_url, days_back=1)
-        print(f"   {len(articles)} new article(s)")
-        for a in articles:
+        articles = get_rss_articles(source_name, feed_url, days_back=FETCH_DAYS_BACK)
+        new_articles = [a for a in articles if a["url"] not in already_seen]
+        print(f"   {len(new_articles)} new article(s) ({len(articles) - len(new_articles)} already processed)")
+        for a in new_articles:
             all_items.append(("article", a))
+
+    # X / Twitter (via RSSHub — fails silently if instance is unavailable)
+    for source_name, feed_url in X_SOURCES.items():
+        print(f"\n🐦 X · {source_name}")
+        articles = get_rss_articles(source_name, feed_url, days_back=FETCH_DAYS_BACK)
+        new_articles = [a for a in articles if a["url"] not in already_seen]
+        print(f"   {len(new_articles)} new post(s) ({len(articles) - len(new_articles)} already processed)")
+        for a in new_articles:
+            all_items.append(("social", a))
 
     # Earnings & company news (keyword-filtered)
     for source_name, feed_url in EARNINGS_SOURCES.items():
         print(f"\n📈 Earnings · {source_name}")
-        articles = get_rss_articles(source_name, feed_url, days_back=1)
+        articles = get_rss_articles(source_name, feed_url, days_back=FETCH_DAYS_BACK)
         earnings = [
             a for a in articles
             if any(kw in a["title"].lower() for kw in _EARNINGS_KEYWORDS)
+            and a["url"] not in already_seen
         ]
         print(f"   {len(earnings)} earnings item(s)")
         for a in earnings:
@@ -1057,7 +1492,13 @@ def run_daily():
         print(f"\n🔍 Corroborating {len(all_insights)} insight(s)…")
         all_insights, convergence_themes = corroborate_insights(all_insights)
 
-    open_calls = update_open_calls(all_insights)
+    open_calls    = update_open_calls(all_insights, snapshot)
+    resolved      = resolve_expired_calls(snapshot)
+    if resolved:
+        print(f"\n🏁 {len(resolved)} open call(s) resolved today.")
+
+    print(f"\n📉 Reading sentiment trends…")
+    trends = get_sentiment_trends(days=14)
 
     dashboard: dict = {}
     if all_insights:
@@ -1065,12 +1506,15 @@ def run_daily():
         dashboard = synthesize_daily_dashboard(all_insights, convergence_themes)
 
     daily_data = {
-        "date":              TODAY.isoformat(),
-        "sources_processed": sorted({i["source"] for i in all_insights}),
-        "insights":          all_insights,
+        "date":               TODAY.isoformat(),
+        "sources_processed":  sorted({i["source"] for i in all_insights}),
+        "insights":           all_insights,
         "convergence_themes": convergence_themes,
-        "open_calls":        open_calls,
-        "dashboard":         dashboard,
+        "open_calls":         open_calls,
+        "resolved_calls":     resolved,
+        "dashboard":          dashboard,
+        "snapshot":           snapshot,
+        "sentiment_trends":   trends,
     }
 
     out = DAILY_DIR / f"{TODAY.isoformat()}.json"
@@ -1116,6 +1560,10 @@ def run_weekly():
 # ── Entry Point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    run_daily()
-    if IS_WEEKLY:
-        run_weekly()
+    import sys
+    if "--convergence-check" in sys.argv:
+        run_convergence_check()
+    else:
+        run_daily()
+        if IS_WEEKLY:
+            run_weekly()
