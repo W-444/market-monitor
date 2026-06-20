@@ -54,5 +54,21 @@
     "date_made": "2026-06-20",
     "source_confidence": 0.62,
     "status": "open"
+  },
+  {
+    "summary": "Front-end Treasury yields face upward pressure with the risk of accelerating higher if the May PCE print surprises to the upside, as the market would move to fully price the 2026 rate hike.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+    "direction": "bearish",
+    "instruments": [
+      "SHY",
+      "TBT",
+      "2-year Treasury",
+      "10-year Treasury"
+    ],
+    "timeframe": "near-term, around June 25 PCE release",
+    "date_made": "2026-06-20",
+    "source_confidence": 0.68,
+    "status": "open"
   }
 ]
