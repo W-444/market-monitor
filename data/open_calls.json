@@ -70,5 +70,21 @@
     "date_made": "2026-06-20",
     "source_confidence": 0.68,
     "status": "open"
+  },
+  {
+    "summary": "The Fed's updated dot plot signals a hawkish pivot with 9 of 19 participants forecasting a rate hike in 2026, pushing the year-end median Fed Funds rate projection to 3.8% from 3.4%.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "SHY",
+      "IEF"
+    ],
+    "timeframe": "year-end 2026",
+    "date_made": "2026-06-18",
+    "source_confidence": 0.75,
+    "status": "open",
+    "entry_prices": {}
   }
 ]

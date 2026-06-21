@@ -1,0 +1,138 @@
+{
+  "week_summary": "Markets continued climbing into quarter-end on strong retail flows and seasonal tailwinds, but the week was defined by two competing forces: a hawkish Fed pivot under Chair Warsh\u2014with 9 of 19 officials now projecting a 2026 rate hike\u2014and mounting warnings that AI/tech speculation has reached bubble-like extremes. Gold suffered its worst weekly drop in months (~3.5%) as a surging dollar and rising real yields pressured the metal. The macro backdrop remains non-recessionary with robust earnings and labor data, but elevated valuations and record retail inflows signal a classic late-cycle environment where near-term momentum coexists with deteriorating risk-reward on longer horizons.",
+  "dominant_themes": [
+    {
+      "theme": "Hawkish Fed regime change under Warsh driving USD strength and rising yields",
+      "direction": "bearish",
+      "frequency": "Both digest days (June 20 & 21); 5+ source references across Real Investment Advice articles"
+    },
+    {
+      "theme": "AI/Tech speculative excess and bubble-like froth",
+      "direction": "bearish",
+      "frequency": "Both digest days; 4 sources including Jeremy Grantham (Odd Lots) and multiple Real Investment Advice pieces"
+    },
+    {
+      "theme": "Late-cycle melt-up: near-term bullish momentum with eroding margin of safety",
+      "direction": "neutral",
+      "frequency": "Both digest days; 4+ source references"
+    },
+    {
+      "theme": "Extreme equity valuations portending weak long-term forward returns",
+      "direction": "bearish",
+      "frequency": "Primarily June 21 digest; 3 sources (Real Investment Advice, Odd Lots/Grantham)"
+    },
+    {
+      "theme": "Gold under bearish pressure from stronger dollar and rising real yields",
+      "direction": "bearish",
+      "frequency": "June 20 digest; 3 converging source references"
+    }
+  ],
+  "asset_class_outlook": {
+    "ai_tech": {
+      "consensus": "divided",
+      "summary": "Near-term momentum remains constructive\u2014Nasdaq led all indices up 2.43% on the week and absorbed the hawkish Fed shock\u2014but multiple sources flag bubble-like characteristics. Jeremy Grantham drew explicit dot-com parallels, ARKK saw a speculative inflow spike around the SpaceX IPO, and record retail volumes into high-growth tech are a classic late-stage warning signal. Micron earnings (June 25) are the next key catalyst for AI semiconductor demand. The setup favors traders riding momentum with tight stops, but medium-term (6-18 month) risk-reward is deteriorating."
+    },
+    "precious_metals": {
+      "consensus": "bearish",
+      "summary": "Gold fell roughly 3.5% on the week to ~$4,175 as the trifecta of a hawkish Warsh Fed, the dollar index surging to ~100.7 (highest since May 2025), and rising real yields (2-year at 4.19%, 10-year at 4.46%) pressured the metal. A hot May PCE print on June 25 would likely extend the selloff by hardening the rate hike case. No bullish counterarguments surfaced in the week's intelligence. Near-term bias is clearly lower unless inflation data disappoints."
+    },
+    "industrial_commodities": {
+      "consensus": "bearish",
+      "summary": "Limited direct coverage this week, but the available signal is negative. Crude oil settled near $75.70 with pump prices falling below $4/gallon for the first time since March, driven by the US-Iran deal removing geopolitical risk premium. Energy was the clear sector laggard despite a broadly risk-on tape. A stronger dollar adds additional headwind to commodity prices more broadly."
+    },
+    "macro": {
+      "consensus": "divided",
+      "summary": "The near-term macro picture is non-recessionary: Q1 earnings grew 27% with an 84% beat rate, unemployment sits at 4.3%, retail sales rose 4.9% YoY, and Atlanta Fed GDPNow tracks Q2 at 4.3% annualized. However, the Fed's hawkish pivot\u2014eliminating forward guidance and raising the year-end rate median to 3.8%\u2014introduces a tightening overhang. Record retail equity inflows ($150B+ in one month) and the highest average investor equity allocation since 1945 (55.1%) are classic late-cycle markers. The May PCE release on June 25 is the single most important near-term data point."
+    }
+  },
+  "notable_calls": [
+    {
+      "source": "Odd Lots (Jeremy Grantham)",
+      "summary": "Current markets exhibit significant frothiness and bubble-like characteristics, particularly around AI/Big Tech, analogous to the dot-com bubble; a 'watershed change' for Big Tech stocks may signal an inflection point.",
+      "direction": "bearish",
+      "timeframe": "unspecified (historically Grantham's calls play out over 1-3 years)",
+      "confidence": 0.65
+    },
+    {
+      "source": "Real Investment Advice",
+      "summary": "The Fed's updated dot plot signals a hawkish pivot with 9 of 19 participants forecasting a rate hike in 2026, pushing the year-end median Fed Funds rate projection to 3.8% from 3.4%. A hot May PCE print on June 25 could force markets to fully price the October 2026 hike.",
+      "direction": "bearish",
+      "timeframe": "through year-end 2026, key event June 25",
+      "confidence": 0.75
+    },
+    {
+      "source": "Real Investment Advice",
+      "summary": "Gold faces near-term bearish pressure from the hawkish Warsh Fed, stronger dollar (~100.7 DXY), and rising real yields; gold fell ~3.5% to ~$4,175 and further downside is likely if PCE surprises hot.",
+      "direction": "bearish",
+      "timeframe": "near-term, 1-2 weeks",
+      "confidence": 0.62
+    },
+    {
+      "source": "Real Investment Advice",
+      "summary": "U.S. equity markets are in a late-cycle melt-up with near-term momentum still constructive, but record retail inflows ($150B+ into equity index ETFs in one month) mark a classic 'Mania Phase' handoff\u2014stay invested but tighten discipline.",
+      "direction": "mixed",
+      "timeframe": "near-term weeks to months; bearish risk 6-18 months",
+      "confidence": 0.62
+    },
+    {
+      "source": "Real Investment Advice",
+      "summary": "Average investor allocation to equities hit 55.1%\u2014highest in 80 years of data since 1945\u2014portending weak 10-year forward returns, though timing of the inflection is highly uncertain.",
+      "direction": "bearish",
+      "timeframe": "10-year horizon",
+      "confidence": 0.6
+    }
+  ],
+  "source_divergences": [
+    {
+      "topic": "AI/Tech sector positioning: ride the momentum vs. de-risk",
+      "camp_a": {
+        "sources": [
+          "Real Investment Advice (market technicals)",
+          "Real Investment Advice (weekly review)"
+        ],
+        "view": "Near-term momentum is constructive\u2014Nasdaq up 2.43%, chips firming post-OPEX, S&P breadth healthy at 64% above 50-DMA. Stay long with tactical discipline into quarter-end."
+      },
+      "camp_b": {
+        "sources": [
+          "Odd Lots (Jeremy Grantham)",
+          "Real Investment Advice (bubble indicators)",
+          "Real Investment Advice (ARKK flows)"
+        ],
+        "view": "AI/tech is in a dot-com-like bubble with speculative retail flows into ARKK and record equity ETF inflows marking a classic mania-phase handoff. Medium-term forward returns will be poor."
+      }
+    },
+    {
+      "topic": "Consumer health and recession risk",
+      "camp_a": {
+        "sources": [
+          "Real Investment Advice (Michigan Sentiment analysis)"
+        ],
+        "view": "Michigan Consumer Sentiment at 44.8 (lowest since 1952) signals deep consumer distress and potential recession, supporting a bearish macro view."
+      },
+      "camp_b": {
+        "sources": [
+          "Real Investment Advice (Conference Board analysis)",
+          "Real Investment Advice (economic data review)"
+        ],
+        "view": "Michigan sentiment is structurally compromised by partisan bias and a 2024 methodology change; the Conference Board index at 92.8, strong labor data (unemployment 4.3%, claims 209K), and retail sales growth of 4.9% YoY paint a non-recessionary picture."
+      }
+    }
+  ],
+  "key_data_points": [
+    "S&P 500 at 7,500.58; record high 7,609.78; 50-DMA support at 7,329; 200-DMA at 6,887",
+    "Nasdaq Composite at 26,517.93, up 2.43% on the week \u2014 led all major indices",
+    "Fed dot plot: 9 of 19 officials project a 2026 rate hike; year-end median raised from 3.4% to 3.8%",
+    "2-year Treasury yield at 4.19%; 10-year at 4.46%",
+    "Dollar Index (DXY) at ~100.7 \u2014 highest since May 2025",
+    "Gold fell ~3.5% on the week to ~$4,175/oz",
+    "Crude oil near $75.70; pump prices below $4/gallon for first time since March 2026",
+    "Q1 2026 earnings growth: 27%; beat rate 84% vs. 78% five-year average; beats by 20.7%",
+    "Atlanta Fed GDPNow tracking Q2 2026 at 4.3% annualized",
+    "Net equity ETF inflows >$150B in past month \u2014 second-highest monthly haul on record",
+    "Average investor equity allocation: 55.1% (highest in dataset history back to 1945)",
+    "Wells Fargo May PCE forecast: headline 4.1% (from 3.8%), core 3.4% \u2014 release date June 25",
+    "Michigan Consumer Sentiment: 44.8 (lowest since 1952); Conference Board: 92.8",
+    "Unemployment rate: 4.3%; weekly jobless claims: 209,000; retail sales +4.9% YoY",
+    "Micron (MU) earnings report: June 25 \u2014 key test for AI semiconductor demand narrative"
+  ]
+}
