@@ -6,82 +6,83 @@
   ],
   "insights": [
     {
-      "summary": "The S&P 500 continues to climb higher despite historically low consumer sentiment, supported by strong Q1 earnings growth of 27%, an 84% beat rate, and robust labor market data \u2014 suggesting equities remain in a fundamentally supported uptrend.",
+      "summary": "The S&P 500 continues to climb higher despite record-low consumer sentiment, supported by strong Q1 earnings growth of 27%, high beat rates, and near-cycle-low jobless claims \u2014 suggesting the equity bull case remains intact.",
       "asset_classes": [
         "macro",
         "other"
       ],
       "instruments": [
         "SPY",
-        "SPX"
+        "S&P 500"
       ],
       "direction": "bullish",
-      "timeframe": "near-term, Q2 2026",
+      "timeframe": null,
       "specificity": "medium",
-      "key_reasoning": "Five major economic indicators (labor market, retail spending, corporate earnings, credit data, and GDP tracking) all align bullishly, while the lone bearish signal (Michigan sentiment) is likely distorted by partisan bias and methodology changes.",
-      "notable_data": "Q1 earnings growth 27%; 84% beat rate vs. 78% five-year average; earnings beating estimates by 20.7%; Atlanta Fed GDPNow tracking 4.3% annualized Q2 growth as of May 21; jobless claims 209,000; unemployment 4.3%; retail sales +4.9% YoY",
+      "key_reasoning": "Labor market, consumer spending, corporate earnings, and credit data all align bullishly while the sentiment survey divergence is largely explained by partisan bias and methodology changes, not economic deterioration.",
+      "notable_data": "Q1 earnings growth 27%; 84% beat rate vs. 5-year avg 78%; earnings beat estimates by 20.7%; jobless claims 209,000; unemployment 4.3%; retail sales +4.9% YoY; Atlanta Fed GDPNow tracking 4.3% annualized Q2 growth as of May 21",
       "source_confidence": 0.45,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/the-consumer-sentiment-disconnect-from-economic-reality/",
       "content_title": "The Consumer Sentiment Disconnect From Economic Reality",
       "content_date": "2026-06-19",
       "content_type": "article",
-      "corroboration_confidence": 0.55,
+      "corroboration_confidence": 0.72,
       "corroborated_by": [
         "Real Investment Advice (index 2)",
         "Real Investment Advice (index 4)"
       ]
     },
     {
-      "summary": "The University of Michigan Consumer Sentiment Index is structurally compromised by partisan bias and a 2024 methodology shift to online surveying, making it an unreliable bearish signal for market or economic positioning.",
+      "summary": "The University of Michigan Consumer Sentiment Index reading of 44.8 is likely overstating economic distress by approximately 8.9 points due to a 2024 methodology shift to online-only sampling, making it an unreliable bearish signal for markets.",
       "asset_classes": [
         "macro"
       ],
       "instruments": [],
       "direction": "neutral",
-      "timeframe": "ongoing",
+      "timeframe": null,
       "specificity": "medium",
-      "key_reasoning": "The online methodology switch lowered the index by an estimated 8.9 points (>11%), and partisan asymmetry accounts for roughly 30% of the post-2020 gap between predicted and observed sentiment, undermining its usefulness as a recession indicator.",
-      "notable_data": "Michigan sentiment at 44.8 in May 2026 \u2014 lowest since 1952; methodology change estimated to have depressed index by ~8.9 points; partisan gap expanded to 45 points under Biden; 51% of Democratic respondents reportedly below the all-time low reading of 47.6",
+      "key_reasoning": "Independent research by Cummings and Tedeschi estimates the switch from phone to online surveys structurally depressed the Michigan index by ~8.9 points (>11%), a finding supported by Morning Consult's online sentiment index not showing a comparable decline.",
+      "notable_data": "Michigan sentiment at 44.8 (lowest since 1952); estimated methodology drag of 8.9 points / 11%; Conference Board Consumer Confidence at 92.8 vs. 2009 trough of 25.3 and 2020 trough of 85.7",
       "source_confidence": 0.42,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/the-consumer-sentiment-disconnect-from-economic-reality/",
       "content_title": "The Consumer Sentiment Disconnect From Economic Reality",
       "content_date": "2026-06-19",
       "content_type": "article",
-      "corroboration_confidence": 0.15,
+      "corroboration_confidence": 0.25,
       "corroborated_by": [
-        "Real Investment Advice (index 2)"
+        "Real Investment Advice (index 0)"
       ]
     },
     {
-      "summary": "The Conference Board Consumer Confidence Index at 92.8 \u2014 well above its 2009 low of 25.3 and 2020 COVID low of 85.7 \u2014 presents a far less bearish consumer picture and supports a non-recessionary macro backdrop for risk assets.",
+      "summary": "With the Atlanta Fed GDPNow model tracking 4.3% annualized Q2 GDP growth, the macro backdrop supports continued strength in risk assets and broad equity ETFs through at least mid-2026.",
       "asset_classes": [
-        "macro"
+        "macro",
+        "other"
       ],
       "instruments": [
         "SPY",
         "QQQ"
       ],
       "direction": "bullish",
-      "timeframe": null,
+      "timeframe": "Q2 2026",
       "specificity": "medium",
-      "key_reasoning": "The Conference Board's labor-market-weighted methodology is less susceptible to partisan distortion and inflation perception bias, providing a more reliable read that contradicts the recession narrative implied by Michigan's print.",
-      "notable_data": "Conference Board index at 92.8 vs. 2009 trough of 25.3 and COVID trough of 85.7; Michigan's Current Economic Conditions component is 26% below its 2008 financial crisis trough",
-      "source_confidence": 0.38,
+      "key_reasoning": "GDP has run between +2% and +3% YoY for three consecutive years while the labor market and consumer spending remain robust, underpinning corporate earnings growth and equity market performance.",
+      "notable_data": "Atlanta Fed GDPNow Q2 estimate: 4.3% annualized as of May 21, 2026; GDP running +2% to +3% YoY for 3 years",
+      "source_confidence": 0.5,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/the-consumer-sentiment-disconnect-from-economic-reality/",
       "content_title": "The Consumer Sentiment Disconnect From Economic Reality",
       "content_date": "2026-06-19",
       "content_type": "article",
-      "corroboration_confidence": 0.5,
+      "corroboration_confidence": 0.72,
       "corroborated_by": [
         "Real Investment Advice (index 0)",
         "Real Investment Advice (index 4)"
       ]
     },
     {
-      "summary": "The Fed's updated dot plot signals a hawkish pivot with 9 of 19 participants forecasting a rate hike in 2026, pushing the year-end median Fed Funds rate projection to 3.8% from 3.4%.",
+      "summary": "The Fed's updated dot plot signals a hawkish shift, with markets increasingly pricing in a rate hike by year-end 2026, driven by upwardly revised inflation forecasts and the Fed's explicit pledge to deliver price stability.",
       "asset_classes": [
         "macro",
         "bonds"
@@ -89,14 +90,14 @@
       "instruments": [
         "TLT",
         "SHY",
-        "IEF"
+        "Fed Funds rate"
       ],
       "direction": "bearish",
       "timeframe": "year-end 2026",
       "specificity": "high",
-      "key_reasoning": "Core PCE revised up 0.6% for 2026 and 0.3% for 2027, with the Fed pledging price stability and no forward guidance \u2014 bond markets are pricing in at least one rate hike before year-end.",
-      "notable_data": "2026 year-end median Fed Funds projection raised from 3.4% to 3.8%; 2027 rate higher by 0.5%; Core PCE revised +0.6% for 2026 and +0.3% for 2027; current rate held at 3.50%-3.75%",
-      "source_confidence": 0.75,
+      "key_reasoning": "The 2026 median Fed Funds rate projection moved from 3.4% to 3.8%, 9 of 19 FOMC participants expect a hike this year, and Core PCE was revised up 0.6% for 2026, collectively pointing to tighter monetary conditions ahead.",
+      "notable_data": "Median 2026 Fed Funds projection raised from 3.4% to 3.8%; 2027 projection raised by 0.5%; Core PCE revised +0.6% for 2026 and +0.3% for 2027; current rate held at 3.50%-3.75%; 9 of 19 participants forecast a hike in 2026",
+      "source_confidence": 0.72,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
       "content_title": "Warsh And The FOMC Hold Steady",
@@ -106,48 +107,46 @@
       "corroborated_by": []
     },
     {
-      "summary": "U.S. equity markets are in a late-cycle melt-up phase with near-term momentum still constructive, but retail flow surge signals eroding margin of safety \u2014 stay invested but tighten discipline.",
+      "summary": "Near-term equity market setup favors continued risk-taking as the trend is intact, breadth is healthy, and the S&P 500 held key support at its 50-day moving average, though frothy retail flows reduce the margin of safety.",
       "asset_classes": [
-        "ai_tech",
         "other"
       ],
       "instruments": [
-        "SPY",
-        "QQQ",
-        "ARKK"
+        "SPX",
+        "S&P 500"
       ],
-      "direction": "mixed",
-      "timeframe": "near-term (weeks to months)",
+      "direction": "bullish",
+      "timeframe": "near-term",
       "specificity": "medium",
-      "key_reasoning": "S&P 500 held support at the 50-day MA (~7,267), RSI near 60, and 64% of S&P constituents above their 50-day MA indicate healthy breadth; however, record retail inflows ($150B+ into equity index ETFs in one month) mark a classic late-cycle 'Mania Phase' handoff.",
-      "notable_data": "S&P 500 closed June 15 at 7,554; 50-day MA near 7,267; 200-day MA at 6,887; RSI ~60; 64% of S&P constituents above 50-day MA; net equity ETF inflows >$150B in past month (second-highest monthly haul on record)",
-      "source_confidence": 0.62,
+      "key_reasoning": "The S&P 500 bounced off support at the 50-day moving average (~7,267) and closed well above the 200-day average (6,887); RSI near 60 and 64% of constituents above their 50-day lines indicate a healthy, non-overbought tape.",
+      "notable_data": "S&P 500 50-day MA support at ~7,267; close on June 15 at 7,554; 200-day MA at 6,887; RSI ~60; 64% of S&P constituents above their 50-day MA",
+      "source_confidence": 0.6,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
       "content_title": "Warsh And The FOMC Hold Steady",
       "content_date": "2026-06-18",
       "content_type": "article",
-      "corroboration_confidence": 0.45,
+      "corroboration_confidence": 0.72,
       "corroborated_by": [
-        "Real Investment Advice (index 5)",
-        "Real Investment Advice (index 6)",
-        "Odd Lots (index 7)"
+        "Real Investment Advice (index 0)",
+        "Real Investment Advice (index 2)"
       ]
     },
     {
-      "summary": "ARKK and AI/tech names saw a massive inflow spike tied to the SpaceX IPO, suggesting speculative retail enthusiasm is concentrated in high-growth/disruptive tech \u2014 a late-stage warning signal.",
+      "summary": "Massive retail inflows into equity ETFs and ARKK signal a late-cycle 'Mania Phase,' suggesting elevated long-term valuation risk and reduced margin of safety even if the near-term trend continues higher.",
       "asset_classes": [
-        "ai_tech"
+        "ai_tech",
+        "other"
       ],
       "instruments": [
         "ARKK"
       ],
-      "direction": "bearish",
-      "timeframe": "medium-term (6-18 months)",
+      "direction": "mixed",
+      "timeframe": "medium to long-term (implied 5-10 year horizon for valuation mean reversion)",
       "specificity": "medium",
-      "key_reasoning": "Retail-driven inflow spikes into speculative growth ETFs like ARKK historically coincide with the peak of the 'Awareness-to-Mania' bubble phase transition, reducing forward return expectations.",
-      "notable_data": "ARKK printed a massive inflow spike on the day of the SpaceX IPO; corporate bond ETF flows also hit a record high",
-      "source_confidence": 0.45,
+      "key_reasoning": "Net flows into the ~100 largest US equity index ETFs exceeded $150 billion over the past month (second-highest on record), and ARKK saw a massive inflow spike tied to the SpaceX IPO \u2014 classic late-cycle public participation that historically marks the handoff to the Mania Phase.",
+      "notable_data": "Net flows into ~100 largest US equity ETFs: >$150B in past month (second-highest monthly record); Average Investor Allocation to Equities at 52.9% (peak reading of 55.1% as of Dec 31, 2025, highest since 1945 dataset)",
+      "source_confidence": 0.5,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
       "content_title": "Warsh And The FOMC Hold Steady",
@@ -155,26 +154,24 @@
       "content_type": "article",
       "corroboration_confidence": 0.55,
       "corroborated_by": [
-        "Odd Lots (index 7)",
-        "Real Investment Advice (index 4)"
+        "Real Investment Advice (index 6)",
+        "Odd Lots (index 7)"
       ]
     },
     {
-      "summary": "Long-term equity valuations are at historically extreme levels \u2014 average investor allocation to equities hit 55.1% (highest since 1945 dataset) \u2014 portending weak 10-year forward returns, though the bullish trend may persist for years before correcting.",
+      "summary": "Extreme equity valuations as measured by average investor allocation to equities portend weak 10-year forward returns, though the timing of any correction remains highly uncertain and could be years away.",
       "asset_classes": [
         "other"
       ],
       "instruments": [
-        "SPY",
-        "IVV",
-        "VOO"
+        "S&P 500"
       ],
       "direction": "bearish",
       "timeframe": "10-year horizon",
       "specificity": "low",
-      "key_reasoning": "Average investor equity allocation at 55.1% \u2014 the highest in 80 years of data \u2014 has historically predicted below-average 10-year forward market returns, though timing of the inflection remains highly uncertain.",
-      "notable_data": "Average Investor Allocation to Equities: 55.1% as of Dec 31, 2025 (highest in dataset history back to 1945); updated recent quarter reading: 52.9%",
-      "source_confidence": 0.32,
+      "key_reasoning": "Average Investor Allocation to Equities at 52.9%-55.1% is the highest reading since 1945, a level historically associated with poor subsequent 10-year market returns, but the article acknowledges a recent disconnect from historical patterns.",
+      "notable_data": "Average Investor Allocation to Equities: 52.9% (recent), 55.1% peak as of Dec 31, 2025 \u2014 highest in dataset history going back to 1945",
+      "source_confidence": 0.3,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
       "content_title": "Warsh And The FOMC Hold Steady",
@@ -182,13 +179,12 @@
       "content_type": "article",
       "corroboration_confidence": 0.6,
       "corroborated_by": [
-        "Odd Lots (index 7)",
-        "Real Investment Advice (index 4)",
-        "Real Investment Advice (index 5)"
+        "Real Investment Advice (index 5)",
+        "Odd Lots (index 7)"
       ]
     },
     {
-      "summary": "Jeremy Grantham signals current markets exhibit significant frothiness and bubble-like characteristics, particularly around AI/Big Tech, drawing parallels to the dot-com bubble of the early 2000s.",
+      "summary": "Jeremy Grantham signals current markets exhibit significant frothiness and bubble-like characteristics, particularly in Big Tech/AI stocks, implying a bearish forward-looking view on these segments.",
       "asset_classes": [
         "ai_tech",
         "macro"
@@ -200,7 +196,7 @@
       "direction": "bearish",
       "timeframe": null,
       "specificity": "low",
-      "key_reasoning": "Grantham has a track record of identifying major bubbles and sees current AI excitement as analogous to dot-com mania; he notes a 'watershed change' for Big Tech stocks as a potential inflection signal.",
+      "key_reasoning": "Grantham draws parallels between current AI excitement and the dot-com bubble of the early 2000s, and notes a 'watershed change' for Big Tech stocks as a warning signal.",
       "notable_data": null,
       "source_confidence": 0.15,
       "source": "Odd Lots",
@@ -208,58 +204,16 @@
       "content_title": "Jeremy Grantham on How to Tell If a Bubble Is About to Burst",
       "content_date": "2026-06-18",
       "content_type": "article",
-      "corroboration_confidence": 0.65,
+      "corroboration_confidence": 0.55,
       "corroborated_by": [
-        "Real Investment Advice (index 6)",
         "Real Investment Advice (index 5)",
-        "Real Investment Advice (index 4)"
+        "Real Investment Advice (index 6)"
       ]
     }
   ],
   "convergence_themes": [
     {
-      "theme": "AI/Tech speculative excess and bubble-like froth",
-      "direction": "bearish",
-      "asset_classes": [
-        "ai_tech"
-      ],
-      "supporting_sources": [
-        "Odd Lots (Jeremy Grantham, index 7)",
-        "Real Investment Advice (index 5)",
-        "Real Investment Advice (index 4)"
-      ],
-      "strength": "strong"
-    },
-    {
-      "theme": "Extreme equity valuations portend weak long-term forward returns",
-      "direction": "bearish",
-      "asset_classes": [
-        "other",
-        "macro"
-      ],
-      "supporting_sources": [
-        "Real Investment Advice (index 6)",
-        "Odd Lots (Jeremy Grantham, index 7)",
-        "Real Investment Advice (index 4)"
-      ],
-      "strength": "strong"
-    },
-    {
-      "theme": "Late-cycle melt-up: near-term bullish momentum but rising risk signals",
-      "direction": "mixed",
-      "asset_classes": [
-        "other",
-        "macro"
-      ],
-      "supporting_sources": [
-        "Real Investment Advice (index 4)",
-        "Real Investment Advice (index 0)",
-        "Real Investment Advice (index 5)"
-      ],
-      "strength": "moderate"
-    },
-    {
-      "theme": "Macro backdrop remains non-recessionary / supportive for equities near-term",
+      "theme": "S&P 500 near-term bull case supported by strong earnings, macro data, and healthy technicals",
       "direction": "bullish",
       "asset_classes": [
         "macro",
@@ -267,7 +221,46 @@
       ],
       "supporting_sources": [
         "Real Investment Advice (index 0)",
-        "Real Investment Advice (index 2)"
+        "Real Investment Advice (index 2)",
+        "Real Investment Advice (index 4)"
+      ],
+      "strength": "strong"
+    },
+    {
+      "theme": "Elevated equity valuations, retail mania, and bubble-like characteristics signal long-term downside risk",
+      "direction": "bearish",
+      "asset_classes": [
+        "other",
+        "ai_tech"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 5)",
+        "Real Investment Advice (index 6)",
+        "Odd Lots (index 7)"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "theme": "Big Tech / AI segment showing frothy, bubble-like characteristics with elevated valuation risk",
+      "direction": "bearish",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 5)",
+        "Odd Lots (index 7)"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "theme": "Consumer sentiment data may be overstating economic weakness, reducing its reliability as a bearish market signal",
+      "direction": "neutral",
+      "asset_classes": [
+        "macro"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 1)",
+        "Real Investment Advice (index 0)"
       ],
       "strength": "weak"
     }
@@ -360,31 +353,47 @@
       "source_confidence": 0.75,
       "status": "open",
       "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish shift, with markets increasingly pricing in a rate hike by year-end 2026, driven by upwardly revised inflation forecasts and the Fed's explicit pledge to deliver price stability.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "Fed Funds rate"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
     }
   ],
   "resolved_calls": [],
   "dashboard": {
-    "market_summary": "U.S. equities remain in a near-term uptrend supported by strong Q1 earnings (27% growth, 84% beat rate), a resilient labor market, and a Conference Board confidence reading well above recessionary levels \u2014 but the weight of evidence is increasingly cautionary. AI/tech names face a strong convergent bearish signal, with Jeremy Grantham's dot-com bubble parallels reinforced by ARKK/SpaceX IPO-driven retail speculation surges and historically extreme equity allocations (55.1% \u2014 the highest since 1945). The Fed's updated dot plot, with 9 of 19 members penciling in a 2026 rate hike and a median year-end funds rate rising to 3.8%, introduces a meaningful headwind for long-duration growth assets. No direct signals were generated today for precious metals or industrial commodities, leaving those sectors data-absent in this session. The overall picture is a late-cycle melt-up: momentum is still constructive short-term, but the margin of safety is eroding rapidly.",
+    "market_summary": "The near-term equity backdrop remains constructive, with S&P 500 technicals holding key support, Q1 earnings growth of 27%, and the Atlanta Fed GDPNow tracking 4.3% Q2 GDP \u2014 all pointing to continued risk-on momentum. However, a meaningful tension exists between this strong near-term picture and elevated long-term risks: retail ETF inflows into speculative names, extreme investor equity allocations, and Grantham-style bubble warnings \u2014 particularly concentrated in Big Tech and AI \u2014 suggest the margin of safety is shrinking. A potential hawkish Fed pivot (rate hike priced in by end-2026) adds a bond-market headwind that could eventually pressure growth multiples. For investors in AI/tech, precious metals, and industrial commodities, today's data is sparse on metals and commodities specifically, but the macro strength mildly supports risk assets broadly while the froth warnings counsel position discipline in high-multiple AI/tech names.",
     "sectors": {
       "ai_tech": {
-        "sentiment_score": -0.55,
-        "recommendation": "sell",
-        "rationale": "Three converging bearish signals \u2014 Grantham's bubble warning, the ARKK/SpaceX retail inflow spike, and the late-cycle melt-up froth thesis \u2014 form a strong consensus that speculative excess in AI/tech is at a late-stage extreme. Near-term momentum may persist, but the risk/reward is sufficiently skewed to warrant reducing exposure or tightening stops rather than adding new positions."
+        "sentiment_score": -0.2,
+        "recommendation": "hold",
+        "rationale": "Multiple sources converge on bubble-like characteristics and frothy retail flows specifically in Big Tech and AI ETFs (e.g., ARKK), implying elevated valuation risk; near-term momentum is intact but the risk/reward is asymmetrically skewed for new buying. Existing positions can be held with tight risk management, but aggressive additions are not warranted."
       },
       "precious_metals": {
-        "sentiment_score": 0.0,
+        "sentiment_score": 0.1,
         "recommendation": "no signal",
-        "rationale": "No insights or convergence themes touching precious metals were present in today's data set; a directional call cannot be responsibly made without supporting evidence."
+        "rationale": "Today's insights contain no direct data on precious metals; however, the hawkish Fed dot-plot signal is a mild headwind for gold, while macro uncertainty and long-term valuation concerns provide a modest indirect tailwind. Insufficient sector-specific evidence to make a directional call today."
       },
       "industrial_commodities": {
-        "sentiment_score": 0.0,
+        "sentiment_score": 0.2,
         "recommendation": "no signal",
-        "rationale": "Today's sources provided no coverage of industrial commodities, leaving this sector without a data-supported signal for this session."
+        "rationale": "Strong Q2 GDP tracking (4.3% annualized) is broadly supportive of industrial demand, but today's insights provide no direct coverage of industrial commodities. The macro tailwind is noted, but sector-specific evidence is absent \u2014 no actionable signal can be responsibly issued."
       },
       "macro": {
-        "sentiment_score": -0.15,
+        "sentiment_score": 0.45,
         "recommendation": "hold",
-        "rationale": "The macro backdrop is genuinely mixed: non-recessionary fundamentals (earnings beats, Conference Board confidence, solid labor data) support staying invested, but the Fed's hawkish dot-plot revision and extreme long-term valuation signals argue against adding broad market risk here. A hold posture \u2014 remaining invested while tightening discipline \u2014 reflects the weak bullish near-term offset by strong structural caution."
+        "rationale": "The macro picture is net bullish in the near term \u2014 robust earnings, healthy jobless claims, strong GDP tracking, and intact market breadth outweigh the consumer sentiment scare, which appears methodologically distorted. The looming hawkish Fed shift and long-term valuation extremes prevent a full bull signal, making a hold-and-monitor posture most appropriate."
       }
     }
   },
@@ -404,7 +413,7 @@
       null,
       null,
       0.35,
-      null
+      -0.55
     ],
     "precious_metals": [
       null,
@@ -420,7 +429,7 @@
       null,
       null,
       -0.55,
-      null
+      0.0
     ],
     "industrial_commodities": [
       null,
@@ -436,7 +445,7 @@
       null,
       null,
       0.0,
-      null
+      0.0
     ],
     "macro": [
       null,
@@ -452,7 +461,7 @@
       null,
       null,
       0.1,
-      null
+      -0.15
     ]
   }
 }

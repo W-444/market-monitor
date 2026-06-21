@@ -86,5 +86,21 @@
     "source_confidence": 0.75,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "The Fed's updated dot plot signals a hawkish shift, with markets increasingly pricing in a rate hike by year-end 2026, driven by upwardly revised inflation forecasts and the Fed's explicit pledge to deliver price stability.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "SHY",
+      "Fed Funds rate"
+    ],
+    "timeframe": "year-end 2026",
+    "date_made": "2026-06-18",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
