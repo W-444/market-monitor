@@ -1329,106 +1329,152 @@ def format_daily_email(data: dict) -> str:
 
 
 def _conf_bar(score: float) -> str:
-    """Monospace confidence bar used in the weekly email."""
+    """Monospace confidence bar — kept for any legacy usage."""
     filled = round(min(max(score, 0), 1) * 10)
     return "█" * filled + "░" * (10 - filled) + f"  {score:.0%}"
 
 
-# Base CSS shared by the weekly email (daily email uses inline styles instead)
-_EMAIL_CSS = """
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
-     background:#f0f2f5;margin:0;padding:20px}
-.wrap{max-width:700px;margin:0 auto}
-.card{background:#fff;border-radius:10px;overflow:hidden;margin-bottom:16px;
-      box-shadow:0 1px 3px rgba(0,0,0,.08)}
-.hdr{background:#1a1a2e;color:#fff;padding:22px 28px}
-.hdr h1{margin:0;font-size:20px;font-weight:600}
-.hdr p{margin:4px 0 0;opacity:.65;font-size:12px}
-.sec{padding:18px 28px;border-bottom:1px solid #f0f0f0}
-.sec:last-child{border-bottom:none}
-.sec h2{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#999;margin:0 0 12px}
-.ins{padding:13px 0;border-bottom:1px solid #f5f5f5}
-.ins:last-child{border-bottom:none}
-.tag{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:500}
-.bullish{background:#e6f9f0;color:#1a7a4a}
-.bearish{background:#fef0f0;color:#b03030}
-.neutral{background:#eef2ff;color:#3050a0}
-.mixed{background:#fffbe6;color:#7a5a00}
-.src{background:#f0f0f0;color:#555}
-.ins .body{font-size:13px;line-height:1.55;color:#222;margin-bottom:5px}
-.ins .reason{font-size:12px;color:#666;line-height:1.4}
-.theme{background:#f7f8ff;border-left:3px solid #4a6cf7;
-       padding:9px 13px;margin-bottom:9px;border-radius:0 5px 5px 0}
-.theme b{font-size:13px}
-.theme small{display:block;font-size:11px;color:#999;margin-top:3px}
-"""
+def _conf_bar_html(score: float) -> str:
+    """Visual confidence bar using inline table cells (email-safe, no CSS classes)."""
+    filled = round(min(max(score, 0), 1) * 10)
+    # Blue gradient for confidence (neutral colour, not bullish/bearish)
+    cells = "".join(
+        f'<td style="background:{"#3b82f6" if i < filled else "#e5e7eb"};'
+        f'height:7px;padding:0;border-right:2px solid #fff"></td>'
+        for i in range(10)
+    )
+    return (
+        f'<div style="margin-top:8px">'
+        f'<span style="font-size:9px;font-weight:700;text-transform:uppercase;'
+        f'letter-spacing:.5px;color:#aaa">Confidence&nbsp;&nbsp;</span>'
+        f'<table cellpadding="0" cellspacing="0" '
+        f'style="width:90px;border-collapse:collapse;border-radius:3px;'
+        f'overflow:hidden;display:inline-table;vertical-align:middle">'
+        f'<tr>{cells}</tr></table>'
+        f'<span style="font-size:11px;color:#333;font-weight:700;margin-left:8px">'
+        f'{score:.0%}</span>'
+        f'</div>'
+    )
+
+
+# _EMAIL_CSS kept as an empty stub — weekly email now uses inline styles throughout
+_EMAIL_CSS = ""
 
 
 def format_weekly_email(data: dict, week_label: str) -> str:
     if not data:
         return (
-            f"<html><body><p>Weekly synthesis unavailable for {week_label}.</p>"
-            f"</body></html>"
+            f'<!DOCTYPE html><html><body style="font-family:sans-serif;padding:20px">'
+            f'<p>Weekly synthesis unavailable for {week_label}.</p></body></html>'
         )
+
+    W = ("max-width:700px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,"
+         "'Segoe UI',Arial,sans-serif;border-radius:10px;overflow:hidden;"
+         "box-shadow:0 2px 8px rgba(0,0,0,.15)")
 
     html = (
-        f'<!DOCTYPE html><html><head><meta charset="utf-8">'
-        f'<style>{_EMAIL_CSS}'
-        '.grid{{display:grid;grid-template-columns:1fr 1fr;gap:12px}}'
-        '.oc{{background:#f8f9fa;border-radius:6px;padding:14px}}'
-        '.oc .asset{{font-weight:600;font-size:12px;margin-bottom:5px;'
-        '           text-transform:uppercase;letter-spacing:.4px;color:#555}}'
-        '.oc .view{{font-size:13px;color:#333;line-height:1.4}}'
-        '.oc .cons{{display:inline-block;margin-bottom:6px}}'
-        '</style></head><body><div class="wrap">'
-        f'<div class="card"><div class="hdr">'
-        f'<h1>📈 Weekly Market Intelligence Report</h1>'
-        f'<p>{week_label}</p></div>'
+        f'<!DOCTYPE html><html><head><meta charset="utf-8"></head>'
+        f'<body style="background:#0e0e1e;margin:0;padding:24px">'
+        f'<div style="{W}">'
+
+        # ── Header ────────────────────────────────────────────────────────────
+        f'<div style="background:#1a1a2e;padding:22px 28px">'
+        f'<div style="color:#fff;font-size:22px;font-weight:700;letter-spacing:-.3px">'
+        f'📈 Weekly Market Intelligence Report</div>'
+        f'<div style="color:rgba(255,255,255,.5);font-size:12px;margin-top:5px">'
+        f'{week_label}</div>'
+        f'</div>'
     )
 
+    # ── Week in Brief ─────────────────────────────────────────────────────────
     if data.get("week_summary"):
         html += (
-            f'<div class="sec"><h2>🗺 Week in Brief</h2>'
-            f'<p style="font-size:14px;line-height:1.65;color:#333;margin:0">'
-            f'{data["week_summary"]}</p></div>'
+            f'<div style="background:#fff;padding:20px 28px;border-bottom:1px solid #eee">'
+            f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:.7px;color:#aaa;margin-bottom:12px">🗺 WEEK IN BRIEF</div>'
+            f'<div style="font-size:14px;line-height:1.7;color:#1a1a1a">'
+            f'{data["week_summary"]}</div>'
+            f'</div>'
         )
 
+    # ── Asset Class Outlook ───────────────────────────────────────────────────
     if data.get("asset_class_outlook"):
-        html += '<div class="sec"><h2>📊 Asset Class Outlook</h2><div class="grid">'
+        html += (
+            f'<div style="background:#f4f6fb;padding:16px 20px 8px 20px;'
+            f'border-bottom:1px solid #e4e6eb">'
+            f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:.7px;color:#aaa;margin-bottom:14px">📊 ASSET CLASS OUTLOOK</div>'
+        )
         for asset, details in data["asset_class_outlook"].items():
             if isinstance(details, dict):
-                cons = details.get("consensus", "")
+                cons = details.get("consensus", "neutral").lower()
                 view = details.get("summary", "")
             else:
-                cons, view = "", str(details)
+                cons, view = "neutral", str(details)
             label = asset.replace("_", " ").title()
-            d_class = cons if cons in ("bullish","bearish","neutral","mixed") else "neutral"
+            fg, bg = _DIR_COLORS.get(cons, ("#555", "#f5f5f5"))
+            # Accent bar colour
+            if   cons == "bullish": accent = "#1e8449"
+            elif cons == "bearish": accent = "#c0392b"
+            elif cons == "mixed":   accent = "#d4ac0d"
+            else:                   accent = "#95a5a6"
             html += (
-                f'<div class="oc"><div class="asset">{label}</div>'
-                + (f'<span class="tag {d_class} cons">{cons.upper()}</span>' if cons else "")
-                + f'<div class="view">{view}</div></div>'
+                f'<div style="background:#fff;border-radius:8px;margin-bottom:10px;'
+                f'border:1px solid #e0e0e0;border-left:5px solid {accent};padding:14px 18px">'
+                f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">'
+                f'<tr>'
+                f'<td style="font-size:12px;font-weight:700;text-transform:uppercase;'
+                f'letter-spacing:.5px;color:#333">{label}</td>'
+                f'<td style="text-align:right">'
+                f'<span style="background:{fg};color:#fff;font-size:10px;font-weight:700;'
+                f'padding:3px 10px;border-radius:3px;letter-spacing:.5px">{cons.upper()}</span>'
+                f'</td>'
+                f'</tr></table>'
+                + (f'<div style="font-size:13px;color:#444;line-height:1.55;margin-top:8px">'
+                   f'{view}</div>' if view else "")
+                + f'</div>'
             )
-        html += '</div></div>'
+        html += '</div>'
 
+    # ── Dominant Themes ───────────────────────────────────────────────────────
     if data.get("dominant_themes"):
-        html += '<div class="sec"><h2>🔁 Dominant Themes This Week</h2>'
+        html += (
+            f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
+            f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:.7px;color:#aaa;margin-bottom:12px">🔁 DOMINANT THEMES THIS WEEK</div>'
+        )
         for t in data["dominant_themes"]:
             if isinstance(t, dict):
                 freq = t.get("frequency", "")
-                d = t.get("direction", "neutral")
+                d    = t.get("direction", "neutral")
+                fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
                 html += (
-                    f'<div class="theme">'
-                    f'<b><span class="tag {d}" style="margin-right:7px">{d.upper()}</span>'
-                    f'{t.get("theme","")}</b>'
-                    + (f'<small>{freq}</small>' if freq else "")
+                    f'<div style="background:{bg};border-left:4px solid {fg};'
+                    f'padding:10px 14px;margin-bottom:9px;border-radius:0 6px 6px 0">'
+                    f'<div style="font-size:13px;font-weight:600;color:#111">'
+                    f'<span style="background:{fg};color:#fff;font-size:9px;font-weight:700;'
+                    f'padding:2px 7px;border-radius:2px;margin-right:8px;letter-spacing:.5px">'
+                    f'{d.upper()}</span>{t.get("theme","")}</div>'
+                    + (f'<div style="font-size:11px;color:#888;margin-top:4px">{freq}</div>'
+                       if freq else "")
                     + '</div>'
                 )
             else:
-                html += f'<div class="theme"><b>{t}</b></div>'
+                html += (
+                    f'<div style="background:#f7f8ff;border-left:4px solid #4a6cf7;'
+                    f'padding:10px 14px;margin-bottom:9px;border-radius:0 6px 6px 0">'
+                    f'<div style="font-size:13px;font-weight:600;color:#111">{t}</div>'
+                    f'</div>'
+                )
         html += '</div>'
 
+    # ── Notable Calls ─────────────────────────────────────────────────────────
     if data.get("notable_calls"):
-        html += '<div class="sec"><h2>💡 Notable Calls This Week</h2>'
+        html += (
+            f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
+            f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:.7px;color:#aaa;margin-bottom:12px">💡 NOTABLE CALLS THIS WEEK</div>'
+        )
         for c in data["notable_calls"]:
             if isinstance(c, dict):
                 src  = c.get("source", "")
@@ -1436,45 +1482,90 @@ def format_weekly_email(data: dict, week_label: str) -> str:
                 tf   = c.get("timeframe", "")
                 d    = c.get("direction", "neutral")
                 conf = c.get("confidence", 0.0)
+                fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
                 html += (
-                    f'<div class="ins"><div class="tags">'
-                    f'<span class="tag {d}">{d.upper()}</span>'
-                    f'<span class="tag src">{src}</span></div>'
-                    f'<div class="body">{summ}</div>'
-                    + (f'<div class="reason">Timeframe: {tf}</div>' if tf else "")
-                    + f'<div class="conf">Confidence {_conf_bar(conf)}</div>'
+                    f'<div style="border-top:1px solid #f0f0f0;padding:12px 0">'
+                    f'<div style="margin-bottom:7px">'
+                    f'<span style="background:{fg};color:#fff;font-size:9px;font-weight:700;'
+                    f'padding:2px 8px;border-radius:2px;letter-spacing:.5px">{d.upper()}</span>'
+                    f'&nbsp;<span style="background:#f0f0f0;color:#555;font-size:9px;'
+                    f'font-weight:600;padding:2px 8px;border-radius:2px">{src}</span>'
                     f'</div>'
+                    f'<div style="font-size:13px;line-height:1.55;color:#222;margin-bottom:5px">'
+                    f'{summ}</div>'
+                    + (f'<div style="font-size:11px;color:#888">⏱ Timeframe: {tf}</div>'
+                       if tf else "")
+                    + _conf_bar_html(conf)
+                    + f'</div>'
                 )
             else:
-                html += f'<div class="ins"><div class="body">{c}</div></div>'
+                html += (
+                    f'<div style="border-top:1px solid #f0f0f0;padding:12px 0;'
+                    f'font-size:13px;color:#222">{c}</div>'
+                )
         html += '</div>'
 
+    # ── Notable Divergences ───────────────────────────────────────────────────
     if data.get("source_divergences"):
-        html += '<div class="sec"><h2>⚖️ Notable Divergences</h2>'
+        html += (
+            f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
+            f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:.7px;color:#aaa;margin-bottom:12px">⚖️ NOTABLE DIVERGENCES</div>'
+        )
         for div in data["source_divergences"]:
             if isinstance(div, dict):
                 ca = div.get("camp_a", {})
                 cb = div.get("camp_b", {})
                 html += (
-                    f'<div class="ins">'
-                    f'<div class="body"><strong>{div.get("topic","")}</strong></div>'
-                    f'<div class="reason">'
-                    f'<em>{", ".join(ca.get("sources",[]))}</em>: {ca.get("view","")}<br>'
-                    f'<em>{", ".join(cb.get("sources",[]))}</em>: {cb.get("view","")}'
-                    f'</div></div>'
+                    f'<div style="background:#f9f9f9;border-radius:6px;'
+                    f'padding:12px 16px;margin-bottom:10px;border:1px solid #ebebeb">'
+                    f'<div style="font-size:13px;font-weight:700;color:#111;margin-bottom:10px">'
+                    f'{div.get("topic","")}</div>'
+                    f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">'
+                    f'<tr style="vertical-align:top">'
+                    # Camp A
+                    f'<td style="width:50%;padding-right:10px">'
+                    f'<div style="font-size:9px;font-weight:700;text-transform:uppercase;'
+                    f'letter-spacing:.5px;color:#3b82f6;margin-bottom:4px">'
+                    f'{", ".join(ca.get("sources",[]))}</div>'
+                    f'<div style="font-size:12px;color:#333;line-height:1.45">{ca.get("view","")}</div>'
+                    f'</td>'
+                    # Divider
+                    f'<td style="width:1px;background:#e0e0e0;padding:0"></td>'
+                    # Camp B
+                    f'<td style="width:50%;padding-left:10px">'
+                    f'<div style="font-size:9px;font-weight:700;text-transform:uppercase;'
+                    f'letter-spacing:.5px;color:#e67e22;margin-bottom:4px">'
+                    f'{", ".join(cb.get("sources",[]))}</div>'
+                    f'<div style="font-size:12px;color:#333;line-height:1.45">{cb.get("view","")}</div>'
+                    f'</td>'
+                    f'</tr></table>'
+                    f'</div>'
                 )
         html += '</div>'
 
+    # ── Key Data Points ───────────────────────────────────────────────────────
     if data.get("key_data_points"):
-        html += '<div class="sec"><h2>📐 Key Data Points</h2>'
+        html += (
+            f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
+            f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+            f'letter-spacing:.7px;color:#aaa;margin-bottom:12px">📐 KEY DATA POINTS</div>'
+        )
         for dp in data["key_data_points"]:
-            html += f'<div class="ins"><div class="body">• {dp}</div></div>'
+            html += (
+                f'<div style="padding:5px 0 5px 0;border-bottom:1px solid #f8f8f8;'
+                f'font-size:13px;color:#222;line-height:1.5">'
+                f'<span style="color:#3b82f6;font-weight:700;margin-right:6px">›</span>{dp}</div>'
+            )
         html += '</div>'
 
+    # ── Footer ────────────────────────────────────────────────────────────────
     html += (
-        '</div>'  # card
-        f'<div class="ftr">Market Intelligence Monitor · Weekly · {week_label}</div>'
-        '</div></body></html>'
+        f'<div style="background:#1a1a2e;text-align:center;padding:14px 20px;'
+        f'font-size:11px;color:rgba(255,255,255,.35)">'
+        f'Market Intelligence Monitor &nbsp;·&nbsp; Weekly &nbsp;·&nbsp; {week_label}'
+        f'</div>'
+        f'</div></body></html>'
     )
     return html
 
@@ -1625,12 +1716,9 @@ def run_daily():
 
     all_items: list[tuple[str, dict]] = []
 
-    # Fetch live prices first — used for snapshot email section and entry-price logging
     print("\n💹 Fetching market snapshot…")
     snapshot = get_market_snapshot()
 
-    # URLs already processed in the previous (FETCH_DAYS_BACK - 1) runs —
-    # skip these so each item is only ever extracted once despite the 72h window.
     already_seen = get_already_processed_urls()
     print(f"   ({len(already_seen)} URL(s) already processed in prior runs — will skip)")
 
@@ -1692,8 +1780,8 @@ def run_daily():
         print(f"\n🔍 Corroborating {len(all_insights)} insight(s)…")
         all_insights, convergence_themes = corroborate_insights(all_insights)
 
-    open_calls    = update_open_calls(all_insights, snapshot)
-    resolved      = resolve_expired_calls(snapshot)
+    open_calls = update_open_calls(all_insights, snapshot)
+    resolved   = resolve_expired_calls(snapshot)
     if resolved:
         print(f"\n🏁 {len(resolved)} open call(s) resolved today.")
 
@@ -1722,8 +1810,8 @@ def run_daily():
     print(f"\n💾 Saved → {out}")
 
     if not all_insights:
-        subject  = f"📊 Market Digest — {TODAY.strftime('%a %-d %b')} · No new content today"
-        html     = (
+        subject = f"📊 Market Digest — {TODAY.strftime('%a %-d %b')} · No new content today"
+        html = (
             "<html><body style='font-family:sans-serif;padding:24px'>"
             f"<h2>Market Digest — {TODAY.isoformat()}</h2>"
             "<p>No new content was published today by monitored sources.</p>"
@@ -1739,6 +1827,7 @@ def run_daily():
 
     send_email(subject, html)
     return daily_data
+
 
 # ── Weekly Run ────────────────────────────────────────────────────────────────
 
@@ -1757,7 +1846,18 @@ def run_weekly():
     subject = f"📈 Weekly Market Intelligence Report — {week_label}"
     send_email(subject, format_weekly_email(weekly_data, week_label))
 
+
 # ── Entry Point ───────────────────────────────────────────────────────────────
+
+if __name__ == "__main__":
+    import sys
+    if "--convergence-check" in sys.argv:
+        run_convergence_check()
+    else:
+        run_daily()
+        if IS_WEEKLY:
+            run_weekly()
+��────────────────────
 
 if __name__ == "__main__":
     import sys
