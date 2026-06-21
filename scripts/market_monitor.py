@@ -1857,13 +1857,3 @@ if __name__ == "__main__":
         run_daily()
         if IS_WEEKLY:
             run_weekly()
-��────────────────────
-
-if __name__ == "__main__":
-    import sys
-    if "--convergence-check" in sys.argv:
-        run_convergence_check()
-    else:
-        run_daily()
-        if IS_WEEKLY:
-            run_weekly()
