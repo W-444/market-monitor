@@ -364,20 +364,43 @@ def get_sentiment_trends(days: int = 14) -> dict[str, list[float | None]]:
     return trends
 
 
+def _sparkline(scores: list[float | None]) -> str:
+    """Convert sentiment scores to a Unicode block sparkline, e.g. ▁▃▅▇▆▄▂▁"""
+    BLOCKS = "▁▂▃▄▅▆▇█"
+    chars = []
+    for s in scores:
+        if s is None:
+            chars.append("·")
+        else:
+            idx = max(0, min(7, round((s + 1.0) / 2.0 * 7)))
+            chars.append(BLOCKS[idx])
+    return "".join(chars)
+
+
 def _trend_indicator(scores: list[float | None]) -> str:
-    """Return a compact 'arrow + delta' string for the recent trend."""
+    """Unicode sparkline + arrow/delta for recent sentiment trend."""
     valid = [(i, s) for i, s in enumerate(scores) if s is not None]
+    spark = _sparkline(scores[-14:]) if scores else ""
     if len(valid) < 2:
-        return ""
+        # Not enough history yet — show the stub sparkline + NEW marker
+        return (
+            f'<span style="font-family:monospace;font-size:13px;color:#ccc;'
+            f'letter-spacing:1px">{spark or "·"}</span>'
+            f'<span style="font-size:9px;color:#bbb;margin-left:4px">● NEW</span>'
+        )
     first_score = valid[0][1]
     last_score  = valid[-1][1]
     delta = last_score - first_score
     if   delta >  0.15: arrow, col = "↑", "#27ae60"
     elif delta < -0.15: arrow, col = "↓", "#c0392b"
     else:               arrow, col = "→", "#888"
+    n = len(valid)
     return (
-        f'<span style="font-size:10px;color:{col};font-weight:600">'
-        f'{arrow} {delta:+.2f} (14d)</span>'
+        f'<span style="font-family:monospace;font-size:13px;color:#444;'
+        f'letter-spacing:1px">{spark}</span> '
+        f'<span style="font-size:10px;color:{col};font-weight:700">'
+        f'{arrow} {delta:+.2f}</span>'
+        f'<span style="font-size:9px;color:#bbb;margin-left:3px">({n}d)</span>'
     )
 
 
@@ -866,18 +889,18 @@ _DIR_COLORS = {
 
 
 def _sentiment_gauge(score: float) -> str:
-    """10-segment coloured bar + label — uses only table/inline styles for email safety."""
+    """12-segment coloured bar with BEARISH/BULLISH end-labels and centre numeric score."""
     clamped = max(-1.0, min(1.0, score))
-    filled  = round((clamped + 1.0) / 2.0 * 10)   # 0-10 segments
+    filled  = round((clamped + 1.0) / 2.0 * 12)   # 0-12 filled segments
 
-    # Segment palette: deep-red → orange → grey → light-green → deep-green
-    palette = ["#c0392b","#c0392b","#e67e22","#f39c12","#95a5a6",
-               "#95a5a6","#27ae60","#27ae60","#1e8449","#1e8449"]
+    # Colour gradient: strong-bear → bear → orange → grey → green → strong-bull
+    palette = ["#c0392b","#c0392b","#c0392b","#e67e22","#f39c12","#bdc3c7",
+               "#bdc3c7","#52be80","#27ae60","#1e8449","#1e8449","#145a32"]
 
     cells = "".join(
-        f'<td style="background:{"" + palette[i] if i < filled else "#e0e0e0"};'
-        f'height:8px;padding:0;border-right:2px solid #fff"></td>'
-        for i in range(10)
+        f'<td style="background:{palette[i] if i < filled else "#e8e8e8"};'
+        f'height:12px;padding:0;border-right:2px solid #fff"></td>'
+        for i in range(12)
     )
 
     if   score <= -0.7: label, lc = "STRONGLY BEARISH", "#c0392b"
@@ -886,28 +909,38 @@ def _sentiment_gauge(score: float) -> str:
     elif score <   0.7: label, lc = "BULLISH",          "#27ae60"
     else:               label, lc = "STRONGLY BULLISH", "#1e8449"
 
+    score_pct = f"{score:+.2f}"
     return (
-        f'<table cellpadding="0" cellspacing="0" '
-        f'style="width:100%;border-collapse:collapse;margin-bottom:4px">'
+        # End-labels row
+        f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;margin-bottom:3px">'
+        f'<tr>'
+        f'<td style="font-size:9px;color:#c0392b;font-weight:600">◀ BEARISH</td>'
+        f'<td style="text-align:center;font-size:10px;font-weight:700;color:{lc}">{score_pct}</td>'
+        f'<td style="text-align:right;font-size:9px;color:#1e8449;font-weight:600">BULLISH ▶</td>'
+        f'</tr></table>'
+        # Gauge bar
+        f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;margin-bottom:6px">'
         f'<tr>{cells}</tr></table>'
-        f'<div style="font-size:9px;font-weight:700;color:{lc};'
-        f'letter-spacing:0.5px;margin-bottom:8px">{label}</div>'
+        # Label
+        f'<div style="font-size:10px;font-weight:700;color:{lc};letter-spacing:0.5px;margin-bottom:10px">'
+        f'● {label}</div>'
     )
 
 
 def _rec_badge(rec: str) -> str:
-    """Buy / Hold / Sell badge."""
+    """Buy / Hold / Sell recommendation badge."""
     styles = {
-        "buy":       ("#fff", "#1a7a4a", "▲ BUY"),
-        "hold":      ("#fff", "#7a5a00", "◆ HOLD"),
-        "sell":      ("#fff", "#b03030", "▼ SELL"),
-        "no signal": ("#888", "#e8e8e8", "— NO SIGNAL"),
+        "buy":       ("#fff", "#1a7a4a", "▲  BUY"),
+        "hold":      ("#fff", "#7a5a00", "◆  HOLD"),
+        "sell":      ("#fff", "#b03030", "▼  SELL"),
+        "no signal": ("#999", "#f0f0f0", "—  NO SIGNAL"),
     }
-    fg, bg, text = styles.get(rec.lower().strip(), ("#888", "#e8e8e8", rec.upper()))
+    fg, bg, text = styles.get(rec.lower().strip(), ("#999", "#f0f0f0", rec.upper()))
     return (
-        f'<div style="margin-bottom:10px">'
-        f'<span style="background:{bg};color:{fg};font-size:11px;font-weight:700;'
-        f'padding:4px 12px;border-radius:3px;letter-spacing:0.5px">{text}</span>'
+        f'<div style="margin-bottom:12px">'
+        f'<span style="background:{bg};color:{fg};font-size:13px;font-weight:700;'
+        f'padding:6px 18px;border-radius:4px;letter-spacing:0.8px;'
+        f'display:inline-block">{text}</span>'
         f'</div>'
     )
 
@@ -915,94 +948,161 @@ def _rec_badge(rec: str) -> str:
 def _sector_card(title: str, icon: str, sector_data: dict,
                  sector_insights: list[dict],
                  trend_scores: list[float | None] | None = None) -> str:
-    """One sector panel (50% wide table cell)."""
+    """Full-width sector panel with gauge, badge, sparkline trend, and top insights."""
     score = sector_data.get("sentiment_score", 0.0)
     rec   = sector_data.get("recommendation", "no signal")
     rat   = sector_data.get("rationale", "")
 
-    html = (
-        f'<td style="width:50%;vertical-align:top;padding:6px">'
-        f'<div style="background:#fff;border-radius:8px;padding:14px 16px;'
-        f'border:1px solid #e8e8e8">'
-        f'<div style="display:table;width:100%;margin-bottom:10px">'
-        f'<div style="display:table-cell;font-size:10px;font-weight:700;'
-        f'text-transform:uppercase;letter-spacing:0.6px;color:#555">{icon}&nbsp;{title}</div>'
-        + (f'<div style="display:table-cell;text-align:right">'
-           + _trend_indicator(trend_scores)
-           + '</div>' if trend_scores else "")
-        + '</div>'
-        + _sentiment_gauge(score)
-        + _rec_badge(rec)
+    # Left accent colour driven by sentiment
+    if   score <= -0.3: accent = "#c0392b"
+    elif score <   0.3: accent = "#95a5a6"
+    else:               accent = "#1e8449"
+
+    trend_html = _trend_indicator(trend_scores) if trend_scores is not None else (
+        '<span style="font-size:9px;color:#ccc">● NEW</span>'
     )
+
+    # ── Card shell: white card with 4px left accent bar ─────────────────────
+    html = (
+        f'<div style="background:#fff;border-radius:8px;margin-bottom:12px;'
+        f'border:1px solid #e0e0e0;border-left:5px solid {accent};overflow:hidden">'
+
+        # Header row: icon + title on left, sparkline trend on right
+        f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">'
+        f'<tr>'
+        f'<td style="padding:14px 18px 10px 16px">'
+        f'<span style="font-size:11px;font-weight:700;text-transform:uppercase;'
+        f'letter-spacing:0.7px;color:#333">{icon}&nbsp;&nbsp;{title}</span>'
+        f'</td>'
+        f'<td style="padding:14px 18px 10px 0;text-align:right;white-space:nowrap">'
+        f'{trend_html}'
+        f'</td>'
+        f'</tr></table>'
+
+        # Gauge + badge side-by-side inside a 2-col table
+        f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">'
+        f'<tr>'
+        # Gauge column (left, ~65%)
+        f'<td style="padding:0 18px 8px 16px;vertical-align:top;width:65%">'
+        + _sentiment_gauge(score)
+        + f'</td>'
+        # Badge column (right, ~35%)
+        f'<td style="padding:8px 18px 8px 0;vertical-align:top;text-align:right;width:35%">'
+        + _rec_badge(rec)
+        + f'</td>'
+        f'</tr></table>'
+    )
+
+    # Rationale (analyst summary)
     if rat:
         html += (
-            f'<div style="font-size:11px;color:#666;line-height:1.45;'
-            f'margin-bottom:10px;border-top:1px solid #f0f0f0;padding-top:8px">{rat}</div>'
+            f'<div style="font-size:12px;color:#555;line-height:1.5;'
+            f'padding:0 18px 12px 16px;border-top:1px solid #f5f5f5">{rat}</div>'
         )
 
-    # Up to 3 top insights for this sector
-    for ins in sector_insights[:3]:
-        d  = ins.get("direction", "neutral")
-        fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
-        html += (
-            f'<div style="border-top:1px solid #f5f5f5;padding-top:7px;margin-top:7px">'
-            f'<span style="background:{bg};color:{fg};font-size:9px;font-weight:700;'
-            f'padding:1px 5px;border-radius:2px;letter-spacing:0.4px">{d.upper()}</span>'
-            f'<div style="font-size:11px;color:#333;line-height:1.4;margin-top:3px">'
-            f'{ins["summary"]}</div>'
-            f'<div style="font-size:10px;color:#aaa;margin-top:2px">{ins["source"]}</div>'
-            f'</div>'
-        )
+    # ── Top insights ─────────────────────────────────────────────────────────
+    if sector_insights:
+        html += '<div style="border-top:2px solid #f5f5f5">'
+        for ins in sector_insights[:3]:
+            d  = ins.get("direction", "neutral")
+            fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
+            html += (
+                f'<div style="padding:9px 18px 9px 16px;border-bottom:1px solid #f9f9f9">'
+                f'<span style="background:{bg};color:{fg};font-size:9px;font-weight:700;'
+                f'padding:2px 6px;border-radius:2px;letter-spacing:0.4px;'
+                f'vertical-align:middle">{d.upper()}</span>'
+                f'&nbsp;<span style="font-size:11px;color:#aaa">{ins["source"]}</span>'
+                f'<div style="font-size:12px;color:#222;line-height:1.45;margin-top:4px">'
+                f'{ins["summary"]}</div>'
+                f'</div>'
+            )
+        html += '</div>'
 
-    html += '</div></td>'
+    html += '</div>'  # close card
     return html
 
 
 def _price_snapshot_html(snapshot: list[dict]) -> str:
-    """Compact 2-column price table, colour-coded by 1-day change."""
+    """Price snapshot grouped by sector, with colour-coded % change and mini bar."""
     if not snapshot:
         return ""
-    rows = ""
-    for i in range(0, len(snapshot), 2):
-        row = ""
-        for item in snapshot[i:i+2]:
-            price  = item.get("price")
-            chg    = item.get("change_pct")
+
+    # Group by sector label
+    SECTOR_ORDER  = ["ai_tech", "precious_metals", "industrial_commodities", "macro"]
+    SECTOR_LABELS = {
+        "ai_tech":                ("🤖", "AI / TECH"),
+        "precious_metals":        ("🥇", "PRECIOUS METALS"),
+        "industrial_commodities": ("⚙️",  "INDUSTRIAL"),
+        "macro":                  ("🌍", "MACRO"),
+    }
+    grouped: dict[str, list[dict]] = {k: [] for k in SECTOR_ORDER}
+    for item in snapshot:
+        s = item.get("sector", "macro")
+        grouped.setdefault(s, []).append(item)
+
+    html = (
+        f'<div style="background:#12122a;padding:16px 24px;border-bottom:2px solid #2a2a4a">'
+        f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
+        f'letter-spacing:.8px;color:#8888bb;margin-bottom:12px">📈 LIVE MARKET SNAPSHOT</div>'
+        f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">'
+        f'<tr style="vertical-align:top">'
+    )
+
+    non_empty = [s for s in SECTOR_ORDER if grouped.get(s)]
+    col_w = 100 // max(len(non_empty), 1)
+
+    for sec in non_empty:
+        items = grouped[sec]
+        icon, label = SECTOR_LABELS.get(sec, ("", sec.upper()))
+        html += (
+            f'<td style="width:{col_w}%;padding:0 12px 0 0;vertical-align:top">'
+            f'<div style="font-size:9px;font-weight:700;color:#6666aa;'
+            f'letter-spacing:.5px;margin-bottom:6px">{icon} {label}</div>'
+        )
+        for item in items:
+            price = item.get("price")
+            chg   = item.get("change_pct")
             if price is None:
                 continue
-            chg_s  = f"{chg:+.1f}%" if chg is not None else "—"
-            chg_c  = "#27ae60" if (chg or 0) >= 0 else "#c0392b"
-            row += (
-                f'<td style="padding:5px 10px 5px 0;width:50%">'
-                f'<span style="font-size:11px;color:#555;font-weight:600">'
-                f'{item["symbol"]}</span> '
-                f'<span style="font-size:11px;color:#333">${price:,.2f}</span> '
-                f'<span style="font-size:10px;color:{chg_c};font-weight:600">{chg_s}</span>'
-                f'</td>'
+            chg_s = f"{chg:+.1f}%" if chg is not None else "—"
+            chg_c = "#52be80" if (chg or 0) >= 0 else "#e74c3c"
+            # Mini bar: ████░░░░ mapped from -3% to +3%
+            bar_fill = max(0, min(8, round((min(max(chg or 0, -3), 3) + 3) / 6 * 8)))
+            bar = ("█" * bar_fill + "░" * (8 - bar_fill))
+            html += (
+                f'<div style="margin-bottom:7px">'
+                f'<span style="font-size:11px;color:#dde;font-weight:600">'
+                f'{item["symbol"]}</span>'
+                f'<span style="font-size:10px;color:#888;margin-left:4px">'
+                f'{item.get("name","")}</span>'
+                f'<br>'
+                f'<span style="font-size:12px;color:#fff;font-weight:600">'
+                f'${price:,.2f}</span>'
+                f'&nbsp;<span style="font-size:11px;color:{chg_c};font-weight:700">'
+                f'{chg_s}</span>'
+                f'<br>'
+                f'<span style="font-family:monospace;font-size:10px;color:{chg_c};'
+                f'letter-spacing:0">{bar}</span>'
+                f'</div>'
             )
-        if row:
-            rows += f'<tr>{row}</tr>'
-    return (
-        f'<div style="background:#f8f9fc;padding:14px 28px;border-bottom:1px solid #eee">'
-        f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
-        f'letter-spacing:.6px;color:#999;margin-bottom:8px">📈 Market Snapshot</div>'
-        f'<table cellpadding="0" cellspacing="0" style="width:100%">{rows}</table>'
-        f'</div>'
-    )
+        html += '</td>'
+
+    html += '</tr></table></div>'
+    return html
 
 
 def format_daily_email(data: dict) -> str:
-    date_str      = data["date"]
-    insights      = data.get("insights", [])
-    themes        = data.get("convergence_themes", [])
-    open_calls    = data.get("open_calls", [])
-    resolved      = data.get("resolved_calls", [])
-    dashboard     = data.get("dashboard", {})
-    snapshot      = data.get("snapshot", [])
-    trends        = data.get("sentiment_trends", {})
-    src_count     = len(set(i["source"] for i in insights))
+    date_str   = data["date"]
+    insights   = data.get("insights", [])
+    themes     = data.get("convergence_themes", [])
+    open_calls = data.get("open_calls", [])
+    resolved   = data.get("resolved_calls", [])
+    dashboard  = data.get("dashboard", {})
+    snapshot   = data.get("snapshot", [])
+    trends     = data.get("sentiment_trends", {})
+    src_count  = len(set(i["source"] for i in insights))
 
-    # ── Group insights by sector ──────────────────────────────────────────────
+    # ── Group insights by sector (highest confidence first) ───────────────────
     sector_insights: dict[str, list[dict]] = {
         k: [] for k in ("ai_tech", "precious_metals", "industrial_commodities", "macro")
     }
@@ -1029,94 +1129,131 @@ def format_daily_email(data: dict) -> str:
     except ValueError:
         date_label = date_str
 
-    W = "max-width:700px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont," \
-        "'Segoe UI',Arial,sans-serif"
+    W = ("max-width:700px;margin:0 auto;font-family:-apple-system,BlinkMacSystemFont,"
+         "'Segoe UI',Arial,sans-serif;border-radius:10px;overflow:hidden;"
+         "box-shadow:0 2px 8px rgba(0,0,0,.15)")
+
+    # ── Overall sentiment badge for header ────────────────────────────────────
+    all_scores = [
+        sectors_cfg.get(s, {}).get("sentiment_score")
+        for s in ("ai_tech", "precious_metals", "industrial_commodities", "macro")
+        if sectors_cfg.get(s, {}).get("sentiment_score") is not None
+    ]
+    if all_scores:
+        avg_score = sum(all_scores) / len(all_scores)
+        if   avg_score <= -0.3: mkt_label, mkt_c = "RISK-OFF",  "#e74c3c"
+        elif avg_score <   0.3: mkt_label, mkt_c = "MIXED",     "#f39c12"
+        else:                   mkt_label, mkt_c = "RISK-ON",   "#27ae60"
+        mkt_badge = (
+            f'<span style="background:{mkt_c};color:#fff;font-size:10px;font-weight:700;'
+            f'padding:3px 10px;border-radius:3px;letter-spacing:.5px">{mkt_label}</span>'
+        )
+    else:
+        mkt_badge = ""
 
     html = (
         f'<!DOCTYPE html><html><head><meta charset="utf-8"></head>'
-        f'<body style="background:#f0f2f5;margin:0;padding:20px">'
+        f'<body style="background:#0e0e1e;margin:0;padding:24px">'
         f'<div style="{W}">'
 
-        # ── Header ────────────────────────────────────────────────────────────
-        f'<div style="background:#1a1a2e;border-radius:10px 10px 0 0;padding:22px 28px">'
-        f'<div style="color:#fff;font-size:20px;font-weight:700;margin-bottom:4px">'
+        # ════════════════════════════════════════════════════════
+        # HEADER
+        # ════════════════════════════════════════════════════════
+        f'<div style="background:#1a1a2e;padding:22px 28px">'
+        f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">'
+        f'<tr>'
+        f'<td>'
+        f'<div style="color:#fff;font-size:22px;font-weight:700;letter-spacing:-.3px">'
         f'📊 Market Intelligence Digest</div>'
-        f'<div style="color:rgba(255,255,255,.55);font-size:12px">'
+        f'<div style="color:rgba(255,255,255,.5);font-size:12px;margin-top:5px">'
         f'{date_label}&nbsp;&nbsp;·&nbsp;&nbsp;{len(insights)} insights'
         f'&nbsp;&nbsp;·&nbsp;&nbsp;{src_count} sources</div>'
+        f'</td>'
+        f'<td style="text-align:right;vertical-align:top;padding-top:4px">'
+        f'{mkt_badge}'
+        f'</td>'
+        f'</tr>'
+        f'</table>'
         f'</div>'
     )
 
-    # ── Price Snapshot ────────────────────────────────────────────────────────
+    # ════════════════════════════════════════════════════════
+    # PRICE SNAPSHOT  (dark band)
+    # ════════════════════════════════════════════════════════
     html += _price_snapshot_html(snapshot)
 
-    # ── Market Overview ───────────────────────────────────────────────────────
+    # ════════════════════════════════════════════════════════
+    # MARKET OVERVIEW
+    # ════════════════════════════════════════════════════════
     if dashboard.get("market_summary"):
         html += (
             f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
             f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
-            f'letter-spacing:.6px;color:#999;margin-bottom:10px">📋 Market Overview</div>'
-            f'<div style="font-size:14px;line-height:1.65;color:#222">'
+            f'letter-spacing:.7px;color:#aaa;margin-bottom:10px">📋 MARKET OVERVIEW</div>'
+            f'<div style="font-size:14px;line-height:1.7;color:#1a1a1a">'
             f'{dashboard["market_summary"]}</div>'
             f'</div>'
         )
 
-    # ── Sector Dashboard (2 × 2 grid) ─────────────────────────────────────────
+    # ════════════════════════════════════════════════════════
+    # SECTOR DASHBOARD  — full-width stacked cards
+    # ════════════════════════════════════════════════════════
     panels = [
-        ("ai_tech",                "AI / TECH",               "🤖"),
-        ("precious_metals",        "PRECIOUS METALS",          "🥇"),
-        ("industrial_commodities", "INDUSTRIAL COMMODITIES",   "⚙️"),
-        ("macro",                  "MACRO & OTHER",            "🌍"),
+        ("ai_tech",                "AI / TECH",             "🤖"),
+        ("precious_metals",        "PRECIOUS METALS",        "🥇"),
+        ("industrial_commodities", "INDUSTRIAL COMMODITIES", "⚙️"),
+        ("macro",                  "MACRO & OTHER",          "🌍"),
     ]
     html += (
-        f'<div style="background:#f7f8fc;padding:14px 16px;border-bottom:1px solid #eee">'
+        f'<div style="background:#f4f6fb;padding:16px 20px 4px 20px;'
+        f'border-bottom:1px solid #e4e6eb">'
         f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
-        f'letter-spacing:.6px;color:#999;margin-bottom:10px">📊 Sector Dashboard</div>'
-        f'<table cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse">'
-        # Row 1
-        f'<tr>'
-        + _sector_card(panels[0][1], panels[0][2], sectors_cfg.get(panels[0][0], {}), sector_insights[panels[0][0]], trends.get(panels[0][0]))
-        + _sector_card(panels[1][1], panels[1][2], sectors_cfg.get(panels[1][0], {}), sector_insights[panels[1][0]], trends.get(panels[1][0]))
-        + f'</tr>'
-        # Row 2
-        f'<tr>'
-        + _sector_card(panels[2][1], panels[2][2], sectors_cfg.get(panels[2][0], {}), sector_insights[panels[2][0]], trends.get(panels[2][0]))
-        + _sector_card(panels[3][1], panels[3][2], sectors_cfg.get(panels[3][0], {}), sector_insights[panels[3][0]], trends.get(panels[3][0]))
-        + f'</tr>'
-        f'</table></div>'
+        f'letter-spacing:.7px;color:#aaa;margin-bottom:14px">📊 SECTOR DASHBOARD</div>'
     )
+    for sec_key, sec_title, sec_icon in panels:
+        html += _sector_card(
+            sec_title, sec_icon,
+            sectors_cfg.get(sec_key, {}),
+            sector_insights[sec_key],
+            trends.get(sec_key),
+        )
+    html += '</div>'
 
-    # ── Convergence Themes ────────────────────────────────────────────────────
+    # ════════════════════════════════════════════════════════
+    # CONVERGENCE THEMES
+    # ════════════════════════════════════════════════════════
     if themes:
         html += (
             f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
             f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
-            f'letter-spacing:.6px;color:#999;margin-bottom:12px">🔁 Convergence Themes</div>'
+            f'letter-spacing:.7px;color:#aaa;margin-bottom:12px">🔁 CONVERGENCE THEMES</div>'
         )
         for t in themes:
-            d  = t.get("direction", "neutral")
+            d      = t.get("direction", "neutral")
             fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
-            srcs = ", ".join(t.get("supporting_sources", []))
+            srcs   = ", ".join(t.get("supporting_sources", []))
             strength = t.get("strength", "")
             html += (
-                f'<div style="background:{bg};border-left:3px solid {fg};'
-                f'padding:9px 13px;margin-bottom:8px;border-radius:0 5px 5px 0">'
-                f'<div style="font-size:13px;font-weight:600;color:#222">'
+                f'<div style="background:{bg};border-left:4px solid {fg};'
+                f'padding:10px 14px;margin-bottom:9px;border-radius:0 6px 6px 0">'
+                f'<div style="font-size:13px;font-weight:600;color:#111">'
                 f'<span style="background:{fg};color:#fff;font-size:9px;font-weight:700;'
-                f'padding:2px 6px;border-radius:2px;margin-right:7px;'
-                f'letter-spacing:.4px">{d.upper()}</span>{t["theme"]}</div>'
-                + (f'<div style="font-size:11px;color:#888;margin-top:3px">'
+                f'padding:2px 7px;border-radius:2px;margin-right:8px;letter-spacing:.5px">'
+                f'{d.upper()}</span>{t["theme"]}</div>'
+                + (f'<div style="font-size:11px;color:#777;margin-top:4px">'
                    f'{srcs}{(" · " + strength) if strength else ""}</div>' if srcs else "")
                 + '</div>'
             )
         html += '</div>'
 
-    # ── Resolved Calls ────────────────────────────────────────────────────────
+    # ════════════════════════════════════════════════════════
+    # CALLS RESOLVED TODAY
+    # ════════════════════════════════════════════════════════
     if resolved:
         html += (
             f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
             f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
-            f'letter-spacing:.6px;color:#999;margin-bottom:12px">🏁 Calls Resolved Today</div>'
+            f'letter-spacing:.7px;color:#aaa;margin-bottom:12px">🏁 CALLS RESOLVED TODAY</div>'
         )
         for c in resolved:
             verdict = c.get("status", "")
@@ -1125,47 +1262,64 @@ def format_daily_email(data: dict) -> str:
             chg     = c.get("resolution_change_pct")
             chg_s   = f" ({chg:+.1f}%)" if chg is not None else ""
             html += (
-                f'<div style="background:#f8f8f8;border-left:3px solid {v_color};'
-                f'padding:10px 14px;margin-bottom:8px;border-radius:0 6px 6px 0">'
-                f'<div style="font-size:12px;font-weight:600;color:{v_color};margin-bottom:3px">'
+                f'<div style="border-left:4px solid {v_color};background:#f8f8f8;'
+                f'padding:10px 16px;margin-bottom:9px;border-radius:0 6px 6px 0">'
+                f'<div style="font-size:12px;font-weight:700;color:{v_color};margin-bottom:3px">'
                 f'{v_icon} {verdict.upper()}{chg_s}</div>'
-                f'<div style="font-size:13px;color:#333">{c["summary"]}</div>'
-                f'<div style="font-size:11px;color:#aaa;margin-top:4px">'
-                f'📅 Made {c["date_made"]} · ⏱ {c.get("timeframe","?")} · 📰 {c["source"]}'
+                f'<div style="font-size:13px;color:#222">{c["summary"]}</div>'
+                f'<div style="font-size:11px;color:#bbb;margin-top:5px">'
+                f'📅 Made {c["date_made"]}&nbsp;·&nbsp;'
+                f'⏱ {c.get("timeframe","?")}&nbsp;·&nbsp;📰 {c["source"]}'
                 f'</div></div>'
             )
         html += '</div>'
 
-    # ── Open Calls Tracker ────────────────────────────────────────────────────
+    # ════════════════════════════════════════════════════════
+    # OPEN CALLS TRACKER
+    # ════════════════════════════════════════════════════════
     if open_calls:
         html += (
             f'<div style="background:#fff;padding:18px 28px;border-bottom:1px solid #eee">'
             f'<div style="font-size:10px;font-weight:700;text-transform:uppercase;'
-            f'letter-spacing:.6px;color:#999;margin-bottom:12px">📌 Open Calls Tracker</div>'
+            f'letter-spacing:.7px;color:#aaa;margin-bottom:12px">📌 OPEN CALLS TRACKER</div>'
         )
         for c in open_calls[-10:]:
             insts = ", ".join(c.get("instruments", []))
-            d  = c.get("direction", "neutral")
+            d     = c.get("direction", "neutral")
             fg, bg = _DIR_COLORS.get(d, ("#555", "#f5f5f5"))
+            # Days open counter
+            try:
+                days_open = (datetime.date.today() -
+                             datetime.date.fromisoformat(c["date_made"])).days
+                age = f"{days_open}d open"
+            except Exception:
+                age = ""
             html += (
-                f'<div style="background:#fffbf0;border:1px solid #f0d878;'
-                f'border-radius:6px;padding:10px 14px;margin-bottom:8px">'
-                f'<span style="background:{bg};color:{fg};font-size:9px;font-weight:700;'
-                f'padding:1px 5px;border-radius:2px;margin-right:6px">{d.upper()}</span>'
-                f'<span style="font-size:13px;font-weight:500;color:#333">{c["summary"]}</span>'
-                f'<div style="font-size:11px;color:#aaa;margin-top:5px">'
-                f'📅 {c["date_made"]}&nbsp;&nbsp;·&nbsp;&nbsp;'
-                f'⏱ {c.get("timeframe","?")}&nbsp;&nbsp;·&nbsp;&nbsp;'
-                f'📰 {c["source"]}'
-                + (f'&nbsp;&nbsp;·&nbsp;&nbsp;🎯 {insts}' if insts else "")
+                f'<div style="background:#fffbf2;border:1px solid #e8d88a;'
+                f'border-left:4px solid {fg};border-radius:0 6px 6px 0;'
+                f'padding:10px 16px;margin-bottom:9px">'
+                f'<table cellpadding="0" cellspacing="0" style="width:100%"><tr>'
+                f'<td><span style="background:{bg};color:{fg};font-size:9px;font-weight:700;'
+                f'padding:2px 6px;border-radius:2px;letter-spacing:.4px">{d.upper()}</span>'
+                f'&nbsp;<span style="font-size:13px;font-weight:500;color:#222">'
+                f'{c["summary"]}</span></td>'
+                f'<td style="text-align:right;font-size:10px;color:#bbb;white-space:nowrap">'
+                f'{age}</td>'
+                f'</tr></table>'
+                f'<div style="font-size:11px;color:#bbb;margin-top:5px">'
+                f'📅 {c["date_made"]}&nbsp;·&nbsp;⏱ {c.get("timeframe","?")}'
+                f'&nbsp;·&nbsp;📰 {c["source"]}'
+                + (f'&nbsp;·&nbsp;🎯 {insts}' if insts else "")
                 + '</div></div>'
             )
         html += '</div>'
 
-    # ── Footer ────────────────────────────────────────────────────────────────
+    # ════════════════════════════════════════════════════════
+    # FOOTER
+    # ════════════════════════════════════════════════════════
     html += (
-        f'<div style="text-align:center;padding:14px;font-size:11px;color:#bbb;'
-        f'background:#f0f2f5;border-radius:0 0 10px 10px">'
+        f'<div style="background:#1a1a2e;text-align:center;padding:14px 20px;'
+        f'font-size:11px;color:rgba(255,255,255,.35)">'
         f'Market Intelligence Monitor &nbsp;·&nbsp; '
         f'{datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")}'
         f'</div>'
