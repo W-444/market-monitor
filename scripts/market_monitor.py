@@ -1174,6 +1174,12 @@ def format_daily_email(data: dict) -> str:
     return html
 
 
+def _conf_bar(score: float) -> str:
+    """Monospace confidence bar used in the weekly email."""
+    filled = round(min(max(score, 0), 1) * 10)
+    return "█" * filled + "░" * (10 - filled) + f"  {score:.0%}"
+
+
 # Base CSS shared by the weekly email (daily email uses inline styles instead)
 _EMAIL_CSS = """
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
