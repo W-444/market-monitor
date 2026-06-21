@@ -278,30 +278,40 @@ _YF_HEADERS = {
 
 
 def get_market_snapshot() -> list[dict]:
-    """Fetch current price and 1-day % change for every symbol in PRICE_WATCHLIST."""
+    """Fetch current price and 1-day % change for every symbol in PRICE_WATCHLIST.
+
+    Tries two Yahoo Finance endpoints in case one is rate-limited.
+    """
     symbols = [sym for sym, *_ in PRICE_WATCHLIST]
-    url = (
-        "https://query1.finance.yahoo.com/v7/finance/quote"
-        f"?lang=en-US&region=US&symbols={','.join(symbols)}"
-    )
-    try:
-        resp = requests.get(url, headers=_YF_HEADERS, timeout=15)
-        quotes = {q["symbol"]: q for q in resp.json()["quoteResponse"]["result"]}
-        snap = []
-        for sym, name, sector in PRICE_WATCHLIST:
-            q = quotes.get(sym, {})
-            snap.append({
-                "symbol":     sym,
-                "name":       name,
-                "sector":     sector,
-                "price":      q.get("regularMarketPrice"),
-                "change_pct": q.get("regularMarketChangePercent"),
-            })
-        print(f"  📈 Price snapshot: {len([s for s in snap if s['price']])} ticker(s) fetched")
-        return snap
-    except Exception as exc:
-        print(f"  ⚠  Price snapshot failed: {exc}")
-        return []
+    sym_str = ",".join(symbols)
+    urls = [
+        f"https://query1.finance.yahoo.com/v7/finance/quote?lang=en-US&region=US&symbols={sym_str}",
+        f"https://query2.finance.yahoo.com/v7/finance/quote?lang=en-US&region=US&symbols={sym_str}",
+    ]
+    for url in urls:
+        try:
+            resp = requests.get(url, headers=_YF_HEADERS, timeout=15)
+            body = resp.json()
+            result = (body.get("quoteResponse") or {}).get("result") or []
+            if not result:
+                continue
+            quotes = {q["symbol"]: q for q in result}
+            snap = []
+            for sym, name, sector in PRICE_WATCHLIST:
+                q = quotes.get(sym, {})
+                snap.append({
+                    "symbol":     sym,
+                    "name":       name,
+                    "sector":     sector,
+                    "price":      q.get("regularMarketPrice"),
+                    "change_pct": q.get("regularMarketChangePercent"),
+                })
+            print(f"  📈 Price snapshot: {len([s for s in snap if s['price']])} ticker(s) fetched")
+            return snap
+        except Exception as exc:
+            print(f"  ⚠  Price snapshot attempt failed ({url[-20:]}): {exc}")
+    print("  ⚠  Price snapshot unavailable — continuing without it")
+    return []
 
 
 # ── Deduplication ────────────────────────────────────────────────────────────
@@ -1162,6 +1172,36 @@ def format_daily_email(data: dict) -> str:
         f'</div></body></html>'
     )
     return html
+
+
+# Base CSS shared by the weekly email (daily email uses inline styles instead)
+_EMAIL_CSS = """
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+     background:#f0f2f5;margin:0;padding:20px}
+.wrap{max-width:700px;margin:0 auto}
+.card{background:#fff;border-radius:10px;overflow:hidden;margin-bottom:16px;
+      box-shadow:0 1px 3px rgba(0,0,0,.08)}
+.hdr{background:#1a1a2e;color:#fff;padding:22px 28px}
+.hdr h1{margin:0;font-size:20px;font-weight:600}
+.hdr p{margin:4px 0 0;opacity:.65;font-size:12px}
+.sec{padding:18px 28px;border-bottom:1px solid #f0f0f0}
+.sec:last-child{border-bottom:none}
+.sec h2{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#999;margin:0 0 12px}
+.ins{padding:13px 0;border-bottom:1px solid #f5f5f5}
+.ins:last-child{border-bottom:none}
+.tag{font-size:11px;padding:2px 8px;border-radius:10px;font-weight:500}
+.bullish{background:#e6f9f0;color:#1a7a4a}
+.bearish{background:#fef0f0;color:#b03030}
+.neutral{background:#eef2ff;color:#3050a0}
+.mixed{background:#fffbe6;color:#7a5a00}
+.src{background:#f0f0f0;color:#555}
+.ins .body{font-size:13px;line-height:1.55;color:#222;margin-bottom:5px}
+.ins .reason{font-size:12px;color:#666;line-height:1.4}
+.theme{background:#f7f8ff;border-left:3px solid #4a6cf7;
+       padding:9px 13px;margin-bottom:9px;border-radius:0 5px 5px 0}
+.theme b{font-size:13px}
+.theme small{display:block;font-size:11px;color:#999;margin-top:3px}
+"""
 
 
 def format_weekly_email(data: dict, week_label: str) -> str:
