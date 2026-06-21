@@ -102,5 +102,21 @@
     "source_confidence": 0.72,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "The Fed's hawkish shift under Warsh \u2014 with higher dot plot projections and a pledge to deliver price stability \u2014 raises the probability of a rate hike by year-end 2026, pressuring rate-sensitive assets and bonds.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "IEF",
+      "BND"
+    ],
+    "timeframe": "year-end 2026",
+    "date_made": "2026-06-18",
+    "source_confidence": 0.75,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
