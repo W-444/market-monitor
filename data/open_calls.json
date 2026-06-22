@@ -118,5 +118,20 @@
     "source_confidence": 0.75,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Key S&P 500 support sits at the 50-DMA (7,329); a break below this level would signal a meaningful shift in trend, while a break above 7,610 (the record high) would confirm bullish continuation.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+    "direction": "neutral",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "near-term (next 2 weeks)",
+    "date_made": "2026-06-22",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
