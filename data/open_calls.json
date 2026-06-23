@@ -133,5 +133,22 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "A hot May PCE print on June 25 is the primary near-term risk catalyst that could fully price in a 2026 Fed rate hike, driving the dollar and front-end Treasury yields sharply higher while pressuring equities.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "SHY",
+      "DXY",
+      "UUP"
+    ],
+    "timeframe": "event-driven \u2014 June 25, 2026 PCE release",
+    "date_made": "2026-06-20",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
