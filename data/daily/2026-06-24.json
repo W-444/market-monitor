@@ -1,0 +1,516 @@
+{
+  "date": "2026-06-24",
+  "sources_processed": [
+    "Real Investment Advice",
+    "Stratechery"
+  ],
+  "insights": [
+    {
+      "summary": "A 'Godzilla' El Ni\u00f1o expected to persist through year-end will stress agricultural output in Indonesia, India, Australia, Central America, Caribbean, and Colombia, driving food commodity supply shocks and higher prices.",
+      "asset_classes": [
+        "industrial_commodities",
+        "other"
+      ],
+      "instruments": [
+        "DBA",
+        "CORN",
+        "WEAT",
+        "RICE",
+        "maize",
+        "rice"
+      ],
+      "direction": "bullish",
+      "timeframe": "H2 2026 through 2027",
+      "specificity": "medium",
+      "key_reasoning": "El Ni\u00f1o-driven drought conditions across major crop-producing regions will reduce agricultural yields, with the production impact lag meaning the full supply shock hits in the 2027 crop cycle.",
+      "notable_data": "El Ni\u00f1o expected to arrive by July 2026; expected to persist through at least year-end 2026; yield hit estimated to arrive in 2027.",
+      "source_confidence": 0.55,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/el-nino-is-coming-are-food-markets-ready/",
+      "content_title": "El Nino Is Coming: Are Food Markets Ready?",
+      "content_date": "2026-06-23",
+      "content_type": "article",
+      "corroboration_confidence": 0.85,
+      "corroborated_by": [
+        "Real Investment Advice (index 1)",
+        "Real Investment Advice (index 2)"
+      ]
+    },
+    {
+      "summary": "Two independent supply shocks \u2014 El Ni\u00f1o yield disruption and fertilizer supply cuts from the Strait of Hormuz closure \u2014 are converging on the same 2026\u20132027 crop cycle, amplifying upside risk for agricultural commodity prices.",
+      "asset_classes": [
+        "industrial_commodities",
+        "other"
+      ],
+      "instruments": [
+        "DBA",
+        "CORN",
+        "WEAT",
+        "SOYB",
+        "MOS",
+        "NTR",
+        "fertilizer"
+      ],
+      "direction": "bullish",
+      "timeframe": "2026\u20132027 growing season",
+      "specificity": "medium",
+      "key_reasoning": "Analysts estimate 3\u20134 million tons of fertilizer supply have been cut since the Strait of Hormuz closure; the 6\u201312 month lag in both the fertilizer shortage and El Ni\u00f1o yield impact aligns them on the same crop cycle simultaneously.",
+      "notable_data": "3\u20134 million tons of fertilizer supply cut; 6\u201312 month lag structure for both shocks converging on 2026\u20132027 crop cycle.",
+      "source_confidence": 0.62,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/el-nino-is-coming-are-food-markets-ready/",
+      "content_title": "El Nino Is Coming: Are Food Markets Ready?",
+      "content_date": "2026-06-23",
+      "content_type": "article",
+      "corroboration_confidence": 0.85,
+      "corroborated_by": [
+        "Real Investment Advice (index 0)",
+        "Real Investment Advice (index 2)"
+      ]
+    },
+    {
+      "summary": "Brazil and Southern Africa are expected to benefit from El Ni\u00f1o rainfall patterns, with Brazil's soy crops likely to receive above-average moisture and Southern Africa projected to see above-average cereal output in 2026.",
+      "asset_classes": [
+        "industrial_commodities",
+        "other"
+      ],
+      "instruments": [
+        "SOYB",
+        "soybeans"
+      ],
+      "direction": "bullish",
+      "timeframe": "2026",
+      "specificity": "low",
+      "key_reasoning": "El Ni\u00f1o historically shifts rainfall beneficially to Brazil's soy-growing regions and Southern Africa, partially offsetting global supply losses but not enough to neutralize the broader shock.",
+      "notable_data": "Southern Africa projected above-average cereal output for 2026.",
+      "source_confidence": 0.38,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/el-nino-is-coming-are-food-markets-ready/",
+      "content_title": "El Nino Is Coming: Are Food Markets Ready?",
+      "content_date": "2026-06-23",
+      "content_type": "article",
+      "corroboration_confidence": 0.65,
+      "corroborated_by": [
+        "Real Investment Advice (index 0)",
+        "Real Investment Advice (index 1)"
+      ]
+    },
+    {
+      "summary": "US equity market structure is dangerously fragile \u2014 dominated by passive flows, 0DTE options, record margin balances, and extreme mega-cap concentration \u2014 creating asymmetric downside risk even without a macro catalyst.",
+      "asset_classes": [
+        "macro",
+        "ai_tech"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "S&P 500"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term, unspecified",
+      "specificity": "medium",
+      "key_reasoning": "40 cents of every S&P 500 dollar flows into just 10 stocks via three passive index funds; momentum-driven, leverage-amplified structure means any flow reversal could be rapid and severe without macro warning.",
+      "notable_data": "S&P 500 at ~7,500, near 7,620 YTD high; VIX ~16; 40 cents of every S&P dollar goes into top 10 stocks; 35% of US retail order flow seen by Citadel Securities.",
+      "source_confidence": 0.5,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/el-nino-is-coming-are-food-markets-ready/",
+      "content_title": "El Nino Is Coming: Are Food Markets Ready?",
+      "content_date": "2026-06-23",
+      "content_type": "article",
+      "corroboration_confidence": 0.55,
+      "corroborated_by": [
+        "Real Investment Advice (index 4)"
+      ]
+    },
+    {
+      "summary": "Kevin Warsh's first Fed meeting as chair has put a rate hike back on the table, which changes the calculus for passive flows heading into July and introduces downside risk for equities despite bullish technical momentum.",
+      "asset_classes": [
+        "macro",
+        "bonds"
+      ],
+      "instruments": [
+        "SPY",
+        "TLT",
+        "financials",
+        "XLF"
+      ],
+      "direction": "bearish",
+      "timeframe": "next 2 weeks / July 2026",
+      "specificity": "medium",
+      "key_reasoning": "A potential rate hike from the Fed conflicts with the mechanical bid from July 1 passive-money redeployment; the rate hike threat is bearish for equities and financials despite financials' recent outperformance.",
+      "notable_data": "Quarter-end pension selling imminent; July 1 passive redeployment opens next; largest options expiration in history just cleared.",
+      "source_confidence": 0.52,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/el-nino-is-coming-are-food-markets-ready/",
+      "content_title": "El Nino Is Coming: Are Food Markets Ready?",
+      "content_date": "2026-06-23",
+      "content_type": "article",
+      "corroboration_confidence": 0.6,
+      "corroborated_by": [
+        "Real Investment Advice (index 3)",
+        "Real Investment Advice (index 5)"
+      ]
+    },
+    {
+      "summary": "Financial sector's recent outperformance vs. the S&P 500 is unlikely to continue given a hawkish Fed, flattening yield curve, and rate hike risk.",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "instruments": [
+        "XLF"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term",
+      "specificity": "low",
+      "key_reasoning": "A flattening yield curve and threat of rate hikes historically compress bank net interest margins and weigh on financial stocks; the sector's recent outperformance is seen as unsustainable.",
+      "notable_data": "Financial sector outperformed S&P 500 last week despite hawkish Fed tone.",
+      "source_confidence": 0.35,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/el-nino-is-coming-are-food-markets-ready/",
+      "content_title": "El Nino Is Coming: Are Food Markets Ready?",
+      "content_date": "2026-06-23",
+      "content_type": "article",
+      "corroboration_confidence": 0.5,
+      "corroborated_by": [
+        "Real Investment Advice (index 4)"
+      ]
+    },
+    {
+      "summary": "The big three Western memory makers (Samsung, SK Hynix, Micron) face long-term competitive pressure as Chinese memory manufacturers gain a foothold in the market, potentially eroding margins and market share.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "MU",
+        "HNHPF",
+        "SSNLF"
+      ],
+      "direction": "bearish",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "By allowing or failing to prevent Chinese memory makers from scaling, the incumbent big three may have opened the door to a lower-cost competitive threat that could structurally pressure pricing and profitability.",
+      "notable_data": null,
+      "source_confidence": 0.15,
+      "source": "Stratechery",
+      "source_url": "https://stratechery.com/2026/memory-chips-and-china-microsoft-and-chinese-models/",
+      "content_title": "Memory Chips and China, Microsoft and Chinese Models",
+      "content_date": "2026-06-23",
+      "content_type": "article",
+      "corroboration_confidence": 0.1,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Microsoft has strong financial and strategic incentives to integrate Chinese AI models into its products and services, suggesting growing adoption of non-US frontier models in enterprise software.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "MSFT"
+      ],
+      "direction": "mixed",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "Microsoft's cost and capability incentives align with leveraging competitive Chinese AI models, which could reduce its dependence on OpenAI and diversify its AI supply chain \u2014 potentially positive for margins but raising geopolitical and regulatory risk.",
+      "notable_data": null,
+      "source_confidence": 0.18,
+      "source": "Stratechery",
+      "source_url": "https://stratechery.com/2026/memory-chips-and-china-microsoft-and-chinese-models/",
+      "content_title": "Memory Chips and China, Microsoft and Chinese Models",
+      "content_date": "2026-06-23",
+      "content_type": "article",
+      "corroboration_confidence": 0.1,
+      "corroborated_by": []
+    }
+  ],
+  "convergence_themes": [
+    {
+      "theme": "Agricultural commodity price surge driven by El Ni\u00f1o supply shocks and fertilizer disruption",
+      "direction": "bullish",
+      "asset_classes": [
+        "industrial_commodities",
+        "other"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 0)",
+        "Real Investment Advice (index 1)",
+        "Real Investment Advice (index 2)"
+      ],
+      "strength": "strong"
+    },
+    {
+      "theme": "US equity market downside risk from hawkish Fed policy and structural fragility",
+      "direction": "bearish",
+      "asset_classes": [
+        "macro",
+        "ai_tech",
+        "bonds"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 3)",
+        "Real Investment Advice (index 4)"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "theme": "Financial sector underperformance risk amid hawkish Fed and rate hike threat",
+      "direction": "bearish",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 4)",
+        "Real Investment Advice (index 5)"
+      ],
+      "strength": "moderate"
+    }
+  ],
+  "open_calls": [
+    {
+      "summary": "Alphabet is the strongest AI infrastructure play among hyperscalers, with Google Cloud accelerating to 63% growth and a $460B backlog justifying its $180-190B capex commitment; the market has validated this with a 10% surge post-earnings.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bullish",
+      "instruments": [
+        "GOOGL",
+        "GOOG"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.72,
+      "status": "open"
+    },
+    {
+      "summary": "Meta is the most vulnerable of the four hyperscalers to continued market skepticism because it lacks a third-party cloud business to validate its massive capex commitment, making its AI spending thesis the weakest among peers.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "META"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.7,
+      "status": "open"
+    },
+    {
+      "summary": "The oil futures curve is pricing a sharp normalization from current ~$110 Brent to roughly $80 by December 2026 and ~$70 by late 2027, representing either a generational hedging opportunity for energy buyers or a violent correction risk if the backwardation proves wrong.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "BNO",
+        "USO",
+        "XLE"
+      ],
+      "timeframe": "December 2026 to late 2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.76,
+      "status": "open"
+    },
+    {
+      "summary": "The S&P 500 is in a constructive trend with the path of least resistance higher into quarter-end, supported by record retail buying flows and favorable July seasonal tailwinds, with 7,610 as the key level to clear.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "next 2 weeks / quarter-end June 30",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.62,
+      "status": "open"
+    },
+    {
+      "summary": "Front-end Treasury yields face upward pressure with the risk of accelerating higher if the May PCE print surprises to the upside, as the market would move to fully price the 2026 rate hike.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "SHY",
+        "TBT",
+        "2-year Treasury",
+        "10-year Treasury"
+      ],
+      "timeframe": "near-term, around June 25 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.68,
+      "status": "open"
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish pivot with 9 of 19 participants forecasting a rate hike in 2026, pushing the year-end median Fed Funds rate projection to 3.8% from 3.4%.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "IEF"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish shift, with markets increasingly pricing in a rate hike by year-end 2026, driven by upwardly revised inflation forecasts and the Fed's explicit pledge to deliver price stability.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "Fed Funds rate"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's hawkish shift under Warsh \u2014 with higher dot plot projections and a pledge to deliver price stability \u2014 raises the probability of a rate hike by year-end 2026, pressuring rate-sensitive assets and bonds.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "IEF",
+        "BND"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Key S&P 500 support sits at the 50-DMA (7,329); a break below this level would signal a meaningful shift in trend, while a break above 7,610 (the record high) would confirm bullish continuation.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "neutral",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term (next 2 weeks)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A hot May PCE print on June 25 is the primary near-term risk catalyst that could fully price in a 2026 Fed rate hike, driving the dollar and front-end Treasury yields sharply higher while pressuring equities.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "DXY",
+        "UUP"
+      ],
+      "timeframe": "event-driven \u2014 June 25, 2026 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    }
+  ],
+  "resolved_calls": [],
+  "dashboard": {
+    "market_summary": "Today's dominant theme is a converging agricultural supply shock: a 'Godzilla' El Ni\u00f1o disrupting crop output across Asia, Australasia, and Latin America is compounding with fertilizer supply cuts tied to Strait of Hormuz tensions, creating a strong bullish setup for agricultural and industrial commodities into the 2026\u20132027 crop cycle. On the equity side, the macro backdrop is deteriorating \u2014 a newly hawkish Fed under Kevin Warsh has reintroduced rate hike risk, which pressures passive-flow-dominated, mega-cap-concentrated US equities and adds headwinds specifically to AI/tech names. Precious metals receive no direct signal from today's insights, though the hawkish rate environment is a mild headwind while commodity stress and geopolitical risk provide an offsetting floor. AI/tech faces a layered bear case: broad equity fragility, potential rate hikes, and longer-term structural noise around Chinese memory and AI model competition.",
+    "sectors": {
+      "ai_tech": {
+        "sentiment_score": -0.45,
+        "recommendation": "sell",
+        "rationale": "Hawkish Fed policy and structural equity market fragility (record margin balances, mega-cap concentration, 0DTE options) create asymmetric downside for tech-heavy positions. Secondary risks from Chinese memory competition and enterprise AI model substitution add longer-term margin and market-share uncertainty, though these carry low source confidence."
+      },
+      "precious_metals": {
+        "sentiment_score": 0.1,
+        "recommendation": "hold",
+        "rationale": "No direct precious metals signals appear in today's data, but the combination of geopolitical stress (Hormuz closure), rate hike risk, and equity market fragility provides a modest safe-haven underpinning. Insufficient direct evidence to upgrade to a buy, but selling into this macro backdrop is not warranted."
+      },
+      "industrial_commodities": {
+        "sentiment_score": 0.75,
+        "recommendation": "buy",
+        "rationale": "Two independent, high-corroboration supply shocks \u2014 El Ni\u00f1o crop disruption across multiple major producing regions and fertilizer supply cuts from Hormuz tensions \u2014 are converging on the same crop cycle, producing a strong and well-corroborated bullish case for agricultural commodities. Brazil and Southern Africa benefit partially, but the net global supply picture remains materially tighter."
+      },
+      "macro": {
+        "sentiment_score": -0.5,
+        "recommendation": "sell",
+        "rationale": "A hawkish Fed pivot under Warsh reintroducing rate hike risk, combined with a fragile US equity market structure and likely financial sector underperformance, points to broad risk-off conditions. Investors should reduce exposure to rate-sensitive and passive-flow-dependent positions heading into the next FOMC window."
+      }
+    }
+  },
+  "snapshot": [],
+  "sentiment_trends": {
+    "ai_tech": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.35,
+      0.1,
+      0.3,
+      0.2,
+      null
+    ],
+    "precious_metals": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      -0.55,
+      0.5,
+      0.0,
+      -0.45,
+      null
+    ],
+    "industrial_commodities": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.0,
+      0.0,
+      0.0,
+      -0.2,
+      null
+    ],
+    "macro": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.1,
+      0.1,
+      -0.2,
+      -0.25,
+      null
+    ]
+  }
+}
