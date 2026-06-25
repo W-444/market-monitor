@@ -1,0 +1,787 @@
+{
+  "date": "2026-06-25",
+  "sources_processed": [
+    "Real Investment Advice"
+  ],
+  "insights": [
+    {
+      "summary": "Micron (MU) faces asymmetric downside risk into its fiscal Q3 earnings report; a beat may not be sufficient to sustain the stock given elevated expectations and a whisper number above already-high consensus.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "MU"
+      ],
+      "direction": "bearish",
+      "timeframe": "1-2 days (post earnings)",
+      "specificity": "high",
+      "key_reasoning": "Consensus already sits above Micron's own guidance, the whisper number is higher still, and the options market prices a ~13% one-day swing; any hedging language on pricing or capacity could trigger a sell-off even on a nominal beat, as seen with Broadcom three weeks prior.",
+      "notable_data": "Consensus EPS ~$20.60 vs Micron guidance $19.15; consensus revenue ~$35B vs guidance $33.5B; options pricing ~13% one-day swing; stock ran to record $1,213 last week; year-ago EPS $1.91 on $9.3B revenue",
+      "source_confidence": 0.72,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/greenspan-passes-but-his-put-lives-on/",
+      "content_title": "Greenspan Passes But His Put Lives On",
+      "content_date": "2026-06-24",
+      "content_type": "article",
+      "corroboration_confidence": 0.72,
+      "corroborated_by": [
+        "Real Investment Advice (index 1)",
+        "Real Investment Advice (index 2)",
+        "Real Investment Advice (index 7)"
+      ]
+    },
+    {
+      "summary": "A Micron earnings miss or cautious DRAM/NAND/HBM guidance would propagate bearish pressure across the entire semiconductor complex and chip ETFs, becoming a broad market problem rather than a single-stock event.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SOXX",
+        "SMH"
+      ],
+      "direction": "bearish",
+      "timeframe": "next 1-3 trading days",
+      "specificity": "medium",
+      "key_reasoning": "Semiconductors have carried a disproportionate share of the index rally this year; Micron is the market's cleanest read on AI memory demand, so weak guidance on DRAM/NAND pricing reads directly through to Nvidia and high-bandwidth memory names.",
+      "notable_data": "Chip complex sold off 5-10x harder than the broad S&P 500 on the day prior to earnings; overnight selling in Korean memory names contributed to the move",
+      "source_confidence": 0.62,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/greenspan-passes-but-his-put-lives-on/",
+      "content_title": "Greenspan Passes But His Put Lives On",
+      "content_date": "2026-06-24",
+      "content_type": "article",
+      "corroboration_confidence": 0.75,
+      "corroborated_by": [
+        "Real Investment Advice (index 0)",
+        "Real Investment Advice (index 2)",
+        "Real Investment Advice (index 7)"
+      ]
+    },
+    {
+      "summary": "Pre-earnings position squaring in semiconductors signals elevated near-term risk for chip-heavy AI tech ETFs; traders reduced semiconductor exposure ahead of a binary event they cannot reliably handicap.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "SOXX",
+        "SMH",
+        "QQQ"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term (days to weeks)",
+      "specificity": "medium",
+      "key_reasoning": "The concentrated selling into the close, disproportionate to broader market weakness, reflects deliberate de-risking rather than macro selling, suggesting continued near-term volatility in semiconductor-heavy ETFs.",
+      "notable_data": "S&P 500 broadly down modestly while semis fell 5-10x more; money rotated into safety/defensive names on the session",
+      "source_confidence": 0.52,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/greenspan-passes-but-his-put-lives-on/",
+      "content_title": "Greenspan Passes But His Put Lives On",
+      "content_date": "2026-06-24",
+      "content_type": "article",
+      "corroboration_confidence": 0.7,
+      "corroborated_by": [
+        "Real Investment Advice (index 0)",
+        "Real Investment Advice (index 1)",
+        "Real Investment Advice (index 7)"
+      ]
+    },
+    {
+      "summary": "The enduring 'Fed Put' framework supports a structural bullish bias for risk assets over the medium-to-long term, as markets maintain confidence the Fed will intervene in significant downturns.",
+      "asset_classes": [
+        "macro",
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ"
+      ],
+      "direction": "bullish",
+      "timeframe": "medium-to-long term (cycle-level)",
+      "specificity": "low",
+      "key_reasoning": "The Fed's consistent pattern of aggressive intervention since 1998\u2014through LTCM, dot-com, GFC, and COVID\u2014has institutionalized investor confidence in a Fed backstop, structurally reducing perceived downside risk.",
+      "notable_data": "Fed cut rates 75 bps in six weeks during LTCM crisis (1998); interventions across 2000, 2008, and 2020 crises cited",
+      "source_confidence": 0.22,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/greenspan-passes-but-his-put-lives-on/",
+      "content_title": "Greenspan Passes But His Put Lives On",
+      "content_date": "2026-06-24",
+      "content_type": "article",
+      "corroboration_confidence": 0.4,
+      "corroborated_by": [
+        "Real Investment Advice (index 4)",
+        "Real Investment Advice (index 11)"
+      ]
+    },
+    {
+      "summary": "The S&P 500 is expected to trade higher into early July driven by mechanical flows including passive reloads, ETF inflows, and buybacks after quad-witching and quarter-end pension rebalancing clears.",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "S&P 500",
+        "QQQ"
+      ],
+      "direction": "bullish",
+      "timeframe": "next 2 weeks / into early July 2026",
+      "specificity": "medium",
+      "key_reasoning": "Post-quad-witching dealer gamma removal, July 1 passive money reload, record ETF inflows ($1T YTD), and $925B in authorized buybacks all create mechanical buying pressure into the new quarter.",
+      "notable_data": "S&P 500 at 7,505; ATH at 7,620; $1T ETF inflows YTD (45% ahead of prior record pace); $925B in buybacks authorized YTD; S&P rises 69% of the time in first half of July since 1928; Nasdaq 100 positive in 17 of last 18 years in early July.",
+      "source_confidence": 0.62,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/the-technical-backdrop-when-flows-meet-a-hawkish-fed/",
+      "content_title": "The Technical Backdrop: When Flows Meet a Hawkish Fed",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.45,
+      "corroborated_by": [
+        "Real Investment Advice (index 3)",
+        "Real Investment Advice (index 11)"
+      ]
+    },
+    {
+      "summary": "Quarter-end pension rebalancing poses a short-term mechanical selling risk for equities and buying pressure for bonds before flows reverse on July 1.",
+      "asset_classes": [
+        "macro",
+        "bonds",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "TLT",
+        "S&P 500"
+      ],
+      "direction": "bearish",
+      "timeframe": "into June 30, 2026 quarter-end",
+      "specificity": "medium",
+      "key_reasoning": "Top 100 US pension funds are ~110% funded (healthiest since 2001), meaning de-risking is likely; over-allocation to equities vs. bonds forces mechanical rebalancing sells in equities and buys in bonds.",
+      "notable_data": "Top 100 US pension funds ~110% funded; equities overweight, bonds underweight relative to targets.",
+      "source_confidence": 0.6,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/the-technical-backdrop-when-flows-meet-a-hawkish-fed/",
+      "content_title": "The Technical Backdrop: When Flows Meet a Hawkish Fed",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.38,
+      "corroborated_by": [
+        "Real Investment Advice (index 8)",
+        "Real Investment Advice (index 14)"
+      ]
+    },
+    {
+      "summary": "The hawkish turn by new Fed Chair Kevin Warsh \u2014 with half the FOMC penciling in a rate hike \u2014 materially undermines the dip-buying reflex that has supported the rally, introducing meaningful downside risk.",
+      "asset_classes": [
+        "macro",
+        "bonds"
+      ],
+      "instruments": [
+        "S&P 500",
+        "SPY",
+        "10-year Treasury"
+      ],
+      "direction": "bearish",
+      "timeframe": "second half of 2026",
+      "specificity": "medium",
+      "key_reasoning": "The easing bias has been removed from the Fed statement and a rate hike is back on the table; this removes the implicit Fed put that underpins aggressive dip-buying behavior documented by Citadel's flow data.",
+      "notable_data": "Fed held at 3.75%; half of FOMC penciled in at least one rate hike; 10-year yield jumped back toward 4.5%; S&P posted worst first Fed-day for a new chair since 1994 (-1.21%).",
+      "source_confidence": 0.65,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/the-technical-backdrop-when-flows-meet-a-hawkish-fed/",
+      "content_title": "The Technical Backdrop: When Flows Meet a Hawkish Fed",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.6,
+      "corroborated_by": [
+        "Real Investment Advice (index 10)",
+        "Real Investment Advice (index 14)",
+        "Real Investment Advice (index 8)"
+      ]
+    },
+    {
+      "summary": "Semiconductor and mega-cap tech stocks face elevated concentration and leverage risk, with leveraged ETF assets up ~60% since end of March and semiconductor-linked leverage nearly tripling.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "SOXL",
+        "NVDA",
+        "semiconductors",
+        "Magnificent 7",
+        "leveraged ETFs"
+      ],
+      "direction": "mixed",
+      "timeframe": "near-term / into Q3 2026",
+      "specificity": "medium",
+      "key_reasoning": "18 cents of every S&P dollar flows into semiconductors and 33 cents into the Magnificent 7; leveraged ETF assets hit a record $218B with semiconductor leverage nearly tripling, creating a fragile crowded trade vulnerable to sharp reversal if flows turn.",
+      "notable_data": "Leveraged ETF assets at record $218B, up ~60% since end of March 2026; semiconductor leverage ~3x; ~40 cents of every S&P dollar in top 10 holdings; 33 cents in Magnificent 7; 18 cents in semiconductors.",
+      "source_confidence": 0.63,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/the-technical-backdrop-when-flows-meet-a-hawkish-fed/",
+      "content_title": "The Technical Backdrop: When Flows Meet a Hawkish Fed",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.55,
+      "corroborated_by": [
+        "Real Investment Advice (index 0)",
+        "Real Investment Advice (index 1)",
+        "Real Investment Advice (index 2)"
+      ]
+    },
+    {
+      "summary": "Deteriorating market breadth \u2014 with only 58% of S&P 500 members above their 50-day MA versus the healthy 70-80% threshold \u2014 signals underlying weakness even as the index approaches all-time highs.",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "instruments": [
+        "S&P 500",
+        "SPY"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term",
+      "specificity": "medium",
+      "key_reasoning": "Narrow breadth divergences where a shrinking list of leaders push the index to highs typically resolve negatively; if the percentage of stocks above their 50-day continues fading, the divergence is likely to close via index decline.",
+      "notable_data": "Only 58% of S&P 500 members above 50-day MA (healthy baseline is 70-80%); S&P 500 ~2% above 50-day, ~8% above 200-day; spring low of 6,344 is 17% below current levels.",
+      "source_confidence": 0.55,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/the-technical-backdrop-when-flows-meet-a-hawkish-fed/",
+      "content_title": "The Technical Backdrop: When Flows Meet a Hawkish Fed",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.58,
+      "corroborated_by": [
+        "Real Investment Advice (index 14)",
+        "Real Investment Advice (index 9)",
+        "Real Investment Advice (index 6)"
+      ]
+    },
+    {
+      "summary": "A VIX move toward 30 would be the critical trigger to watch as it is the level at which, per Citadel's data, reflexive dip-buying goes quiet and the bullish mechanical flow thesis breaks down.",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "instruments": [
+        "VIX",
+        "SPY"
+      ],
+      "direction": "bearish",
+      "timeframe": "contingent / near-term",
+      "specificity": "medium",
+      "key_reasoning": "Citadel Securities \u2014 which sees ~35% of all US retail order flow \u2014 identifies VIX 30 as the inflection point where buy-the-dip behavior stops; current VIX near 17 signals complacency rather than safety.",
+      "notable_data": "VIX currently ~17; Citadel dip-buyer shutdown threshold is VIX 30; Citadel sees ~35% of all US retail order flow.",
+      "source_confidence": 0.58,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/the-technical-backdrop-when-flows-meet-a-hawkish-fed/",
+      "content_title": "The Technical Backdrop: When Flows Meet a Hawkish Fed",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.42,
+      "corroborated_by": [
+        "Real Investment Advice (index 8)",
+        "Real Investment Advice (index 14)"
+      ]
+    },
+    {
+      "summary": "The S&P 500 is expected to face near-term headwinds from Fed rate hikes, with the 3-month forward window historically weak or negative following an initial hike, though a quick pivot to dovish policy could reverse losses.",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "direction": "mixed",
+      "timeframe": "3\u201312 months following initial rate hike",
+      "specificity": "medium",
+      "key_reasoning": "Historical data across six major hiking cycles since 1994 shows weak 3-month S&P 500 performance post-first-hike, but four of six cycles saw positive 6\u201312 month returns; today's high-valuation environment mirrors 2022, a cautionary cycle.",
+      "notable_data": "In four of six major hiking cycles since 1994, equities sustained positive performance; 2022 cycle saw worsening negative returns across 3, 6, and 12-month windows; current S&P 500 at 7,500.58, record high at 7,609.78.",
+      "source_confidence": 0.5,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "content_title": "Fed Funds Hikes Cloud The Outlook: Should Investors Worry?",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.55,
+      "corroborated_by": [
+        "Real Investment Advice (index 6)",
+        "Real Investment Advice (index 14)",
+        "Real Investment Advice (index 8)"
+      ]
+    },
+    {
+      "summary": "S&P 500 near-term path of least resistance is higher, supported by record retail inflows and strong seasonal tailwinds into July, with key support at 7,329 (50-DMA) and resistance at the 7,610 record high.",
+      "asset_classes": [
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "direction": "bullish",
+      "timeframe": "2\u20134 weeks (month- and quarter-end into July)",
+      "specificity": "high",
+      "key_reasoning": "Post-quadruple-witching gamma reset leaves the tape more flow-sensitive; Citadel's Rubner cites record retail demand, a buy-the-dip reflex with VIX in mid-teens, and one of the strongest seasonal windows as July allocation cycle begins.",
+      "notable_data": "S&P 500 at 7,500.58; 20-DMA at 7,487; 50-DMA at 7,329; 200-DMA at 6,917; record 7,609.78 on June 2; ~$8.3 trillion quadruple-witching expiration on Thursday; retail cash equity volumes 60% above 2025 average and 2x 2024 average; June tracking 9% above May's record.",
+      "source_confidence": 0.65,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "content_title": "Fed Funds Hikes Cloud The Outlook: Should Investors Worry?",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.4,
+      "corroborated_by": [
+        "Real Investment Advice (index 4)",
+        "Real Investment Advice (index 3)"
+      ]
+    },
+    {
+      "summary": "Small-cap equities face a specific bearish headwind from a bear-flattening yield curve, as their disproportionate reliance on floating-rate debt means rising short-term rates immediately reprice their borrowing costs higher.",
+      "asset_classes": [
+        "other"
+      ],
+      "instruments": [
+        "IWM"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-to-medium term (tied to ongoing rate hike cycle)",
+      "specificity": "medium",
+      "key_reasoning": "The 2Y/10Y yield curve has collapsed from 72bps to 29bps year-to-date; a bear flattener driven by rising short rates disproportionately pressures small caps dependent on floating-rate debt.",
+      "notable_data": "10Y\u20132Y spread fell ~10bps post-FOMC meeting; curve dropped from 72bps to 29bps since start of year; two Fed Funds rate hikes now priced in by year-end.",
+      "source_confidence": 0.6,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "content_title": "Fed Funds Hikes Cloud The Outlook: Should Investors Worry?",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.35,
+      "corroborated_by": [
+        "Real Investment Advice (index 13)",
+        "Real Investment Advice (index 14)"
+      ]
+    },
+    {
+      "summary": "Financial sector equities face a bearish outlook as the bear-flattening yield curve compresses net interest margins, squeezing the spread between borrowing costs and lending rates.",
+      "asset_classes": [
+        "other"
+      ],
+      "instruments": [
+        "XLF"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-to-medium term (tied to ongoing rate hike cycle)",
+      "specificity": "medium",
+      "key_reasoning": "Rising short-term rates faster than long-term rates compresses bank net interest margins, the core profitability driver for financials; curve at 29bps leaves little buffer.",
+      "notable_data": "10Y\u20132Y spread at 29bps, down from 72bps at start of year; two Fed Funds hikes priced in by year-end 2026.",
+      "source_confidence": 0.55,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "content_title": "Fed Funds Hikes Cloud The Outlook: Should Investors Worry?",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.35,
+      "corroborated_by": [
+        "Real Investment Advice (index 12)",
+        "Real Investment Advice (index 14)"
+      ]
+    },
+    {
+      "summary": "The combination of high equity valuations, a flattening yield curve, speculative activity, and Fed rate hike rhetoric represents a compounding set of headwinds for broad equities, with risk skewed to the downside if economic data deteriorates.",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ"
+      ],
+      "direction": "bearish",
+      "timeframe": "6\u201312 months",
+      "specificity": "medium",
+      "key_reasoning": "Current setup parallels 2022 with high valuations and rampant speculation, though starting rate levels are higher and the magnitude of hikes expected is smaller; additional headwinds include consumer pressure, IPO/secondary equity supply, and mid-term elections.",
+      "notable_data": "Equity valuations described as near historic highs; yield curve at 29bps vs. 72bps at year-start; Fed Funds market pricing two hikes by year-end 2026; MACD still below signal line with negative histogram.",
+      "source_confidence": 0.45,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "content_title": "Fed Funds Hikes Cloud The Outlook: Should Investors Worry?",
+      "content_date": "2026-06-22",
+      "content_type": "article",
+      "corroboration_confidence": 0.65,
+      "corroborated_by": [
+        "Real Investment Advice (index 6)",
+        "Real Investment Advice (index 8)",
+        "Real Investment Advice (index 10)",
+        "Real Investment Advice (index 12)",
+        "Real Investment Advice (index 13)"
+      ]
+    }
+  ],
+  "convergence_themes": [
+    {
+      "theme": "Semiconductor and AI-tech complex faces elevated near-term bearish risk driven by Micron earnings uncertainty, position squaring, and dangerous leverage buildup in chip ETFs",
+      "direction": "bearish",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 0)",
+        "Real Investment Advice (index 1)",
+        "Real Investment Advice (index 2)",
+        "Real Investment Advice (index 7)"
+      ],
+      "strength": "strong"
+    },
+    {
+      "theme": "Hawkish Fed policy pivot (rate hike risk under Warsh) introduces meaningful downside headwinds for broad equities, undermining the dip-buying reflex and compressing multiples",
+      "direction": "bearish",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 6)",
+        "Real Investment Advice (index 10)",
+        "Real Investment Advice (index 14)",
+        "Real Investment Advice (index 8)"
+      ],
+      "strength": "strong"
+    },
+    {
+      "theme": "Broad equity market faces compounding bearish headwinds: high valuations, deteriorating breadth, yield curve flattening, and speculative excess",
+      "direction": "bearish",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 8)",
+        "Real Investment Advice (index 9)",
+        "Real Investment Advice (index 14)",
+        "Real Investment Advice (index 5)"
+      ],
+      "strength": "strong"
+    },
+    {
+      "theme": "Short-term mechanical flows (passive inflows, buybacks, retail seasonality) support a near-term bullish drift in the S&P 500 into early July",
+      "direction": "bullish",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 4)",
+        "Real Investment Advice (index 11)",
+        "Real Investment Advice (index 3)"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "theme": "Bear-flattening yield curve creates sector-specific bearish pressure on small-caps (IWM) and financials (XLF) due to floating-rate debt exposure and compressed net interest margins",
+      "direction": "bearish",
+      "asset_classes": [
+        "other"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 12)",
+        "Real Investment Advice (index 13)",
+        "Real Investment Advice (index 14)"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "theme": "Quarter-end pension rebalancing creates transient mechanical selling pressure on equities with a subsequent reversal expected post-July 1",
+      "direction": "bearish",
+      "asset_classes": [
+        "macro",
+        "bonds",
+        "other"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 5)",
+        "Real Investment Advice (index 4)"
+      ],
+      "strength": "weak"
+    }
+  ],
+  "open_calls": [
+    {
+      "summary": "Alphabet is the strongest AI infrastructure play among hyperscalers, with Google Cloud accelerating to 63% growth and a $460B backlog justifying its $180-190B capex commitment; the market has validated this with a 10% surge post-earnings.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bullish",
+      "instruments": [
+        "GOOGL",
+        "GOOG"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.72,
+      "status": "open"
+    },
+    {
+      "summary": "Meta is the most vulnerable of the four hyperscalers to continued market skepticism because it lacks a third-party cloud business to validate its massive capex commitment, making its AI spending thesis the weakest among peers.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "META"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.7,
+      "status": "open"
+    },
+    {
+      "summary": "The oil futures curve is pricing a sharp normalization from current ~$110 Brent to roughly $80 by December 2026 and ~$70 by late 2027, representing either a generational hedging opportunity for energy buyers or a violent correction risk if the backwardation proves wrong.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "BNO",
+        "USO",
+        "XLE"
+      ],
+      "timeframe": "December 2026 to late 2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.76,
+      "status": "open"
+    },
+    {
+      "summary": "The S&P 500 is in a constructive trend with the path of least resistance higher into quarter-end, supported by record retail buying flows and favorable July seasonal tailwinds, with 7,610 as the key level to clear.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "next 2 weeks / quarter-end June 30",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.62,
+      "status": "open"
+    },
+    {
+      "summary": "Front-end Treasury yields face upward pressure with the risk of accelerating higher if the May PCE print surprises to the upside, as the market would move to fully price the 2026 rate hike.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "SHY",
+        "TBT",
+        "2-year Treasury",
+        "10-year Treasury"
+      ],
+      "timeframe": "near-term, around June 25 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.68,
+      "status": "open"
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish pivot with 9 of 19 participants forecasting a rate hike in 2026, pushing the year-end median Fed Funds rate projection to 3.8% from 3.4%.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "IEF"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish shift, with markets increasingly pricing in a rate hike by year-end 2026, driven by upwardly revised inflation forecasts and the Fed's explicit pledge to deliver price stability.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "Fed Funds rate"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's hawkish shift under Warsh \u2014 with higher dot plot projections and a pledge to deliver price stability \u2014 raises the probability of a rate hike by year-end 2026, pressuring rate-sensitive assets and bonds.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "IEF",
+        "BND"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Key S&P 500 support sits at the 50-DMA (7,329); a break below this level would signal a meaningful shift in trend, while a break above 7,610 (the record high) would confirm bullish continuation.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "neutral",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term (next 2 weeks)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A hot May PCE print on June 25 is the primary near-term risk catalyst that could fully price in a 2026 Fed rate hike, driving the dollar and front-end Treasury yields sharply higher while pressuring equities.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "DXY",
+        "UUP"
+      ],
+      "timeframe": "event-driven \u2014 June 25, 2026 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron (MU) faces asymmetric downside risk into its fiscal Q3 earnings report; a beat may not be sufficient to sustain the stock given elevated expectations and a whisper number above already-high consensus.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/greenspan-passes-but-his-put-lives-on/",
+      "direction": "bearish",
+      "instruments": [
+        "MU"
+      ],
+      "timeframe": "1-2 days (post earnings)",
+      "date_made": "2026-06-24",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "S&P 500 near-term path of least resistance is higher, supported by record retail inflows and strong seasonal tailwinds into July, with key support at 7,329 (50-DMA) and resistance at the 7,610 record high.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "2\u20134 weeks (month- and quarter-end into July)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    }
+  ],
+  "resolved_calls": [],
+  "dashboard": {
+    "market_summary": "Today's dominant theme is elevated near-term risk across the broad equity market, with the semiconductor and AI-tech complex at the epicenter ahead of Micron's binary earnings event and amid dangerous leverage buildup in chip ETFs. A hawkish Fed pivot under Chair Warsh \u2014 with half the FOMC reportedly penciling in rate hikes \u2014 is compounding headwinds by undermining the dip-buying reflex that has sustained the rally, while deteriorating market breadth (only 58% of S&P 500 members above their 50-DMA) and a bear-flattening yield curve add structural pressure. Short-term mechanical flows \u2014 passive inflows, buybacks, and retail seasonality \u2014 provide a partial offset and could support a drift higher into early July, but this is a fragile, flow-driven bid rather than a fundamentals-driven one. Precious metals and industrial commodities receive no signal today due to a complete absence of source coverage, making them effectively unranked in today's data.",
+    "sectors": {
+      "ai_tech": {
+        "sentiment_score": -0.55,
+        "recommendation": "sell",
+        "rationale": "Multiple converging bearish signals \u2014 Micron earnings asymmetric downside risk, pre-earnings position squaring, and leveraged ETF assets in semiconductors nearly tripling since March \u2014 create a high-risk, low-reward setup for chip-heavy AI/tech ETFs (e.g., SOXX, SMH, QQQ) in the near term. A Micron miss or cautious HBM/DRAM guidance could cascade broadly across the semiconductor complex, and the leverage overhang amplifies the potential drawdown."
+      },
+      "precious_metals": {
+        "sentiment_score": 0.0,
+        "recommendation": "no signal",
+        "rationale": "No source coverage or insights pertaining to precious metals \u2014 including gold, silver, or related ETFs (e.g., GLD, SLV, GDX) \u2014 were present in today's data set. Insufficient evidence to form a directional view."
+      },
+      "industrial_commodities": {
+        "sentiment_score": 0.0,
+        "recommendation": "no signal",
+        "rationale": "No source coverage or insights pertaining to industrial commodities \u2014 including copper, oil, or related ETFs (e.g., XME, PDBC, FCX) \u2014 were present in today's data set. Insufficient evidence to form a directional view."
+      },
+      "macro": {
+        "sentiment_score": -0.4,
+        "recommendation": "hold",
+        "rationale": "The macro picture is genuinely bifurcated: strong bearish structural headwinds (hawkish Fed, high valuations, flattening yield curve, weak breadth) are partially offset by legitimate near-term mechanical tailwinds (passive inflows, buybacks, retail seasonality into early July), creating a hold rather than outright sell \u2014 broad index ETFs may drift higher short-term but face meaningful downside risk if VIX approaches 30 or economic data deteriorates."
+      }
+    }
+  },
+  "snapshot": [],
+  "sentiment_trends": {
+    "ai_tech": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.35,
+      0.1,
+      0.3,
+      0.2,
+      -0.45,
+      null
+    ],
+    "precious_metals": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      -0.55,
+      0.5,
+      0.0,
+      -0.45,
+      0.1,
+      null
+    ],
+    "industrial_commodities": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.0,
+      0.0,
+      0.0,
+      -0.2,
+      0.75,
+      null
+    ],
+    "macro": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.1,
+      0.1,
+      -0.2,
+      -0.25,
+      -0.5,
+      null
+    ]
+  }
+}

@@ -150,5 +150,34 @@
     "source_confidence": 0.72,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Micron (MU) faces asymmetric downside risk into its fiscal Q3 earnings report; a beat may not be sufficient to sustain the stock given elevated expectations and a whisper number above already-high consensus.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/greenspan-passes-but-his-put-lives-on/",
+    "direction": "bearish",
+    "instruments": [
+      "MU"
+    ],
+    "timeframe": "1-2 days (post earnings)",
+    "date_made": "2026-06-24",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "S&P 500 near-term path of least resistance is higher, supported by record retail inflows and strong seasonal tailwinds into July, with key support at 7,329 (50-DMA) and resistance at the 7,610 record high.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+    "direction": "bullish",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "2\u20134 weeks (month- and quarter-end into July)",
+    "date_made": "2026-06-22",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
