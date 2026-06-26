@@ -1,0 +1,421 @@
+{
+  "date": "2026-06-26",
+  "sources_processed": [
+    "Real Investment Advice"
+  ],
+  "insights": [
+    {
+      "summary": "Hyperscaler earnings quality is deteriorating as a $549B gap between CapEx and depreciation will hit income statements in 2028+, threatening margins for Meta, Microsoft, Alphabet, Amazon, and Oracle beyond the current 'golden window'.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "META",
+        "MSFT",
+        "GOOGL",
+        "AMZN",
+        "ORCL",
+        "QQQ"
+      ],
+      "direction": "bearish",
+      "timeframe": "2028 and beyond",
+      "specificity": "medium",
+      "key_reasoning": "Hyperscalers capitalize AI chip purchases as assets and depreciate them slowly, masking true expense load; the $549B gap between 2026 CapEx ($760B) and depreciation ($211B) must eventually flow through income statements, compressing margins.",
+      "notable_data": "$412B hyperscaler CapEx in 2025; $760B estimated for 2026; $211B estimated depreciation for 2026; $549B expense gap; analyst D&A estimates described as 'systematically understated'",
+      "source_confidence": 0.55,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/earnings-growth-today-but-at-what-cost/",
+      "content_title": "Earnings Growth Today But At What Cost?",
+      "content_date": "2026-06-25",
+      "content_type": "article",
+      "corroboration_confidence": 0.25,
+      "corroborated_by": [
+        "Real Investment Advice (index 1 \u2014 broad AI/tech bearish sentiment via margin debt, index 3 \u2014 valuation compression via equity supply)"
+      ]
+    },
+    {
+      "summary": "Record margin debt expansion signals a fragile, leverage-fueled bull market that historically precedes major tops by several months, warranting tighter risk discipline without an outright sell signal.",
+      "asset_classes": [
+        "macro",
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ"
+      ],
+      "direction": "bearish",
+      "timeframe": "several months horizon",
+      "specificity": "medium",
+      "key_reasoning": "FINRA May data shows margin debt at a record $1.42T (+8.5% MoM, +53.7% YoY), the fourth-fastest expansion on record per Topdown Charts; historically this reading has appeared a few months before major market tops, and net investor debt (margin minus free credit) is at a record -$992B.",
+      "notable_data": "Margin debt: $1.42T record; MoM surge: +8.5% (+$111B); YoY: +53.7%; margin debt/GDP: 4.45% (47% above long-term avg); net investor debt: -$992B record; two-month leverage rebound from March low: ~16%",
+      "source_confidence": 0.55,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/earnings-growth-today-but-at-what-cost/",
+      "content_title": "Earnings Growth Today But At What Cost?",
+      "content_date": "2026-06-25",
+      "content_type": "article",
+      "corroboration_confidence": 0.3,
+      "corroborated_by": [
+        "Real Investment Advice (index 0 \u2014 AI/tech margin deterioration, index 3 \u2014 liquidity crowding/valuation compression)"
+      ]
+    },
+    {
+      "summary": "SK Hynix's $29.4B US ADR listing (expected July 10) offers American investors direct exposure to the dominant HBM chip supplier but adds significant equity supply overhang that could pressure existing AI/semiconductor names.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "NVDA",
+        "MU",
+        "SOXX",
+        "SMH"
+      ],
+      "direction": "mixed",
+      "timeframe": "July 10 listing date and near-term thereafter",
+      "specificity": "medium",
+      "key_reasoning": "SK Hynix is the dominant supplier of high-bandwidth memory for Nvidia AI GPUs and trades at a discount to Micron; US listing resolves that valuation gap but joins a flood of equity supply (SpaceX, Anthropic, OpenAI IPOs, hyperscaler secondaries) that competes for finite investor capital.",
+      "notable_data": "Offering size: $29.4B (largest ADR in history, surpassing Alibaba's $25B 2014 IPO); SK Hynix shares up ~300% in 2026 and ~800% over the past year; expected trading date: July 10",
+      "source_confidence": 0.65,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/earnings-growth-today-but-at-what-cost/",
+      "content_title": "Earnings Growth Today But At What Cost?",
+      "content_date": "2026-06-25",
+      "content_type": "article",
+      "corroboration_confidence": 0.2,
+      "corroborated_by": [
+        "Real Investment Advice (index 3 \u2014 equity supply overhang theme)"
+      ]
+    },
+    {
+      "summary": "The growing wave of equity supply from major tech IPOs and secondaries (SK Hynix, SpaceX, Anthropic, OpenAI) risks crowding out existing holdings as available liquidity is insufficient to absorb all new issuance without compressing valuations of current market constituents.",
+      "asset_classes": [
+        "ai_tech",
+        "macro"
+      ],
+      "instruments": [
+        "QQQ",
+        "SPY",
+        "ARKK"
+      ],
+      "direction": "bearish",
+      "timeframe": "2026 near-to-medium term",
+      "specificity": "low",
+      "key_reasoning": "The Fed is not providing excess liquidity, savings rates are lower, and valuations are elevated; new mega-listings compete for the same finite capital pool, implying existing market-cap must shrink to accommodate new supply.",
+      "notable_data": "SK Hynix ADR: $29.4B; Alibaba 2014 IPO: $25B (prior record); pipeline also includes SpaceX, Anthropic, OpenAI IPOs and hyperscaler secondaries",
+      "source_confidence": 0.3,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/earnings-growth-today-but-at-what-cost/",
+      "content_title": "Earnings Growth Today But At What Cost?",
+      "content_date": "2026-06-25",
+      "content_type": "article",
+      "corroboration_confidence": 0.3,
+      "corroborated_by": [
+        "Real Investment Advice (index 2 \u2014 SK Hynix supply overhang, index 1 \u2014 leverage-fueled fragility, index 0 \u2014 AI/tech margin pressure)"
+      ]
+    }
+  ],
+  "convergence_themes": [
+    {
+      "theme": "AI/Tech valuation pressure from structural headwinds (margin erosion, equity supply overhang, leverage)",
+      "direction": "bearish",
+      "asset_classes": [
+        "ai_tech",
+        "macro"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (indices 0, 1, 3)"
+      ],
+      "strength": "weak",
+      "notes": "Three articles from a single publisher converge on bearish AI/tech outlook via different mechanisms. Strength is capped at 'weak' due to lack of independent-source corroboration \u2014 all signals originate from the same outlet, which significantly limits true convergence confidence."
+    },
+    {
+      "theme": "Equity supply overhang crowding out existing AI/semiconductor holdings",
+      "direction": "bearish",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (indices 2, 3)"
+      ],
+      "strength": "weak",
+      "notes": "Two articles from Real Investment Advice specifically flag new equity issuance (SK Hynix ADR, SpaceX, Anthropic, OpenAI) as a liquidity drain and valuation depressant for incumbent AI/semiconductor names. Single-source origin limits strength rating."
+    }
+  ],
+  "open_calls": [
+    {
+      "summary": "Alphabet is the strongest AI infrastructure play among hyperscalers, with Google Cloud accelerating to 63% growth and a $460B backlog justifying its $180-190B capex commitment; the market has validated this with a 10% surge post-earnings.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bullish",
+      "instruments": [
+        "GOOGL",
+        "GOOG"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.72,
+      "status": "open"
+    },
+    {
+      "summary": "Meta is the most vulnerable of the four hyperscalers to continued market skepticism because it lacks a third-party cloud business to validate its massive capex commitment, making its AI spending thesis the weakest among peers.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "META"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.7,
+      "status": "open"
+    },
+    {
+      "summary": "The oil futures curve is pricing a sharp normalization from current ~$110 Brent to roughly $80 by December 2026 and ~$70 by late 2027, representing either a generational hedging opportunity for energy buyers or a violent correction risk if the backwardation proves wrong.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "BNO",
+        "USO",
+        "XLE"
+      ],
+      "timeframe": "December 2026 to late 2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.76,
+      "status": "open"
+    },
+    {
+      "summary": "The S&P 500 is in a constructive trend with the path of least resistance higher into quarter-end, supported by record retail buying flows and favorable July seasonal tailwinds, with 7,610 as the key level to clear.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "next 2 weeks / quarter-end June 30",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.62,
+      "status": "open"
+    },
+    {
+      "summary": "Front-end Treasury yields face upward pressure with the risk of accelerating higher if the May PCE print surprises to the upside, as the market would move to fully price the 2026 rate hike.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "SHY",
+        "TBT",
+        "2-year Treasury",
+        "10-year Treasury"
+      ],
+      "timeframe": "near-term, around June 25 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.68,
+      "status": "open"
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish pivot with 9 of 19 participants forecasting a rate hike in 2026, pushing the year-end median Fed Funds rate projection to 3.8% from 3.4%.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "IEF"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish shift, with markets increasingly pricing in a rate hike by year-end 2026, driven by upwardly revised inflation forecasts and the Fed's explicit pledge to deliver price stability.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "Fed Funds rate"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's hawkish shift under Warsh \u2014 with higher dot plot projections and a pledge to deliver price stability \u2014 raises the probability of a rate hike by year-end 2026, pressuring rate-sensitive assets and bonds.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "IEF",
+        "BND"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Key S&P 500 support sits at the 50-DMA (7,329); a break below this level would signal a meaningful shift in trend, while a break above 7,610 (the record high) would confirm bullish continuation.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "neutral",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term (next 2 weeks)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A hot May PCE print on June 25 is the primary near-term risk catalyst that could fully price in a 2026 Fed rate hike, driving the dollar and front-end Treasury yields sharply higher while pressuring equities.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "DXY",
+        "UUP"
+      ],
+      "timeframe": "event-driven \u2014 June 25, 2026 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron (MU) faces asymmetric downside risk into its fiscal Q3 earnings report; a beat may not be sufficient to sustain the stock given elevated expectations and a whisper number above already-high consensus.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/greenspan-passes-but-his-put-lives-on/",
+      "direction": "bearish",
+      "instruments": [
+        "MU"
+      ],
+      "timeframe": "1-2 days (post earnings)",
+      "date_made": "2026-06-24",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "S&P 500 near-term path of least resistance is higher, supported by record retail inflows and strong seasonal tailwinds into July, with key support at 7,329 (50-DMA) and resistance at the 7,610 record high.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "2\u20134 weeks (month- and quarter-end into July)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    }
+  ],
+  "resolved_calls": [],
+  "dashboard": {
+    "market_summary": "Today's insights are dominated by a single-source bearish narrative targeting AI/tech, with Real Investment Advice flagging three distinct structural headwinds: a looming $549B CapEx-to-depreciation gap threatening hyperscaler margins post-2028, record margin debt signalling a leverage-fragile bull market, and a growing equity supply overhang from major tech listings (SK Hynix, SpaceX, Anthropic, OpenAI) that risks crowding out incumbent holdings. Because all signals originate from one publisher with low corroboration confidence scores, conviction is limited \u2014 these are cautionary flags rather than actionable sell signals. Precious metals and industrial commodities received no coverage today, leaving those sectors effectively dark. Macro conditions warrant monitoring given elevated leverage metrics, but no independent confirmation exists to escalate risk posture.",
+    "sectors": {
+      "ai_tech": {
+        "sentiment_score": -0.35,
+        "recommendation": "hold",
+        "rationale": "Multiple bearish mechanisms converge on AI/tech \u2014 margin erosion risk, leverage-fuelled market fragility, and equity supply overhang \u2014 but all originate from a single outlet with corroboration confidence below 0.35, preventing a sell call. Existing holders should tighten risk discipline (review position sizing, trailing stops) without exiting; new capital deployment should wait for independent confirmation of these themes."
+      },
+      "precious_metals": {
+        "sentiment_score": 0.0,
+        "recommendation": "no signal",
+        "rationale": "No precious metals coverage in today's inputs. Cannot form a directional view without data."
+      },
+      "industrial_commodities": {
+        "sentiment_score": 0.0,
+        "recommendation": "no signal",
+        "rationale": "No industrial commodities coverage in today's inputs. Cannot form a directional view without data."
+      },
+      "macro": {
+        "sentiment_score": -0.25,
+        "recommendation": "hold",
+        "rationale": "Record margin debt expansion is a historically reliable late-cycle warning indicator, but the signal is single-source and not yet at a confirmed inflection point \u2014 months of lead time are typical before a major top. Maintain current allocation but avoid adding leveraged exposure to risk assets until the picture clarifies with broader corroboration."
+      }
+    }
+  },
+  "snapshot": [],
+  "sentiment_trends": {
+    "ai_tech": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.35,
+      0.1,
+      0.3,
+      0.2,
+      -0.45,
+      -0.55,
+      null
+    ],
+    "precious_metals": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      -0.55,
+      0.5,
+      0.0,
+      -0.45,
+      0.1,
+      0.0,
+      null
+    ],
+    "industrial_commodities": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.0,
+      0.0,
+      0.0,
+      -0.2,
+      0.75,
+      0.0,
+      null
+    ],
+    "macro": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.1,
+      0.1,
+      -0.2,
+      -0.25,
+      -0.5,
+      -0.4,
+      null
+    ]
+  }
+}
