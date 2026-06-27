@@ -2,9 +2,8 @@ name: Market Intelligence Monitor
 
 on:
   schedule:
-    # 05:00 UTC daily = ~06:00 CET (winter) / 07:00 CEST (summer)
-    # Adjust to suit your timezone: https://crontab.guru
-    - cron: "0 5 * * *"
+    # 19:00 UTC = 05:00 AEST (UTC+10) / 06:00 AEDT (UTC+11, daylight saving)
+    - cron: "0 19 * * *"
   workflow_dispatch:   # lets you trigger a run manually from GitHub Actions UI
 
 permissions:
