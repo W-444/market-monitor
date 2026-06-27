@@ -58,13 +58,15 @@ MAX_ARTICLE_CHARS    = 8000
 
 # ── Sources ───────────────────────────────────────────────────────────────────
 
+# YouTube channel IDs — used for the official RSS feed (reliable from cloud IPs).
+# To find a channel ID: visit youtube.com/@handle and look for the RSS link in page source,
+# or use: https://www.youtube.com/feeds/videos.xml?channel_id=<ID>
 YOUTUBE_CHANNELS = {
-    "Thoughtful Money":        "https://www.youtube.com/@adam.taggart/videos",
-    "Thoughtful Money (Live)": "https://www.youtube.com/@adam.taggart/streams",
-    "Eurodollar University":   "https://www.youtube.com/@EurodollarUniversity",
-    "All-In Podcast":          "https://www.youtube.com/@allin",
-    "George Gammon":           "https://www.youtube.com/@GeorgeGammon",
-    "Forward Guidance":        "https://www.youtube.com/@ForwardGuidance",
+    "Thoughtful Money":      "UCjqe6xtZYTfvA4pHs0HgJsQ",  # @adam.taggart
+    "Eurodollar University": "UCrXNkk4IESnqU-8GMad2vyA",  # @EurodollarUniversity
+    "All-In Podcast":        "UCESLZhusAkFfsNsApnjF_Cg",  # @allin
+    "George Gammon":         "UCpvyOqtEc86X8w8_Se0t4-w",  # @GeorgeGammon
+    "Forward Guidance":      "UC0E-St9TloQ7TAu8hn1xJ9w",  # @ForwardGuidance
 }
 
 RSS_SOURCES = {
@@ -135,40 +137,51 @@ _EARNINGS_KEYWORDS = frozenset({
 
 # ── Content Fetching ──────────────────────────────────────────────────────────
 
-def get_recent_youtube_videos(channel_url: str, source_name: str,
+def get_recent_youtube_videos(channel_id: str, source_name: str,
                                days_back: int = 1) -> list[dict]:
-    """Return video metadata for videos published in the last `days_back` days."""
-    cutoff = (TODAY - datetime.timedelta(days=days_back)).strftime("%Y%m%d")
+    """Return videos published in last `days_back` days via YouTube's official RSS feed.
+
+    Uses YouTube's public Atom feed rather than yt-dlp scraping, which is reliably
+    blocked by YouTube from cloud/CI IP ranges (GitHub Actions, Azure, etc.).
+    The RSS feed returns the ~15 most recent videos and is never IP-restricted.
+    """
+    url = f"https://www.youtube.com/feeds/videos.xml?channel_id={channel_id}"
+    cutoff_dt = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(days=days_back)
     try:
-        result = subprocess.run(
-            [
-                "yt-dlp", "--flat-playlist", "--playlist-end", "15",
-                "--dateafter", cutoff,   # yt-dlp native filter: skip older videos
-                "--print", "%(id)s|||%(title)s|||%(upload_date)s",
-                "--no-warnings", "--quiet", channel_url,
-            ],
-            capture_output=True, text=True, timeout=90,
-        )
+        feed = feedparser.parse(url)
+        if feed.bozo and not feed.entries:
+            print(f"  ⚠  YouTube RSS error for {source_name}: {getattr(feed, 'bozo_exception', 'unknown')}")
+            return []
         videos = []
-        for line in result.stdout.strip().splitlines():
-            if "|||" not in line:
+        for entry in feed.entries:
+            pub = entry.get("published_parsed")
+            if pub is None:
                 continue
-            parts = line.split("|||")
-            if len(parts) < 3:
+            pub_dt = datetime.datetime(*pub[:6], tzinfo=datetime.timezone.utc)
+            if pub_dt < cutoff_dt:
                 continue
-            vid_id, title, upload_date = (p.strip() for p in parts[:3])
-            # Belt-and-suspenders: also validate date format before comparing
-            if re.match(r"^\d{8}$", upload_date or "") and upload_date >= cutoff:
-                videos.append({
-                    "id":     vid_id,
-                    "title":  title,
-                    "date":   f"{upload_date[:4]}-{upload_date[4:6]}-{upload_date[6:]}",
-                    "url":    f"https://youtube.com/watch?v={vid_id}",
-                    "source": source_name,
-                })
+            # feedparser exposes yt:videoId as entry.yt_videoid
+            vid_id = getattr(entry, "yt_videoid", None) or entry.get("id", "").split("=")[-1]
+            if not vid_id:
+                continue
+            # media:group > media:description often has a useful summary
+            description = ""
+            media = entry.get("media_group") or {}
+            if isinstance(media, dict):
+                description = media.get("media_description", "") or ""
+            if not description:
+                description = entry.get("summary", "")
+            videos.append({
+                "id":          vid_id,
+                "title":       entry.get("title", ""),
+                "date":        pub_dt.strftime("%Y-%m-%d"),
+                "url":         f"https://youtube.com/watch?v={vid_id}",
+                "source":      source_name,
+                "description": description[:3000],
+            })
         return videos
     except Exception as exc:
-        print(f"  ⚠  YouTube fetch failed for {source_name}: {exc}")
+        print(f"  ⚠  YouTube RSS fetch failed for {source_name}: {exc}")
         return []
 
 
@@ -182,18 +195,22 @@ def get_youtube_transcript(video_id: str, title: str) -> str | None:
     url = f"https://youtube.com/watch?v={video_id}"
     try:
         with tempfile.TemporaryDirectory() as tmpdir:
-            subprocess.run(
+            proc = subprocess.run(
                 [
                     "yt-dlp",
                     "--write-auto-subs", "--no-download",
                     "--sub-langs", "en.*",
                     "--sub-format", "vtt",
                     "--output", f"{tmpdir}/sub",
-                    "--no-warnings", "--quiet",
+                    "--no-warnings",
                     url,
                 ],
                 capture_output=True, text=True, timeout=90,
             )
+            if proc.returncode != 0 and proc.stderr.strip():
+                # Log first line of stderr so we can see why yt-dlp failed
+                first_err = proc.stderr.strip().splitlines()[0][:120]
+                print(f"    yt-dlp error: {first_err}")
             vtt_files = list(Path(tmpdir).glob("*.vtt"))
             if not vtt_files:
                 print(f"    No transcript available: {title[:60]}")
@@ -1722,16 +1739,21 @@ def run_daily():
     already_seen = get_already_processed_urls()
     print(f"   ({len(already_seen)} URL(s) already processed in prior runs — will skip)")
 
-    # YouTube
-    for source_name, channel_url in YOUTUBE_CHANNELS.items():
+    # YouTube — discovery via official RSS feed, transcript via yt-dlp
+    for source_name, channel_id in YOUTUBE_CHANNELS.items():
         print(f"\n▶  YouTube · {source_name}")
-        videos = get_recent_youtube_videos(channel_url, source_name, days_back=FETCH_DAYS_BACK)
+        videos = get_recent_youtube_videos(channel_id, source_name, days_back=FETCH_DAYS_BACK)
         new_videos = [v for v in videos if v["url"] not in already_seen]
         print(f"   {len(new_videos)} new video(s) ({len(videos) - len(new_videos)} already processed)")
         for v in new_videos:
             transcript = get_youtube_transcript(v["id"], v["title"])
             if transcript:
                 v["content"] = transcript
+                all_items.append(("podcast", v))
+            elif v.get("description") and len(v["description"]) > 150:
+                # Fallback: use video description from RSS when transcript unavailable
+                print(f"    Using description fallback for: {v['title'][:60]}")
+                v["content"] = f"[YouTube description — transcript unavailable]\n\n{v['description']}"
                 all_items.append(("podcast", v))
             time.sleep(1)
 
@@ -1849,6 +1871,14 @@ def run_weekly():
 
 # ── Entry Point ───────────────────────────────────────────────────────────────
 
+if __name__ == "__main__":
+    import sys
+    if "--convergence-check" in sys.argv:
+        run_convergence_check()
+    else:
+        run_daily()
+        if IS_WEEKLY:
+            run_weekly()
 if __name__ == "__main__":
     import sys
     if "--convergence-check" in sys.argv:
