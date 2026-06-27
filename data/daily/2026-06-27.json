@@ -2,13 +2,283 @@
   "date": "2026-06-27",
   "sources_processed": [
     "All-In Podcast",
-    "Eurodollar University",
+    "Odd Lots",
     "Real Investment Advice",
     "Thoughtful Money"
   ],
   "insights": [
     {
-      "summary": "A 30% market correction would not necessarily break the long-term secular bull trend; the S&P 500 is so far above its long-term trend that only a 40-50% decline would constitute a true structural bear market.",
+      "summary": "Broad market breadth is weak despite headline indices holding up, driven by Mag7 dominance masking underlying fragility in equal-weight S&P and semiconductors. This narrow market structure signals elevated correction risk.",
+      "asset_classes": [
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "RSP",
+        "QQQ",
+        "SOX"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term",
+      "specificity": "medium",
+      "key_reasoning": "RSI appears acceptable at the index level but breadth metrics show only a handful of mega-cap names carrying the market, a historically fragile setup that precedes corrections.",
+      "notable_data": null,
+      "source_confidence": 0.35,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Semiconductors are showing a momentum shift with cyclical risks rising; the law of large numbers is becoming a headwind for continued outsized growth in the sector.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "SOXX",
+        "SMH",
+        "NVDA"
+      ],
+      "direction": "bearish",
+      "timeframe": "medium-term",
+      "specificity": "medium",
+      "key_reasoning": "Semiconductor revenue bases are now so large that maintaining prior growth rates is mathematically difficult, and cyclical demand patterns suggest a downturn is increasingly likely.",
+      "notable_data": null,
+      "source_confidence": 0.3,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Capital is rotating away from Mag7 growth names toward stable, dividend-paying growers as mega-cap momentum fades. Roberts' firm is repositioning accordingly.",
+      "asset_classes": [
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "QQQ",
+        "AAPL",
+        "MSFT",
+        "GOOGL"
+      ],
+      "direction": "mixed",
+      "timeframe": "near-term to medium-term",
+      "specificity": "medium",
+      "key_reasoning": "Mag7 stocks are stumbling on valuation and capex concerns, prompting factor rotation into value and stable-growth equities with more predictable free cash flow.",
+      "notable_data": null,
+      "source_confidence": 0.38,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Apple faces margin pressure from price hikes needed to offset tariff costs; the fundamental earnings outlook is challenged near-term.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "AAPL"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term",
+      "specificity": "medium",
+      "key_reasoning": "Apple is passing tariff-related cost increases to consumers via price hikes, which risks demand destruction and compression of profit margins if consumers resist.",
+      "notable_data": null,
+      "source_confidence": 0.32,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "The massive AI capex buildout by Mag7 companies faces serious risks from physics constraints, component availability (capacitors), and an accelerating depreciation bill that will pressure free cash flow.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "MSFT",
+        "GOOGL",
+        "META",
+        "AMZN",
+        "NVDA"
+      ],
+      "direction": "bearish",
+      "timeframe": "medium-term",
+      "specificity": "medium",
+      "key_reasoning": "Data center infrastructure is being overbuilt at a pace where obsolescence cycles and depreciation costs will materially reduce free cash flow before productivity gains are realized.",
+      "notable_data": null,
+      "source_confidence": 0.33,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "OpenAI's IPO has been delayed to 2027, a signal that AI private market valuations may be difficult to sustain and that the window for peak AI sentiment may be closing.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "MSFT"
+      ],
+      "direction": "bearish",
+      "timeframe": "2027",
+      "specificity": "medium",
+      "key_reasoning": "IPO delay suggests either valuation concerns or market timing caution from insiders, which historically signals that the speculative peak in a sector theme is maturing.",
+      "notable_data": "OpenAI IPO pushed to 2027",
+      "source_confidence": 0.4,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Roberts' firm's factor rotation model is shifting from value back toward growth and mega-cap tilts, suggesting a short-term tactical trade in large-cap growth ETFs.",
+      "asset_classes": [
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "IVW",
+        "QQQ",
+        "VUG"
+      ],
+      "direction": "bullish",
+      "timeframe": "near-term (July 2026)",
+      "specificity": "medium",
+      "key_reasoning": "Quarter-end rebalancing flows and bond strength are temporarily supportive of mega-cap growth, warranting a tactical tilt before a potentially more significant rollover.",
+      "notable_data": null,
+      "source_confidence": 0.42,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Gold miners are under pressure from dollar strength and foreign capital flowing into U.S. assets, creating a headwind despite gold's underlying appeal.",
+      "asset_classes": [
+        "precious_metals"
+      ],
+      "instruments": [
+        "GDX",
+        "GDXJ",
+        "GLD"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term",
+      "specificity": "medium",
+      "key_reasoning": "A strengthening U.S. dollar driven by foreign inflows into U.S. assets compresses gold miner margins and suppresses gold prices in dollar terms.",
+      "notable_data": null,
+      "source_confidence": 0.35,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Record margin debt being used to purchase leveraged derivatives sets the stage for a spectacular deleveraging event; Roberts warns this will 'end in tears.'",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ"
+      ],
+      "direction": "bearish",
+      "timeframe": "unspecified, but imminent risk flagged",
+      "specificity": "low",
+      "key_reasoning": "Margin debt at all-time highs combined with leveraged derivatives usage creates a reflexive cascade risk where any meaningful price decline forces forced selling and amplifies losses.",
+      "notable_data": "Margin debt at all-time highs",
+      "source_confidence": 0.28,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Oil prices are falling and inflation is expected to be transitory, which should push bond yields lower and make bonds increasingly attractive.",
+      "asset_classes": [
+        "energy",
+        "bonds",
+        "macro"
+      ],
+      "instruments": [
+        "USO",
+        "TLT",
+        "IEF",
+        "BNO"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term to medium-term",
+      "specificity": "medium",
+      "key_reasoning": "Declining oil prices reduce energy-driven inflation pressures, giving the Fed cover to cut rates, which would rally longer-duration bonds.",
+      "notable_data": null,
+      "source_confidence": 0.4,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Bitcoin is showing technical weakness and MicroStrategy (MSTR) carries elevated blow-up risk, though an oversold bounce is possible short-term.",
+      "asset_classes": [
+        "crypto"
+      ],
+      "instruments": [
+        "BTC",
+        "MSTR",
+        "IBIT"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term with possible short-term bounce",
+      "specificity": "medium",
+      "key_reasoning": "Bitcoin's technical chart structure has broken down, and MSTR's leveraged BTC exposure amplifies downside risk; however, extremely oversold conditions could produce a reflexive rally before the next leg lower.",
+      "notable_data": null,
+      "source_confidence": 0.37,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=NDBNP47BX8s",
+      "content_title": "\"The Blow-up Is Going To Be Spectacular\" | Lance Roberts",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "A 30% decline in the S&P 500 would not necessarily break the secular bull market trend; only a 40-50% decline would likely constitute a true bear market by trend-structure criteria.",
       "asset_classes": [
         "other"
       ],
@@ -19,22 +289,19 @@
       "direction": "bullish",
       "timeframe": null,
       "specificity": "medium",
-      "key_reasoning": "The market's long-term uptrend has remained intact through multiple 20%+ corrections since 2009; the defining criterion for a bear market should be trend-structure breakdown, not an arbitrary percentage threshold.",
-      "notable_data": "30% decline still leaves bull trend intact; 40-50% decline required to break long-term trend",
-      "source_confidence": 0.3,
+      "key_reasoning": "The market is currently so extended above its long-term trend that even a 30% correction would leave the broader bull trend intact; the 20% bear market threshold is an outdated 1960s definition that no longer reflects trend-break reality.",
+      "notable_data": "30% correction cited as insufficient to break bull trend; 40-50% decline estimated as the threshold to break long-term trend structure",
+      "source_confidence": 0.25,
       "source": "Thoughtful Money",
       "source_url": "https://youtube.com/watch?v=NxAdNypDoKY",
       "content_title": "The Market Could Drop 30% And Still Be Bullish | Lance Roberts",
       "content_date": "2026-06-26",
       "content_type": "podcast",
-      "corroboration_confidence": 0.25,
-      "corroborated_by": [
-        "Thoughtful Money (index 1)",
-        "Thoughtful Money (index 2)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "The S&P 500 may be entering a blow-off top phase, with the index potentially gaining another ~1,000 points from current levels if market participation broadens beyond leading stocks.",
+      "summary": "The S&P 500 may be entering a classic blow-off top phase, with the potential for an additional ~1,000-point gain from current levels before a major reversal occurs. The recent breakout and rapid surge suggest the most explosive phase of the rally may still be ahead.",
       "asset_classes": [
         "other"
       ],
@@ -43,28 +310,23 @@
         "SPY"
       ],
       "direction": "bullish",
-      "timeframe": "near-term / relatively short period",
+      "timeframe": "near-term (weeks to months, unspecified)",
       "specificity": "medium",
-      "key_reasoning": "After breaking out above prior highs and surging from ~7,000 to ~7,500 in weeks, historical precedent suggests extreme momentum tends to extend further rather than reverse immediately; broadening participation could fuel an additional parabolic leg.",
-      "notable_data": "SPX moved from ~7,000 to ~7,500 in a few weeks post-breakout; potential additional ~1,000-point gain cited; market logged one of its strongest 8-week rallies in modern history with an unusually long consecutive-gain streak.",
+      "key_reasoning": "Historical data shows extreme momentum and overbought conditions are poor timing tools for tops; markets in similar blow-off phases have continued higher rather than reversing immediately. Broadening market participation could accelerate the final leg.",
+      "notable_data": "SPX surged from ~7,000 to ~7,500 in a few weeks post-breakout; potential additional 1,000-point gain cited; one of the strongest 8-week rallies in modern history logged; unusually long streak of consecutive gains recorded.",
       "source_confidence": 0.45,
       "source": "Thoughtful Money",
       "source_url": "https://youtube.com/watch?v=9sY1z4xRpA0",
       "content_title": "The Bigger The Bubble, The Harder The Top To Spot | New Harbor Financial",
       "content_date": "2026-06-25",
       "content_type": "podcast",
-      "corroboration_confidence": 0.3,
-      "corroborated_by": [
-        "Thoughtful Money (index 0)",
-        "Thoughtful Money (index 2)",
-        "Real Investment Advice (index 18)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "Overbought signals, long winning streaks, and stretched valuations are poor timing tools for calling a market top; extreme trends historically become more extreme before reversing abruptly.",
+      "summary": "Extreme momentum signals \u2014 including long winning streaks and overbought readings \u2014 should not be interpreted as imminent reversal signals, as history shows these conditions frequently precede further gains rather than tops.",
       "asset_classes": [
-        "macro",
-        "other"
+        "macro"
       ],
       "instruments": [
         "SPX"
@@ -72,22 +334,19 @@
       "direction": "bullish",
       "timeframe": null,
       "specificity": "low",
-      "key_reasoning": "Historical data shows that periods of extreme momentum \u2014 high valuations, yield curve inversions, long rally streaks \u2014 frequently produce further gains rather than immediate reversals; major tops form abruptly after investor conviction peaks.",
-      "notable_data": "One of the strongest 8-week rallies in modern market history; unusually long streak of consecutive index gains cited.",
+      "key_reasoning": "Historical precedent cited by New Harbor Financial shows that similar extreme-trend periods produced additional upside; major market tops tend to form abruptly after investor complacency peaks, not during overbought conditions.",
+      "notable_data": "One of the strongest 8-week rallies in modern history; unusually long consecutive-gain streak (specific number not provided in transcript).",
       "source_confidence": 0.25,
       "source": "Thoughtful Money",
       "source_url": "https://youtube.com/watch?v=9sY1z4xRpA0",
       "content_title": "The Bigger The Bubble, The Harder The Top To Spot | New Harbor Financial",
       "content_date": "2026-06-25",
       "content_type": "podcast",
-      "corroboration_confidence": 0.25,
-      "corroborated_by": [
-        "Thoughtful Money (index 0)",
-        "Thoughtful Money (index 1)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "Kevin Muir believes the overall market is dangerously expensive and advises a defensive portfolio posture now. He sees broad overvaluation across equities with Wall Street remaining complacent about risk.",
+      "summary": "Kevin Muir believes markets are broadly overvalued and recommends a defensive portfolio posture. He sees elevated risk across equities and advises shifting toward defensive assets.",
       "asset_classes": [
         "macro",
         "other"
@@ -96,7 +355,7 @@
       "direction": "bearish",
       "timeframe": null,
       "specificity": "low",
-      "key_reasoning": "Muir argues that valuations are stretched across the board and that investors are broadly underestimating market risk, making defense the prudent stance.",
+      "key_reasoning": "Muir characterizes valuations as dangerously expensive across the board while Wall Street sentiment remains bullish, creating a contrarian risk signal. No specific sectors or instruments are identified in the available description.",
       "notable_data": null,
       "source_confidence": 0.15,
       "source": "Thoughtful Money",
@@ -104,126 +363,11 @@
       "content_title": "Is The Market Dangerously Expensive Now? | Kevin Muir",
       "content_date": "2026-06-25",
       "content_type": "podcast",
-      "corroboration_confidence": 0.3,
-      "corroborated_by": [
-        "Eurodollar University (index 6)",
-        "Real Investment Advice (index 15)",
-        "Real Investment Advice (index 16)"
-      ]
-    },
-    {
-      "summary": "Gold and silver are currently in a pullback from record highs and seeking a bottom, with the implied view that lower prices represent a buying opportunity before a resumption of the uptrend. No specific price targets or timeframes are available from the transcript.",
-      "asset_classes": [
-        "precious_metals"
-      ],
-      "instruments": [
-        "gold",
-        "silver",
-        "GLD",
-        "SLV"
-      ],
-      "direction": "bullish",
-      "timeframe": null,
-      "specificity": "low",
-      "key_reasoning": "The framing of the episode \u2014 'where is the bottom' and an active junk silver promotional offer \u2014 implies a bullish longer-term view and that current weakness is a dip-buying opportunity rather than a structural breakdown.",
-      "notable_data": null,
-      "source_confidence": 0.1,
-      "source": "Thoughtful Money",
-      "source_url": "https://youtube.com/watch?v=UnMbZ58hqs8",
-      "content_title": "Where Is The Bottom For Gold & Silver? | Andy Schectman",
-      "content_date": "2026-06-24",
-      "content_type": "podcast",
-      "corroboration_confidence": 0.1,
+      "corroboration_confidence": 0.0,
       "corroborated_by": []
     },
     {
-      "summary": "Gold and silver are being liquidated as the dollar spikes higher, with bearish pressure driven by deflationary monetary dynamics rather than Fed policy signals.",
-      "asset_classes": [
-        "precious_metals",
-        "currencies",
-        "macro"
-      ],
-      "instruments": [
-        "gold",
-        "silver",
-        "GLD",
-        "SLV",
-        "DXY"
-      ],
-      "direction": "bearish",
-      "timeframe": null,
-      "specificity": "low",
-      "key_reasoning": "Dollar strength is being driven by growing deflation tendencies in the eurodollar/offshore dollar system, which is forcing liquidation of gold and silver positions.",
-      "notable_data": null,
-      "source_confidence": 0.2,
-      "source": "Eurodollar University",
-      "source_url": "https://youtube.com/watch?v=YI6nxu0709M",
-      "content_title": "ALERT: Gold Is Crashing\u2026 While The Dollar Rips Higher",
-      "content_date": "2026-06-24",
-      "content_type": "podcast",
-      "corroboration_confidence": 0.35,
-      "corroborated_by": [
-        "Eurodollar University (index 7)",
-        "Thoughtful Money (index 4 \u2014 opposing)"
-      ]
-    },
-    {
-      "summary": "The Treasury yield curve faces reinversion risk, with TIPS yields rising sharply, signaling deflationary pressures are intensifying in the bond market.",
-      "asset_classes": [
-        "bonds",
-        "macro"
-      ],
-      "instruments": [
-        "TIPS",
-        "TIP",
-        "Treasury curve"
-      ],
-      "direction": "bearish",
-      "timeframe": null,
-      "specificity": "low",
-      "key_reasoning": "TIPS are 'screaming' and reinversion of the Treasury curve has become a 'very real possibility,' driven by the same deflationary eurodollar dynamics pressuring gold and the dollar higher.",
-      "notable_data": null,
-      "source_confidence": 0.2,
-      "source": "Eurodollar University",
-      "source_url": "https://youtube.com/watch?v=YI6nxu0709M",
-      "content_title": "ALERT: Gold Is Crashing\u2026 While The Dollar Rips Higher",
-      "content_date": "2026-06-24",
-      "content_type": "podcast",
-      "corroboration_confidence": 0.45,
-      "corroborated_by": [
-        "Real Investment Advice (index 15)",
-        "Real Investment Advice (index 16)"
-      ]
-    },
-    {
-      "summary": "The US dollar is expected to continue strengthening as deflationary eurodollar system dynamics dominate, overriding Fed dot-plot signals.",
-      "asset_classes": [
-        "currencies",
-        "macro"
-      ],
-      "instruments": [
-        "DXY",
-        "UUP"
-      ],
-      "direction": "bullish",
-      "timeframe": null,
-      "specificity": "low",
-      "key_reasoning": "Dollar strength is attributed to systemic eurodollar scarcity and growing deflation tendencies in the global monetary system, not Fed rate expectations.",
-      "notable_data": null,
-      "source_confidence": 0.2,
-      "source": "Eurodollar University",
-      "source_url": "https://youtube.com/watch?v=YI6nxu0709M",
-      "content_title": "ALERT: Gold Is Crashing\u2026 While The Dollar Rips Higher",
-      "content_date": "2026-06-24",
-      "content_type": "podcast",
-      "corroboration_confidence": 0.4,
-      "corroborated_by": [
-        "Eurodollar University (index 5)",
-        "Eurodollar University (index 6)"
-      ]
-    },
-    {
-      "summary": "Micron reportedly delivered a blowout earnings quarter, suggesting strong ongoing demand for AI-related memory. This points to continued bullish momentum for memory chip stocks and AI infrastructure plays.",
+      "summary": "Micron reported blowout earnings driven by AI memory demand, suggesting continued strong demand for HBM and DRAM in AI infrastructure buildout. This points to a bullish outlook for memory semiconductor exposure.",
       "asset_classes": [
         "ai_tech"
       ],
@@ -233,7 +377,7 @@
       "direction": "bullish",
       "timeframe": null,
       "specificity": "low",
-      "key_reasoning": "Micron's strong earnings beat was discussed in the context of an AI memory crunch, implying sustained demand pressure that benefits memory suppliers.",
+      "key_reasoning": "Micron's earnings beat ('smashes earnings') is attributed to AI memory demand, indicating the AI infrastructure cycle remains robust and memory is a key bottleneck/opportunity.",
       "notable_data": null,
       "source_confidence": 0.2,
       "source": "All-In Podcast",
@@ -241,13 +385,11 @@
       "content_title": "Socialists Sweep NYC, China Catches Up in Coding, AI Memory Crunch, Micron's Blowout Quarter",
       "content_date": "2026-06-27",
       "content_type": "podcast",
-      "corroboration_confidence": 0.65,
-      "corroborated_by": [
-        "Real Investment Advice (index 17)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "An AI memory crunch is reportedly affecting Apple and consumer hardware broadly, suggesting potential headwinds for consumer device margins and supply chains reliant on AI-capable memory.",
+      "summary": "An 'AI memory crunch' is impacting Apple and consumer hardware, suggesting near-term headwinds for consumer-facing AI device makers as memory constraints limit product capabilities.",
       "asset_classes": [
         "ai_tech"
       ],
@@ -257,7 +399,7 @@
       "direction": "bearish",
       "timeframe": null,
       "specificity": "low",
-      "key_reasoning": "Memory constraints tied to AI workloads are described as hitting consumer hardware, which could compress margins or delay product cycles for companies like Apple.",
+      "key_reasoning": "Memory shortages are described as hitting Apple and consumer hardware, implying supply-side constraints could pressure consumer AI device rollouts and margins.",
       "notable_data": null,
       "source_confidence": 0.15,
       "source": "All-In Podcast",
@@ -265,13 +407,11 @@
       "content_title": "Socialists Sweep NYC, China Catches Up in Coding, AI Memory Crunch, Micron's Blowout Quarter",
       "content_date": "2026-06-27",
       "content_type": "podcast",
-      "corroboration_confidence": 0.2,
-      "corroborated_by": [
-        "All-In Podcast (index 12)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "Anthropic is referenced at a $3 trillion implied valuation in the context of an IPO update, indicating extremely high private market valuations for frontier AI labs.",
+      "summary": "Anthropic is reportedly being valued at $3 trillion in an IPO context, signaling extremely elevated private-market valuations for frontier AI companies that could set a benchmark for public market AI listings.",
       "asset_classes": [
         "ai_tech"
       ],
@@ -281,21 +421,19 @@
       "direction": "bullish",
       "timeframe": null,
       "specificity": "medium",
-      "key_reasoning": "A $3T valuation figure for Anthropic signals intense investor appetite for leading AI model companies, with potential spillover enthusiasm for publicly traded AI proxies.",
-      "notable_data": "Anthropic implied valuation at $3 trillion",
-      "source_confidence": 0.25,
+      "key_reasoning": "A $3T IPO valuation for Anthropic, if accurate, would represent one of the largest public offerings in history and reflects market conviction in frontier AI as a dominant growth category.",
+      "notable_data": "Anthropic IPO valuation cited at $3 trillion",
+      "source_confidence": 0.3,
       "source": "All-In Podcast",
       "source_url": "https://youtube.com/watch?v=w8ah_tA0yfg",
       "content_title": "Socialists Sweep NYC, China Catches Up in Coding, AI Memory Crunch, Micron's Blowout Quarter",
       "content_date": "2026-06-27",
       "content_type": "podcast",
-      "corroboration_confidence": 0.15,
-      "corroborated_by": [
-        "All-In Podcast (index 14)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "Cerebras reportedly broke its deal price after going public, suggesting near-term bearish price action and weak aftermarket demand for AI chip IPOs at elevated valuations.",
+      "summary": "Cerebras dropped below its deal price after breaking it, indicating bearish near-term sentiment for smaller/specialized AI chip companies attempting to go public.",
       "asset_classes": [
         "ai_tech"
       ],
@@ -303,23 +441,21 @@
         "CBRS"
       ],
       "direction": "bearish",
-      "timeframe": "near-term post-IPO",
+      "timeframe": "near-term",
       "specificity": "medium",
-      "key_reasoning": "Cerebras trading below its IPO deal price signals that public market investors are more valuation-sensitive than private market participants for AI chip names.",
-      "notable_data": "Cerebras dropped below IPO deal price",
+      "key_reasoning": "Cerebras trading below its IPO deal price signals weak investor appetite for non-dominant AI chip plays, contrasting with enthusiasm for large-cap AI infrastructure names.",
+      "notable_data": "Cerebras dropped after breaking deal price",
       "source_confidence": 0.3,
       "source": "All-In Podcast",
       "source_url": "https://youtube.com/watch?v=w8ah_tA0yfg",
       "content_title": "Socialists Sweep NYC, China Catches Up in Coding, AI Memory Crunch, Micron's Blowout Quarter",
       "content_date": "2026-06-27",
       "content_type": "podcast",
-      "corroboration_confidence": 0.2,
-      "corroborated_by": [
-        "All-In Podcast (index 12)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "China's open-source AI progress and distillation techniques are catching up to US frontier models, which could pressure the valuation premium currently ascribed to leading US AI companies.",
+      "summary": "China's open-source AI and distillation capabilities are described as catching up, which could pressure the competitive moats and premium valuations of US-listed AI leaders.",
       "asset_classes": [
         "ai_tech"
       ],
@@ -332,7 +468,7 @@
       "direction": "mixed",
       "timeframe": null,
       "specificity": "low",
-      "key_reasoning": "Competitive convergence from Chinese open-source AI (via distillation) reduces moat sustainability for US AI incumbents, a structural headwind to premium valuations over time.",
+      "key_reasoning": "If Chinese open-source models narrow the gap with US frontier models, pricing power and market share for US AI platform companies may face long-term compression.",
       "notable_data": null,
       "source_confidence": 0.15,
       "source": "All-In Podcast",
@@ -340,40 +476,35 @@
       "content_title": "Socialists Sweep NYC, China Catches Up in Coding, AI Memory Crunch, Micron's Blowout Quarter",
       "content_date": "2026-06-27",
       "content_type": "podcast",
-      "corroboration_confidence": 0.25,
-      "corroborated_by": [
-        "All-In Podcast (index 13)",
-        "All-In Podcast (index 11)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "OpenAI developing its own custom chip is discussed, suggesting a longer-term shift toward vertical integration that could reduce reliance on third-party AI chip suppliers like Nvidia.",
+      "summary": "OpenAI is developing its own custom chip, which could reduce long-term dependency on NVIDIA and reshape the AI semiconductor supply chain.",
       "asset_classes": [
         "ai_tech"
       ],
       "instruments": [
         "NVDA",
-        "TSMC"
+        "INTC",
+        "AMD"
       ],
       "direction": "bearish",
       "timeframe": null,
       "specificity": "low",
-      "key_reasoning": "Hyperscalers and major AI labs building proprietary silicon historically pressures merchant chip vendors' long-term market share and pricing power.",
+      "key_reasoning": "Vertical integration by major AI labs into custom silicon historically reduces reliance on third-party chip vendors, posing a medium-to-long-term demand risk for NVDA at the margin.",
       "notable_data": null,
-      "source_confidence": 0.12,
+      "source_confidence": 0.15,
       "source": "All-In Podcast",
       "source_url": "https://youtube.com/watch?v=w8ah_tA0yfg",
       "content_title": "Socialists Sweep NYC, China Catches Up in Coding, AI Memory Crunch, Micron's Blowout Quarter",
       "content_date": "2026-06-27",
       "content_type": "podcast",
-      "corroboration_confidence": 0.2,
-      "corroborated_by": [
-        "All-In Podcast (index 12)",
-        "Real Investment Advice (index 20)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "A SpaceX partial float is referenced in the IPO update, indicating a potential near-term liquidity event for one of the most highly valued private space/tech companies.",
+      "summary": "SpaceX is discussed in the context of a potential public float, which could create a major new investable AI/tech/space asset if it proceeds.",
       "asset_classes": [
         "ai_tech",
         "other"
@@ -382,21 +513,165 @@
         "SpaceX"
       ],
       "direction": "bullish",
-      "timeframe": "near-term",
+      "timeframe": null,
       "specificity": "low",
-      "key_reasoning": "A SpaceX float would provide public market access to the dominant commercial launch and satellite internet franchise, likely attracting significant institutional demand.",
+      "key_reasoning": "A SpaceX IPO or partial float would unlock access to one of the most valuable private companies globally, likely attracting significant institutional and retail inflows.",
       "notable_data": null,
-      "source_confidence": 0.15,
+      "source_confidence": 0.1,
       "source": "All-In Podcast",
       "source_url": "https://youtube.com/watch?v=w8ah_tA0yfg",
       "content_title": "Socialists Sweep NYC, China Catches Up in Coding, AI Memory Crunch, Micron's Blowout Quarter",
       "content_date": "2026-06-27",
       "content_type": "podcast",
-      "corroboration_confidence": 0.1,
+      "corroboration_confidence": 0.0,
       "corroborated_by": []
     },
     {
-      "summary": "With bank lending surging at 10-20% annualized rates and money velocity recovering, the article warns of a renewed inflation risk in 2026 \u2014 unlike the 2009-2020 period when money sat idle.",
+      "summary": "The S&P 500 pullback is characterized as a healthy rotation rather than a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+      "asset_classes": [
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "direction": "bullish",
+      "timeframe": "near-term, weeks",
+      "specificity": "high",
+      "key_reasoning": "Breadth improved while the cap-weight index fell \u2014 equal-weight S&P outperformed by 2.5+ points on the week \u2014 indicating internal market repair rather than broad deterioration.",
+      "notable_data": "S&P 500 at 7,306; 50-DMA ~7,360; 200-DMA ~6,921; record high 7,620; pullback of 4.1% from June 2 high; RSI in low 40s vs. >75 early June",
+      "source_confidence": 0.65,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "content_title": "Stock Market Pullback Is Healthier Than It Looks",
+      "content_date": "2026-06-27",
+      "content_type": "article",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "A decisive break below 7,250 support opens downside toward 7,150 and potentially the 200-DMA near 6,921 for the S&P 500.",
+      "asset_classes": [
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term, conditional",
+      "specificity": "high",
+      "key_reasoning": "Technical support at 7,250 is the key line; a breach signals accelerating selling pressure that would target the longer-term 200-day moving average.",
+      "notable_data": "Support at 7,250; next downside target 7,150; 200-DMA at ~6,921",
+      "source_confidence": 0.62,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "content_title": "Stock Market Pullback Is Healthier Than It Looks",
+      "content_date": "2026-06-27",
+      "content_type": "article",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Megacap AI/tech names (Nasdaq 100 constituents) face continued near-term pressure as crowded positioning unwinds, while defensive sectors offer a better near-term risk/reward.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "QQQ",
+        "XLK"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term, weeks",
+      "specificity": "medium",
+      "key_reasoning": "Technology fell 5.4% on the week as the AI complex sold the Micron news; MACD has rolled over and concentration risk is being actively repriced.",
+      "notable_data": "Nasdaq 100 down 4.6% on the week; Technology sector down 5.4%; Communication Services down 3%",
+      "source_confidence": 0.58,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "content_title": "Stock Market Pullback Is Healthier Than It Looks",
+      "content_date": "2026-06-27",
+      "content_type": "article",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Defensive equity sectors \u2014 healthcare, utilities, real estate, and consumer staples \u2014 are attracting rotation capital and are positioned to continue outperforming in the near term.",
+      "asset_classes": [
+        "other"
+      ],
+      "instruments": [
+        "XLV",
+        "XLU",
+        "XLRE",
+        "XLP"
+      ],
+      "direction": "bullish",
+      "timeframe": "near-term, weeks",
+      "specificity": "medium",
+      "key_reasoning": "Classic risk-off rotation out of crowded, expensive AI names into cheaper, steadier defensive sectors; driven by both fundamental repricing and yield dynamics.",
+      "notable_data": "Healthcare +7.3%, Utilities +3%+, Real Estate +3%+, Consumer Staples +1.7% on the week",
+      "source_confidence": 0.6,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "content_title": "Stock Market Pullback Is Healthier Than It Looks",
+      "content_date": "2026-06-27",
+      "content_type": "article",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "The 10-year Treasury yield easing toward 4.38% supports the defensive rotation; a hot June jobs print (due July 2) could push yields back to ~4.5% and reinstate pressure on long-duration growth stocks.",
+      "asset_classes": [
+        "bonds",
+        "ai_tech"
+      ],
+      "instruments": [
+        "TLT",
+        "IEF",
+        "QQQ"
+      ],
+      "direction": "mixed",
+      "timeframe": "1 week (July 2 jobs report catalyst)",
+      "specificity": "high",
+      "key_reasoning": "May payrolls came in at 172,000 with unemployment at 4.3% \u2014 above consensus \u2014 keeping the Fed hawkish; a repeat upside surprise would push 10-year toward 4.5% and re-pressure high-duration tech.",
+      "notable_data": "10-year yield at 4.38%; prior payrolls 172,000; unemployment 4.3%; consensus soft-landing scenario ~130,000; 4.5% yield as key upside level",
+      "source_confidence": 0.68,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "content_title": "Stock Market Pullback Is Healthier Than It Looks",
+      "content_date": "2026-06-27",
+      "content_type": "article",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "Semiconductor stocks received a near-term positive catalyst from Micron's blowout quarter and memory-pricing recovery, though the broader AI complex sold the news this cycle.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "MU",
+        "SOXX",
+        "SMH"
+      ],
+      "direction": "mixed",
+      "timeframe": "near-term",
+      "specificity": "medium",
+      "key_reasoning": "Micron jumped ~16% on strong earnings and a memory-pricing recovery narrative that lifted the semiconductor group, but broader AI names used it as a sell-the-news event amid crowded positioning.",
+      "notable_data": "Micron up ~16% on the week following earnings beat",
+      "source_confidence": 0.52,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "content_title": "Stock Market Pullback Is Healthier Than It Looks",
+      "content_date": "2026-06-27",
+      "content_type": "article",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
+    },
+    {
+      "summary": "With bank lending surging at 10-20% annualized rates and money supply accelerating in 2026, the article warns that the monetary conditions for sustained inflation are re-emerging \u2014 unlike the 2009-2020 period where velocity was suppressed.",
       "asset_classes": [
         "macro",
         "bonds"
@@ -404,56 +679,53 @@
       "instruments": [
         "TIP",
         "SCHP",
-        "IEF",
-        "TLT"
+        "TLT",
+        "IEF"
       ],
       "direction": "bearish",
-      "timeframe": "2026 near-term",
+      "timeframe": "2026 near-term, ongoing",
       "specificity": "medium",
-      "key_reasoning": "All three inflation drivers (M, V, and supply constraints on Q) are aligning simultaneously in 2026, replicating the conditions that produced 9.1% CPI in June 2022, unlike the 2009-2020 QE era where velocity collapse neutralized money growth.",
-      "notable_data": "Bank loans and leases growing at 10% annualized pace; commercial and industrial lending at ~20% annualized; CPI peaked at 9.1% in June 2022 during last comparable convergence.",
-      "source_confidence": 0.45,
+      "key_reasoning": "The Fed restarted bill purchases, commercial and industrial lending is running at ~20% annualized, and money velocity is no longer dormant \u2014 all three variables in MV=PQ are moving in an inflationary direction simultaneously, unlike the post-2008 QE era.",
+      "notable_data": "Bank loans and leases growing at 10% annualized pace; commercial and industrial lending at ~20% annualized; CPI peaked at 9.1% in June 2022 as prior comparable confluence occurred; Fed restarted bill purchases in 2026",
+      "source_confidence": 0.35,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/mitton-friedman-was-right-just-mostly-misquoted/",
       "content_title": "Friedman Was Right, Just Mostly Misquoted.",
       "content_date": "2026-06-26",
       "content_type": "article",
-      "corroboration_confidence": 0.45,
-      "corroborated_by": [
-        "Real Investment Advice (index 16)",
-        "Eurodollar University (index 6)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "The Fed's restart of bill purchases in 2026, framed as a technical repo-market operation, is effectively re-expanding the monetary base into an already-velocity-recovering environment, raising inflationary pressure.",
+      "summary": "The article implicitly flags that a 2021-style inflationary episode could recur in 2026 as velocity recovers alongside rapid money supply growth, suggesting hard assets and inflation hedges may outperform nominal bonds.",
       "asset_classes": [
-        "macro",
+        "precious_metals",
+        "industrial_commodities",
         "bonds"
       ],
       "instruments": [
-        "TLT",
-        "BIL",
-        "SHV"
+        "GLD",
+        "IAU",
+        "PDBC",
+        "DJP",
+        "TLT"
       ],
-      "direction": "bearish",
+      "direction": "mixed",
       "timeframe": "2026",
-      "specificity": "medium",
-      "key_reasoning": "Unlike post-2008 QE where reserves sat idle, the current 2026 expansion coincides with active lending and circulating money, making the Treasury's pivot to short-term bill issuance a net inflationary catalyst rather than a neutral technical adjustment.",
-      "notable_data": "Commercial and industrial lending running at ~20% annualized growth; Fed restarted bill purchases in early 2026.",
-      "source_confidence": 0.38,
+      "specificity": "low",
+      "key_reasoning": "The author draws a direct parallel to 2021 conditions where simultaneous acceleration in money supply, velocity recovery, and supply constraints drove 9.1% CPI \u2014 positioning it as a 'setup worth watching closely' in 2026.",
+      "notable_data": "M2 acceleration noted in 2026; 20% annualized C&I lending growth; 2021-2022 CPI peak of 9.1% used as reference case",
+      "source_confidence": 0.25,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/mitton-friedman-was-right-just-mostly-misquoted/",
       "content_title": "Friedman Was Right, Just Mostly Misquoted.",
       "content_date": "2026-06-26",
       "content_type": "article",
-      "corroboration_confidence": 0.45,
-      "corroborated_by": [
-        "Real Investment Advice (index 15)",
-        "Eurodollar University (index 6)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "Micron's HBM memory chips remain fully booked with a supply shortage expected to persist well beyond 2027, confirming the AI memory supercycle is ongoing and broadly bullish for AI semiconductor names.",
+      "summary": "Micron's AI memory supercycle shows no signs of slowing, with HBM chips fully booked and supply shortages expected to persist well beyond 2027, supporting continued bullish momentum in AI memory and semiconductor names.",
       "asset_classes": [
         "ai_tech"
       ],
@@ -466,23 +738,22 @@
       "direction": "bullish",
       "timeframe": "beyond 2027",
       "specificity": "high",
-      "key_reasoning": "Micron management explicitly stated HBM supply constraints will continue well beyond 2027, driven by insatiable data center demand powering Nvidia GPU stacks; Q4 guidance of $50B revenue and 86% gross margins far exceeded consensus.",
-      "notable_data": "Q3 revenue $41.46B (+346% YoY, +74% QoQ); adj. EPS $25.11 vs. $20.28 consensus; gross margin 84.9%; Q4 guidance: $50B revenue vs. $43B consensus, ~86% gross margin, EPS $31, FCF >$30B; MU shares +~20% after-hours",
+      "key_reasoning": "Micron reported 346% YoY revenue growth with HBM products fully booked; management explicitly guided supply shortages continuing well beyond 2027, underpinning a sustained demand outlook for AI memory.",
+      "notable_data": "Q3 revenue $41.46B (+346% YoY, +74% QoQ); adj. EPS $25.11 vs $20.28 consensus; gross margin 84.9%; data center revenue $25B; Q4 guidance: revenue $50B (vs $43B consensus), gross margin ~86%, EPS $31, FCF >$30B",
       "source_confidence": 0.85,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
       "content_title": "Micron: The AI Memory Supercycle Rolls On",
       "content_date": "2026-06-26",
       "content_type": "article",
-      "corroboration_confidence": 0.7,
-      "corroborated_by": [
-        "All-In Podcast (index 8)"
-      ]
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "summary": "Mega-cap growth stocks (MGK) are deeply oversold relative to value and momentum factors heading into Q2 earnings season in mid-July, setting up a mean-reversion rally opportunity.",
+      "summary": "Mega-cap growth stocks (MGK) are deeply oversold relative to value and momentum factors, setting up a mean-reversion rally catalyst heading into Q2 earnings season in mid-July.",
       "asset_classes": [
-        "ai_tech"
+        "ai_tech",
+        "other"
       ],
       "instruments": [
         "MGK",
@@ -491,164 +762,117 @@
       "direction": "bullish",
       "timeframe": "mid-July 2026 earnings season",
       "specificity": "medium",
-      "key_reasoning": "MGK has a relative factor score of -0.59 (most oversold in large-cap complex) versus value at +0.65 and momentum at +0.73; megacaps report into low expectations and washed-out positioning, historically ideal conditions for mean-reversion rallies.",
-      "notable_data": "MGK relative score -0.59; large-cap value score +0.65; momentum score +0.73; since late December: momentum +30%, value +15%, mega-cap growth +~1%",
+      "key_reasoning": "MGK has a relative score of -0.59 vs. the index (most oversold in large-cap complex), while value (+0.65) and momentum (+0.73) are stretched after a 30% momentum run since late December; megacaps report into low expectations and washed-out positioning.",
+      "notable_data": "MGK relative score -0.59; large-cap value +0.65; momentum +0.73; momentum up ~30% since late December; large-cap value up ~15%; MGK up just over 1% in same period",
       "source_confidence": 0.65,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
       "content_title": "Micron: The AI Memory Supercycle Rolls On",
       "content_date": "2026-06-26",
       "content_type": "article",
-      "corroboration_confidence": 0.3,
-      "corroborated_by": [
-        "Thoughtful Money (index 1)",
-        "Thoughtful Money (index 2)"
-      ]
-    },
-    {
-      "summary": "Falling crude oil prices will eventually pass through to gasoline prices, but the transmission is delayed due to refinery margins, seasonal peak demand, and Hormuz-specific refined-product logistics unwinding slower than crude.",
-      "asset_classes": [
-        "energy",
-        "macro"
-      ],
-      "instruments": [
-        "crude oil",
-        "gasoline futures",
-        "UGA",
-        "USO"
-      ],
-      "direction": "bearish",
-      "timeframe": "near-term (weeks to months implied)",
-      "specificity": "medium",
-      "key_reasoning": "Three structural factors \u2014 crack spread absorption by refiners, peak summer gasoline demand, and slower normalization of refined-product logistics from Hormuz disruption \u2014 are delaying the disinflationary impulse from crude's sharp decline to pump prices.",
-      "notable_data": "Crude oil price now only a few dollars above pre-conflict levels; gasoline prices have not kept pace with crude's decline; US-Iran peace deal cited as catalyst for crude drop",
-      "source_confidence": 0.55,
-      "source": "Real Investment Advice",
-      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
-      "content_title": "Micron: The AI Memory Supercycle Rolls On",
-      "content_date": "2026-06-26",
-      "content_type": "article",
-      "corroboration_confidence": 0.1,
+      "corroboration_confidence": 0.0,
       "corroborated_by": []
     },
     {
-      "summary": "The momentum and value rotation trade \u2014 including semiconductors hiding inside value indices \u2014 is becoming stretched and overbought, suggesting diminishing risk/reward for continued chasing of these factors.",
+      "summary": "Value and momentum factors, heavily weighted in semiconductor names, are overbought and carry elevated reversal risk as the crowded trade into these factors narrows further.",
       "asset_classes": [
         "ai_tech",
         "other"
       ],
       "instruments": [
         "MU",
-        "SMH",
-        "IWD",
-        "MTUM"
+        "SMH"
       ],
       "direction": "bearish",
       "timeframe": "near-term, around mid-July 2026 earnings",
       "specificity": "medium",
-      "key_reasoning": "Momentum and value factors are at stretched relative readings (+0.65 to +0.73) while having run 15-30% since December; semiconductor names like Micron are classified as 'value' in indices due to low multiples on peak earnings, masking concentration risk in an overbought pocket.",
-      "notable_data": "Momentum factor +30% since late December; value factor +15%; momentum relative score +0.73; value relative score +0.65",
-      "source_confidence": 0.6,
+      "key_reasoning": "Momentum and value factors are stretched at +0.73 and +0.65 respectively; semiconductor names like Micron are driving value index outperformance and have gone parabolic \u2014 per Bob Farrell's Rule #4, exponential moves don't correct sideways.",
+      "notable_data": "Momentum factor up ~30% since late December; MU shares jumped ~20% after-hours post-earnings; value factor up ~15% same period",
+      "source_confidence": 0.55,
       "source": "Real Investment Advice",
       "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
       "content_title": "Micron: The AI Memory Supercycle Rolls On",
       "content_date": "2026-06-26",
       "content_type": "article",
-      "corroboration_confidence": 0.25,
-      "corroborated_by": [
-        "All-In Podcast (index 13)",
-        "Thoughtful Money (index 3)"
-      ]
-    }
-  ],
-  "convergence_themes": [
-    {
-      "theme": "AI memory supercycle \u2014 Micron and HBM demand remain robustly bullish",
-      "direction": "bullish",
-      "asset_classes": [
-        "ai_tech"
-      ],
-      "supporting_sources": [
-        "All-In Podcast",
-        "Real Investment Advice"
-      ],
-      "strength": "strong"
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "theme": "Renewed inflation / bond bear risk in 2026 driven by money velocity and Fed balance sheet expansion",
-      "direction": "bearish",
+      "summary": "Falling crude oil prices from US-Iran peace deal optimism will eventually translate into gasoline price relief, but the pass-through will lag due to refinery margins, seasonal demand, and Hormuz-specific refined product tightness.",
       "asset_classes": [
-        "macro",
-        "bonds"
-      ],
-      "supporting_sources": [
-        "Real Investment Advice",
-        "Eurodollar University"
-      ],
-      "strength": "moderate"
-    },
-    {
-      "theme": "US dollar strengthening driven by deflationary eurodollar dynamics",
-      "direction": "bullish",
-      "asset_classes": [
-        "currencies",
+        "energy",
         "macro"
       ],
-      "supporting_sources": [
-        "Eurodollar University"
+      "instruments": [
+        "USO",
+        "UGA",
+        "XLE",
+        "crude oil",
+        "gasoline futures"
       ],
-      "strength": "moderate"
+      "direction": "bearish",
+      "timeframe": "weeks to months (near-term lag implied)",
+      "specificity": "medium",
+      "key_reasoning": "Crude has nearly fully retraced its pre-conflict levels but gasoline has not followed due to high seasonal demand, refinery margin recovery, and slower normalization of refined-product logistics from the Strait of Hormuz disruption.",
+      "notable_data": "Crude oil price described as 'only a few dollars higher' than pre-conflict levels; gasoline prices have not kept pace with crude decline",
+      "source_confidence": 0.52,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "content_title": "Micron: The AI Memory Supercycle Rolls On",
+      "content_date": "2026-06-26",
+      "content_type": "article",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "theme": "Precious metals (gold and silver) under near-term pressure \u2014 conflicting views on direction",
-      "direction": "bearish",
-      "asset_classes": [
-        "precious_metals"
-      ],
-      "supporting_sources": [
-        "Eurodollar University",
-        "Thoughtful Money"
-      ],
-      "strength": "weak"
-    },
-    {
-      "theme": "Equity market overvaluation and stretched valuations \u2014 macro bearish caution",
-      "direction": "bearish",
-      "asset_classes": [
-        "macro",
-        "other"
-      ],
-      "supporting_sources": [
-        "Thoughtful Money",
-        "Real Investment Advice"
-      ],
-      "strength": "moderate"
-    },
-    {
-      "theme": "AI chip sector faces competitive and vertical-integration headwinds (China catch-up, OpenAI custom chips)",
-      "direction": "bearish",
+      "summary": "Lenovo is actively investing in AI Cloud infrastructure alongside Nvidia, signaling continued strong enterprise demand for AI hardware and cloud buildout. This supports a bullish view on AI infrastructure spending and related equities.",
       "asset_classes": [
         "ai_tech"
       ],
-      "supporting_sources": [
-        "All-In Podcast",
-        "Real Investment Advice"
+      "instruments": [
+        "NVDA",
+        "LNVGY"
       ],
-      "strength": "weak"
+      "direction": "bullish",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "Lenovo's CFO is allocating significant capex toward AI Cloud infrastructure in partnership with Nvidia, reflecting broad corporate conviction that AI investment cycles have substantial runway remaining.",
+      "notable_data": null,
+      "source_confidence": 0.2,
+      "source": "Odd Lots",
+      "source_url": "https://omny.fm/shows/odd-lots/how-lenovos-cfo-is-allocating-capital-during-one-of-historys-biggest-booms",
+      "content_title": "How Lenovo's CFO Is Allocating Capital During One of History's Biggest Booms",
+      "content_date": "2026-06-27",
+      "content_type": "article",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     },
     {
-      "theme": "S&P 500 secular bull trend intact with potential for further upside before meaningful reversal",
-      "direction": "bullish",
+      "summary": "Lenovo is integrating AI agents into its PC devices, suggesting a potential uplift cycle for AI-enabled personal computing hardware that could benefit the broader PC and AI chip ecosystem.",
       "asset_classes": [
-        "other"
+        "ai_tech"
       ],
-      "supporting_sources": [
-        "Thoughtful Money",
-        "Real Investment Advice"
+      "instruments": [
+        "LNVGY",
+        "NVDA",
+        "QQQ"
       ],
-      "strength": "moderate"
+      "direction": "bullish",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "AI agent integration into consumer and enterprise PC devices represents a product refresh catalyst, potentially driving a new hardware upgrade cycle similar in scale to prior generational transitions.",
+      "notable_data": null,
+      "source_confidence": 0.15,
+      "source": "Odd Lots",
+      "source_url": "https://omny.fm/shows/odd-lots/how-lenovos-cfo-is-allocating-capital-during-one-of-historys-biggest-booms",
+      "content_title": "How Lenovo's CFO Is Allocating Capital During One of History's Biggest Booms",
+      "content_date": "2026-06-27",
+      "content_type": "article",
+      "corroboration_confidence": 0.0,
+      "corroborated_by": []
     }
   ],
+  "convergence_themes": [],
   "open_calls": [
     {
       "summary": "Alphabet is the strongest AI infrastructure play among hyperscalers, with Google Cloud accelerating to 63% growth and a $460B backlog justifying its $180-190B capex commitment; the market has validated this with a 10% surge post-earnings.",
@@ -864,31 +1088,157 @@
       "source_confidence": 0.85,
       "status": "open",
       "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 pullback is a healthy rotation, not a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, next 1-4 weeks",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 opens downside toward 7,150 and potentially the 200-DMA near 6,921 on the S&P 500.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, conditional on support break",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A hot June jobs print (Thursday July 2) could push the 10-year yield back toward 4.5%, renewing pressure on long-duration growth/AI names in a thin holiday tape.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "QQQ",
+        "TNX"
+      ],
+      "timeframe": "1 week (July 2 event-driven)",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.68,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's HBM chips remain fully booked with supply shortages expected to persist well beyond 2027, signaling continued structural tailwinds for AI memory semiconductors.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.82,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 pullback is characterized as a healthy rotation rather than a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, weeks",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 support opens downside toward 7,150 and potentially the 200-DMA near 6,921 for the S&P 500.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, conditional",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.62,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The 10-year Treasury yield easing toward 4.38% supports the defensive rotation; a hot June jobs print (due July 2) could push yields back to ~4.5% and reinstate pressure on long-duration growth stocks.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "mixed",
+      "instruments": [
+        "TLT",
+        "IEF",
+        "QQQ"
+      ],
+      "timeframe": "1 week (July 2 jobs report catalyst)",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.68,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's AI memory supercycle shows no signs of slowing, with HBM chips fully booked and supply shortages expected to persist well beyond 2027, supporting continued bullish momentum in AI memory and semiconductor names.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.85,
+      "status": "open",
+      "entry_prices": {}
     }
   ],
   "resolved_calls": [],
   "dashboard": {
-    "market_summary": "The dominant story today is the AI memory supercycle, with Micron's blowout earnings and confirmed HBM supply shortages through 2027 providing the strongest, best-corroborated bullish signal in today's data. Mega-cap tech is oversold heading into Q2 earnings, creating a near-term mean-reversion setup, though longer-term competitive risks from China's AI progress and OpenAI's chip ambitions introduce structural uncertainty. Precious metals face near-term headwinds as a strengthening dollar and deflationary eurodollar dynamics drive liquidation, overwhelming the tentative 'buy the dip' case. The macro backdrop is increasingly bifurcated: deflationary pressures dominate today while a 2026 inflation resurgence \u2014 driven by surging bank lending, recovering money velocity, and Fed balance sheet re-expansion \u2014 poses a forward risk to bonds and risk assets broadly. Equity valuations remain stretched at the index level, but the secular bull trend appears intact and a blow-off top scenario cannot be dismissed.",
+    "market_summary": "Today's market picture is defined by a tug-of-war in AI/tech: Micron's blowout AI memory results and deeply oversold mega-cap growth names set up a potential mean-reversion rally into Q2 earnings, but structural headwinds \u2014 crowded positioning, OpenAI IPO delays, AI capex depreciation pressures, and China competitive catch-up \u2014 cap the upside conviction. Broad market breadth remains narrow, with defensive sectors (healthcare, utilities, staples) absorbing rotation capital and the S&P 500 sitting at a technical inflection point where a close above the 50-DMA targets 7,500 but a break below 7,250 opens 6,900. Precious metals face a specific near-term headwind from dollar strength pressuring miners, while the macro backdrop \u2014 re-accelerating money supply and bank lending \u2014 raises the medium-term risk of a 2021-style inflationary episode that could ultimately benefit hard assets. Industrial commodities receive minimal direct signal today, with falling crude prices from Iran deal optimism the dominant energy narrative but no meaningful industrial metals catalyst identified.",
     "sectors": {
       "ai_tech": {
-        "sentiment_score": 0.55,
-        "recommendation": "buy",
-        "rationale": "The AI memory supercycle is the strongest convergence theme today, with high-confidence corroboration across two sources confirming Micron's HBM demand is fully booked well beyond 2027; mega-cap growth stocks are also technically oversold ahead of earnings. Competitive headwinds (China catch-up, OpenAI custom silicon) are real but low-confidence and longer-dated, leaving the near-term risk/reward tilted bullish for AI infrastructure ETFs."
+        "sentiment_score": -0.1,
+        "recommendation": "hold",
+        "rationale": "Evidence is genuinely split: Micron's HBM supercycle, oversold mega-cap conditions, and enterprise AI infrastructure spending are tactically bullish, but structural concerns \u2014 narrow breadth, capex depreciation, OpenAI IPO delay, China competition, and crowded semis positioning \u2014 prevent a clean buy signal. Hold existing exposure and watch the S&P 50-DMA reclaim as the tactical trigger for adding."
       },
       "precious_metals": {
-        "sentiment_score": -0.35,
+        "sentiment_score": -0.2,
         "recommendation": "hold",
-        "rationale": "Gold and silver are under active near-term pressure from a strengthening dollar and deflationary eurodollar dynamics, with liquidation flows dominant right now. However, the longer-term bullish case (pullback as buying opportunity) keeps an outright sell call premature \u2014 evidence quality is low on both sides, warranting a hold rather than adding or reducing meaningfully."
+        "rationale": "Gold miners face a specific near-term headwind from dollar strength and foreign capital repatriation into U.S. assets, while the medium-term inflationary re-acceleration thesis (rising money supply, bank lending surge) provides a structural backstop for the asset class. Avoid adding to miners in the near term but do not reduce core gold exposure given the macro hedge case."
       },
       "industrial_commodities": {
-        "sentiment_score": -0.2,
+        "sentiment_score": 0.0,
         "recommendation": "no signal",
-        "rationale": "Today's data contains only a single, lightly corroborated insight on energy (crude-to-gasoline transmission lag) with no coverage of base metals or broader industrial commodities; insufficient evidence exists to make a directional call for this sector today."
+        "rationale": "Today's sources provide insufficient direct coverage of industrial metals or materials to generate a directional signal; only an indirect, low-confidence reference to potential 2026 inflationary tailwinds for hard assets was noted."
       },
       "macro": {
-        "sentiment_score": -0.3,
+        "sentiment_score": -0.25,
         "recommendation": "hold",
-        "rationale": "The macro picture is cautious but not crisis-level: deflationary dollar dynamics are dominant today while a 2026 inflation/bond-bear risk is building credibly across two sources, and equity valuations remain stretched. Investors should maintain defensive positioning at the margins \u2014 reduce bond duration exposure and avoid aggressively adding broad equity beta \u2014 without abandoning risk assets entirely given the intact secular bull trend."
+        "rationale": "The macro backdrop carries a mild bearish tilt: record margin debt, re-accelerating money supply raising inflation risks, and a pivotal jobs print (July 2) that could push yields back to 4.5% and reignite pressure on long-duration growth assets. Defensive positioning is prudent but a blow-off-top scenario in equities cannot be ruled out, arguing against aggressive de-risking."
       }
     }
   },
@@ -908,7 +1258,7 @@
       -0.45,
       -0.55,
       -0.35,
-      0.65
+      -0.1
     ],
     "precious_metals": [
       null,
@@ -924,7 +1274,7 @@
       0.1,
       0.0,
       0.0,
-      -0.25
+      -0.15
     ],
     "industrial_commodities": [
       null,
@@ -940,7 +1290,7 @@
       0.75,
       0.0,
       0.0,
-      0.3
+      -0.2
     ],
     "macro": [
       null,

@@ -213,5 +213,131 @@
     "source_confidence": 0.85,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 pullback is a healthy rotation, not a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+    "direction": "bullish",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "near-term, next 1-4 weeks",
+    "date_made": "2026-06-27",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "A decisive break below 7,250 opens downside toward 7,150 and potentially the 200-DMA near 6,921 on the S&P 500.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "near-term, conditional on support break",
+    "date_made": "2026-06-27",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "A hot June jobs print (Thursday July 2) could push the 10-year yield back toward 4.5%, renewing pressure on long-duration growth/AI names in a thin holiday tape.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "QQQ",
+      "TNX"
+    ],
+    "timeframe": "1 week (July 2 event-driven)",
+    "date_made": "2026-06-27",
+    "source_confidence": 0.68,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Micron's HBM chips remain fully booked with supply shortages expected to persist well beyond 2027, signaling continued structural tailwinds for AI memory semiconductors.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+    "direction": "bullish",
+    "instruments": [
+      "MU",
+      "NVDA",
+      "SMH",
+      "SOXX"
+    ],
+    "timeframe": "beyond 2027",
+    "date_made": "2026-06-26",
+    "source_confidence": 0.82,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 pullback is characterized as a healthy rotation rather than a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+    "direction": "bullish",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "near-term, weeks",
+    "date_made": "2026-06-27",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "A decisive break below 7,250 support opens downside toward 7,150 and potentially the 200-DMA near 6,921 for the S&P 500.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "near-term, conditional",
+    "date_made": "2026-06-27",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The 10-year Treasury yield easing toward 4.38% supports the defensive rotation; a hot June jobs print (due July 2) could push yields back to ~4.5% and reinstate pressure on long-duration growth stocks.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+    "direction": "mixed",
+    "instruments": [
+      "TLT",
+      "IEF",
+      "QQQ"
+    ],
+    "timeframe": "1 week (July 2 jobs report catalyst)",
+    "date_made": "2026-06-27",
+    "source_confidence": 0.68,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Micron's AI memory supercycle shows no signs of slowing, with HBM chips fully booked and supply shortages expected to persist well beyond 2027, supporting continued bullish momentum in AI memory and semiconductor names.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+    "direction": "bullish",
+    "instruments": [
+      "MU",
+      "NVDA",
+      "SMH",
+      "SOXX"
+    ],
+    "timeframe": "beyond 2027",
+    "date_made": "2026-06-26",
+    "source_confidence": 0.85,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
