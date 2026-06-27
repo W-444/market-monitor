@@ -2,8 +2,9 @@ name: Convergence Alert
 
 on:
   schedule:
-    # 12:00 UTC daily — runs after the 05:00 morning digest has completed
-    - cron: "0 12 * * *"
+    # 02:00 UTC = 12:00 AEST (UTC+10) / 13:00 AEDT (UTC+11, daylight saving)
+    # Runs ~7h after the 19:00 UTC morning digest
+    - cron: "0 2 * * *"
   workflow_dispatch:
 
 permissions:
