@@ -179,5 +179,39 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Micron's HBM chips remain fully booked with supply shortages expected to persist well beyond 2027, signaling continued strength in the AI memory supercycle for semiconductor names.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+    "direction": "bullish",
+    "instruments": [
+      "MU",
+      "NVDA",
+      "SMH",
+      "SOXX"
+    ],
+    "timeframe": "beyond 2027",
+    "date_made": "2026-06-26",
+    "source_confidence": 0.82,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Micron's HBM memory chips remain fully booked with a supply shortage expected to persist well beyond 2027, confirming the AI memory supercycle is ongoing and broadly bullish for AI semiconductor names.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+    "direction": "bullish",
+    "instruments": [
+      "MU",
+      "NVDA",
+      "SMH",
+      "SOXX"
+    ],
+    "timeframe": "beyond 2027",
+    "date_made": "2026-06-26",
+    "source_confidence": 0.85,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
