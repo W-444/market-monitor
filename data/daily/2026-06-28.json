@@ -1,0 +1,843 @@
+{
+  "date": "2026-06-28",
+  "sources_processed": [
+    "Eurodollar University",
+    "Thoughtful Money"
+  ],
+  "insights": [
+    {
+      "summary": "A 10\u201315% broad market correction is expected, likely during June\u2013August, which Oakley views as a buying opportunity rather than a bear market signal. The second year of a presidential cycle historically produces mid-year weakness before a later recovery.",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ"
+      ],
+      "direction": "mixed",
+      "timeframe": "June\u2013August 2026",
+      "specificity": "medium",
+      "key_reasoning": "Second-year presidential cycle seasonality historically produces a mid-year decline in June, July, or early August before recovering; Oakley frames a 10\u201315% pullback as a reset creating better long-term entry points rather than the start of a bear market.",
+      "notable_data": "10\u201315% projected decline magnitude; mid-year window June\u2013August based on presidential cycle pattern",
+      "source_confidence": 0.5,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=kU7OBYe2wl4",
+      "content_title": "The Bull Case For A Market Selloff | Ted Oakley",
+      "content_date": "2026-06-28",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.25,
+      "corroborated_by": [
+        "Thoughtful Money (indices 2, 3, 12)"
+      ]
+    },
+    {
+      "summary": "Gold, silver, and mining stocks became excessively frothy and Oxbow Advisors significantly reduced exposure earlier in 2026; a broader market pullback would allow them to rebuild positions at more attractive prices, implying a future bullish re-entry.",
+      "asset_classes": [
+        "precious_metals"
+      ],
+      "instruments": [
+        "GLD",
+        "SLV",
+        "GDX"
+      ],
+      "direction": "bullish",
+      "timeframe": "after a market correction, near-term 2026",
+      "specificity": "medium",
+      "key_reasoning": "Oakley's team sold precious metals and miners after the sector became 'excessively frothy'; they are waiting for a broad market selloff to provide lower re-entry prices, signaling a longer-term bullish structural view on the sector.",
+      "notable_data": "Described reduction as 'significant'; no specific price targets cited",
+      "source_confidence": 0.4,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=kU7OBYe2wl4",
+      "content_title": "The Bull Case For A Market Selloff | Ted Oakley",
+      "content_date": "2026-06-28",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.35,
+      "corroborated_by": [
+        "Thoughtful Money (indices 4, 8)"
+      ]
+    },
+    {
+      "summary": "Speculative excess in semiconductors, space-themed ETFs, and high-profile IPOs signals late-cycle risk appetite that warrants caution and reduced exposure to momentum themes.",
+      "asset_classes": [
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "SMH",
+        "SOXX",
+        "SPCX",
+        "MAGS"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term, mid-2026",
+      "specificity": "low",
+      "key_reasoning": "Investor rotation from Magnificent Seven to semiconductors to space/IPO themes mirrors classic late-cycle speculation patterns; historically, open IPO windows and theme-chasing indicate excessive risk appetite that precedes market weakness.",
+      "notable_data": "Oakley states current IPO speculation is 'unlike anything he's seen in decades of investing'",
+      "source_confidence": 0.3,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=kU7OBYe2wl4",
+      "content_title": "The Bull Case For A Market Selloff | Ted Oakley",
+      "content_date": "2026-06-28",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.55,
+      "corroborated_by": [
+        "Thoughtful Money (index 3)",
+        "Eurodollar University (index 12)"
+      ]
+    },
+    {
+      "summary": "AI/semiconductor stocks are overvalued and speculative, with the 'honeymoon' ending as massive capex projections face revenue justification challenges \u2014 a painful correction is expected.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "QQQ",
+        "SOXX",
+        "semiconductors"
+      ],
+      "direction": "bearish",
+      "timeframe": null,
+      "specificity": "medium",
+      "key_reasoning": "Historical parallel to the broadband boom and overbuilding bust; AI capex is massive but revenues to justify it are not materializing, with FOMO rather than fundamentals driving prices.",
+      "notable_data": "Semiconductors represent a dominant concentration in both US and Asian indices; massive AI capex projections cited but specific dollar figures unavailable from description",
+      "source_confidence": 0.35,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=5OrRpcqoZBo",
+      "content_title": "There's Going To Be One Hell Of A Hangover When The Market Party Ends | Louis Gave",
+      "content_date": "2026-06-28",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.55,
+      "corroborated_by": [
+        "Thoughtful Money (index 2)",
+        "Eurodollar University (index 12)"
+      ]
+    },
+    {
+      "summary": "The traditional 60/40 portfolio model is dead; recommended allocation shifts toward equities, energy, and metals instead of bonds.",
+      "asset_classes": [
+        "bonds",
+        "energy",
+        "precious_metals",
+        "industrial_commodities"
+      ],
+      "instruments": [
+        "gold",
+        "oil",
+        "energy ETFs"
+      ],
+      "direction": "bearish",
+      "timeframe": null,
+      "specificity": "medium",
+      "key_reasoning": "Bond capital remains structurally stuck due to regulatory and pension constraints, and financial repression (Japan precedent) makes fixed income unattractive; real assets preferred.",
+      "notable_data": null,
+      "source_confidence": 0.3,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=5OrRpcqoZBo",
+      "content_title": "There's Going To Be One Hell Of A Hangover When The Market Party Ends | Louis Gave",
+      "content_date": "2026-06-28",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.2,
+      "corroborated_by": [
+        "Thoughtful Money (indices 8, 1)"
+      ]
+    },
+    {
+      "summary": "Japan capital repatriation poses a significant risk to global markets over the next 12 months, with yen calls recommended as a cheap hedge.",
+      "asset_classes": [
+        "currencies",
+        "macro"
+      ],
+      "instruments": [
+        "JPY",
+        "yen calls"
+      ],
+      "direction": "bullish",
+      "timeframe": "next 12 months",
+      "specificity": "medium",
+      "key_reasoning": "Japanese capital repatriation flows ('Godzilla') competing against passive investing flows ('Giant Robot') could disrupt global asset prices; cheap yen calls offer dual-purpose protection.",
+      "notable_data": null,
+      "source_confidence": 0.45,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=5OrRpcqoZBo",
+      "content_title": "There's Going To Be One Hell Of A Hangover When The Market Party Ends | Louis Gave",
+      "content_date": "2026-06-28",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.1,
+      "corroborated_by": []
+    },
+    {
+      "summary": "China is set as the global price setter for oil, and oil price dynamics are increasingly driven by Chinese demand signals.",
+      "asset_classes": [
+        "energy"
+      ],
+      "instruments": [
+        "oil",
+        "USO",
+        "XLE"
+      ],
+      "direction": "mixed",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "China's divergent economy and its role as the marginal buyer gives it outsized influence on global oil pricing.",
+      "notable_data": null,
+      "source_confidence": 0.2,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=5OrRpcqoZBo",
+      "content_title": "There's Going To Be One Hell Of A Hangover When The Market Party Ends | Louis Gave",
+      "content_date": "2026-06-28",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.3,
+      "corroborated_by": [
+        "Thoughtful Money (indices 10, 11)"
+      ]
+    },
+    {
+      "summary": "China is producing world-class industrial companies and its AI efficiency model (Deepseek as 'Toyota/BYD vs Ferrari') suggests competitive disruption of Western AI dominance.",
+      "asset_classes": [
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "FXI",
+        "KWEB",
+        "Deepseek-related equities"
+      ],
+      "direction": "bullish",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "China's industrial leap and cost-efficient AI development (Deepseek surprise) challenges the premium valuation of US AI incumbents and signals emerging Chinese tech competitiveness.",
+      "notable_data": "Deepseek framed as Toyota/BYD efficiency model vs. US AI Ferrari model",
+      "source_confidence": 0.25,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=5OrRpcqoZBo",
+      "content_title": "There's Going To Be One Hell Of A Hangover When The Market Party Ends | Louis Gave",
+      "content_date": "2026-06-28",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.15,
+      "corroborated_by": []
+    },
+    {
+      "summary": "A deflationary bust scenario is considered least likely due to ongoing fiscal stimulus; the macro environment more likely resolves as inflationary or stagflationary.",
+      "asset_classes": [
+        "macro",
+        "precious_metals",
+        "energy"
+      ],
+      "instruments": [
+        "gold",
+        "GLD",
+        "TIPS"
+      ],
+      "direction": "bullish",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "Governments continue to deploy fiscal stimulus, preventing deflationary collapse and supporting real assets as hedges against inflationary outcomes.",
+      "notable_data": null,
+      "source_confidence": 0.22,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=5OrRpcqoZBo",
+      "content_title": "There's Going To Be One Hell Of A Hangover When The Market Party Ends | Louis Gave",
+      "content_date": "2026-06-28",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.3,
+      "corroborated_by": [
+        "Thoughtful Money (indices 4, 1)"
+      ]
+    },
+    {
+      "summary": "Latin America presents an undercrowded opportunity due to political and market shifts, offering diversification away from overvalued US/North Asia tech.",
+      "asset_classes": [
+        "other"
+      ],
+      "instruments": [
+        "ILF",
+        "EWZ",
+        "GXG"
+      ],
+      "direction": "bullish",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "Political shifts in Latin America are creating market opportunities in a region that is underfollowed and undercrowded relative to AI/semiconductor-heavy indices.",
+      "notable_data": null,
+      "source_confidence": 0.18,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=5OrRpcqoZBo",
+      "content_title": "There's Going To Be One Hell Of A Hangover When The Market Party Ends | Louis Gave",
+      "content_date": "2026-06-28",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.1,
+      "corroborated_by": []
+    },
+    {
+      "summary": "The Iran 'peace deal' is likely a fragile, conditional framework rather than a lasting settlement, suggesting markets have overreacted to the headline and risk assets tied to Middle East stability may be mispriced. A return to confrontation remains a live scenario.",
+      "asset_classes": [
+        "energy",
+        "macro"
+      ],
+      "instruments": [
+        "crude oil",
+        "USO",
+        "XLE"
+      ],
+      "direction": "bearish",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "Core nuclear concessions have not been publicly verified and conflicting narratives from both sides suggest no binding agreement exists; U.S. officials have signaled military pressure could quickly resume if nuclear talks stall.",
+      "notable_data": null,
+      "source_confidence": 0.2,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=lVRrhOuiAgY",
+      "content_title": "The Iran Peace Deal Isn't What You Really Think | Michael Every",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.4,
+      "corroborated_by": [
+        "Thoughtful Money (index 11)"
+      ]
+    },
+    {
+      "summary": "Geopolitical risk premium in energy markets may be artificially suppressed by optimistic Iran deal headlines, with a potential re-escalation scenario that could spike crude oil prices if negotiations collapse.",
+      "asset_classes": [
+        "energy",
+        "industrial_commodities"
+      ],
+      "instruments": [
+        "crude oil",
+        "USO",
+        "BNO"
+      ],
+      "direction": "mixed",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "The deal is described as a 'temporary pause' at best; if the nuclear issue is not resolved, a return to confrontation would likely re-introduce a significant geopolitical risk premium into energy prices.",
+      "notable_data": null,
+      "source_confidence": 0.15,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=lVRrhOuiAgY",
+      "content_title": "The Iran Peace Deal Isn't What You Really Think | Michael Every",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.4,
+      "corroborated_by": [
+        "Thoughtful Money (index 10)"
+      ]
+    },
+    {
+      "summary": "Bitcoin has broken down below $60K to near two-year lows, and its tight correlation with BlackRock's stock price is being cited as a shared warning signal for broader risk assets rather than a crypto-specific event.",
+      "asset_classes": [
+        "crypto",
+        "other"
+      ],
+      "instruments": [
+        "BTC",
+        "BLK"
+      ],
+      "direction": "bearish",
+      "timeframe": "current / near-term",
+      "specificity": "low",
+      "key_reasoning": "Bitcoin and BlackRock stock have been tracking each other closely, suggesting the Bitcoin breakdown reflects a systemic macro or liquidity stress signal rather than idiosyncratic crypto weakness.",
+      "notable_data": "Bitcoin below $60K, described as levels not seen in nearly two years (as of June 2026 date).",
+      "source_confidence": 0.2,
+      "source": "Eurodollar University",
+      "source_url": "https://youtube.com/watch?v=biyCX7UYAfQ",
+      "content_title": "Bitcoin And BlackRock Just Did Something VERY Strange",
+      "content_date": "2026-06-27",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.45,
+      "corroborated_by": [
+        "Thoughtful Money (indices 2, 3, 0)"
+      ]
+    }
+  ],
+  "convergence_themes": [
+    {
+      "theme": "AI and semiconductor overvaluation / speculative excess warrants caution",
+      "direction": "bearish",
+      "asset_classes": [
+        "ai_tech",
+        "other"
+      ],
+      "supporting_sources": [
+        "Thoughtful Money (indices 2, 3)",
+        "Eurodollar University (index 12)"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "theme": "Broad risk-asset correction anticipated in near-to-medium term",
+      "direction": "bearish",
+      "asset_classes": [
+        "macro",
+        "other",
+        "crypto"
+      ],
+      "supporting_sources": [
+        "Thoughtful Money (indices 0, 2, 3)",
+        "Eurodollar University (index 12)"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "theme": "Geopolitical risk in energy markets is underpriced; Iran deal fragility threatens upside crude oil spike",
+      "direction": "mixed",
+      "asset_classes": [
+        "energy",
+        "macro"
+      ],
+      "supporting_sources": [
+        "Thoughtful Money (indices 10, 11)"
+      ],
+      "strength": "weak"
+    },
+    {
+      "theme": "Precious metals and energy preferred over bonds in inflationary/stagflationary macro regime",
+      "direction": "bullish",
+      "asset_classes": [
+        "precious_metals",
+        "energy",
+        "bonds"
+      ],
+      "supporting_sources": [
+        "Thoughtful Money (indices 1, 4, 8)"
+      ],
+      "strength": "weak"
+    }
+  ],
+  "open_calls": [
+    {
+      "summary": "Alphabet is the strongest AI infrastructure play among hyperscalers, with Google Cloud accelerating to 63% growth and a $460B backlog justifying its $180-190B capex commitment; the market has validated this with a 10% surge post-earnings.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bullish",
+      "instruments": [
+        "GOOGL",
+        "GOOG"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.72,
+      "status": "open"
+    },
+    {
+      "summary": "Meta is the most vulnerable of the four hyperscalers to continued market skepticism because it lacks a third-party cloud business to validate its massive capex commitment, making its AI spending thesis the weakest among peers.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "META"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.7,
+      "status": "open"
+    },
+    {
+      "summary": "The oil futures curve is pricing a sharp normalization from current ~$110 Brent to roughly $80 by December 2026 and ~$70 by late 2027, representing either a generational hedging opportunity for energy buyers or a violent correction risk if the backwardation proves wrong.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "BNO",
+        "USO",
+        "XLE"
+      ],
+      "timeframe": "December 2026 to late 2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.76,
+      "status": "open"
+    },
+    {
+      "summary": "The S&P 500 is in a constructive trend with the path of least resistance higher into quarter-end, supported by record retail buying flows and favorable July seasonal tailwinds, with 7,610 as the key level to clear.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "next 2 weeks / quarter-end June 30",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.62,
+      "status": "open"
+    },
+    {
+      "summary": "Front-end Treasury yields face upward pressure with the risk of accelerating higher if the May PCE print surprises to the upside, as the market would move to fully price the 2026 rate hike.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "SHY",
+        "TBT",
+        "2-year Treasury",
+        "10-year Treasury"
+      ],
+      "timeframe": "near-term, around June 25 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.68,
+      "status": "open"
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish pivot with 9 of 19 participants forecasting a rate hike in 2026, pushing the year-end median Fed Funds rate projection to 3.8% from 3.4%.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "IEF"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish shift, with markets increasingly pricing in a rate hike by year-end 2026, driven by upwardly revised inflation forecasts and the Fed's explicit pledge to deliver price stability.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "Fed Funds rate"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's hawkish shift under Warsh \u2014 with higher dot plot projections and a pledge to deliver price stability \u2014 raises the probability of a rate hike by year-end 2026, pressuring rate-sensitive assets and bonds.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "IEF",
+        "BND"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Key S&P 500 support sits at the 50-DMA (7,329); a break below this level would signal a meaningful shift in trend, while a break above 7,610 (the record high) would confirm bullish continuation.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "neutral",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term (next 2 weeks)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A hot May PCE print on June 25 is the primary near-term risk catalyst that could fully price in a 2026 Fed rate hike, driving the dollar and front-end Treasury yields sharply higher while pressuring equities.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "DXY",
+        "UUP"
+      ],
+      "timeframe": "event-driven \u2014 June 25, 2026 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron (MU) faces asymmetric downside risk into its fiscal Q3 earnings report; a beat may not be sufficient to sustain the stock given elevated expectations and a whisper number above already-high consensus.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/greenspan-passes-but-his-put-lives-on/",
+      "direction": "bearish",
+      "instruments": [
+        "MU"
+      ],
+      "timeframe": "1-2 days (post earnings)",
+      "date_made": "2026-06-24",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "S&P 500 near-term path of least resistance is higher, supported by record retail inflows and strong seasonal tailwinds into July, with key support at 7,329 (50-DMA) and resistance at the 7,610 record high.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "2\u20134 weeks (month- and quarter-end into July)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's HBM chips remain fully booked with supply shortages expected to persist well beyond 2027, signaling continued strength in the AI memory supercycle for semiconductor names.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.82,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's HBM memory chips remain fully booked with a supply shortage expected to persist well beyond 2027, confirming the AI memory supercycle is ongoing and broadly bullish for AI semiconductor names.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.85,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 pullback is a healthy rotation, not a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, next 1-4 weeks",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 opens downside toward 7,150 and potentially the 200-DMA near 6,921 on the S&P 500.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, conditional on support break",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A hot June jobs print (Thursday July 2) could push the 10-year yield back toward 4.5%, renewing pressure on long-duration growth/AI names in a thin holiday tape.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "QQQ",
+        "TNX"
+      ],
+      "timeframe": "1 week (July 2 event-driven)",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.68,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's HBM chips remain fully booked with supply shortages expected to persist well beyond 2027, signaling continued structural tailwinds for AI memory semiconductors.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.82,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 pullback is characterized as a healthy rotation rather than a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, weeks",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 support opens downside toward 7,150 and potentially the 200-DMA near 6,921 for the S&P 500.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, conditional",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.62,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The 10-year Treasury yield easing toward 4.38% supports the defensive rotation; a hot June jobs print (due July 2) could push yields back to ~4.5% and reinstate pressure on long-duration growth stocks.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "mixed",
+      "instruments": [
+        "TLT",
+        "IEF",
+        "QQQ"
+      ],
+      "timeframe": "1 week (July 2 jobs report catalyst)",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.68,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's AI memory supercycle shows no signs of slowing, with HBM chips fully booked and supply shortages expected to persist well beyond 2027, supporting continued bullish momentum in AI memory and semiconductor names.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.85,
+      "status": "open",
+      "entry_prices": {}
+    }
+  ],
+  "resolved_calls": [],
+  "dashboard": {
+    "market_summary": "Today's picture is dominated by two converging bearish signals: AI/semiconductor valuations are widely viewed as stretched and late-cycle, with speculative excess in semis, space ETFs, and IPOs echoing prior bubble phases, while Bitcoin's breakdown below $60K adds a broader risk-asset warning. A 10\u201315% broad market correction is anticipated in the June\u2013August window, though analysts frame it as a buying opportunity rather than a structural bear market. Precious metals had already run hot and exposure was trimmed earlier in 2026, but the inflationary/stagflationary macro backdrop keeps the longer-term re-entry thesis intact. Industrial commodities face a mixed signal from energy: geopolitical risk premiums appear artificially suppressed by Iran deal optimism, creating asymmetric upside risk if negotiations collapse, while China's role as global oil price-setter adds further uncertainty.",
+    "sectors": {
+      "ai_tech": {
+        "sentiment_score": -0.65,
+        "recommendation": "sell",
+        "rationale": "Multiple converging signals \u2014 speculative excess in semiconductors, overvaluation concerns around capex vs. revenue justification, and Bitcoin's risk-asset breakdown \u2014 all point to meaningful downside risk in the near term. Reducing exposure to momentum-driven AI/tech names is supported by moderate-strength convergence across sources."
+      },
+      "precious_metals": {
+        "sentiment_score": 0.2,
+        "recommendation": "hold",
+        "rationale": "Metals were trimmed after becoming frothy, but the inflationary/stagflationary macro regime and the death of the 60/40 model keep the structural bull case alive for a future re-entry. Hold remaining positions and watch for a broader market pullback to rebuild at better prices."
+      },
+      "industrial_commodities": {
+        "sentiment_score": 0.05,
+        "recommendation": "hold",
+        "rationale": "Signals are weak and mixed: the stagflationary macro backdrop is modestly supportive, but energy-linked commodities carry unpriced geopolitical risk from Iran deal fragility. Insufficient corroboration across sources to justify adding exposure today."
+      },
+      "macro": {
+        "sentiment_score": -0.35,
+        "recommendation": "hold",
+        "rationale": "The macro backdrop skews cautious near-term \u2014 a presidential-cycle mid-year correction, Japan repatriation risk, and suppressed geopolitical risk premia all argue for defensiveness. Longer-term, fiscal stimulus makes a deflationary bust unlikely, favouring real assets over bonds, but the immediate posture is risk-reduction rather than accumulation."
+      }
+    }
+  },
+  "snapshot": [],
+  "sentiment_trends": {
+    "ai_tech": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.35,
+      0.1,
+      0.3,
+      0.2,
+      -0.45,
+      -0.55,
+      -0.35,
+      -0.1,
+      -0.6
+    ],
+    "precious_metals": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      -0.55,
+      0.5,
+      0.0,
+      -0.45,
+      0.1,
+      0.0,
+      0.0,
+      -0.2,
+      -0.1
+    ],
+    "industrial_commodities": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.0,
+      0.0,
+      0.0,
+      -0.2,
+      0.75,
+      0.0,
+      0.0,
+      0.0,
+      0.4
+    ],
+    "macro": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      0.1,
+      0.1,
+      -0.2,
+      -0.25,
+      -0.5,
+      -0.4,
+      -0.25,
+      -0.25,
+      -0.5
+    ]
+  }
+}
