@@ -1,0 +1,827 @@
+{
+  "date": "2026-06-29",
+  "sources_processed": [
+    "Real Investment Advice"
+  ],
+  "insights": [
+    {
+      "summary": "Record money market fund balances ($7.92T total, $3.09T retail) are rotating into equities as yields drift lower, providing significant fuel for continued market upside regardless of underlying economic weakness.",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ"
+      ],
+      "direction": "bullish",
+      "timeframe": null,
+      "specificity": "medium",
+      "key_reasoning": "As risk-free money market yields decline from their 5% peak, the massive stock of accumulated cash is being redeployed into equities, creating a liquidity-driven bid that is independent of economic fundamentals or income flows.",
+      "notable_data": "Money market funds hold record $7.92T as of June 17, 2026; retail investors account for $3.09T of that total, also a record.",
+      "source_confidence": 0.4,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/record-retail-inflows-where-is-all-the-money-coming-from/",
+      "content_title": "Record Retail Inflows: Where Is All The Money Coming From?",
+      "content_date": "2026-06-29",
+      "content_type": "article",
+      "corroboration_confidence": 0.35,
+      "corroborated_by": [
+        "Real Investment Advice (index 4)",
+        "Real Investment Advice (index 9)"
+      ]
+    },
+    {
+      "summary": "Record corporate buyback authorizations, particularly in tech/semiconductors, represent the largest and most price-insensitive buyer in the market and should continue supporting equity prices near-term.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "QQQ",
+        "SOXX",
+        "SMH"
+      ],
+      "direction": "bullish",
+      "timeframe": "year-to-date through mid-June 2026, ongoing",
+      "specificity": "medium",
+      "key_reasoning": "Corporate buybacks are price-insensitive and structurally supportive; with $926B authorized across the Russell 3000 and IT accounting for 42%, tech equities have a powerful mechanical backstop.",
+      "notable_data": "Buyback authorizations across the Russell 3000 hit a record $926B YTD through mid-June 2026; information technology alone accounts for 42% ($389B implied).",
+      "source_confidence": 0.5,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/record-retail-inflows-where-is-all-the-money-coming-from/",
+      "content_title": "Record Retail Inflows: Where Is All The Money Coming From?",
+      "content_date": "2026-06-29",
+      "content_type": "article",
+      "corroboration_confidence": 0.3,
+      "corroborated_by": [
+        "Real Investment Advice (index 9)",
+        "Real Investment Advice (index 0)"
+      ]
+    },
+    {
+      "summary": "Leveraged ETF assets at record $218B \u2014 two-thirds concentrated in tech and semiconductors \u2014 represent a significant tail risk; when the tape turns, amplified leverage unwind could drive sharp, rapid drawdowns in those sectors.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "TQQQ",
+        "SOXL",
+        "NVDA"
+      ],
+      "direction": "bearish",
+      "timeframe": null,
+      "specificity": "medium",
+      "key_reasoning": "The current melt-up is partially fueled by leveraged exposure, not just real capital; leveraged ETFs and record options premium create reflexive downside risk when sentiment reverses, with tech and semis most exposed.",
+      "notable_data": "Leveraged ETF assets hit record $218B, two-thirds in tech and semiconductors; retail options premium ran ~$7B/day in June (all-time high); June quadruple witching carried record $8.3T in notional.",
+      "source_confidence": 0.45,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/record-retail-inflows-where-is-all-the-money-coming-from/",
+      "content_title": "Record Retail Inflows: Where Is All The Money Coming From?",
+      "content_date": "2026-06-29",
+      "content_type": "article",
+      "corroboration_confidence": 0.25,
+      "corroborated_by": [
+        "Real Investment Advice (index 6)",
+        "Real Investment Advice (index 3)"
+      ]
+    },
+    {
+      "summary": "The current equity rally is diagnosed as liquidity-driven rather than fundamentals-driven, suggesting elevated vulnerability once the simultaneous tailwinds of cash rotation, buybacks, and leverage reach exhaustion.",
+      "asset_classes": [
+        "macro"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ"
+      ],
+      "direction": "mixed",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "When record dry powder, record buybacks, and record leverage all hit the bid simultaneously, prices rise independent of economic reality \u2014 but this confluence of factors is inherently temporary and self-limiting.",
+      "notable_data": "Top 10% own ~$50T in equities (~87% of total); top 10% cash-as-share-of-assets near 8%, highest since 1990; bottom 50% equity holdings at record $617B, up 571% since 2010.",
+      "source_confidence": 0.25,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/record-retail-inflows-where-is-all-the-money-coming-from/",
+      "content_title": "Record Retail Inflows: Where Is All The Money Coming From?",
+      "content_date": "2026-06-29",
+      "content_type": "article",
+      "corroboration_confidence": 0.3,
+      "corroborated_by": [
+        "Real Investment Advice (index 2)",
+        "Real Investment Advice (index 5)",
+        "Real Investment Advice (index 6)"
+      ]
+    },
+    {
+      "summary": "The S&P 500 is in a short-term pullback but the larger uptrend remains intact; a weekly close back above the 50-day moving average (~7,360) would signal resumption toward 7,500 and a retest of the 7,620 record high.",
+      "asset_classes": [
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "direction": "bullish",
+      "timeframe": "near-term, early July 2026",
+      "specificity": "high",
+      "key_reasoning": "Index sits 5.6% above rising 200-day MA (~6,921), RSI has reset from overbought >75 to low 40s, and breadth improvement (equal-weight outperforming cap-weight by 2.5+ points) suggests healthy rotation rather than distribution.",
+      "notable_data": "S&P 500 at 7,306; 50-day MA ~7,360; 200-day MA ~6,921; 4.1% pullback from June 2 record of 7,620; RSI low 40s; equal-weight beat cap-weight by >2.5 pts on the week; ~58% of members above their 50-day MA",
+      "source_confidence": 0.65,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "content_title": "Alphabet Joins The Dow Jones Industrial Average",
+      "content_date": "2026-06-29",
+      "content_type": "article",
+      "corroboration_confidence": 0.3,
+      "corroborated_by": [
+        "Real Investment Advice (index 0)",
+        "Real Investment Advice (index 1)"
+      ]
+    },
+    {
+      "summary": "A decisive break below 7,250 support opens downside risk toward 7,150 and potentially the 200-day moving average near 6,921 for the S&P 500.",
+      "asset_classes": [
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term, early July 2026",
+      "specificity": "high",
+      "key_reasoning": "MACD has rolled over below signal line with widening negative histogram, and a break of the 7,250 support zone would invalidate the post-April rally structure.",
+      "notable_data": "Key support at 7,250; next downside targets 7,150 and 200-day MA at ~6,921; MACD below signal line",
+      "source_confidence": 0.62,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "content_title": "Alphabet Joins The Dow Jones Industrial Average",
+      "content_date": "2026-06-29",
+      "content_type": "article",
+      "corroboration_confidence": 0.25,
+      "corroborated_by": [
+        "Real Investment Advice (index 2)",
+        "Real Investment Advice (index 6)"
+      ]
+    },
+    {
+      "summary": "Technology exposure should be trimmed toward target weight and defensive positions added, as crowded tech names face near-term headwinds during the current pullback.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "QQQ",
+        "GOOGL"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term, Q3 2026",
+      "specificity": "medium",
+      "key_reasoning": "Extended technology positions have already taken the brunt of selling; the ETF Sector Rotation Model proactively trimmed stretched tech exposure earlier in June ahead of the pullback.",
+      "notable_data": "Only ~58% of S&P members above their 50-day MA vs. healthy threshold of 70-80%; trimming done earlier in June",
+      "source_confidence": 0.45,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "content_title": "Alphabet Joins The Dow Jones Industrial Average",
+      "content_date": "2026-06-29",
+      "content_type": "article",
+      "corroboration_confidence": 0.3,
+      "corroborated_by": [
+        "Real Investment Advice (index 2)",
+        "Real Investment Advice (index 3)",
+        "Real Investment Advice (index 5)"
+      ]
+    },
+    {
+      "summary": "Quarter-end index rebalancing flows \u2014 selling outperformers, buying laggards \u2014 are amplified this quarter due to stark sector performance divergence and may temporarily distort prices through early July.",
+      "asset_classes": [
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ",
+        "IWM"
+      ],
+      "direction": "mixed",
+      "timeframe": "through first few days of July 2026",
+      "specificity": "medium",
+      "key_reasoning": "Pension funds, endowments, and institutional managers benchmarked to major indexes must realign holdings; the wide performance gap between sectors amplifies rebalancing flows, which can reverse in the new month.",
+      "notable_data": "Rebalancing flows expected to persist through early July; caution warranted as flows may reverse",
+      "source_confidence": 0.42,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "content_title": "Alphabet Joins The Dow Jones Industrial Average",
+      "content_date": "2026-06-29",
+      "content_type": "article",
+      "corroboration_confidence": 0.15,
+      "corroborated_by": [
+        "Real Investment Advice (index 3)"
+      ]
+    },
+    {
+      "summary": "Fed Chair Warsh's Wednesday speech is expected to maintain a hawkish tone but may not fully validate market expectations of multiple rate hikes over the next six months.",
+      "asset_classes": [
+        "macro",
+        "bonds"
+      ],
+      "instruments": [
+        "TLT",
+        "IEF"
+      ],
+      "direction": "neutral",
+      "timeframe": "this week, July 2026",
+      "specificity": "medium",
+      "key_reasoning": "The last FOMC meeting was perceived as hawkish; the market is pricing multiple hikes, but Warsh may stop short of confirming that trajectory, creating ambiguity for rate-sensitive assets.",
+      "notable_data": "Market pricing potential multiple Fed rate hikes over next six months; employment report expected +112k jobs vs. prior 172k; GDP revision shows near-zero personal consumption growth",
+      "source_confidence": 0.4,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "content_title": "Alphabet Joins The Dow Jones Industrial Average",
+      "content_date": "2026-06-29",
+      "content_type": "article",
+      "corroboration_confidence": 0.1,
+      "corroborated_by": []
+    },
+    {
+      "summary": "AI-driven earnings growth has permanently shifted corporate earnings power to digital infrastructure, making AI/tech a structurally dominant long-term theme confirmed by Alphabet's Dow inclusion.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "GOOGL",
+        "QQQ"
+      ],
+      "direction": "bullish",
+      "timeframe": "long-term, secular",
+      "specificity": "low",
+      "key_reasoning": "Information technology has contributed outsized gains to S&P 500 since 2023 via multiple expansion driven by AI enthusiasm; Alphabet's Dow inclusion confirms the AI economy is already embedded in economic reality rather than speculative.",
+      "notable_data": "Verizon earnings essentially flat for a decade; Alphabet earnings growth dramatically superior; Dow composition change from VZ to GOOGL",
+      "source_confidence": 0.25,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "content_title": "Alphabet Joins The Dow Jones Industrial Average",
+      "content_date": "2026-06-29",
+      "content_type": "article",
+      "corroboration_confidence": 0.3,
+      "corroborated_by": [
+        "Real Investment Advice (index 1)",
+        "Real Investment Advice (index 0)"
+      ]
+    }
+  ],
+  "convergence_themes": [
+    {
+      "theme": "Near-term bearish / cautious outlook on tech and semiconductors amid crowding and leverage risk",
+      "direction": "bearish",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 2) \u2013 leveraged ETF tail risk in tech/semis",
+        "Real Investment Advice (index 6) \u2013 trim tech, add defensives",
+        "Real Investment Advice (index 3) \u2013 liquidity-driven rally vulnerable to reversal"
+      ],
+      "strength": "moderate",
+      "caveat": "All signals originate from a single source; true independent corroboration is absent, capping confidence."
+    },
+    {
+      "theme": "Structural long-term bullish case for AI/tech driven by earnings power and capital flows",
+      "direction": "bullish",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 1) \u2013 record corporate buybacks in tech/semis",
+        "Real Investment Advice (index 9) \u2013 AI-driven structural earnings shift, Alphabet Dow inclusion"
+      ],
+      "strength": "weak",
+      "caveat": "Single-source intra-dataset agreement; no independent source confirmation available."
+    },
+    {
+      "theme": "Equity market upside supported by liquidity tailwinds (money market rotation + buybacks)",
+      "direction": "bullish",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 0) \u2013 $7.92T money market rotation into equities",
+        "Real Investment Advice (index 1) \u2013 record buyback authorizations as price-insensitive bid",
+        "Real Investment Advice (index 4) \u2013 larger uptrend intact, path to record highs"
+      ],
+      "strength": "moderate",
+      "caveat": "Convergence is meaningful thematically but entirely within one source; would be strong with independent confirmation."
+    },
+    {
+      "theme": "Liquidity-driven rally faces structural exhaustion risk \u2014 bullish and bearish views coexist (mixed signal)",
+      "direction": "mixed",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice (index 3) \u2013 rally diagnosed as liquidity-driven, not fundamental",
+        "Real Investment Advice (index 5) \u2013 defined downside levels if support breaks",
+        "Real Investment Advice (index 7) \u2013 quarter-end rebalancing distorting near-term prices"
+      ],
+      "strength": "weak",
+      "caveat": "Mixed directional signals reduce actionability. Single-source origin further limits conviction."
+    }
+  ],
+  "open_calls": [
+    {
+      "summary": "Alphabet is the strongest AI infrastructure play among hyperscalers, with Google Cloud accelerating to 63% growth and a $460B backlog justifying its $180-190B capex commitment; the market has validated this with a 10% surge post-earnings.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bullish",
+      "instruments": [
+        "GOOGL",
+        "GOOG"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.72,
+      "status": "open"
+    },
+    {
+      "summary": "Meta is the most vulnerable of the four hyperscalers to continued market skepticism because it lacks a third-party cloud business to validate its massive capex commitment, making its AI spending thesis the weakest among peers.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "META"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.7,
+      "status": "open"
+    },
+    {
+      "summary": "The oil futures curve is pricing a sharp normalization from current ~$110 Brent to roughly $80 by December 2026 and ~$70 by late 2027, representing either a generational hedging opportunity for energy buyers or a violent correction risk if the backwardation proves wrong.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "BNO",
+        "USO",
+        "XLE"
+      ],
+      "timeframe": "December 2026 to late 2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.76,
+      "status": "open"
+    },
+    {
+      "summary": "The S&P 500 is in a constructive trend with the path of least resistance higher into quarter-end, supported by record retail buying flows and favorable July seasonal tailwinds, with 7,610 as the key level to clear.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "next 2 weeks / quarter-end June 30",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.62,
+      "status": "open"
+    },
+    {
+      "summary": "Front-end Treasury yields face upward pressure with the risk of accelerating higher if the May PCE print surprises to the upside, as the market would move to fully price the 2026 rate hike.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "SHY",
+        "TBT",
+        "2-year Treasury",
+        "10-year Treasury"
+      ],
+      "timeframe": "near-term, around June 25 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.68,
+      "status": "open"
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish pivot with 9 of 19 participants forecasting a rate hike in 2026, pushing the year-end median Fed Funds rate projection to 3.8% from 3.4%.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "IEF"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish shift, with markets increasingly pricing in a rate hike by year-end 2026, driven by upwardly revised inflation forecasts and the Fed's explicit pledge to deliver price stability.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "Fed Funds rate"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's hawkish shift under Warsh \u2014 with higher dot plot projections and a pledge to deliver price stability \u2014 raises the probability of a rate hike by year-end 2026, pressuring rate-sensitive assets and bonds.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "IEF",
+        "BND"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Key S&P 500 support sits at the 50-DMA (7,329); a break below this level would signal a meaningful shift in trend, while a break above 7,610 (the record high) would confirm bullish continuation.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "neutral",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term (next 2 weeks)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A hot May PCE print on June 25 is the primary near-term risk catalyst that could fully price in a 2026 Fed rate hike, driving the dollar and front-end Treasury yields sharply higher while pressuring equities.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "DXY",
+        "UUP"
+      ],
+      "timeframe": "event-driven \u2014 June 25, 2026 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron (MU) faces asymmetric downside risk into its fiscal Q3 earnings report; a beat may not be sufficient to sustain the stock given elevated expectations and a whisper number above already-high consensus.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/greenspan-passes-but-his-put-lives-on/",
+      "direction": "bearish",
+      "instruments": [
+        "MU"
+      ],
+      "timeframe": "1-2 days (post earnings)",
+      "date_made": "2026-06-24",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "S&P 500 near-term path of least resistance is higher, supported by record retail inflows and strong seasonal tailwinds into July, with key support at 7,329 (50-DMA) and resistance at the 7,610 record high.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "2\u20134 weeks (month- and quarter-end into July)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's HBM chips remain fully booked with supply shortages expected to persist well beyond 2027, signaling continued strength in the AI memory supercycle for semiconductor names.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.82,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's HBM memory chips remain fully booked with a supply shortage expected to persist well beyond 2027, confirming the AI memory supercycle is ongoing and broadly bullish for AI semiconductor names.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.85,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 pullback is a healthy rotation, not a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, next 1-4 weeks",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 opens downside toward 7,150 and potentially the 200-DMA near 6,921 on the S&P 500.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, conditional on support break",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A hot June jobs print (Thursday July 2) could push the 10-year yield back toward 4.5%, renewing pressure on long-duration growth/AI names in a thin holiday tape.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "QQQ",
+        "TNX"
+      ],
+      "timeframe": "1 week (July 2 event-driven)",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.68,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's HBM chips remain fully booked with supply shortages expected to persist well beyond 2027, signaling continued structural tailwinds for AI memory semiconductors.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.82,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 pullback is characterized as a healthy rotation rather than a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, weeks",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 support opens downside toward 7,150 and potentially the 200-DMA near 6,921 for the S&P 500.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, conditional",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.62,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The 10-year Treasury yield easing toward 4.38% supports the defensive rotation; a hot June jobs print (due July 2) could push yields back to ~4.5% and reinstate pressure on long-duration growth stocks.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "mixed",
+      "instruments": [
+        "TLT",
+        "IEF",
+        "QQQ"
+      ],
+      "timeframe": "1 week (July 2 jobs report catalyst)",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.68,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's AI memory supercycle shows no signs of slowing, with HBM chips fully booked and supply shortages expected to persist well beyond 2027, supporting continued bullish momentum in AI memory and semiconductor names.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.85,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 is in a short-term pullback but the larger uptrend remains intact; a weekly close back above the 50-day moving average (~7,360) would set up a retest of 7,500 and then the 7,620 record high.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term, early July 2026",
+      "date_made": "2026-06-29",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 support would open downside toward 7,150 and potentially the 200-day moving average near 6,921 if selling accelerates.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term, early July 2026",
+      "date_made": "2026-06-29",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 is in a short-term pullback but the larger uptrend remains intact; a weekly close back above the 50-day moving average (~7,360) would signal resumption toward 7,500 and a retest of the 7,620 record high.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term, early July 2026",
+      "date_made": "2026-06-29",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 support opens downside risk toward 7,150 and potentially the 200-day moving average near 6,921 for the S&P 500.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term, early July 2026",
+      "date_made": "2026-06-29",
+      "source_confidence": 0.62,
+      "status": "open",
+      "entry_prices": {}
+    }
+  ],
+  "resolved_calls": [],
+  "dashboard": {
+    "market_summary": "Today's market picture is dominated by a liquidity-fueled equity rally \u2014 record money market balances ($7.92T) rotating into stocks and record corporate buybacks providing a powerful near-term bid \u2014 but the rally's lack of fundamental grounding makes it structurally fragile. For AI/tech investors, the setup is bifurcated: long-term structural tailwinds from AI-driven earnings growth and buybacks are real, but near-term crowding, record leveraged ETF concentration ($218B, two-thirds in tech/semis), and quarter-end rebalancing selling create meaningful tactical headwinds. Precious metals and industrial commodities receive no actionable signal from today's data. The key macro watchpoint is Fed Chair Warsh's Wednesday speech, which could pressure rate expectations, while S&P 500 levels of 7,360 (upside trigger) and 7,250 (downside warning) serve as the near-term directional gateposts.",
+    "sectors": {
+      "ai_tech": {
+        "sentiment_score": -0.2,
+        "recommendation": "hold",
+        "rationale": "The weight of near-term evidence \u2014 leveraged ETF tail risk, crowded positioning, trim-to-target-weight guidance, and quarter-end rebalancing outflows \u2014 tilts tactically cautious, offsetting the genuine long-term structural bull case from AI earnings power and buybacks. Maintain core positions but avoid adding exposure until the pullback resolves and leverage unwind risk subsides."
+      },
+      "precious_metals": {
+        "sentiment_score": 0.0,
+        "recommendation": "no signal",
+        "rationale": "No data or insights covering precious metals were present in today's source material; no evidence-based directional call can be made."
+      },
+      "industrial_commodities": {
+        "sentiment_score": 0.0,
+        "recommendation": "no signal",
+        "rationale": "No data or insights covering industrial commodities were present in today's source material; no evidence-based directional call can be made."
+      },
+      "macro": {
+        "sentiment_score": 0.15,
+        "recommendation": "hold",
+        "rationale": "Liquidity tailwinds (cash rotation, buybacks, intact S&P uptrend) provide a modestly positive macro backdrop, but the rally is diagnosed as liquidity-driven rather than fundamentals-driven, capping conviction; the hawkish Fed overhang and defined downside levels below 7,250 warrant defensive positioning rather than aggressive deployment."
+      }
+    }
+  },
+  "snapshot": [],
+  "sentiment_trends": {
+    "ai_tech": [
+      null,
+      null,
+      null,
+      null,
+      0.35,
+      0.1,
+      0.3,
+      0.2,
+      -0.45,
+      -0.55,
+      -0.35,
+      -0.1,
+      -0.65,
+      0.2
+    ],
+    "precious_metals": [
+      null,
+      null,
+      null,
+      null,
+      -0.55,
+      0.5,
+      0.0,
+      -0.45,
+      0.1,
+      0.0,
+      0.0,
+      -0.2,
+      0.2,
+      0.0
+    ],
+    "industrial_commodities": [
+      null,
+      null,
+      null,
+      null,
+      0.0,
+      0.0,
+      0.0,
+      -0.2,
+      0.75,
+      0.0,
+      0.0,
+      0.0,
+      0.05,
+      0.0
+    ],
+    "macro": [
+      null,
+      null,
+      null,
+      null,
+      0.1,
+      0.1,
+      -0.2,
+      -0.25,
+      -0.5,
+      -0.4,
+      -0.25,
+      -0.25,
+      -0.35,
+      0.1
+    ]
+  }
+}

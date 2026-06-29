@@ -339,5 +339,65 @@
     "source_confidence": 0.85,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 is in a short-term pullback but the larger uptrend remains intact; a weekly close back above the 50-day moving average (~7,360) would set up a retest of 7,500 and then the 7,620 record high.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+    "direction": "bullish",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "near-term, early July 2026",
+    "date_made": "2026-06-29",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "A decisive break below 7,250 support would open downside toward 7,150 and potentially the 200-day moving average near 6,921 if selling accelerates.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "near-term, early July 2026",
+    "date_made": "2026-06-29",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 is in a short-term pullback but the larger uptrend remains intact; a weekly close back above the 50-day moving average (~7,360) would signal resumption toward 7,500 and a retest of the 7,620 record high.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+    "direction": "bullish",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "near-term, early July 2026",
+    "date_made": "2026-06-29",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "A decisive break below 7,250 support opens downside risk toward 7,150 and potentially the 200-day moving average near 6,921 for the S&P 500.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "near-term, early July 2026",
+    "date_made": "2026-06-29",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
