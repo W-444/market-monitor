@@ -399,5 +399,59 @@
     "source_confidence": 0.62,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "AI memory chip shortage is reversing decades of deflationary trends in consumer tech, with major OEMs raising prices 15-20%, signaling a structural shift in CPI's IT category that the Fed cannot easily address via rate hikes.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-memory-chips-spark-inflation-worries/",
+    "direction": "bearish",
+    "instruments": [
+      "AAPL",
+      "DELL",
+      "MU"
+    ],
+    "timeframe": "near-to-medium term (2025-2026)",
+    "date_made": "2026-06-30",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Mega-cap growth (Mag 7) is tactically buyable following a flow-driven 13% drawdown, with an expected near-term outperformance versus both value stocks and high-flying semiconductor/hardware names as post-quarter-end rebalancing normalizes.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-memory-chips-spark-inflation-worries/",
+    "direction": "bullish",
+    "instruments": [
+      "MAGS",
+      "MGK",
+      "NVDA",
+      "AAPL",
+      "GOOGL",
+      "MSFT"
+    ],
+    "timeframe": "short-term tactical (first week of Q3 2026 and into Q2 earnings)",
+    "date_made": "2026-06-30",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The firm made a tactical rotation from value to growth/mega-cap stocks, expecting Mag 7 names to outperform both value and high-flying semiconductor hardware names as post-quarter-end flows normalize.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-memory-chips-spark-inflation-worries/",
+    "direction": "bullish",
+    "instruments": [
+      "MGK",
+      "MAGS",
+      "NVDA",
+      "AAPL",
+      "GOOGL",
+      "MSFT"
+    ],
+    "timeframe": "first week of new quarter (early Q3 2026)",
+    "date_made": "2026-06-30",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
