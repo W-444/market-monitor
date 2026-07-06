@@ -511,5 +511,35 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 is in an uptrend with room to run toward 7,800 if it breaks above the June record near 7,640; the 50-day MA at 7,410 is the key downside support level.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/forward-guidance-r-i-p/",
+    "direction": "bullish",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "near-term, weeks",
+    "date_made": "2026-07-06",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 is in an uptrend with room to run toward 7,800 if it breaks above the June record near 7,640; the 50-day MA at ~7,410 is the key support level to watch.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/forward-guidance-r-i-p/",
+    "direction": "bullish",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "near-term, weeks",
+    "date_made": "2026-07-06",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
