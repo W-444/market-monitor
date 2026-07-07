@@ -541,5 +541,43 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Magnificent 7 mega-cap tech stocks are a tactical buy into late July earnings, with the MAGS/MTUM ratio already bouncing 13% off late-June lows signaling capital returning to the group.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-dollar-narrative-has-turned/",
+    "direction": "bullish",
+    "instruments": [
+      "MAGS",
+      "MTUM",
+      "MGK",
+      "META",
+      "MU",
+      "TSLA"
+    ],
+    "timeframe": "tactical, through late July 2026 earnings dates",
+    "date_made": "2026-07-07",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Mag 7 megacap growth stocks are a tactical buy into late July earnings, with the MAGS/MTUM ratio already bouncing 13% off its June 24 low, signaling capital rotation back into mega-caps.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-dollar-narrative-has-turned/",
+    "direction": "bullish",
+    "instruments": [
+      "MAGS",
+      "MTUM",
+      "MGK",
+      "META",
+      "MU",
+      "TSLA"
+    ],
+    "timeframe": "tactical, through late July 2026 earnings dates",
+    "date_made": "2026-07-07",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
