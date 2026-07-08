@@ -1,0 +1,1212 @@
+{
+  "date": "2026-07-08",
+  "sources_processed": [
+    "Eurodollar University",
+    "Real Investment Advice",
+    "Thoughtful Money"
+  ],
+  "insights": [
+    {
+      "summary": "The Japanese yen is at risk of a more serious currency crisis as Japan's FX intervention reserves decline with each defense of the \u00a5160/USD level, making interventions increasingly unsustainable.",
+      "asset_classes": [
+        "currencies",
+        "macro"
+      ],
+      "instruments": [
+        "USDJPY",
+        "FXY",
+        "DXY"
+      ],
+      "direction": "bearish",
+      "timeframe": null,
+      "specificity": "medium",
+      "key_reasoning": "Japan repeatedly sells dollar reserves to buy yen near \u00a5160/USD, but each intervention depletes reserves, reducing Japan's capacity to defend the currency and raising the probability of a structural break.",
+      "notable_data": "\u00a5160 per dollar cited as the intervention trigger level",
+      "source_confidence": 0.4,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=GzfMqqP7LgQ",
+      "content_title": "Why A Strong Dollar Is Bad For Everyone & Your Portfolio",
+      "content_date": "2026-07-08",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.35,
+      "corroborated_by": [
+        "Thoughtful Money (index 1 \u2014 USD strength/intervention risk implicitly supports JPY pressure)"
+      ]
+    },
+    {
+      "summary": "A 'Plaza Accord 2.0' coordinated intervention to weaken the U.S. dollar is a growing policy risk as an excessively strong dollar damages U.S. trading partners and ultimately undermines American export demand.",
+      "asset_classes": [
+        "currencies",
+        "macro"
+      ],
+      "instruments": [
+        "DXY",
+        "UUP",
+        "UDN"
+      ],
+      "direction": "bearish",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "A strong dollar weakens trading partners' purchasing power, reducing demand for U.S. exports and increasing global financial stress, eventually forcing policymakers into coordinated dollar-weakening action.",
+      "notable_data": null,
+      "source_confidence": 0.25,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=GzfMqqP7LgQ",
+      "content_title": "Why A Strong Dollar Is Bad For Everyone & Your Portfolio",
+      "content_date": "2026-07-08",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.4,
+      "corroborated_by": [
+        "Thoughtful Money (index 0 \u2014 USD/JPY dynamics)",
+        "Thoughtful Money (index 2 \u2014 contrasting structural USD view from same source)"
+      ]
+    },
+    {
+      "summary": "The U.S. dollar is structurally stronger than most investors expect due to debt-driven demand: every dollar created via bank lending generates a future repayment obligation, creating persistent structural dollar demand.",
+      "asset_classes": [
+        "currencies",
+        "macro"
+      ],
+      "instruments": [
+        "DXY",
+        "UUP"
+      ],
+      "direction": "bullish",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "Dollars are created alongside debt liabilities; borrowers must repay in dollars, generating ongoing demand for the currency independent of interest rate differentials or safe-haven flows.",
+      "notable_data": null,
+      "source_confidence": 0.2,
+      "source": "Thoughtful Money",
+      "source_url": "https://youtube.com/watch?v=GzfMqqP7LgQ",
+      "content_title": "Why A Strong Dollar Is Bad For Everyone & Your Portfolio",
+      "content_date": "2026-07-08",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.2,
+      "corroborated_by": [
+        "Thoughtful Money (index 1 \u2014 same source, opposing view on DXY)"
+      ]
+    },
+    {
+      "summary": "Walmart cutting prices broadly signals weakening consumer demand and deflationary pressure, contradicting the Fed's inflation narrative and pointing to a deteriorating macro environment.",
+      "asset_classes": [
+        "macro"
+      ],
+      "instruments": [
+        "WMT"
+      ],
+      "direction": "bearish",
+      "timeframe": "near-term, mid-2026",
+      "specificity": "medium",
+      "key_reasoning": "The largest U.S. retailer cutting prices across thousands of SKUs (groceries, consumer goods, durables) is interpreted as a demand-side signal: consumers are exhausted post-tax-refund-season, not an inflation story. Eurodollar curve signals reportedly warned of this consumer exhaustion once seasonal fiscal support dried up.",
+      "notable_data": "Walmart cutting prices on thousands of products including beef, Coca-Cola, Pepsi, laundry detergent, and lawn mowers; context of a gasoline price shock on consumers; tax refund money cited as having run dry.",
+      "source_confidence": 0.3,
+      "source": "Eurodollar University",
+      "source_url": "https://youtube.com/watch?v=wMG9-0SZIXU",
+      "content_title": "Walmart Is CUTTING Prices Because Consumers Are \"Out Of Money\"",
+      "content_date": "2026-07-07",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.65,
+      "corroborated_by": [
+        "Eurodollar University (index 5 \u2014 consumer exhaustion/macro deterioration)",
+        "Real Investment Advice (index 9 \u2014 leverage risk/macro deterioration)",
+        "Real Investment Advice (index 11 \u2014 restrictive financial conditions)"
+      ]
+    },
+    {
+      "summary": "Deflationary consumer dynamics and a weakening macro backdrop are implicitly bullish for precious metals as a safe-haven and inflation-hedge alternative, consistent with Eurodollar University's ongoing promotion of physical gold.",
+      "asset_classes": [
+        "precious_metals"
+      ],
+      "instruments": [
+        "GLD",
+        "physical gold",
+        "Augusta Precious Metals"
+      ],
+      "direction": "bullish",
+      "timeframe": null,
+      "specificity": "low",
+      "key_reasoning": "The podcast sponsors a precious metals IRA provider and frames macro weakness and monetary system misunderstanding as reasons to hold physical gold, though no explicit price target or timeframe is given.",
+      "notable_data": null,
+      "source_confidence": 0.15,
+      "source": "Eurodollar University",
+      "source_url": "https://youtube.com/watch?v=wMG9-0SZIXU",
+      "content_title": "Walmart Is CUTTING Prices Because Consumers Are \"Out Of Money\"",
+      "content_date": "2026-07-07",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.8,
+      "corroborated_by": [
+        "Real Investment Advice (index 6 \u2014 gold bullish in contractionary cycle)",
+        "Eurodollar University (index 5 \u2014 safe-haven demand from macro weakness)",
+        "Real Investment Advice (index 7 \u2014 risk-off environment favors hard assets)"
+      ]
+    },
+    {
+      "summary": "Eurodollar curve signals are flagging an economic turning point tied to consumer exhaustion, suggesting bonds (especially short-duration/Eurodollar futures) may be pricing in rate cuts or recessionary conditions ahead.",
+      "asset_classes": [
+        "bonds",
+        "macro"
+      ],
+      "instruments": [
+        "Eurodollar futures",
+        "TLT",
+        "SHY"
+      ],
+      "direction": "bullish",
+      "timeframe": "near-term, mid-to-late 2026",
+      "specificity": "low",
+      "key_reasoning": "Jeff Snider's core methodology relies on Eurodollar curves as leading macro indicators; the framing that 'markets and curves warned' of post-tax-refund consumer weakness implies rates markets are already pricing in economic softness, which is generally bullish for duration.",
+      "notable_data": null,
+      "source_confidence": 0.2,
+      "source": "Eurodollar University",
+      "source_url": "https://youtube.com/watch?v=wMG9-0SZIXU",
+      "content_title": "Walmart Is CUTTING Prices Because Consumers Are \"Out Of Money\"",
+      "content_date": "2026-07-07",
+      "content_type": "podcast",
+      "corroboration_confidence": 0.7,
+      "corroborated_by": [
+        "Real Investment Advice (index 6 \u2014 long-duration bonds bullish in liquidity contraction)",
+        "Real Investment Advice (index 11 \u2014 yield curve signaling late-cycle)",
+        "Eurodollar University (index 3 \u2014 deflationary macro backdrop)"
+      ]
+    },
+    {
+      "summary": "Global liquidity is peaking and the 65-month cycle is now pointing downward into 2027, suggesting a contractionary environment that historically favors commodities including gold, long-duration government bonds, cash, and defensive equities.",
+      "asset_classes": [
+        "precious_metals",
+        "industrial_commodities",
+        "bonds",
+        "macro"
+      ],
+      "instruments": [
+        "GLD",
+        "gold",
+        "TLT",
+        "long-duration government bonds"
+      ],
+      "direction": "bullish",
+      "timeframe": "2026\u20132027",
+      "specificity": "medium",
+      "key_reasoning": "Michael Howell's GLI 65-month sine-wave cycle peaked in August 2025 and is now trending downward; historically, commodities including gold and long-duration bonds outperform during liquidity contraction phases.",
+      "notable_data": "$40 trillion in global debt rollovers projected by 2027, a $4 trillion increase from the prior year; cycle bottomed October 2022, peaked August 2025.",
+      "source_confidence": 0.65,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/is-global-liquidity-peaking/",
+      "content_title": "Is Global Liquidity Peaking?",
+      "content_date": "2026-07-08",
+      "content_type": "article",
+      "corroboration_confidence": 0.75,
+      "corroborated_by": [
+        "Eurodollar University (index 4 \u2014 gold bullish)",
+        "Eurodollar University (index 5 \u2014 bonds bullish/recessionary signals)",
+        "Real Investment Advice (index 9 \u2014 macro deterioration risk)",
+        "Real Investment Advice (index 11 \u2014 late-cycle indicators)"
+      ]
+    },
+    {
+      "summary": "Speculative and leveraged assets \u2014 including crypto, small-cap stocks, emerging-market equities, and private credit \u2014 are expected to be among the worst performers as the global liquidity cycle contracts through 2027.",
+      "asset_classes": [
+        "crypto",
+        "other",
+        "macro"
+      ],
+      "instruments": [
+        "IWM",
+        "crypto",
+        "BTC",
+        "emerging market equities",
+        "private equity"
+      ],
+      "direction": "bearish",
+      "timeframe": "2026\u20132027",
+      "specificity": "medium",
+      "key_reasoning": "Howell's historical cycle analysis shows speculative and leveraged assets underperform during liquidity downturns due to tighter refinancing conditions and reduced risk appetite.",
+      "notable_data": "$40 trillion in global debt rollovers by 2027 creating a mismatch between refinancing demand and tightening financial conditions.",
+      "source_confidence": 0.62,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/is-global-liquidity-peaking/",
+      "content_title": "Is Global Liquidity Peaking?",
+      "content_date": "2026-07-08",
+      "content_type": "article",
+      "corroboration_confidence": 0.65,
+      "corroborated_by": [
+        "Real Investment Advice (index 9 \u2014 extreme leverage risk in equities)",
+        "Real Investment Advice (index 10 \u2014 systemic leverage risk increasing)",
+        "Real Investment Advice (index 12 \u2014 bearish growth/tech assets)",
+        "Real Investment Advice (index 8 \u2014 speculative rally reversing)"
+      ]
+    },
+    {
+      "summary": "The semiconductor/chip rally is reversing after parabolic first-half 2026 gains, driven by profit-taking, valuation normalization, and rotation into value and Dow blue-chip stocks expected to persist into Q3 2026.",
+      "asset_classes": [
+        "ai_tech"
+      ],
+      "instruments": [
+        "SOXX",
+        "MU",
+        "AVGO",
+        "SanDisk"
+      ],
+      "direction": "bearish",
+      "timeframe": "Q3 2026",
+      "specificity": "high",
+      "key_reasoning": "Broadcom's CEO declined to raise full-year AI semiconductor guidance, triggering profit-taking in stocks priced for 2028\u20132029 earnings; competitive pressures in chip manufacturing are further eroding the narrative.",
+      "notable_data": "Micron up 260%+ through June 2026; SanDisk up 850%+; SOXX up 75%+ in H1 2026 before reversal began.",
+      "source_confidence": 0.72,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/is-global-liquidity-peaking/",
+      "content_title": "Is Global Liquidity Peaking?",
+      "content_date": "2026-07-08",
+      "content_type": "article",
+      "corroboration_confidence": 0.55,
+      "corroborated_by": [
+        "Real Investment Advice (index 12 \u2014 growth-to-value rotation, tech/AI bearish)",
+        "Real Investment Advice (index 7 \u2014 speculative assets underperform)",
+        "Real Investment Advice (index 9 \u2014 leverage risk in equities)"
+      ]
+    },
+    {
+      "summary": "Record margin debt and the thinnest-ever net credit balance signal extreme leverage risk in equities; if sentiment turns, the air pocket from forced selling could be historically large.",
+      "asset_classes": [
+        "other",
+        "macro"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ"
+      ],
+      "direction": "bearish",
+      "timeframe": "null",
+      "specificity": "medium",
+      "key_reasoning": "Margin debt hit a record $1.42 trillion in May 2026 (+53% YoY), a pace that historically coincided with the 2000, 2007, and 2021 market tops; the net credit balance collapsed to a record negative $991.7 billion.",
+      "notable_data": "Margin debt: $1.42 trillion (May 2026, +8.5% MoM, +53% YoY); Net credit balance: -$991.7 billion vs. -$557 billion a year prior.",
+      "source_confidence": 0.6,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/is-global-liquidity-peaking/",
+      "content_title": "Is Global Liquidity Peaking?",
+      "content_date": "2026-07-08",
+      "content_type": "article",
+      "corroboration_confidence": 0.7,
+      "corroborated_by": [
+        "Real Investment Advice (index 10 \u2014 systemic leverage risk)",
+        "Real Investment Advice (index 7 \u2014 speculative assets bearish)",
+        "Eurodollar University (index 3 \u2014 macro deterioration)",
+        "Real Investment Advice (index 11 \u2014 restrictive conditions)"
+      ]
+    },
+    {
+      "summary": "FINRA's June 4 rule change eliminating the $25,000 pattern day trader minimum lowers friction on leveraged intraday trading at a potential cycle peak, increasing systemic leverage risk rather than reducing it.",
+      "asset_classes": [
+        "macro",
+        "other"
+      ],
+      "instruments": [
+        "SPY",
+        "QQQ"
+      ],
+      "direction": "bearish",
+      "timeframe": "Through October 2027 (firms' compliance deadline)",
+      "specificity": "medium",
+      "key_reasoning": "The rule removes a brake on smaller leveraged accounts while real-time monitoring infrastructure won't be required until October 2027, net-adding leverage capacity at a market cycle high.",
+      "notable_data": "Old PDT minimum: $25,000; new real-time intraday margin system effective June 4, 2026; firm compliance deadline October 2027.",
+      "source_confidence": 0.5,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/is-global-liquidity-peaking/",
+      "content_title": "Is Global Liquidity Peaking?",
+      "content_date": "2026-07-08",
+      "content_type": "article",
+      "corroboration_confidence": 0.55,
+      "corroborated_by": [
+        "Real Investment Advice (index 9 \u2014 record margin debt/leverage risk)",
+        "Real Investment Advice (index 7 \u2014 speculative assets at risk)",
+        "Eurodollar University (index 5 \u2014 macro turning point)"
+      ]
+    },
+    {
+      "summary": "The yield curve is currently in a bear flattening trend, with short-term rates rising faster than long-term rates, signaling restrictive financial conditions and a potential late-cycle economic environment.",
+      "asset_classes": [
+        "bonds",
+        "macro"
+      ],
+      "instruments": [
+        "US Treasury 2-year note",
+        "US Treasury 10-year note",
+        "US Treasury 30-year bond"
+      ],
+      "direction": "bearish",
+      "timeframe": "since late February 2026, ongoing",
+      "specificity": "medium",
+      "key_reasoning": "Since the Iran conflict began in late February, the 2-year yield rose 76 bps, the 10-year by 46 bps, and the 30-year by only 25 bps, flattening the 2/10 curve by 30 bps and the 2/30 curve by 51 bps \u2014 a classic bear flattener reflecting elevated short-rate expectations and subdued long-run growth forecasts.",
+      "notable_data": "2-year +76 bps, 10-year +46 bps, 30-year +25 bps since late February 2026; 2/10 curve flattened 30 bps; 2/30 curve flattened 51 bps",
+      "source_confidence": 0.45,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/are-flattening-curves-and-style-rotations-deceptive-omens/",
+      "content_title": "Are Flattening Curves And Style Rotations Deceptive Omens?",
+      "content_date": "2026-07-08",
+      "content_type": "article",
+      "corroboration_confidence": 0.65,
+      "corroborated_by": [
+        "Eurodollar University (index 5 \u2014 rate cut/recessionary pricing in bonds)",
+        "Real Investment Advice (index 6 \u2014 contractionary macro environment)",
+        "Real Investment Advice (index 13 \u2014 late-cycle confirmation)",
+        "Eurodollar University (index 3 \u2014 weakening macro)"
+      ]
+    },
+    {
+      "summary": "Volatile growth-to-value equity rotations are signaling late-cycle regime uncertainty, suggesting elevated risk for long-duration growth assets such as tech/AI equities relative to value-oriented or shorter-duration equities.",
+      "asset_classes": [
+        "ai_tech",
+        "other"
+      ],
+      "instruments": [
+        "QQQ",
+        "growth ETFs",
+        "value ETFs"
+      ],
+      "direction": "bearish",
+      "timeframe": "current, no specific end date given",
+      "specificity": "low",
+      "key_reasoning": "Rising short-term rates compress the present value of distant cash flows disproportionately, disadvantaging growth/tech stocks with long-duration earnings profiles; the whipsaw between growth and value leadership is interpreted as the market being unable to price the future discount rate, a hallmark of late-cycle instability.",
+      "notable_data": "10-year PV of $100 shifts by $6.17 for a 1% rate change vs. only $0.91 for a 1-year horizon at 5% vs. 4% discount rates",
+      "source_confidence": 0.25,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/are-flattening-curves-and-style-rotations-deceptive-omens/",
+      "content_title": "Are Flattening Curves And Style Rotations Deceptive Omens?",
+      "content_date": "2026-07-08",
+      "content_type": "article",
+      "corroboration_confidence": 0.6,
+      "corroborated_by": [
+        "Real Investment Advice (index 8 \u2014 semiconductor/tech rally reversing)",
+        "Real Investment Advice (index 7 \u2014 speculative assets underperform)",
+        "Real Investment Advice (index 13 \u2014 late-cycle regime uncertainty)",
+        "Real Investment Advice (index 9 \u2014 leverage risk)"
+      ]
+    },
+    {
+      "summary": "Bear yield curve flattening combined with frantic equity style rotations are current condition indicators of a late-cycle economy, but the article cautions these are not reliable timing signals for an imminent market top or recession.",
+      "asset_classes": [
+        "macro",
+        "bonds",
+        "ai_tech"
+      ],
+      "instruments": [],
+      "direction": "mixed",
+      "timeframe": "null",
+      "specificity": "low",
+      "key_reasoning": "Both indicators are 'flashing red' simultaneously, which historically correlates with eventual economic downturns, but false signals are possible due to QE/QT distortions, term premium compression, and passive investing momentum effects \u2014 the 2022 inversion being a notable exception where no recession materialized.",
+      "notable_data": "2022 yield curve inversion did not produce a recession \u2014 cited as the one exception in the long-term historical record",
+      "source_confidence": 0.18,
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/are-flattening-curves-and-style-rotations-deceptive-omens/",
+      "content_title": "Are Flattening Curves And Style Rotations Deceptive Omens?",
+      "content_date": "2026-07-08",
+      "content_type": "article",
+      "corroboration_confidence": 0.55,
+      "corroborated_by": [
+        "Real Investment Advice (index 11 \u2014 bear flattening yield curve)",
+        "Real Investment Advice (index 12 \u2014 growth-to-value rotations)",
+        "Eurodollar University (index 5 \u2014 macro turning point signals)"
+      ]
+    }
+  ],
+  "convergence_themes": [
+    {
+      "theme": "Gold and precious metals as safe-haven in contractionary/deflationary macro environment",
+      "direction": "bullish",
+      "asset_classes": [
+        "precious_metals",
+        "macro"
+      ],
+      "supporting_sources": [
+        "Eurodollar University",
+        "Real Investment Advice"
+      ],
+      "strength": "strong"
+    },
+    {
+      "theme": "Late-cycle macro deterioration with consumer exhaustion and deflationary pressure",
+      "direction": "bearish",
+      "asset_classes": [
+        "macro"
+      ],
+      "supporting_sources": [
+        "Eurodollar University",
+        "Real Investment Advice"
+      ],
+      "strength": "strong"
+    },
+    {
+      "theme": "Long-duration government bonds bullish as recession/rate-cut expectations build",
+      "direction": "bullish",
+      "asset_classes": [
+        "bonds",
+        "macro"
+      ],
+      "supporting_sources": [
+        "Eurodollar University",
+        "Real Investment Advice"
+      ],
+      "strength": "strong"
+    },
+    {
+      "theme": "Extreme leverage and margin risk creating systemic equity vulnerability",
+      "direction": "bearish",
+      "asset_classes": [
+        "other",
+        "macro"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "theme": "Speculative and growth assets (tech, crypto, small-caps) at elevated risk during liquidity contraction",
+      "direction": "bearish",
+      "asset_classes": [
+        "ai_tech",
+        "crypto",
+        "other"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice"
+      ],
+      "strength": "moderate"
+    },
+    {
+      "theme": "USD directional uncertainty \u2014 structural demand vs. coordinated intervention risk",
+      "direction": "neutral",
+      "asset_classes": [
+        "currencies",
+        "macro"
+      ],
+      "supporting_sources": [
+        "Thoughtful Money"
+      ],
+      "strength": "weak"
+    },
+    {
+      "theme": "Yield curve and cycle indicators signaling late-cycle / restrictive financial conditions",
+      "direction": "bearish",
+      "asset_classes": [
+        "bonds",
+        "macro"
+      ],
+      "supporting_sources": [
+        "Real Investment Advice",
+        "Eurodollar University"
+      ],
+      "strength": "moderate"
+    }
+  ],
+  "open_calls": [
+    {
+      "summary": "Alphabet is the strongest AI infrastructure play among hyperscalers, with Google Cloud accelerating to 63% growth and a $460B backlog justifying its $180-190B capex commitment; the market has validated this with a 10% surge post-earnings.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bullish",
+      "instruments": [
+        "GOOGL",
+        "GOOG"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.72,
+      "status": "open"
+    },
+    {
+      "summary": "Meta is the most vulnerable of the four hyperscalers to continued market skepticism because it lacks a third-party cloud business to validate its massive capex commitment, making its AI spending thesis the weakest among peers.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "META"
+      ],
+      "timeframe": "2026-2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.7,
+      "status": "open"
+    },
+    {
+      "summary": "The oil futures curve is pricing a sharp normalization from current ~$110 Brent to roughly $80 by December 2026 and ~$70 by late 2027, representing either a generational hedging opportunity for energy buyers or a violent correction risk if the backwardation proves wrong.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-spending-receipts-four-tech-giants-four-different-verdicts/",
+      "direction": "bearish",
+      "instruments": [
+        "BNO",
+        "USO",
+        "XLE"
+      ],
+      "timeframe": "December 2026 to late 2027",
+      "date_made": "2026-05-01",
+      "source_confidence": 0.76,
+      "status": "open"
+    },
+    {
+      "summary": "The S&P 500 is in a constructive trend with the path of least resistance higher into quarter-end, supported by record retail buying flows and favorable July seasonal tailwinds, with 7,610 as the key level to clear.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "next 2 weeks / quarter-end June 30",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.62,
+      "status": "open"
+    },
+    {
+      "summary": "Front-end Treasury yields face upward pressure with the risk of accelerating higher if the May PCE print surprises to the upside, as the market would move to fully price the 2026 rate hike.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "SHY",
+        "TBT",
+        "2-year Treasury",
+        "10-year Treasury"
+      ],
+      "timeframe": "near-term, around June 25 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.68,
+      "status": "open"
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish pivot with 9 of 19 participants forecasting a rate hike in 2026, pushing the year-end median Fed Funds rate projection to 3.8% from 3.4%.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "IEF"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's updated dot plot signals a hawkish shift, with markets increasingly pricing in a rate hike by year-end 2026, driven by upwardly revised inflation forecasts and the Fed's explicit pledge to deliver price stability.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "Fed Funds rate"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The Fed's hawkish shift under Warsh \u2014 with higher dot plot projections and a pledge to deliver price stability \u2014 raises the probability of a rate hike by year-end 2026, pressuring rate-sensitive assets and bonds.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/warsh-and-the-fomc-hold-steady/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "IEF",
+        "BND"
+      ],
+      "timeframe": "year-end 2026",
+      "date_made": "2026-06-18",
+      "source_confidence": 0.75,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Key S&P 500 support sits at the 50-DMA (7,329); a break below this level would signal a meaningful shift in trend, while a break above 7,610 (the record high) would confirm bullish continuation.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "neutral",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term (next 2 weeks)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A hot May PCE print on June 25 is the primary near-term risk catalyst that could fully price in a 2026 Fed rate hike, driving the dollar and front-end Treasury yields sharply higher while pressuring equities.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/kevin-warsh-and-the-end-of-the-feds-forward-guidance/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "SHY",
+        "DXY",
+        "UUP"
+      ],
+      "timeframe": "event-driven \u2014 June 25, 2026 PCE release",
+      "date_made": "2026-06-20",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron (MU) faces asymmetric downside risk into its fiscal Q3 earnings report; a beat may not be sufficient to sustain the stock given elevated expectations and a whisper number above already-high consensus.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/greenspan-passes-but-his-put-lives-on/",
+      "direction": "bearish",
+      "instruments": [
+        "MU"
+      ],
+      "timeframe": "1-2 days (post earnings)",
+      "date_made": "2026-06-24",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "S&P 500 near-term path of least resistance is higher, supported by record retail inflows and strong seasonal tailwinds into July, with key support at 7,329 (50-DMA) and resistance at the 7,610 record high.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/fed-funds-hikes-cloud-the-outlook-should-investors-worry/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "2\u20134 weeks (month- and quarter-end into July)",
+      "date_made": "2026-06-22",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's HBM chips remain fully booked with supply shortages expected to persist well beyond 2027, signaling continued strength in the AI memory supercycle for semiconductor names.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.82,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's HBM memory chips remain fully booked with a supply shortage expected to persist well beyond 2027, confirming the AI memory supercycle is ongoing and broadly bullish for AI semiconductor names.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.85,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 pullback is a healthy rotation, not a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, next 1-4 weeks",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 opens downside toward 7,150 and potentially the 200-DMA near 6,921 on the S&P 500.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, conditional on support break",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A hot June jobs print (Thursday July 2) could push the 10-year yield back toward 4.5%, renewing pressure on long-duration growth/AI names in a thin holiday tape.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "TLT",
+        "QQQ",
+        "TNX"
+      ],
+      "timeframe": "1 week (July 2 event-driven)",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.68,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's HBM chips remain fully booked with supply shortages expected to persist well beyond 2027, signaling continued structural tailwinds for AI memory semiconductors.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.82,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 pullback is characterized as a healthy rotation rather than a topping signal; a weekly close back above the 50-DMA (~7,360) sets up a retest of 7,500 and then the record high at 7,620.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, weeks",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 support opens downside toward 7,150 and potentially the 200-DMA near 6,921 for the S&P 500.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, conditional",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.62,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The 10-year Treasury yield easing toward 4.38% supports the defensive rotation; a hot June jobs print (due July 2) could push yields back to ~4.5% and reinstate pressure on long-duration growth stocks.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/stock-market-pullback-is-healthier-than-it-looks/",
+      "direction": "mixed",
+      "instruments": [
+        "TLT",
+        "IEF",
+        "QQQ"
+      ],
+      "timeframe": "1 week (July 2 jobs report catalyst)",
+      "date_made": "2026-06-27",
+      "source_confidence": 0.68,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Micron's AI memory supercycle shows no signs of slowing, with HBM chips fully booked and supply shortages expected to persist well beyond 2027, supporting continued bullish momentum in AI memory and semiconductor names.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/micron-the-ai-memory-supercycle-rolls-on/",
+      "direction": "bullish",
+      "instruments": [
+        "MU",
+        "NVDA",
+        "SMH",
+        "SOXX"
+      ],
+      "timeframe": "beyond 2027",
+      "date_made": "2026-06-26",
+      "source_confidence": 0.85,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 is in a short-term pullback but the larger uptrend remains intact; a weekly close back above the 50-day moving average (~7,360) would set up a retest of 7,500 and then the 7,620 record high.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term, early July 2026",
+      "date_made": "2026-06-29",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 support would open downside toward 7,150 and potentially the 200-day moving average near 6,921 if selling accelerates.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term, early July 2026",
+      "date_made": "2026-06-29",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 is in a short-term pullback but the larger uptrend remains intact; a weekly close back above the 50-day moving average (~7,360) would signal resumption toward 7,500 and a retest of the 7,620 record high.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term, early July 2026",
+      "date_made": "2026-06-29",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A decisive break below 7,250 support opens downside risk toward 7,150 and potentially the 200-day moving average near 6,921 for the S&P 500.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-joins-the-dow-jones-industrial-average/",
+      "direction": "bearish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term, early July 2026",
+      "date_made": "2026-06-29",
+      "source_confidence": 0.62,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "AI memory chip shortage is reversing decades of deflationary trends in consumer tech, with major OEMs raising prices 15-20%, signaling a structural shift in CPI's IT category that the Fed cannot easily address via rate hikes.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-memory-chips-spark-inflation-worries/",
+      "direction": "bearish",
+      "instruments": [
+        "AAPL",
+        "DELL",
+        "MU"
+      ],
+      "timeframe": "near-to-medium term (2025-2026)",
+      "date_made": "2026-06-30",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Mega-cap growth (Mag 7) is tactically buyable following a flow-driven 13% drawdown, with an expected near-term outperformance versus both value stocks and high-flying semiconductor/hardware names as post-quarter-end rebalancing normalizes.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-memory-chips-spark-inflation-worries/",
+      "direction": "bullish",
+      "instruments": [
+        "MAGS",
+        "MGK",
+        "NVDA",
+        "AAPL",
+        "GOOGL",
+        "MSFT"
+      ],
+      "timeframe": "short-term tactical (first week of Q3 2026 and into Q2 earnings)",
+      "date_made": "2026-06-30",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The firm made a tactical rotation from value to growth/mega-cap stocks, expecting Mag 7 names to outperform both value and high-flying semiconductor hardware names as post-quarter-end flows normalize.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/ai-memory-chips-spark-inflation-worries/",
+      "direction": "bullish",
+      "instruments": [
+        "MGK",
+        "MAGS",
+        "NVDA",
+        "AAPL",
+        "GOOGL",
+        "MSFT"
+      ],
+      "timeframe": "first week of new quarter (early Q3 2026)",
+      "date_made": "2026-06-30",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "SPCX is viewed bearishly due to accelerating cash burn, a debt issuance decision that signals financial stress rather than strategic discipline, and a $6.4B operating loss in its AI segment that is worsening into 2026.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/debt-versus-equity-spcx-bucks-the-trend/",
+      "direction": "bearish",
+      "instruments": [
+        "SPCX"
+      ],
+      "timeframe": "near-term, ongoing into 2026",
+      "date_made": "2026-07-01",
+      "source_confidence": 0.62,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "SPCX (SpaceX) is viewed bearishly near-term following its debt issuance decision; accelerating cash burn and a 5% float create significant downside risks despite IPO enthusiasm.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/debt-versus-equity-spcx-bucks-the-trend/",
+      "direction": "bearish",
+      "instruments": [
+        "SPCX"
+      ],
+      "timeframe": "near-term (post-IPO lockup period)",
+      "date_made": "2026-07-01",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "A confirmed breakout above the S&P 500's June record near 7,640 would open upside toward the 7,800 area, while a break of the 50-DMA (~7,410) shifts risk to the downside toward the 200-DMA (~6,955).",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/mag-7-stocks-risk-or-opportunity-in-the-making/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "S&P 500"
+      ],
+      "timeframe": "near-term, weeks",
+      "date_made": "2026-07-04",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 is in an uptrend with room to run toward 7,800, with a confirmed breakout above the June record of ~7,640 being the key trigger. The 50-day MA at ~7,410 is the first support level to watch.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/mag-7-stocks-risk-or-opportunity-in-the-making/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, next few weeks",
+      "date_made": "2026-07-04",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 is in an uptrend with room to run toward 7,800 if it breaks above the June record near 7,640; the 50-day MA at 7,410 is the key downside support level.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/forward-guidance-r-i-p/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, weeks",
+      "date_made": "2026-07-06",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The S&P 500 is in an uptrend with room to run toward 7,800 if it breaks above the June record near 7,640; the 50-day MA at ~7,410 is the key support level to watch.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/forward-guidance-r-i-p/",
+      "direction": "bullish",
+      "instruments": [
+        "SPY",
+        "SPX"
+      ],
+      "timeframe": "near-term, weeks",
+      "date_made": "2026-07-06",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Magnificent 7 mega-cap tech stocks are a tactical buy into late July earnings, with the MAGS/MTUM ratio already bouncing 13% off late-June lows signaling capital returning to the group.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/the-dollar-narrative-has-turned/",
+      "direction": "bullish",
+      "instruments": [
+        "MAGS",
+        "MTUM",
+        "MGK",
+        "META",
+        "MU",
+        "TSLA"
+      ],
+      "timeframe": "tactical, through late July 2026 earnings dates",
+      "date_made": "2026-07-07",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Mag 7 megacap growth stocks are a tactical buy into late July earnings, with the MAGS/MTUM ratio already bouncing 13% off its June 24 low, signaling capital rotation back into mega-caps.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/the-dollar-narrative-has-turned/",
+      "direction": "bullish",
+      "instruments": [
+        "MAGS",
+        "MTUM",
+        "MGK",
+        "META",
+        "MU",
+        "TSLA"
+      ],
+      "timeframe": "tactical, through late July 2026 earnings dates",
+      "date_made": "2026-07-07",
+      "source_confidence": 0.65,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "Semiconductor and AI chip stocks are undergoing a meaningful reversal after parabolic first-half 2026 gains, with rotation out of tech into value/Dow stocks expected to persist into Q3 2026.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/is-global-liquidity-peaking/",
+      "direction": "bearish",
+      "instruments": [
+        "SOXX",
+        "MU",
+        "AVGO",
+        "Broadcom"
+      ],
+      "timeframe": "Q3 2026",
+      "date_made": "2026-07-08",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    },
+    {
+      "summary": "The semiconductor/chip rally is reversing after parabolic first-half 2026 gains, driven by profit-taking, valuation normalization, and rotation into value and Dow blue-chip stocks expected to persist into Q3 2026.",
+      "source": "Real Investment Advice",
+      "source_url": "https://realinvestmentadvice.com/resources/blog/is-global-liquidity-peaking/",
+      "direction": "bearish",
+      "instruments": [
+        "SOXX",
+        "MU",
+        "AVGO",
+        "SanDisk"
+      ],
+      "timeframe": "Q3 2026",
+      "date_made": "2026-07-08",
+      "source_confidence": 0.72,
+      "status": "open",
+      "entry_prices": {}
+    }
+  ],
+  "resolved_calls": [],
+  "dashboard": {
+    "market_summary": "Today's macro picture is dominated by a convergence of late-cycle warning signals: consumer exhaustion (Walmart price cuts), bear yield curve flattening, a peaking global liquidity cycle, and record margin debt collectively point to a contractionary environment building into 2027. Precious metals emerge as the clearest beneficiary, supported by both deflationary safe-haven demand and the liquidity cycle thesis. AI/tech faces a double headwind \u2014 a semiconductor rally reversal driven by profit-taking and valuation normalization, compounded by a growth-to-value rotation that punishes long-duration assets in restrictive conditions. Industrial commodities receive modest support from the liquidity cycle contraction thesis historically favoring hard assets, though the deflationary consumer backdrop tempers conviction. Dollar uncertainty (structural demand vs. Plaza Accord 2.0 intervention risk) adds a cross-asset wildcard that warrants monitoring but does not yet warrant a directional call.",
+    "sectors": {
+      "ai_tech": {
+        "sentiment_score": -0.65,
+        "recommendation": "sell",
+        "rationale": "Multiple converging bearish signals \u2014 semiconductor rally reversal, growth-to-value rotation, liquidity contraction, and extreme leverage risk \u2014 outweigh any near-term momentum. Elevated valuations in a late-cycle, restrictive-rate environment make AI/tech ETFs particularly vulnerable to forced selling if sentiment shifts."
+      },
+      "precious_metals": {
+        "sentiment_score": 0.75,
+        "recommendation": "buy",
+        "rationale": "The strongest convergence theme of the day: two independent sources (Eurodollar University and Real Investment Advice) align on precious metals as the preferred safe-haven in a deflationary, contractionary macro environment. High corroboration confidence on the gold thesis supports adding or accumulating exposure."
+      },
+      "industrial_commodities": {
+        "sentiment_score": 0.25,
+        "recommendation": "hold",
+        "rationale": "The 65-month liquidity cycle contraction thesis provides historical support for commodities broadly, but deflationary consumer dynamics and weakening demand signals dampen near-term upside. Maintain existing positions but avoid adding aggressively until demand signals stabilize."
+      },
+      "macro": {
+        "sentiment_score": -0.6,
+        "recommendation": "sell",
+        "rationale": "The macro backdrop is deteriorating across multiple dimensions \u2014 consumer exhaustion, bear flattening yield curve, peaking liquidity, and record leverage \u2014 warranting a defensive posture. Rotation toward cash, short-duration instruments, and defensive assets is supported by the weight of evidence from all three sources today."
+      }
+    }
+  },
+  "snapshot": [],
+  "sentiment_trends": {
+    "ai_tech": [
+      -0.55,
+      -0.35,
+      -0.1,
+      -0.65,
+      -0.2,
+      -0.45,
+      -0.55,
+      -0.4,
+      -0.3,
+      0.2,
+      -0.4,
+      0.25,
+      0.45,
+      -0.65
+    ],
+    "precious_metals": [
+      0.0,
+      0.0,
+      -0.2,
+      0.2,
+      0.0,
+      0.0,
+      0.55,
+      0.45,
+      0.5,
+      0.0,
+      0.0,
+      0.1,
+      0.0,
+      0.75
+    ],
+    "industrial_commodities": [
+      0.0,
+      0.0,
+      0.0,
+      0.05,
+      0.0,
+      0.65,
+      0.35,
+      -0.2,
+      -0.4,
+      -0.2,
+      0.0,
+      -0.55,
+      -0.55,
+      0.25
+    ],
+    "macro": [
+      -0.4,
+      -0.25,
+      -0.25,
+      -0.35,
+      0.15,
+      -0.2,
+      -0.3,
+      -0.65,
+      -0.65,
+      -0.15,
+      -0.5,
+      -0.45,
+      -0.3,
+      -0.6
+    ]
+  }
+}

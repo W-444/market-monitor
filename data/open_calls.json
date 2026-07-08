@@ -579,5 +579,39 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Semiconductor and AI chip stocks are undergoing a meaningful reversal after parabolic first-half 2026 gains, with rotation out of tech into value/Dow stocks expected to persist into Q3 2026.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/is-global-liquidity-peaking/",
+    "direction": "bearish",
+    "instruments": [
+      "SOXX",
+      "MU",
+      "AVGO",
+      "Broadcom"
+    ],
+    "timeframe": "Q3 2026",
+    "date_made": "2026-07-08",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The semiconductor/chip rally is reversing after parabolic first-half 2026 gains, driven by profit-taking, valuation normalization, and rotation into value and Dow blue-chip stocks expected to persist into Q3 2026.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/is-global-liquidity-peaking/",
+    "direction": "bearish",
+    "instruments": [
+      "SOXX",
+      "MU",
+      "AVGO",
+      "SanDisk"
+    ],
+    "timeframe": "Q3 2026",
+    "date_made": "2026-07-08",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
