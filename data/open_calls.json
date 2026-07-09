@@ -613,5 +613,33 @@
     "source_confidence": 0.72,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "SPCX (SpaceX IPO) is considered overvalued above $200, with even $150 offering poor risk/reward; a much more attractive entry is near $100 where downside is limited and upside remains meaningful.",
+    "source": "Thoughtful Money",
+    "source_url": "https://youtube.com/watch?v=ckmRbQM-RD4",
+    "direction": "bearish",
+    "instruments": [
+      "SPCX"
+    ],
+    "timeframe": "near-term; entry target unspecified but framed around post-IPO price discovery",
+    "date_made": "2026-07-09",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "SPCX (SpaceX) is overvalued above $200 with poor risk/reward even at $150; a much more attractive entry point is near $100 where downside is limited and upside remains meaningful.",
+    "source": "Thoughtful Money",
+    "source_url": "https://youtube.com/watch?v=ckmRbQM-RD4",
+    "direction": "bearish",
+    "instruments": [
+      "SPCX"
+    ],
+    "timeframe": "next few quarters / 6-8 months post-IPO",
+    "date_made": "2026-07-09",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
