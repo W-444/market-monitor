@@ -641,5 +641,66 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 is coiling just below its all-time high of ~7,612; a high-volume breakout above that level targets 7,700, while a failure at resistance on narrow breadth sets up a pullback to the 50-day moving average near 7,429.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/big-bank-earnings-kick-off-earnings-season/",
+    "direction": "mixed",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "next 1-2 weeks",
+    "date_made": "2026-07-11",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Tuesday's June CPI report is the single highest-impact near-term catalyst: a cool print (~3.5%) would push the S&P to new all-time highs, while a hot print (~4%) would force aggressive Fed repricing and materially damage the tape.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/big-bank-earnings-kick-off-earnings-season/",
+    "direction": "mixed",
+    "instruments": [
+      "SPY",
+      "TLT",
+      "QQQ"
+    ],
+    "timeframe": "next week (report due 2026-07-15)",
+    "date_made": "2026-07-11",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "A clean high-volume breakout above S&P 500's 7,612 June record would open the path to 7,700, while a failure at that resistance on narrow breadth would likely trigger a pullback to the 50-day moving average (~7,429).",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/big-bank-earnings-kick-off-earnings-season/",
+    "direction": "mixed",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "next 1-2 weeks",
+    "date_made": "2026-07-11",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Tuesday's June CPI print is the single most market-moving near-term catalyst; a hot print near 4% would force rapid Fed repricing and disproportionately damage the current narrow-leadership tape.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/big-bank-earnings-kick-off-earnings-season/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "SPY"
+    ],
+    "timeframe": "next week (CPI release Tuesday)",
+    "date_made": "2026-07-11",
+    "source_confidence": 0.75,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
