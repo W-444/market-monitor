@@ -702,5 +702,50 @@
     "source_confidence": 0.75,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 (price at 7,575) is in a technically bullish structure above rising 50-day and 200-day moving averages, but a breakout above 7,612 is needed to confirm a durable move toward 7,700; failure at resistance risks a pullback to the 50-day near 7,429.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/us-energy-efficiency-we-have-come-a-long-way/",
+    "direction": "mixed",
+    "instruments": [
+      "SPX",
+      "SPY"
+    ],
+    "timeframe": "next week",
+    "date_made": "2026-07-13",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 (proxied at 7,575) is in a bullish technical structure but breadth is thin \u2014 a breakout above 7,612 targets 7,700, while failure there sets up a pullback to the 50-day MA near 7,429.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/us-energy-efficiency-we-have-come-a-long-way/",
+    "direction": "mixed",
+    "instruments": [
+      "SPX",
+      "SPY"
+    ],
+    "timeframe": "next 1-2 weeks",
+    "date_made": "2026-07-13",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "A failure to break above the June record high of 7,612 on continued narrow breadth would signal a pullback to the 50-day moving average (~7,429), which is identified as the preferred low-risk re-entry level.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/us-energy-efficiency-we-have-come-a-long-way/",
+    "direction": "bearish",
+    "instruments": [
+      "SPX",
+      "SPY"
+    ],
+    "timeframe": "near-term (1-2 weeks)",
+    "date_made": "2026-07-13",
+    "source_confidence": 0.68,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
