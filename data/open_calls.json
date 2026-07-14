@@ -747,5 +747,21 @@
     "source_confidence": 0.68,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Forced institutional selling of KOSPI-related holdings is a near-term, quantifiable risk catalyst, with Goldman Sachs identifying a specific concentration threshold that would trigger mandatory divestitures by foreign funds.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-kospi-bubble/",
+    "direction": "bearish",
+    "instruments": [
+      "SK Hynix",
+      "Samsung Electronics",
+      "EWY"
+    ],
+    "timeframe": "near-term, threshold-dependent",
+    "date_made": "2026-07-14",
+    "source_confidence": 0.7,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
