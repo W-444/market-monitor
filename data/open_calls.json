@@ -763,5 +763,39 @@
     "source_confidence": 0.7,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Global liquidity cycle peaked in mid-2025 and is declining, with the trough not expected until 2027, historically favoring cash, long-duration government bonds, and gold over risk assets.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/headwinds-and-tailwinds-minding-the-market-weather/",
+    "direction": "bullish",
+    "instruments": [
+      "gold",
+      "GLD",
+      "TLT",
+      "long-duration government bonds"
+    ],
+    "timeframe": "mid-2025 through 2027",
+    "date_made": "2026-07-15",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Global liquidity cycle peaked in mid-2025 and is declining toward a trough in 2027, historically favoring cash, long-duration government bonds, and gold over risk assets during the declining phase.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/headwinds-and-tailwinds-minding-the-market-weather/",
+    "direction": "bullish",
+    "instruments": [
+      "gold",
+      "GLD",
+      "TLT",
+      "long-duration Treasuries"
+    ],
+    "timeframe": "mid-2025 through 2027",
+    "date_made": "2026-07-15",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
