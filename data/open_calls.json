@@ -797,5 +797,35 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "SMH (VanEck Semiconductor ETF) is showing deteriorating momentum and parabolic extension, warranting a trim to target weight with tighter stops rather than adding exposure. The risk/reward asymmetry no longer favors holders.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/why-are-bdcs-ignoring-junk-bonds/",
+    "direction": "bearish",
+    "instruments": [
+      "SMH",
+      "NVDA"
+    ],
+    "timeframe": "near-term",
+    "date_made": "2026-07-16",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Semiconductors (SMH) are showing cooling momentum and elevated valuation risk, with the author recommending trimming positions and tightening stops rather than adding exposure. The risk/reward asymmetry no longer favors holders at current levels.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/why-are-bdcs-ignoring-junk-bonds/",
+    "direction": "bearish",
+    "instruments": [
+      "SMH",
+      "NVDA"
+    ],
+    "timeframe": "near-term",
+    "date_made": "2026-07-16",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
