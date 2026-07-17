@@ -827,5 +827,33 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "SK Hynix's US-listed ADR (SKHY) is trading at a ~50% premium to its Seoul-listed shares, presenting a valuation risk for US investors buying the ADR.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/inflation-will-be-a-thing-of-the-past-kevin-warsh/",
+    "direction": "bearish",
+    "instruments": [
+      "SKHY"
+    ],
+    "timeframe": "null",
+    "date_made": "2026-07-17",
+    "source_confidence": 0.55,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "SK Hynix's newly listed US ADR (SKHY) is trading at an approximately 50% premium to its Seoul-listed equivalent, representing a significant mispricing risk for US buyers.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/inflation-will-be-a-thing-of-the-past-kevin-warsh/",
+    "direction": "bearish",
+    "instruments": [
+      "SKHY"
+    ],
+    "timeframe": "near-term",
+    "date_made": "2026-07-17",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
