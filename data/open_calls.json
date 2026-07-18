@@ -855,5 +855,21 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Stripe, Block, and Advent have made a $53B bid to acquire PayPal, signaling potential consolidation in the digital payments sector that could re-rate PayPal's equity upward from its offer price.",
+    "source": "All-In Podcast",
+    "source_url": "https://youtube.com/watch?v=9IMwRIei-Xc",
+    "direction": "bullish",
+    "instruments": [
+      "PYPL",
+      "SQ",
+      "ADYEY"
+    ],
+    "timeframe": "near-term, deal announced July 15 2026",
+    "date_made": "2026-07-18",
+    "source_confidence": 0.6,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
