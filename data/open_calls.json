@@ -871,5 +871,88 @@
     "source_confidence": 0.6,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Semiconductors are in a technical bear market and the author explicitly advises against chasing chip names lower while the knife is still falling, pending a potential catalyst from Alphabet's capex guidance next week.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/momentum-meltdown-catches-traders-by-surprise/",
+    "direction": "bearish",
+    "instruments": [
+      "SOXX",
+      "MRVL",
+      "ARM",
+      "MU",
+      "INTC"
+    ],
+    "timeframe": "next 1-2 weeks",
+    "date_made": "2026-07-18",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Alphabet's earnings on Wednesday July 23 are framed as the pivotal event for the AI capex complex: reaffirmation of ~$175B 2026 spending stabilizes washed-out chip names, while any hesitation triggers a second leg down in the momentum selloff.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/momentum-meltdown-catches-traders-by-surprise/",
+    "direction": "mixed",
+    "instruments": [
+      "GOOGL",
+      "SOXX",
+      "NVDA"
+    ],
+    "timeframe": "next week (July 23 earnings)",
+    "date_made": "2026-07-18",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 is holding at a critical support level near its 50-day moving average (~7,464); a decisive break below would signal a wider correction with the next meaningful support near 7,300.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/momentum-meltdown-catches-traders-by-surprise/",
+    "direction": "neutral",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "near-term, next 1-2 weeks",
+    "date_made": "2026-07-18",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Semiconductor and high-beta momentum names should not be chased lower and are not yet a buy; the sector remains in a downtrend with no clear catalyst until Alphabet's earnings reaffirm AI capex.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/momentum-meltdown-catches-traders-by-surprise/",
+    "direction": "bearish",
+    "instruments": [
+      "SOXX",
+      "MRVL",
+      "ARM",
+      "MU",
+      "MTUM"
+    ],
+    "timeframe": "immediate to next 1-2 weeks",
+    "date_made": "2026-07-18",
+    "source_confidence": 0.7,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Alphabet's earnings Wednesday July 23 are the pivotal event for the entire AI/semiconductor complex; a reaffirmation of ~$175B 2026 capex guidance would provide a bullish catalyst for washed-out chip names, while any hesitation would trigger a second leg down.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/momentum-meltdown-catches-traders-by-surprise/",
+    "direction": "mixed",
+    "instruments": [
+      "GOOGL",
+      "SOXX",
+      "QQQ"
+    ],
+    "timeframe": "week of July 21, 2026 (Wednesday after close)",
+    "date_made": "2026-07-18",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
