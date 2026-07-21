@@ -954,5 +954,70 @@
     "source_confidence": 0.72,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Models will begin de-risking AI/tech equity exposure if high-yield OAS breaks above 3.5% and S&P 500 loses the 7,446 level on volume, with Alphabet and Tesla capex reports on Wednesday acting as the near-term catalyst referendum.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/moonshot-ai-raises-red-flags-in-the-ai-industry/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "GOOGL",
+      "TSLA",
+      "HYG"
+    ],
+    "timeframe": "triggered at Wednesday earnings (approx. 2026-07-23)",
+    "date_made": "2026-07-21",
+    "source_confidence": 0.75,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 is at a critical inflection point sitting on its 50-day moving average (~7,464); a decisive hold keeps the uptrend intact, but a break lower on volume opens a correction toward ~7,300.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-deficit-spending-problem-with-a-non-political-fix/",
+    "direction": "mixed",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "near-term (days to weeks)",
+    "date_made": "2026-07-20",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Models will begin de-risking if high-yield breaks above 3.5% OAS or the S&P 500 loses the 7,446 level on volume, using Alphabet and Tesla capex reports as near-term catalysts.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/moonshot-ai-raises-red-flags-in-the-ai-industry/",
+    "direction": "mixed",
+    "instruments": [
+      "SPY",
+      "SPX",
+      "HYG",
+      "GOOGL",
+      "TSLA"
+    ],
+    "timeframe": "by Wednesday earnings (approx. 2026-07-23)",
+    "date_made": "2026-07-21",
+    "source_confidence": 0.75,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 is at a critical inflection point at its 50-day moving average (~7,464); a decisive hold keeps the uptrend intact, but a volume break below triggers a wider correction toward ~7,300.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-deficit-spending-problem-with-a-non-political-fix/",
+    "direction": "mixed",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "near-term (days to weeks)",
+    "date_made": "2026-07-20",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
