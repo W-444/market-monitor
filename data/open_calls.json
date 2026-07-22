@@ -1019,5 +1019,121 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "SpaceX shares face significant valuation headwinds as the stock trades at ~100x price-to-sales, requiring 41\u201367% compounded annual revenue growth for a decade to justify current prices at even generous future multiples. The article implies a bearish or at best mixed near-term outlook for SpaceX equity.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/can-spacex-fire-on-all-cylinders/",
+    "direction": "bearish",
+    "instruments": [
+      "SpaceX"
+    ],
+    "timeframe": "10 years (to mid-2036)",
+    "date_made": "2026-07-22",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Elon Musk's official forward guidance projects SpaceX revenue growing from $18.7 billion in 2025 to $1 trillion by 2030, a 122% CAGR, but even if achieved, shareholder returns depend entirely on the exit multiple \u2014 ranging from ~17% annualized (at 3.7x P/S) to ~70% annualized (at 20x P/S).",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/can-spacex-fire-on-all-cylinders/",
+    "direction": "mixed",
+    "instruments": [
+      "SpaceX"
+    ],
+    "timeframe": "5 years (2025\u20132030)",
+    "date_made": "2026-07-22",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Alphabet's Google Cloud backlog surged to a record $462B (up 63% YoY), supporting continued hyperscaler capex, but declining free cash flow (down 47% YoY to $10.1B) and rising capex guidance ($180-190B for 2026, 'significantly increasing' in 2027) create a valuation risk catalyst around tonight's earnings.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-and-intel-q2-ai-earnings-kick-off/",
+    "direction": "mixed",
+    "instruments": [
+      "GOOGL"
+    ],
+    "timeframe": "Q2 2026 earnings catalyst; 2026-2027 capex cycle",
+    "date_made": "2026-07-22",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The AI and semiconductor momentum trade is breaking down, with single-stock volatility (VIXEQ above 50) at record divergence from index volatility (VIX at 17.5), and BTIG warns normalization will come from AI names catching DOWN, not the rest of the market catching up.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-and-intel-q2-ai-earnings-kick-off/",
+    "direction": "bearish",
+    "instruments": [
+      "SMH",
+      "QQQ",
+      "NVDA",
+      "ORCL"
+    ],
+    "timeframe": "near-term; July 2026 and beyond",
+    "date_made": "2026-07-22",
+    "source_confidence": 0.7,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Nike stock at ~$41 is priced for continued failure but offers a speculative turnaround opportunity with analyst consensus implying ~40% upside to a $59.58 price target, driven by a projected 60% EPS growth over three years.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-and-intel-q2-ai-earnings-kick-off/",
+    "direction": "bullish",
+    "instruments": [
+      "NKE"
+    ],
+    "timeframe": "3-year EPS recovery horizon; near-term turnaround execution risk",
+    "date_made": "2026-07-22",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "SpaceX is trading at a near 100x P/S multiple ($1.84T market cap on $18.7B revenue), implying the market expects 41\u201367% compounded annual revenue growth for a decade \u2014 a historically unprecedented hurdle that makes the stock extremely vulnerable to multiple compression or growth disappointment.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/can-spacex-fire-on-all-cylinders/",
+    "direction": "bearish",
+    "instruments": [
+      "SpaceX (private/IPO)",
+      "AMZN"
+    ],
+    "timeframe": "10 years (to ~2036)",
+    "date_made": "2026-07-22",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Elon Musk projects SpaceX revenue growing from $18.7B in 2025 to $1 trillion by 2030, a 122% CAGR \u2014 but even if achieved, shareholder returns hinge entirely on the exit multiple, ranging from ~17% annualized (at 3.7x P/S) to ~70% annualized (at 20x P/S).",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/can-spacex-fire-on-all-cylinders/",
+    "direction": "mixed",
+    "instruments": [
+      "SpaceX (private/IPO)"
+    ],
+    "timeframe": "5 years (2025\u20132030)",
+    "date_made": "2026-07-22",
+    "source_confidence": 0.6,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Alphabet's Google Cloud backlog nearly doubled sequentially to a record $462B, growing 63% YoY, signaling continued strong AI demand-side momentum, but declining free cash flow (down 47% YoY to $10.1B) and rising capex guidance ($180-190B for 2026, with 2027 'significantly increasing') create a risk to the bull thesis.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/alphabet-and-intel-q2-ai-earnings-kick-off/",
+    "direction": "mixed",
+    "instruments": [
+      "GOOGL"
+    ],
+    "timeframe": "Q2 2026 earnings and forward guidance",
+    "date_made": "2026-07-22",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
