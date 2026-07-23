@@ -1135,5 +1135,105 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Exxon (XOM) is the preferred oil stock for most investors, with Chevron and Occidental Petroleum recommended for those with higher risk tolerance on a 2029\u20132030 view.",
+    "source": "Thoughtful Money",
+    "source_url": "https://youtube.com/watch?v=ZMHWcgD_sos",
+    "direction": "bullish",
+    "instruments": [
+      "XOM",
+      "CVX",
+      "OXY"
+    ],
+    "timeframe": "2029\u20132030",
+    "date_made": "2026-07-23",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "If oil follows Goldman's base or downside scenario, the inflation premium will bleed out of long-duration bonds, making current 4.60% 10-year yields an attractive entry point for bond bulls. Authors recommend buying a first tranche now with dry powder held for a higher-yield entry if oil spikes.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/prediction-markets-a-new-sentiment-gauge-for-traders/",
+    "direction": "bullish",
+    "instruments": [
+      "TLT",
+      "IEF",
+      "BND",
+      "WTI",
+      "Brent"
+    ],
+    "timeframe": "18 months; full base case through 2028",
+    "date_made": "2026-07-23",
+    "source_confidence": 0.75,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Goldman Sachs' base and downside oil scenarios (2 of 3 paths) point to significantly lower crude prices over the next 18\u201324 months, implying a bearish medium-term directional view on oil.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/prediction-markets-a-new-sentiment-gauge-for-traders/",
+    "direction": "bearish",
+    "instruments": [
+      "WTI",
+      "Brent",
+      "USO",
+      "XLE"
+    ],
+    "timeframe": "Through 2028",
+    "date_made": "2026-07-23",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "If oil follows Goldman's base or downside scenario, the inflation premium bleeds out of long-end Treasury yields, making current yield levels (~4.60% on 10-year, ~5.11% on 30-year) an attractive entry point for bond duration. Authors recommend buying a first tranche now while maintaining dry powder for a higher-yield entry if oil spikes.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/prediction-markets-a-new-sentiment-gauge-for-traders/",
+    "direction": "bullish",
+    "instruments": [
+      "TLT",
+      "IEF",
+      "WTI",
+      "Brent crude"
+    ],
+    "timeframe": "18 months; laddering exposure contingent on Iran resolution",
+    "date_made": "2026-07-23",
+    "source_confidence": 0.75,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Oil faces a directionally bearish medium-term outlook with two of Goldman Sachs's three scenarios pointing lower, suggesting energy prices will retreat from current elevated levels barring a sustained Strait of Hormuz disruption.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/prediction-markets-a-new-sentiment-gauge-for-traders/",
+    "direction": "bearish",
+    "instruments": [
+      "WTI",
+      "Brent crude",
+      "USO",
+      "XLE"
+    ],
+    "timeframe": "18 months to 2028",
+    "date_made": "2026-07-23",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "AMD's deal to supply Anthropic with up to 2 GW of MI450 Instinct chips starting H1 2027 is a concrete positive catalyst for AMD in the AI chip market, though the circular financing structure ($5B AMD investment underwriting Anthropic's purchases) warrants investor scrutiny of reported revenue quality.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/prediction-markets-a-new-sentiment-gauge-for-traders/",
+    "direction": "mixed",
+    "instruments": [
+      "AMD",
+      "NVDA"
+    ],
+    "timeframe": "H1 2027 and beyond",
+    "date_made": "2026-07-23",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
