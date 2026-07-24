@@ -1235,5 +1235,58 @@
     "source_confidence": 0.65,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "AI hyperscalers (Alphabet, Amazon, Meta, Microsoft, Oracle) face a significant earnings headwind as $549B in unrecognized capex depreciation begins hitting income statements, threatening the current 'golden window' of strong reported earnings.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-capex-depreciation-risk-is-the-catch-to-record-earnings/",
+    "direction": "bearish",
+    "instruments": [
+      "GOOGL",
+      "AMZN",
+      "META",
+      "MSFT",
+      "ORCL",
+      "QQQ"
+    ],
+    "timeframe": "2026\u20132028",
+    "date_made": "2026-07-24",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "AI hyperscaler stocks face a significant earnings headwind as ~$549B in unrecognized capex depreciation begins hitting income statements, threatening current elevated valuations built on understated costs.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-capex-depreciation-risk-is-the-catch-to-record-earnings/",
+    "direction": "bearish",
+    "instruments": [
+      "GOOGL",
+      "AMZN",
+      "META",
+      "MSFT",
+      "ORCL",
+      "QQQ",
+      "XLK"
+    ],
+    "timeframe": "2026\u20132028",
+    "date_made": "2026-07-24",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Alphabet specifically faces near-term free cash flow deterioration as capex spending accelerates sharply, with management explicitly guiding that depreciation expense will continue to weigh on the income statement.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-capex-depreciation-risk-is-the-catch-to-record-earnings/",
+    "direction": "bearish",
+    "instruments": [
+      "GOOGL"
+    ],
+    "timeframe": "2026 and into 2027",
+    "date_made": "2026-07-24",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
