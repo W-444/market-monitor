@@ -1288,5 +1288,118 @@
     "source_confidence": 0.72,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 has broken below its 50-day moving average and momentum indicators are rolling over, suggesting further near-term downside risk with the early innings of a pullback underway.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-ai-capex-bill-comes-due/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "SPX",
+      "QQQ"
+    ],
+    "timeframe": "near-term, next 1-2 weeks",
+    "date_made": "2026-07-25",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Megacap AI/hyperscaler stocks (Alphabet, Meta, Amazon, Microsoft) face elevated near-term risk as record capex spending is exposed to cash-flow scrutiny when four of the five largest AI spenders report earnings next week.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-ai-capex-bill-comes-due/",
+    "direction": "bearish",
+    "instruments": [
+      "GOOGL",
+      "META",
+      "AMZN",
+      "MSFT",
+      "QQQ"
+    ],
+    "timeframe": "1-2 weeks (earnings week of July 28)",
+    "date_made": "2026-07-25",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "A close below S&P 500 level 7,266 would put the 200-day moving average (~7,001) in play and warrant a shift to a more defensive portfolio posture.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-ai-capex-bill-comes-due/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "SPX"
+    ],
+    "timeframe": "conditional / near-term",
+    "date_made": "2026-07-25",
+    "source_confidence": 0.63,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The AI/hyperscaler complex is under near-term pressure as record capex spending (~$725B in 2026) is being recognized as a cash drain, with depreciation timing masking true earnings quality; the author is holding AI positions at target weight, not adding ahead of megacap earnings.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-ai-capex-bill-comes-due/",
+    "direction": "bearish",
+    "instruments": [
+      "GOOGL",
+      "META",
+      "AMZN",
+      "MSFT",
+      "QQQ"
+    ],
+    "timeframe": "1-2 weeks (into and through Q2 earnings week ending ~Aug 1, 2026)",
+    "date_made": "2026-07-25",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 has broken below its 50-day moving average and momentum indicators are bearish, suggesting further near-term downside is possible, with the 200-DMA at 7,001 as the critical support level that would change the broader trend.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-ai-capex-bill-comes-due/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "RSP"
+    ],
+    "timeframe": "near-term; next 1-4 weeks",
+    "date_made": "2026-07-25",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Energy and crude oil are experiencing a bullish near-term spike driven by Red Sea supply disruptions, with Brent briefly hitting $100 and WTI posting its biggest weekly gain in months.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-ai-capex-bill-comes-due/",
+    "direction": "bullish",
+    "instruments": [
+      "XLE",
+      "USO",
+      "BNO"
+    ],
+    "timeframe": "near-term; week of July 25, 2026",
+    "date_made": "2026-07-25",
+    "source_confidence": 0.68,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Rising oil prices and sticky inflation are reducing the probability of a Fed rate cut, keeping Treasury yields elevated and pressuring rate-sensitive assets; the Fed is expected to hold rates at 3.50\u20133.75% at its July 28\u201329 meeting.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-ai-capex-bill-comes-due/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "IEF"
+    ],
+    "timeframe": "July 28-29 FOMC meeting; near-term",
+    "date_made": "2026-07-25",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
