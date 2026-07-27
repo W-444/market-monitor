@@ -1401,5 +1401,220 @@
     "source_confidence": 0.62,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Hoisington Management has repositioned its fixed-income portfolio to duration under one year (managing T-bills rather than longer bonds), a strongly bearish signal on long-duration Treasuries.",
+    "source": "Thoughtful Money",
+    "source_url": "https://youtube.com/watch?v=ed-0eEQHTbc",
+    "direction": "bearish",
+    "instruments": [
+      "T-bills",
+      "short-duration Treasuries"
+    ],
+    "timeframe": "current positioning, near-term",
+    "date_made": "2026-07-25",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The author sees 10-year Treasury yields as having limited further upside, with fair value estimated near 5.3% based on nominal GDP growth of ~6%; at 4.69% today, only modest upward pressure remains.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/are-us-treasuries-still-a-safe-asset-copy/",
+    "direction": "neutral",
+    "instruments": [
+      "TLT",
+      "IEF",
+      "10-year Treasury",
+      "30-year Treasury"
+    ],
+    "timeframe": "near-term; view established in May 2026 and reiterated July 2026",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Short-duration Treasury instruments (T-bills) are effectively 'safe' with no meaningful default or duration risk, while long-duration Treasuries (20yr+) carry substantial price risk that investors should treat as a separate, leveraged rate bet.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/are-us-treasuries-still-a-safe-asset-copy/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "T-bills",
+      "BIL",
+      "SHV"
+    ],
+    "timeframe": "ongoing structural view",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Small caps (Russell 2000) are outperforming mega-cap and AI-related stocks in 2026, with consensus 2026 earnings growth forecasts rising to 38% from 23% \u2014 supporting continued relative outperformance.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/small-caps-are-quietly-winning-while-mega-caps-wobble/",
+    "direction": "bullish",
+    "instruments": [
+      "IWM",
+      "Russell 2000"
+    ],
+    "timeframe": "Full year 2026",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 has broken below its 50-day moving average for the first time in months, with momentum indicators turning bearish, suggesting the early stages of a pullback rather than a bottom.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/small-caps-are-quietly-winning-while-mega-caps-wobble/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "Near-term (next 1-4 weeks)",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The 200-day moving average at 7,001 is the critical line for the S&P 500 \u2014 a close below 7,266 would put the 200-DMA in play and warrant a defensive portfolio posture.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/small-caps-are-quietly-winning-while-mega-caps-wobble/",
+    "direction": "mixed",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "Near-term (next 2-6 weeks)",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.7,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "AI/hyperscaler stocks face a significant medium-term earnings risk as free cash flow is projected to crater 91% even as reported profits rise, due to $760B in capex being only partially expensed.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/small-caps-are-quietly-winning-while-mega-caps-wobble/",
+    "direction": "bearish",
+    "instruments": [
+      "QQQ",
+      "hyperscalers (MSFT, GOOGL, AMZN, META, NVDA implied)"
+    ],
+    "timeframe": "2026 and beyond",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.68,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "There is a 34% market-implied probability of a Fed rate hike to 3.50-3.75% at the upcoming FOMC meeting, with energy prices up 20%+ in two weeks adding hawkish pressure \u2014 outcome is a key near-term macro risk.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/small-caps-are-quietly-winning-while-mega-caps-wobble/",
+    "direction": "mixed",
+    "instruments": [
+      "TLT",
+      "Fed Funds rate"
+    ],
+    "timeframe": "This week (FOMC decision Wednesday)",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.63,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Hoisington is positioning its fixed income portfolio in very short duration (under one year, managing bills not bonds), signaling a strongly bearish view on longer-dated bonds.",
+    "source": "Thoughtful Money",
+    "source_url": "https://youtube.com/watch?v=ed-0eEQHTbc",
+    "direction": "bearish",
+    "instruments": [
+      "T-bills"
+    ],
+    "timeframe": "near-term to medium-term",
+    "date_made": "2026-07-25",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Small caps (Russell 2000) are outperforming megacap and AI-related stocks in 2026, with consensus earnings growth forecasts rising to 38% for the year, suggesting continued relative outperformance.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/small-caps-are-quietly-winning-while-mega-caps-wobble/",
+    "direction": "bullish",
+    "instruments": [
+      "IWM",
+      "Russell 2000"
+    ],
+    "timeframe": "2026 full year",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The S&P 500 has broken below its 50-day moving average for the first time in months, and technical indicators suggest the early innings of a pullback with potential further downside before a floor is established.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/small-caps-are-quietly-winning-while-mega-caps-wobble/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "near-term (1-4 weeks)",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "A close below 7,266 on the S&P 500 would put the 200-DMA (7,001) in play and warrant a shift to a more defensive portfolio posture.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/small-caps-are-quietly-winning-while-mega-caps-wobble/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY",
+      "S&P 500"
+    ],
+    "timeframe": "near-term conditional",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.7,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "AI hyperscaler and megacap tech stocks face a significant earnings risk from deferred capex depreciation, with free cash flow projected to crater 91% even as reported earnings climb, making current valuations vulnerable.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/small-caps-are-quietly-winning-while-mega-caps-wobble/",
+    "direction": "bearish",
+    "instruments": [
+      "QQQ",
+      "Magnificent Seven",
+      "hyperscalers"
+    ],
+    "timeframe": "2026 and beyond",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.68,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "There is a 34% market-implied probability of a Fed rate hike from 3.50% to 3.75% at the upcoming FOMC meeting, with energy prices up over 20% in two weeks adding hawkish pressure; a surprise hike would negatively impact small caps disproportionately.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/small-caps-are-quietly-winning-while-mega-caps-wobble/",
+    "direction": "mixed",
+    "instruments": [
+      "IWM",
+      "Russell 2000",
+      "TLT"
+    ],
+    "timeframe": "this week (FOMC Wednesday)",
+    "date_made": "2026-07-27",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
