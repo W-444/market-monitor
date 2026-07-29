@@ -1059,7 +1059,7 @@
     "timeframe": "Q2 2026 earnings catalyst; 2026-2027 capex cycle",
     "date_made": "2026-07-22",
     "source_confidence": 0.65,
-    "status": "open",
+    "status": "unresolvable",
     "entry_prices": {}
   },
   {
@@ -1133,7 +1133,7 @@
     "timeframe": "Q2 2026 earnings and forward guidance",
     "date_made": "2026-07-22",
     "source_confidence": 0.65,
-    "status": "open",
+    "status": "unresolvable",
     "entry_prices": {}
   },
   {
@@ -1614,6 +1614,82 @@
     "timeframe": "this week (FOMC Wednesday)",
     "date_made": "2026-07-27",
     "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Market pricing implies an 82% probability of a Fed rate hike in September 2026, driven by oil price inflation; a hike would be bearish for risk assets and potentially supportive of a more hawkish macro environment.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/will-high-oil-prices-force-the-feds-hand/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "SHY",
+      "FFE"
+    ],
+    "timeframe": "September 2026",
+    "date_made": "2026-07-29",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Hyperscalers Microsoft and Meta are near-term binary events: if they guide 2027 capex sharply higher, semiconductor suppliers catch a bid and platforms take the hit; if not, the capex-peak thesis holds and suppliers continue to underperform.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/will-high-oil-prices-force-the-feds-hand/",
+    "direction": "mixed",
+    "instruments": [
+      "MSFT",
+      "META",
+      "NVDA",
+      "LRCX",
+      "ASML"
+    ],
+    "timeframe": "immediate (earnings tonight, July 29 2026)",
+    "date_made": "2026-07-29",
+    "source_confidence": 0.7,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Lam Research is expected to deliver strong near-term fundamentals with 29% revenue growth and 27% earnings growth, suggesting the selloff may be technically driven rather than fundamental deterioration.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/will-high-oil-prices-force-the-feds-hand/",
+    "direction": "bullish",
+    "instruments": [
+      "LRCX"
+    ],
+    "timeframe": "near-term (Q2 2026 earnings, reporting tonight)",
+    "date_made": "2026-07-29",
+    "source_confidence": 0.6,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Oracle's credit is deteriorating significantly, with bonds pricing at junk-equivalent yields despite a BBB- rating, making it a specific bearish credit concern among hyperscalers.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/carnage-in-hyperscaler-credit-really/",
+    "direction": "bearish",
+    "instruments": [
+      "ORCL"
+    ],
+    "timeframe": "near-term; 5-year CDS horizon referenced",
+    "date_made": "2026-07-29",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Oracle's credit is deteriorating rapidly and its bonds are already priced as junk despite a BBB- rating, making it a specific bearish credit concern among hyperscalers. Investors should treat Oracle as an outlier risk, not a bellwether for the broader hyperscaler group.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/carnage-in-hyperscaler-credit-really/",
+    "direction": "bearish",
+    "instruments": [
+      "ORCL"
+    ],
+    "timeframe": "near-term; 5-year CDS horizon referenced",
+    "date_made": "2026-07-29",
+    "source_confidence": 0.72,
     "status": "open",
     "entry_prices": {}
   }
