@@ -1692,5 +1692,104 @@
     "source_confidence": 0.72,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Hoisington Management has repositioned to ultra-short duration (under one year), effectively exiting traditional bond holdings in favor of T-bills, signaling a bearish view on long-duration bonds.",
+    "source": "Thoughtful Money",
+    "source_url": "https://youtube.com/watch?v=ed-0eEQHTbc",
+    "direction": "bearish",
+    "instruments": [
+      "T-bills"
+    ],
+    "timeframe": "current positioning, duration under 1 year",
+    "date_made": "2026-07-28",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Fed Funds futures are pricing in ~80% odds of a September rate hike, with three FOMC dissenters already pushing for tighter policy; a September hike is increasingly likely if additional voters join the hawkish camp.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/a-september-rate-hike-is-on-the-table/",
+    "direction": "bearish",
+    "instruments": [
+      "Fed Funds futures"
+    ],
+    "timeframe": "September 2026 FOMC meeting",
+    "date_made": "2026-07-30",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "SMH is technically oversold after a 22.7% drawdown from its June high and historical signals suggest a likely near-term bounce, though peak growth rate in semiconductor earnings is real.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/a-september-rate-hike-is-on-the-table/",
+    "direction": "bullish",
+    "instruments": [
+      "SMH"
+    ],
+    "timeframe": "1\u20133 months",
+    "date_made": "2026-07-30",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Hoisington (Hunt's firm) has repositioned its fixed-income duration to under one year, effectively abandoning long-duration bonds in favor of short-term bills, signaling a strongly bearish view on long-duration Treasuries.",
+    "source": "Thoughtful Money",
+    "source_url": "https://youtube.com/watch?v=ed-0eEQHTbc",
+    "direction": "bearish",
+    "instruments": [
+      "T-bills",
+      "short-duration Treasuries"
+    ],
+    "timeframe": "current positioning, near-term",
+    "date_made": "2026-07-28",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Fed Funds futures now price near 80% odds of a September rate hike, driven by three dissenting FOMC voters and Fed Chair Warsh's hawkish inflation stance.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/a-september-rate-hike-is-on-the-table/",
+    "direction": "bearish",
+    "instruments": [
+      "Fed Funds futures"
+    ],
+    "timeframe": "September 2026",
+    "date_made": "2026-07-30",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "SMH (semiconductor ETF) is technically oversold after a 22.7% drawdown from its June record, with historical signals suggesting a likely near-term bounce, though the peak growth rate for the sector is real.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/a-september-rate-hike-is-on-the-table/",
+    "direction": "bullish",
+    "instruments": [
+      "SMH"
+    ],
+    "timeframe": "1\u20133 months",
+    "date_made": "2026-07-30",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The South Korea ETF (EWY) has collapsed 40%+ from its record high in roughly four weeks due to a margin-call cascade, and remains the worst-performing foreign index over the past month with further forced selling risk.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/a-september-rate-hike-is-on-the-table/",
+    "direction": "bearish",
+    "instruments": [
+      "EWY"
+    ],
+    "timeframe": "near-term (ongoing)",
+    "date_made": "2026-07-30",
+    "source_confidence": 0.63,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
