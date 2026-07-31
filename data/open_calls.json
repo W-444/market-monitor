@@ -1791,5 +1791,138 @@
     "source_confidence": 0.63,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "Long-end Treasury yields are expected to remain elevated or continue rising as the bond market disbelieves the Fed's inflation resolve, with the 30-year yield already at its highest since July 2007.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/long-bonds-are-weary-of-warshs-inflation-resolve/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "TMF",
+      "30-year Treasury",
+      "10-year Treasury"
+    ],
+    "timeframe": "near-term",
+    "date_made": "2026-07-31",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The Nasdaq 100 is expected to face continued weakness through mid-August to late September, with a potential further decline toward its 200-day moving average near 23,400.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/long-bonds-are-weary-of-warshs-inflation-resolve/",
+    "direction": "bearish",
+    "instruments": [
+      "QQQ",
+      "Nasdaq 100"
+    ],
+    "timeframe": "August through October 2026",
+    "date_made": "2026-07-31",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Hyperscaler free cash flow faces severe near-term compression as capex surges toward ~$700B in 2026, with Alphabet's FCF projected to drop ~90% to ~$8B and Amazon's potentially turning negative.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-bear-case-what-skeptics-get-right-and-wrong/",
+    "direction": "bearish",
+    "instruments": [
+      "GOOGL",
+      "AMZN",
+      "MSFT",
+      "META"
+    ],
+    "timeframe": "2026",
+    "date_made": "2026-07-31",
+    "source_confidence": 0.72,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Long-end Treasury yields are expected to remain elevated or rise further as the bond market prices in persistent inflation risk, with the 30-year yield at its highest since July 2007 and the market doubting the Fed's inflation resolve.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/long-bonds-are-weary-of-warshs-inflation-resolve/",
+    "direction": "bearish",
+    "instruments": [
+      "TLT",
+      "30-year Treasury",
+      "10-year Treasury",
+      "TMF"
+    ],
+    "timeframe": "near-term",
+    "date_made": "2026-07-31",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The Nasdaq 100 is at elevated risk of further downside through mid-to-late August, with seasonal headwinds and a rising oil + rising yields environment flagged as a precursor to sharp corrections historically.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/long-bonds-are-weary-of-warshs-inflation-resolve/",
+    "direction": "bearish",
+    "instruments": [
+      "QQQ",
+      "Nasdaq 100",
+      "SMH"
+    ],
+    "timeframe": "August\u2013October 2026",
+    "date_made": "2026-07-31",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The Nasdaq 100's 200-day moving average near 23,400 is identified as a preferred buy zone for quality technology exposure rather than chasing the current earnings-driven snapback.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/long-bonds-are-weary-of-warshs-inflation-resolve/",
+    "direction": "bullish",
+    "instruments": [
+      "QQQ",
+      "Nasdaq 100"
+    ],
+    "timeframe": "mid-August 2026 and beyond",
+    "date_made": "2026-07-31",
+    "source_confidence": 0.62,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Hyperscaler AI capex is running far ahead of proven payback, with free cash flow set to collapse materially in 2026, representing a valuation and cash-flow risk even if the underlying AI revenue thesis is real.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-bear-case-what-skeptics-get-right-and-wrong/",
+    "direction": "mixed",
+    "instruments": [
+      "GOOGL",
+      "AMZN",
+      "MSFT",
+      "META",
+      "ORCL",
+      "NVDA"
+    ],
+    "timeframe": "2026",
+    "date_made": "2026-07-31",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "Burry's depreciation-understatement thesis implies reported EPS for major AI/cloud names like Oracle and Meta is materially overstated, creating an earnings-quality and valuation risk through 2028.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/ai-bear-case-what-skeptics-get-right-and-wrong/",
+    "direction": "bearish",
+    "instruments": [
+      "ORCL",
+      "META",
+      "NVDA",
+      "GOOGL"
+    ],
+    "timeframe": "2026\u20132028",
+    "date_made": "2026-07-31",
+    "source_confidence": 0.6,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
