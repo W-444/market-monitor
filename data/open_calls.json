@@ -1924,5 +1924,35 @@
     "source_confidence": 0.6,
     "status": "open",
     "entry_prices": {}
+  },
+  {
+    "summary": "SPY is at a critical pivot at the 50-DMA (744.99); the author recommends trimming into the June record high of 759.57 rather than chasing a breakout, and treating a close below 744.99 as a sell signal targeting 729.10 and then 700.39.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-momentum-crash-is-it-over/",
+    "direction": "bearish",
+    "instruments": [
+      "SPY"
+    ],
+    "timeframe": "1-2 weeks",
+    "date_made": "2026-08-01",
+    "source_confidence": 0.75,
+    "status": "open",
+    "entry_prices": {}
+  },
+  {
+    "summary": "The author sees longer-duration Treasury bonds as a non-consensus bullish trade heading into the July jobs report, expecting a cool wage print to allow long yields to retreat sharply from 19-year highs.",
+    "source": "Real Investment Advice",
+    "source_url": "https://realinvestmentadvice.com/resources/blog/the-momentum-crash-is-it-over/",
+    "direction": "bullish",
+    "instruments": [
+      "TLT",
+      "30-year Treasury",
+      "10-year Treasury"
+    ],
+    "timeframe": "days to 1-2 weeks",
+    "date_made": "2026-08-01",
+    "source_confidence": 0.65,
+    "status": "open",
+    "entry_prices": {}
   }
 ]
