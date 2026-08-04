@@ -257,7 +257,7 @@
     "timeframe": "1 week (July 2 event-driven)",
     "date_made": "2026-06-27",
     "source_confidence": 0.68,
-    "status": "open",
+    "status": "unresolvable",
     "entry_prices": {}
   },
   {
@@ -320,7 +320,7 @@
     "timeframe": "1 week (July 2 jobs report catalyst)",
     "date_made": "2026-06-27",
     "source_confidence": 0.68,
-    "status": "open",
+    "status": "unresolvable",
     "entry_prices": {}
   },
   {
